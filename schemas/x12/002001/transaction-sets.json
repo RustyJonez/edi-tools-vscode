@@ -1,0 +1,82 @@
+{
+  "810": {
+    "code": "810",
+    "name": "X12",
+    "description": "To indicate the start of a transaction set and to assign a control number"
+  },
+  "820": {
+    "code": "820",
+    "name": "X12",
+    "description": "To indicate the start of a transaction set and to assign a control number"
+  },
+  "830": {
+    "code": "830",
+    "name": "X12",
+    "description": "To indicate the start of a transaction set and to assign a control number"
+  },
+  "832": {
+    "code": "832",
+    "name": "X12",
+    "description": "To indicate the start of a transaction set and to assign a control number"
+  },
+  "840": {
+    "code": "840",
+    "name": "X12",
+    "description": "To indicate the start of a transaction set and to assign a control number"
+  },
+  "843": {
+    "code": "843",
+    "name": "X12",
+    "description": "To indicate the start of a transaction set and to assign a control number"
+  },
+  "846": {
+    "code": "846",
+    "name": "X12",
+    "description": "To indicate the start of a transaction set and to assign a control number"
+  },
+  "850": {
+    "code": "850",
+    "name": "X12",
+    "description": "To indicate the start of a transaction set and to assign a control number"
+  },
+  "855": {
+    "code": "855",
+    "name": "X12",
+    "description": "To indicate the start of a transaction set and to assign a control number"
+  },
+  "856": {
+    "code": "856",
+    "name": "X12",
+    "description": "To indicate the start of a transaction set and to assign a control number"
+  },
+  "860": {
+    "code": "860",
+    "name": "X12",
+    "description": "To indicate the start of a transaction set and to assign a control number"
+  },
+  "861": {
+    "code": "861",
+    "name": "X12",
+    "description": "To indicate the start of a transaction set and to assign a control number"
+  },
+  "865": {
+    "code": "865",
+    "name": "X12",
+    "description": "To indicate the start of a transaction set and to assign a control number"
+  },
+  "867": {
+    "code": "867",
+    "name": "X12",
+    "description": "To indicate the start of a transaction set and to assign a control number"
+  },
+  "940": {
+    "code": "940",
+    "name": "X12",
+    "description": "This standard provides the format and establishes the data contents of the warehouse shipping order transaction set. This transaction set is used to enable the depositor to advise the warehouse to make a shipment."
+  },
+  "997": {
+    "code": "997",
+    "name": "X12",
+    "description": "To indicate the start of a transaction set and to assign a control number"
+  }
+}
