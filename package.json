@@ -2,11 +2,11 @@
   "name": "edi-tools",
   "displayName": "EDI Tools",
   "description": "Syntax highlighting, formatting, and validation tools for EDI X12 and EDIFACT documents",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "publisher": "RustyJonez",
   "repository": {
-  "type": "git",
-  "url": "https://github.com/RustyJonez/edi-tools-vscode"
+    "type": "git",
+    "url": "https://github.com/RustyJonez/edi-tools-vscode"
   },
   "engines": {
     "vscode": "^1.75.0"
