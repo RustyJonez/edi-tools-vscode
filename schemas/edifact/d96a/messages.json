@@ -1,0 +1,632 @@
+{
+  "APERAK": {
+    "code": "APERAK",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "AUTHOR": {
+    "code": "AUTHOR",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "BANSTA": {
+    "code": "BANSTA",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "BAPLIE": {
+    "code": "BAPLIE",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "BAPLTE": {
+    "code": "BAPLTE",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "BOPBNK": {
+    "code": "BOPBNK",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "BOPCUS": {
+    "code": "BOPCUS",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "BOPDIR": {
+    "code": "BOPDIR",
+    "name": "EDIFACT",
+    "description": "To separate header, detail and summary sections of a message."
+  },
+  "BOPINF": {
+    "code": "BOPINF",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "CALINF": {
+    "code": "CALINF",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "COARRI": {
+    "code": "COARRI",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "CODECO": {
+    "code": "CODECO",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "CODENO": {
+    "code": "CODENO",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "COEDOR": {
+    "code": "COEDOR",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "COHAOR": {
+    "code": "COHAOR",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "COMDIS": {
+    "code": "COMDIS",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "CONAPW": {
+    "code": "CONAPW",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "CONDPV": {
+    "code": "CONDPV",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "CONDRA": {
+    "code": "CONDRA",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "CONDRO": {
+    "code": "CONDRO",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "CONEST": {
+    "code": "CONEST",
+    "name": "EDIFACT",
+    "description": "To separate header, detail and summary sections of a message."
+  },
+  "CONITT": {
+    "code": "CONITT",
+    "name": "EDIFACT",
+    "description": "To separate header, detail and summary sections of a message."
+  },
+  "CONPVA": {
+    "code": "CONPVA",
+    "name": "EDIFACT",
+    "description": "To separate header, detail and summary sections of a message."
+  },
+  "CONQVA": {
+    "code": "CONQVA",
+    "name": "EDIFACT",
+    "description": "A segment used to convey an indexing structure mechanism which identifies the positioning of a group or item."
+  },
+  "CONRPW": {
+    "code": "CONRPW",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "CONTEN": {
+    "code": "CONTEN",
+    "name": "EDIFACT",
+    "description": "To separate header, detail and summary sections of a message."
+  },
+  "CONTRL": {
+    "code": "CONTRL",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "CONWQD": {
+    "code": "CONWQD",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "COPARN": {
+    "code": "COPARN",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "COPINO": {
+    "code": "COPINO",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "COPRAR": {
+    "code": "COPRAR",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "COREOR": {
+    "code": "COREOR",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "COSTCO": {
+    "code": "COSTCO",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "COSTOR": {
+    "code": "COSTOR",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "CREADV": {
+    "code": "CREADV",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "CREEXT": {
+    "code": "CREEXT",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "CREMUL": {
+    "code": "CREMUL",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "CUSCAR": {
+    "code": "CUSCAR",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "CUSDEC": {
+    "code": "CUSDEC",
+    "name": "EDIFACT",
+    "description": "To separate header, detail and summary sections of a message."
+  },
+  "CUSEXP": {
+    "code": "CUSEXP",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "CUSREP": {
+    "code": "CUSREP",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "CUSRES": {
+    "code": "CUSRES",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "DEBADV": {
+    "code": "DEBADV",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "DEBMUL": {
+    "code": "DEBMUL",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "DELFOR": {
+    "code": "DELFOR",
+    "name": "EDIFACT",
+    "description": "To separate header, detail and summary sections of a message."
+  },
+  "DELJIT": {
+    "code": "DELJIT",
+    "name": "EDIFACT",
+    "description": "To provide specific details related to the delivery sequence."
+  },
+  "DESADV": {
+    "code": "DESADV",
+    "name": "EDIFACT",
+    "description": "To identify the sequence in which physical packing is presented in the consignment, and optionally to identify the hierarchical relationship between packing layers."
+  },
+  "DIRDEB": {
+    "code": "DIRDEB",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "DIRDEF": {
+    "code": "DIRDEF",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "DOCADV": {
+    "code": "DOCADV",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "DOCAMA": {
+    "code": "DOCAMA",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "DOCAMI": {
+    "code": "DOCAMI",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "DOCAMR": {
+    "code": "DOCAMR",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "DOCAPP": {
+    "code": "DOCAPP",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "DOCARE": {
+    "code": "DOCARE",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "DOCINF": {
+    "code": "DOCINF",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "FINCAN": {
+    "code": "FINCAN",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "FINSTA": {
+    "code": "FINSTA",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "GENRAL": {
+    "code": "GENRAL",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "GESMES": {
+    "code": "GESMES",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "HANMOV": {
+    "code": "HANMOV",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "IFCSUM": {
+    "code": "IFCSUM",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "IFTCCA": {
+    "code": "IFTCCA",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "IFTDGN": {
+    "code": "IFTDGN",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "IFTFCC": {
+    "code": "IFTFCC",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "IFTIAG": {
+    "code": "IFTIAG",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "IFTMAN": {
+    "code": "IFTMAN",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "IFTMBC": {
+    "code": "IFTMBC",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "IFTMBF": {
+    "code": "IFTMBF",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "IFTMBP": {
+    "code": "IFTMBP",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "IFTMCS": {
+    "code": "IFTMCS",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "IFTMIN": {
+    "code": "IFTMIN",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "IFTRIN": {
+    "code": "IFTRIN",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "IFTSAI": {
+    "code": "IFTSAI",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "IFTSTA": {
+    "code": "IFTSTA",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "IFTSTQ": {
+    "code": "IFTSTQ",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "INSPRE": {
+    "code": "INSPRE",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "INVOIC": {
+    "code": "INVOIC",
+    "name": "EDIFACT",
+    "description": "To identify a line item and configuration."
+  },
+  "INVRPT": {
+    "code": "INVRPT",
+    "name": "EDIFACT",
+    "description": "To identify the sequence in which physical packing is presented in the consignment, and optionally to identify the hierarchical relationship between packing layers."
+  },
+  "JAPRES": {
+    "code": "JAPRES",
+    "name": "EDIFACT",
+    "description": "To separate header, detail and summary sections of a message."
+  },
+  "JINFDE": {
+    "code": "JINFDE",
+    "name": "EDIFACT",
+    "description": "To separate header, detail and summary sections of a message."
+  },
+  "JOBAPP": {
+    "code": "JOBAPP",
+    "name": "EDIFACT",
+    "description": "To separate header, detail and summary sections of a message."
+  },
+  "JOBCON": {
+    "code": "JOBCON",
+    "name": "EDIFACT",
+    "description": "To separate header, detail and summary sections of a message."
+  },
+  "JOBMOD": {
+    "code": "JOBMOD",
+    "name": "EDIFACT",
+    "description": "To separate header, detail and summary sections of a message."
+  },
+  "JOBOFF": {
+    "code": "JOBOFF",
+    "name": "EDIFACT",
+    "description": "To separate header, detail and summary sections of a message."
+  },
+  "MEDPID": {
+    "code": "MEDPID",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "MOVINS": {
+    "code": "MOVINS",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "ORDCHG": {
+    "code": "ORDCHG",
+    "name": "EDIFACT",
+    "description": "To identify a line item and configuration."
+  },
+  "ORDERS": {
+    "code": "ORDERS",
+    "name": "EDIFACT",
+    "description": "To identify a line item and configuration."
+  },
+  "ORDRSP": {
+    "code": "ORDRSP",
+    "name": "EDIFACT",
+    "description": "To identify a line item and configuration."
+  },
+  "PARTIN": {
+    "code": "PARTIN",
+    "name": "EDIFACT",
+    "description": "To separate header, detail and summary sections of a message."
+  },
+  "PAXLST": {
+    "code": "PAXLST",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "PAYDUC": {
+    "code": "PAYDUC",
+    "name": "EDIFACT",
+    "description": "To transmit a processing indicator."
+  },
+  "PAYEXT": {
+    "code": "PAYEXT",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "PAYMUL": {
+    "code": "PAYMUL",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "PAYORD": {
+    "code": "PAYORD",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "PRICAT": {
+    "code": "PRICAT",
+    "name": "EDIFACT",
+    "description": "To indicate the group in which a product belongs."
+  },
+  "PRODEX": {
+    "code": "PRODEX",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "PRPAID": {
+    "code": "PRPAID",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "QALITY": {
+    "code": "QALITY",
+    "name": "EDIFACT",
+    "description": "To identify a line item and configuration."
+  },
+  "QUOTES": {
+    "code": "QUOTES",
+    "name": "EDIFACT",
+    "description": "To identify a line item and configuration."
+  },
+  "RDRMES": {
+    "code": "RDRMES",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "RECADV": {
+    "code": "RECADV",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "RECECO": {
+    "code": "RECECO",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "RECLAM": {
+    "code": "RECLAM",
+    "name": "EDIFACT",
+    "description": "To specify a reference."
+  },
+  "REMADV": {
+    "code": "REMADV",
+    "name": "EDIFACT",
+    "description": "To identify documents, either printed, electronically transferred, or referenced as specified in message description, including, where relevant, the identification of the type of transaction that will result from this message."
+  },
+  "REQDOC": {
+    "code": "REQDOC",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "REQOTE": {
+    "code": "REQOTE",
+    "name": "EDIFACT",
+    "description": "To identify a line item and configuration."
+  },
+  "RESETT": {
+    "code": "RESETT",
+    "name": "EDIFACT",
+    "description": "To specify a reference."
+  },
+  "RESMSG": {
+    "code": "RESMSG",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "RETACC": {
+    "code": "RETACC",
+    "name": "EDIFACT",
+    "description": "To specify currencies used in the transaction and relevant details for the rate of exchange."
+  },
+  "SAFHAZ": {
+    "code": "SAFHAZ",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "SANCRT": {
+    "code": "SANCRT",
+    "name": "EDIFACT",
+    "description": "To identify a line item and configuration."
+  },
+  "SLSFCT": {
+    "code": "SLSFCT",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "SLSRPT": {
+    "code": "SLSRPT",
+    "name": "EDIFACT",
+    "description": "To identify a country/place/location/related location one/related location two."
+  },
+  "SSIMOD": {
+    "code": "SSIMOD",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "SSRECH": {
+    "code": "SSRECH",
+    "name": "EDIFACT",
+    "description": "To separate header, detail and summary sections of a message."
+  },
+  "SSREGW": {
+    "code": "SSREGW",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "STATAC": {
+    "code": "STATAC",
+    "name": "EDIFACT",
+    "description": "To identify documents, either printed, electronically transferred, or referenced as specified in message description, including, where relevant, the identification of the type of transaction that will result from this message."
+  },
+  "SUPCOT": {
+    "code": "SUPCOT",
+    "name": "EDIFACT",
+    "description": "To separate header, detail and summary sections of a message."
+  },
+  "SUPMAN": {
+    "code": "SUPMAN",
+    "name": "EDIFACT",
+    "description": "To separate header, detail and summary sections of a message."
+  },
+  "SUPRES": {
+    "code": "SUPRES",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "TANSTA": {
+    "code": "TANSTA",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "VESDEP": {
+    "code": "VESDEP",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "WKGRDC": {
+    "code": "WKGRDC",
+    "name": "EDIFACT",
+    "description": "To separate header, detail and summary sections of a message."
+  },
+  "WKGRRE": {
+    "code": "WKGRRE",
+    "name": "EDIFACT",
+    "description": "To separate header, detail and summary sections of a message."
+  }
+}

@@ -1,0 +1,246 @@
+{
+  "TD5": {
+    "code": "TD5",
+    "name": "Carrier Details (Routing Sequence/Transit Time)",
+    "description": "To specify the carrier and sequence of routing and provide transit time information",
+    "elements": [
+      {
+        "position": "01",
+        "name": "Routing Sequence Code",
+        "requirement": "O",
+        "type": "133"
+      },
+      {
+        "position": "02",
+        "name": "Identification Code Qualifier",
+        "requirement": "C",
+        "type": "66"
+      },
+      {
+        "position": "03",
+        "name": "Identification Code",
+        "requirement": "C",
+        "type": "67"
+      },
+      {
+        "position": "04",
+        "name": "Transportation Method/Type Code",
+        "requirement": "C",
+        "type": "91"
+      },
+      {
+        "position": "05",
+        "name": "Routing",
+        "requirement": "C",
+        "type": "387"
+      },
+      {
+        "position": "06",
+        "name": "Shipment/Order Status Code",
+        "requirement": "C",
+        "type": "368"
+      },
+      {
+        "position": "07",
+        "name": "Location Qualifier",
+        "requirement": "O",
+        "type": "309"
+      },
+      {
+        "position": "08",
+        "name": "Location Identifier",
+        "requirement": "C",
+        "type": "310"
+      },
+      {
+        "position": "09",
+        "name": "Transit Direction Code",
+        "requirement": "O",
+        "type": "731"
+      },
+      {
+        "position": "10",
+        "name": "Transit Time Direction Qualifier",
+        "requirement": "O",
+        "type": "732"
+      },
+      {
+        "position": "11",
+        "name": "Transit Time",
+        "requirement": "C",
+        "type": "733"
+      },
+      {
+        "position": "12",
+        "name": "Service Level Code",
+        "requirement": "C",
+        "type": "284"
+      },
+      {
+        "position": "13",
+        "name": "Service Level Code",
+        "requirement": "C",
+        "type": "284"
+      },
+      {
+        "position": "14",
+        "name": "Service Level Code",
+        "requirement": "O",
+        "type": "284"
+      },
+      {
+        "position": "15",
+        "name": "Country Code",
+        "requirement": "O",
+        "type": "26"
+      }
+    ]
+  },
+  "N1": {
+    "code": "N1",
+    "name": "Party Identification",
+    "description": "To identify a party by type of organization, name, and code",
+    "elements": [
+      {
+        "position": "01",
+        "name": "Entity Identifier Code",
+        "requirement": "M",
+        "type": "98"
+      },
+      {
+        "position": "02",
+        "name": "Name",
+        "requirement": "C",
+        "type": "93"
+      },
+      {
+        "position": "03",
+        "name": "Identification Code Qualifier",
+        "requirement": "C",
+        "type": "66"
+      },
+      {
+        "position": "04",
+        "name": "Identification Code",
+        "requirement": "C",
+        "type": "67"
+      },
+      {
+        "position": "05",
+        "name": "Entity Relationship Code",
+        "requirement": "O",
+        "type": "706"
+      },
+      {
+        "position": "06",
+        "name": "Entity Identifier Code",
+        "requirement": "O",
+        "type": "98"
+      }
+    ]
+  },
+  "REF": {
+    "code": "REF",
+    "name": "Reference Information",
+    "description": "To specify identifying information",
+    "elements": [
+      {
+        "position": "01",
+        "name": "Reference Identification Qualifier",
+        "requirement": "M",
+        "type": "128"
+      },
+      {
+        "position": "02",
+        "name": "Reference Identification",
+        "requirement": "C",
+        "type": "127"
+      },
+      {
+        "position": "03",
+        "name": "Description",
+        "requirement": "C",
+        "type": "352"
+      },
+      {
+        "position": "01",
+        "name": "Reference Identification Qualifier",
+        "requirement": "M",
+        "type": "128"
+      },
+      {
+        "position": "02",
+        "name": "Reference Identification",
+        "requirement": "M",
+        "type": "127"
+      },
+      {
+        "position": "03",
+        "name": "Reference Identification Qualifier",
+        "requirement": "C",
+        "type": "128"
+      },
+      {
+        "position": "04",
+        "name": "Reference Identification",
+        "requirement": "C",
+        "type": "127"
+      },
+      {
+        "position": "05",
+        "name": "Reference Identification Qualifier",
+        "requirement": "C",
+        "type": "128"
+      },
+      {
+        "position": "06",
+        "name": "Reference Identification",
+        "requirement": "C",
+        "type": "127"
+      }
+    ]
+  },
+  "DTM": {
+    "code": "DTM",
+    "name": "Date/Time Reference",
+    "description": "To specify pertinent dates and times",
+    "elements": [
+      {
+        "position": "01",
+        "name": "Date/Time Qualifier",
+        "requirement": "M",
+        "type": "374"
+      },
+      {
+        "position": "02",
+        "name": "Date",
+        "requirement": "C",
+        "type": "373"
+      },
+      {
+        "position": "03",
+        "name": "Time",
+        "requirement": "C",
+        "type": "337"
+      },
+      {
+        "position": "04",
+        "name": "Time Code",
+        "requirement": "O",
+        "type": "623"
+      },
+      {
+        "position": "05",
+        "name": "Date Time Period Format Qualifier",
+        "requirement": "C",
+        "type": "1250"
+      },
+      {
+        "position": "06",
+        "name": "Date Time Period",
+        "requirement": "C",
+        "type": "1251"
+      }
+    ]
+  }
+}

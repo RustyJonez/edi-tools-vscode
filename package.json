@@ -1,0 +1,211 @@
+{
+  "name": "edi-x12-tools",
+  "displayName": "EDI X12 Tools",
+  "description": "Syntax highlighting, formatting, and validation tools for EDI X12 and EDIFACT documents",
+  "version": "0.1.0",
+  "publisher": "RustyJonez",
+  "engines": {
+    "vscode": "^1.75.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Formatters",
+    "Other"
+  ],
+  "keywords": [
+    "edi",
+    "x12",
+    "edifact",
+    "formatting",
+    "validation"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "languages": [
+      {
+        "id": "x12",
+        "aliases": [
+          "X12",
+          "EDI X12",
+          "edi"
+        ],
+        "extensions": [
+          ".edi",
+          ".x12",
+          ".asv"
+        ],
+        "filenamePatterns": [
+          "*.txt"
+        ],
+        "firstLine": "^ISA",
+        "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "edifact",
+        "aliases": [
+          "EDIFACT",
+          "EDI EDIFACT"
+        ],
+        "extensions": [
+          ".edifact"
+        ],
+        "firstLine": "^(UNA|UNB)",
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "x12",
+        "scopeName": "source.edi",
+        "path": "./syntaxes/x12.tmLanguage.json"
+      },
+      {
+        "language": "edifact",
+        "scopeName": "source.edifact",
+        "path": "./syntaxes/edifact.tmLanguage.json"
+      }
+    ],
+    "commands": [
+      {
+        "command": "ediX12Tools.quickFormat",
+        "title": "EDI: Quick Format"
+      },
+      {
+        "command": "ediX12Tools.normalizeDelimiters",
+        "title": "EDI: Normalize Delimiters"
+      },
+      {
+        "command": "ediX12Tools.addLineBreaks",
+        "title": "EDI: Add Line Breaks"
+      },
+      {
+        "command": "ediX12Tools.lookupSegment",
+        "title": "EDI: Lookup Segment at Cursor"
+      },
+      {
+        "command": "ediX12Tools.lookupTransactionSet",
+        "title": "EDI: Lookup Transaction Set"
+      },
+      {
+        "command": "ediX12Tools.searchSegment",
+        "title": "EDI: Search Segment"
+      },
+      {
+        "command": "ediX12Tools.searchTransactionSet",
+        "title": "EDI: Search Transaction Set"
+      },
+      {
+        "command": "ediX12Tools.updateIds",
+        "title": "EDI: Update Sender/Receiver IDs"
+      },
+      {
+        "command": "ediX12Tools.normalizeEdifactDelimiters",
+        "title": "EDIFACT: Normalize Delimiters"
+      },
+      {
+        "command": "ediX12Tools.addEdifactLineBreaks",
+        "title": "EDIFACT: Add Line Breaks"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "ediX12Tools.quickFormat",
+        "key": "ctrl+e ctrl+e",
+        "mac": "cmd+e cmd+e",
+        "when": "editorLangId == x12 || editorLangId == edifact"
+      },
+      {
+        "command": "ediX12Tools.normalizeDelimiters",
+        "key": "ctrl+e ctrl+n",
+        "mac": "cmd+e cmd+n",
+        "when": "editorLangId == x12 || editorLangId == edifact"
+      },
+      {
+        "command": "ediX12Tools.addLineBreaks",
+        "key": "ctrl+e ctrl+l",
+        "mac": "cmd+e cmd+l",
+        "when": "editorLangId == x12 || editorLangId == edifact"
+      },
+      {
+        "command": "ediX12Tools.lookupSegment",
+        "key": "ctrl+e ctrl+s",
+        "mac": "cmd+e cmd+s",
+        "when": "editorLangId == x12 || editorLangId == edifact"
+      },
+      {
+        "command": "ediX12Tools.lookupTransactionSet",
+        "key": "ctrl+e ctrl+t",
+        "mac": "cmd+e cmd+t",
+        "when": "editorLangId == x12 || editorLangId == edifact"
+      }
+    ],
+    "menus": {
+      "commandPalette": [
+        {
+          "command": "ediX12Tools.quickFormat",
+          "when": "editorLangId == x12 || editorLangId == edifact"
+        },
+        {
+          "command": "ediX12Tools.normalizeDelimiters",
+          "when": "editorLangId == x12 || editorLangId == edifact"
+        },
+        {
+          "command": "ediX12Tools.addLineBreaks",
+          "when": "editorLangId == x12 || editorLangId == edifact"
+        },
+        {
+          "command": "ediX12Tools.lookupSegment",
+          "when": "editorLangId == x12 || editorLangId == edifact"
+        },
+        {
+          "command": "ediX12Tools.lookupTransactionSet",
+          "when": "editorLangId == x12 || editorLangId == edifact"
+        },
+        {
+          "command": "ediX12Tools.updateIds",
+          "when": "editorLangId == x12 || editorLangId == edifact"
+        },
+        {
+          "command": "ediX12Tools.searchSegment",
+          "when": "editorLangId == x12 || editorLangId == edifact"
+        },
+        {
+          "command": "ediX12Tools.searchTransactionSet",
+          "when": "editorLangId == x12 || editorLangId == edifact"
+        }
+      ]
+    },
+    "configuration": {
+      "title": "EDI X12 Tools",
+      "properties": {
+        "ediX12Tools.hover.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable hover tooltips for segment information from Stedi reference"
+        },
+        "ediX12Tools.hover.showElements": {
+          "type": "boolean",
+          "default": true,
+          "description": "Show element list in hover tooltips"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/node": "^18.19.130",
+    "@types/vscode": "^1.75.0",
+    "@typescript-eslint/eslint-plugin": "^6.4.1",
+    "@typescript-eslint/parser": "^6.4.1",
+    "eslint": "^8.47.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.1.6"
+  }
+}

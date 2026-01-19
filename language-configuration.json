@@ -1,0 +1,14 @@
+{
+  "comments": {
+    "lineComment": ""
+  },
+  "brackets": [],
+  "autoClosingPairs": [],
+  "surroundingPairs": [],
+  "folding": {
+    "markers": {
+      "start": "^(ISA|GS|ST|HL)",
+      "end": "^(IEA|GE|SE)"
+    }
+  }
+}

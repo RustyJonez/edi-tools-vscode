@@ -1,0 +1,4089 @@
+{
+  "ADR": {
+    "code": "ADR",
+    "name": "EDIFACT",
+    "description": "To specify an address.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Address usage",
+        "requirement": "C",
+        "type": "C817"
+      },
+      {
+        "position": "020",
+        "name": "Address details",
+        "requirement": "C",
+        "type": "C090"
+      },
+      {
+        "position": "030",
+        "name": "City name",
+        "requirement": "C",
+        "type": "3164"
+      },
+      {
+        "position": "040",
+        "name": "Postcode identification",
+        "requirement": "C",
+        "type": "3251"
+      },
+      {
+        "position": "050",
+        "name": "Country, coded",
+        "requirement": "C",
+        "type": "3207"
+      },
+      {
+        "position": "060",
+        "name": "Country sub-entity details",
+        "requirement": "C",
+        "type": "C819"
+      },
+      {
+        "position": "070",
+        "name": "Location identification",
+        "requirement": "C",
+        "type": "C517"
+      }
+    ]
+  },
+  "AGR": {
+    "code": "AGR",
+    "name": "EDIFACT",
+    "description": "To specify the agreement details.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Agreement type identification",
+        "requirement": "C",
+        "type": "C543"
+      },
+      {
+        "position": "020",
+        "name": "Service layer, coded",
+        "requirement": "C",
+        "type": "9419"
+      }
+    ]
+  },
+  "AJT": {
+    "code": "AJT",
+    "name": "EDIFACT",
+    "description": "To identify the reason for an adjustment.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Adjustment reason, coded",
+        "requirement": "M",
+        "type": "4465"
+      },
+      {
+        "position": "020",
+        "name": "Line item number",
+        "requirement": "C",
+        "type": "1082"
+      }
+    ]
+  },
+  "ALC": {
+    "code": "ALC",
+    "name": "EDIFACT",
+    "description": "To identify allowance or charge details.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Allowance or charge qualifier",
+        "requirement": "M",
+        "type": "5463"
+      },
+      {
+        "position": "020",
+        "name": "Allowance/charge information",
+        "requirement": "C",
+        "type": "C552"
+      },
+      {
+        "position": "030",
+        "name": "Settlement, coded",
+        "requirement": "C",
+        "type": "4471"
+      },
+      {
+        "position": "040",
+        "name": "Calculation sequence indicator, coded",
+        "requirement": "C",
+        "type": "1227"
+      },
+      {
+        "position": "050",
+        "name": "Special services identification",
+        "requirement": "C",
+        "type": "C214"
+      }
+    ]
+  },
+  "ALI": {
+    "code": "ALI",
+    "name": "EDIFACT",
+    "description": "To indicate that special conditions due to the origin, customs preference, fiscal or commercial factors are applicable.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Country of origin, coded",
+        "requirement": "C",
+        "type": "3239"
+      },
+      {
+        "position": "020",
+        "name": "Type of duty regime, coded",
+        "requirement": "C",
+        "type": "9213"
+      },
+      {
+        "position": "030",
+        "name": "Special conditions, coded",
+        "requirement": "C",
+        "type": "4183"
+      },
+      {
+        "position": "040",
+        "name": "Special conditions, coded",
+        "requirement": "C",
+        "type": "4183"
+      },
+      {
+        "position": "050",
+        "name": "Special conditions, coded",
+        "requirement": "C",
+        "type": "4183"
+      },
+      {
+        "position": "060",
+        "name": "Special conditions, coded",
+        "requirement": "C",
+        "type": "4183"
+      },
+      {
+        "position": "070",
+        "name": "Special conditions, coded",
+        "requirement": "C",
+        "type": "4183"
+      }
+    ]
+  },
+  "APR": {
+    "code": "APR",
+    "name": "EDIFACT",
+    "description": "To provide information concerning pricing related to class of trade, price multiplier, and reason for change.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Class of trade, coded",
+        "requirement": "C",
+        "type": "4043"
+      },
+      {
+        "position": "020",
+        "name": "Price multiplier information",
+        "requirement": "C",
+        "type": "C138"
+      },
+      {
+        "position": "030",
+        "name": "Reason for change",
+        "requirement": "C",
+        "type": "C960"
+      }
+    ]
+  },
+  "ARD": {
+    "code": "ARD",
+    "name": "EDIFACT",
+    "description": "To provide details of the function of a monetary amount.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Monetary function",
+        "requirement": "C",
+        "type": "C549"
+      }
+    ]
+  },
+  "ARR": {
+    "code": "ARR",
+    "name": "EDIFACT",
+    "description": "To contain the data in a array.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Position identification",
+        "requirement": "C",
+        "type": "C778"
+      },
+      {
+        "position": "020",
+        "name": "Array cell details",
+        "requirement": "C",
+        "type": "C770"
+      }
+    ]
+  },
+  "ASI": {
+    "code": "ASI",
+    "name": "EDIFACT",
+    "description": "To identify the structure of an array.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Array structure identification",
+        "requirement": "M",
+        "type": "C779"
+      },
+      {
+        "position": "020",
+        "name": "Party identification details",
+        "requirement": "C",
+        "type": "C082"
+      },
+      {
+        "position": "030",
+        "name": "Status, coded",
+        "requirement": "C",
+        "type": "4405"
+      },
+      {
+        "position": "040",
+        "name": "Maintenance operation, coded",
+        "requirement": "C",
+        "type": "4513"
+      }
+    ]
+  },
+  "ATT": {
+    "code": "ATT",
+    "name": "EDIFACT",
+    "description": "To identify a specific attribute.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Attribute function qualifier",
+        "requirement": "M",
+        "type": "9017"
+      },
+      {
+        "position": "020",
+        "name": "Attribute type",
+        "requirement": "C",
+        "type": "C955"
+      },
+      {
+        "position": "030",
+        "name": "Attribute details",
+        "requirement": "C",
+        "type": "C956"
+      }
+    ]
+  },
+  "AUT": {
+    "code": "AUT",
+    "name": "EDIFACT",
+    "description": "To specify results of the application of an authentification procedure.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Validation result",
+        "requirement": "M",
+        "type": "9280"
+      },
+      {
+        "position": "020",
+        "name": "Validation key identification",
+        "requirement": "C",
+        "type": "9282"
+      }
+    ]
+  },
+  "BGM": {
+    "code": "BGM",
+    "name": "EDIFACT",
+    "description": "To indicate the type and function of a message and to transmit the identifying number.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Document/message name",
+        "requirement": "C",
+        "type": "C002"
+      },
+      {
+        "position": "020",
+        "name": "Document/message number",
+        "requirement": "C",
+        "type": "1004"
+      },
+      {
+        "position": "030",
+        "name": "Message function, coded",
+        "requirement": "C",
+        "type": "1225"
+      },
+      {
+        "position": "040",
+        "name": "Response type, coded",
+        "requirement": "C",
+        "type": "4343"
+      }
+    ]
+  },
+  "BII": {
+    "code": "BII",
+    "name": "EDIFACT",
+    "description": "A segment used to convey an indexing structure mechanism which identifies the positioning of a group or item.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Indexing structure qualifier",
+        "requirement": "M",
+        "type": "7429"
+      },
+      {
+        "position": "020",
+        "name": "Bill level identification",
+        "requirement": "M",
+        "type": "C045"
+      },
+      {
+        "position": "030",
+        "name": "Item number",
+        "requirement": "C",
+        "type": "7140"
+      }
+    ]
+  },
+  "BUS": {
+    "code": "BUS",
+    "name": "EDIFACT",
+    "description": "To provide information related to the processing and purpose of a financial message.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Business function",
+        "requirement": "C",
+        "type": "C521"
+      },
+      {
+        "position": "020",
+        "name": "Geographic environment, coded",
+        "requirement": "C",
+        "type": "3279"
+      },
+      {
+        "position": "030",
+        "name": "Type of financial transaction, coded",
+        "requirement": "C",
+        "type": "4487"
+      },
+      {
+        "position": "040",
+        "name": "Bank operation",
+        "requirement": "C",
+        "type": "C551"
+      },
+      {
+        "position": "050",
+        "name": "Intra-company payment, coded",
+        "requirement": "C",
+        "type": "4463"
+      }
+    ]
+  },
+  "CAV": {
+    "code": "CAV",
+    "name": "EDIFACT",
+    "description": "To provide the value of a characteristic.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Characteristic value",
+        "requirement": "M",
+        "type": "C889"
+      }
+    ]
+  },
+  "CCD": {
+    "code": "CCD",
+    "name": "EDIFACT",
+    "description": "To request a credit cover, reply to that request and disclose the reason for the reply.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Credit cover request, coded",
+        "requirement": "C",
+        "type": "4505"
+      },
+      {
+        "position": "020",
+        "name": "Credit cover response, coded",
+        "requirement": "C",
+        "type": "4507"
+      },
+      {
+        "position": "030",
+        "name": "Credit cover reason, coded",
+        "requirement": "C",
+        "type": "4509"
+      }
+    ]
+  },
+  "CCI": {
+    "code": "CCI",
+    "name": "EDIFACT",
+    "description": "To identify and describe a specific characteristic.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Property class, coded",
+        "requirement": "C",
+        "type": "7059"
+      },
+      {
+        "position": "020",
+        "name": "Measurement details",
+        "requirement": "C",
+        "type": "C502"
+      },
+      {
+        "position": "030",
+        "name": "Product characteristic",
+        "requirement": "C",
+        "type": "C240"
+      }
+    ]
+  },
+  "CDI": {
+    "code": "CDI",
+    "name": "EDIFACT",
+    "description": "To describe a physical or logical state.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Physical or logical state qualifier",
+        "requirement": "M",
+        "type": "7001"
+      },
+      {
+        "position": "020",
+        "name": "Physical or logical state information",
+        "requirement": "M",
+        "type": "C564"
+      }
+    ]
+  },
+  "CDS": {
+    "code": "CDS",
+    "name": "EDIFACT",
+    "description": "To identify a code set and to give its class and maintenance operation.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Code set identification",
+        "requirement": "M",
+        "type": "C702"
+      },
+      {
+        "position": "020",
+        "name": "Class designator, coded",
+        "requirement": "C",
+        "type": "1507"
+      },
+      {
+        "position": "030",
+        "name": "Maintenance operation, coded",
+        "requirement": "C",
+        "type": "4513"
+      }
+    ]
+  },
+  "CDV": {
+    "code": "CDV",
+    "name": "EDIFACT",
+    "description": "To provide information related to a code value.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Code value",
+        "requirement": "M",
+        "type": "9426"
+      },
+      {
+        "position": "020",
+        "name": "Code name",
+        "requirement": "C",
+        "type": "9434"
+      },
+      {
+        "position": "030",
+        "name": "Maintenance operation, coded",
+        "requirement": "C",
+        "type": "4513"
+      }
+    ]
+  },
+  "CED": {
+    "code": "CED",
+    "name": "EDIFACT",
+    "description": "To give a precise definition of all necessary elements belonging to the configuration of a computer system like hardware, firmware, operating system, communication (VANS, network type, protocol, format) and application software.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Computer environment details qualifier",
+        "requirement": "M",
+        "type": "1501"
+      },
+      {
+        "position": "020",
+        "name": "Computer environment identification",
+        "requirement": "M",
+        "type": "C079"
+      }
+    ]
+  },
+  "CMP": {
+    "code": "CMP",
+    "name": "EDIFACT",
+    "description": "To identify a composite data element and to give its class and maintenance operation.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Composite data element tag",
+        "requirement": "M",
+        "type": "9146"
+      },
+      {
+        "position": "020",
+        "name": "Class designator, coded",
+        "requirement": "C",
+        "type": "1507"
+      },
+      {
+        "position": "030",
+        "name": "Maintenance operation, coded",
+        "requirement": "C",
+        "type": "4513"
+      }
+    ]
+  },
+  "CNI": {
+    "code": "CNI",
+    "name": "EDIFACT",
+    "description": "To identify one consignment.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Consolidation item number",
+        "requirement": "C",
+        "type": "1490"
+      },
+      {
+        "position": "020",
+        "name": "Document/message details",
+        "requirement": "C",
+        "type": "C503"
+      },
+      {
+        "position": "030",
+        "name": "Consignment load sequence number",
+        "requirement": "C",
+        "type": "1312"
+      }
+    ]
+  },
+  "CNT": {
+    "code": "CNT",
+    "name": "EDIFACT",
+    "description": "To provide control total.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Control",
+        "requirement": "M",
+        "type": "C270"
+      }
+    ]
+  },
+  "COD": {
+    "code": "COD",
+    "name": "EDIFACT",
+    "description": "To provide component details of an object (e.g. product, container) such as its type and the material of which it is composed.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Type of unit/component",
+        "requirement": "C",
+        "type": "C823"
+      },
+      {
+        "position": "020",
+        "name": "Component material",
+        "requirement": "C",
+        "type": "C824"
+      }
+    ]
+  },
+  "COM": {
+    "code": "COM",
+    "name": "EDIFACT",
+    "description": "To identify a communication number of a department or a person to whom communication should be directed.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Communication contact",
+        "requirement": "M",
+        "type": "C076"
+      }
+    ]
+  },
+  "COT": {
+    "code": "COT",
+    "name": "EDIFACT",
+    "description": "To specify details about membership contributions.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Contribution qualifier",
+        "requirement": "M",
+        "type": "5047"
+      },
+      {
+        "position": "020",
+        "name": "Contribution type",
+        "requirement": "C",
+        "type": "C953"
+      },
+      {
+        "position": "030",
+        "name": "Instruction",
+        "requirement": "C",
+        "type": "C522"
+      },
+      {
+        "position": "040",
+        "name": "Rate/tariff class",
+        "requirement": "C",
+        "type": "C203"
+      },
+      {
+        "position": "050",
+        "name": "Reason for change",
+        "requirement": "C",
+        "type": "C960"
+      }
+    ]
+  },
+  "CPI": {
+    "code": "CPI",
+    "name": "EDIFACT",
+    "description": "To identify a charge.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Charge category",
+        "requirement": "C",
+        "type": "C229"
+      },
+      {
+        "position": "020",
+        "name": "Method of payment",
+        "requirement": "C",
+        "type": "C231"
+      },
+      {
+        "position": "030",
+        "name": "Prepaid/collect indicator, coded",
+        "requirement": "C",
+        "type": "4237"
+      }
+    ]
+  },
+  "CPS": {
+    "code": "CPS",
+    "name": "EDIFACT",
+    "description": "To identify the sequence in which physical packing is presented in the consignment, and optionally to identify the hierarchical relationship between packing layers.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Hierarchical id. number",
+        "requirement": "M",
+        "type": "7164"
+      },
+      {
+        "position": "020",
+        "name": "Hierarchical parent id.",
+        "requirement": "C",
+        "type": "7166"
+      },
+      {
+        "position": "030",
+        "name": "Packaging level, coded",
+        "requirement": "C",
+        "type": "7075"
+      }
+    ]
+  },
+  "CST": {
+    "code": "CST",
+    "name": "EDIFACT",
+    "description": "To specify goods in terms of customs identities, status and intended use.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Goods item number",
+        "requirement": "C",
+        "type": "1496"
+      },
+      {
+        "position": "020",
+        "name": "Customs identity codes",
+        "requirement": "C",
+        "type": "C246"
+      },
+      {
+        "position": "030",
+        "name": "Customs identity codes",
+        "requirement": "C",
+        "type": "C246"
+      },
+      {
+        "position": "040",
+        "name": "Customs identity codes",
+        "requirement": "C",
+        "type": "C246"
+      },
+      {
+        "position": "050",
+        "name": "Customs identity codes",
+        "requirement": "C",
+        "type": "C246"
+      },
+      {
+        "position": "060",
+        "name": "Customs identity codes",
+        "requirement": "C",
+        "type": "C246"
+      }
+    ]
+  },
+  "CTA": {
+    "code": "CTA",
+    "name": "EDIFACT",
+    "description": "To identify a person or a department to whom communication should be directed.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Contact function, coded",
+        "requirement": "C",
+        "type": "3139"
+      },
+      {
+        "position": "020",
+        "name": "Department or employee details",
+        "requirement": "C",
+        "type": "C056"
+      }
+    ]
+  },
+  "CUX": {
+    "code": "CUX",
+    "name": "EDIFACT",
+    "description": "To specify currencies used in the transaction and relevant details for the rate of exchange.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Currency details",
+        "requirement": "C",
+        "type": "C504"
+      },
+      {
+        "position": "020",
+        "name": "Currency details",
+        "requirement": "C",
+        "type": "C504"
+      },
+      {
+        "position": "030",
+        "name": "Rate of exchange",
+        "requirement": "C",
+        "type": "5402"
+      },
+      {
+        "position": "040",
+        "name": "Currency market exchange, coded",
+        "requirement": "C",
+        "type": "6341"
+      }
+    ]
+  },
+  "DAM": {
+    "code": "DAM",
+    "name": "EDIFACT",
+    "description": "To specify damage including action taken.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Damage details qualifier",
+        "requirement": "M",
+        "type": "7493"
+      },
+      {
+        "position": "020",
+        "name": "Type of damage",
+        "requirement": "C",
+        "type": "C821"
+      },
+      {
+        "position": "030",
+        "name": "Damage area",
+        "requirement": "C",
+        "type": "C822"
+      },
+      {
+        "position": "040",
+        "name": "Damage severity",
+        "requirement": "C",
+        "type": "C825"
+      },
+      {
+        "position": "050",
+        "name": "Action",
+        "requirement": "C",
+        "type": "C826"
+      }
+    ]
+  },
+  "DGS": {
+    "code": "DGS",
+    "name": "EDIFACT",
+    "description": "To identify dangerous goods.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Dangerous goods regulations, coded",
+        "requirement": "C",
+        "type": "8273"
+      },
+      {
+        "position": "020",
+        "name": "Hazard code",
+        "requirement": "C",
+        "type": "C205"
+      },
+      {
+        "position": "030",
+        "name": "Undg information",
+        "requirement": "C",
+        "type": "C234"
+      },
+      {
+        "position": "040",
+        "name": "Dangerous goods shipment flashpoint",
+        "requirement": "C",
+        "type": "C223"
+      },
+      {
+        "position": "050",
+        "name": "Packing group, coded",
+        "requirement": "C",
+        "type": "8339"
+      },
+      {
+        "position": "060",
+        "name": "EMS number",
+        "requirement": "C",
+        "type": "8364"
+      },
+      {
+        "position": "070",
+        "name": "MFAG",
+        "requirement": "C",
+        "type": "8410"
+      },
+      {
+        "position": "080",
+        "name": "Trem card number",
+        "requirement": "C",
+        "type": "8126"
+      },
+      {
+        "position": "090",
+        "name": "Hazard identification",
+        "requirement": "C",
+        "type": "C235"
+      },
+      {
+        "position": "100",
+        "name": "Dangerous goods label",
+        "requirement": "C",
+        "type": "C236"
+      },
+      {
+        "position": "110",
+        "name": "Packing instruction, coded",
+        "requirement": "C",
+        "type": "8255"
+      },
+      {
+        "position": "120",
+        "name": "Category of means of transport, coded",
+        "requirement": "C",
+        "type": "8325"
+      },
+      {
+        "position": "130",
+        "name": "Permission for transport, coded",
+        "requirement": "C",
+        "type": "8211"
+      }
+    ]
+  },
+  "DII": {
+    "code": "DII",
+    "name": "EDIFACT",
+    "description": "To identify a directory and to give its release, status, controlling agency, language and maintenance operation.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Version",
+        "requirement": "M",
+        "type": "1056"
+      },
+      {
+        "position": "020",
+        "name": "Release",
+        "requirement": "M",
+        "type": "1058"
+      },
+      {
+        "position": "030",
+        "name": "Directory status",
+        "requirement": "C",
+        "type": "9148"
+      },
+      {
+        "position": "040",
+        "name": "Control agency",
+        "requirement": "C",
+        "type": "1476"
+      },
+      {
+        "position": "050",
+        "name": "Language, coded",
+        "requirement": "C",
+        "type": "3453"
+      },
+      {
+        "position": "060",
+        "name": "Maintenance operation, coded",
+        "requirement": "C",
+        "type": "4513"
+      }
+    ]
+  },
+  "DIM": {
+    "code": "DIM",
+    "name": "EDIFACT",
+    "description": "To specify dimensions.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Dimension qualifier",
+        "requirement": "M",
+        "type": "6145"
+      },
+      {
+        "position": "020",
+        "name": "Dimensions",
+        "requirement": "M",
+        "type": "C211"
+      }
+    ]
+  },
+  "DLI": {
+    "code": "DLI",
+    "name": "EDIFACT",
+    "description": "To specify the processing mode of a specific line within a referenced document.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Document line indicator, coded",
+        "requirement": "M",
+        "type": "1073"
+      },
+      {
+        "position": "020",
+        "name": "Line item number",
+        "requirement": "M",
+        "type": "1082"
+      }
+    ]
+  },
+  "DLM": {
+    "code": "DLM",
+    "name": "EDIFACT",
+    "description": "To specify limitations on deliveries.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Back order, coded",
+        "requirement": "C",
+        "type": "4455"
+      },
+      {
+        "position": "020",
+        "name": "Instruction",
+        "requirement": "C",
+        "type": "C522"
+      },
+      {
+        "position": "030",
+        "name": "Special services identification",
+        "requirement": "C",
+        "type": "C214"
+      },
+      {
+        "position": "040",
+        "name": "Product/service substitution, coded",
+        "requirement": "C",
+        "type": "4457"
+      }
+    ]
+  },
+  "DMS": {
+    "code": "DMS",
+    "name": "EDIFACT",
+    "description": "To specify summary information relating to the document/message.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Document/message number",
+        "requirement": "C",
+        "type": "1004"
+      },
+      {
+        "position": "020",
+        "name": "Document/message name, coded",
+        "requirement": "C",
+        "type": "1001"
+      },
+      {
+        "position": "030",
+        "name": "Total number of items",
+        "requirement": "C",
+        "type": "7240"
+      }
+    ]
+  },
+  "DOC": {
+    "code": "DOC",
+    "name": "EDIFACT",
+    "description": "To identify documents, either printed, electronically transferred, or referenced as specified in message description, including, where relevant, the identification of the type of transaction that will result from this message.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Document/message name",
+        "requirement": "M",
+        "type": "C002"
+      },
+      {
+        "position": "020",
+        "name": "Document/message details",
+        "requirement": "C",
+        "type": "C503"
+      },
+      {
+        "position": "030",
+        "name": "Communication channel identifier, coded",
+        "requirement": "C",
+        "type": "3153"
+      },
+      {
+        "position": "040",
+        "name": "Number of copies of document required",
+        "requirement": "C",
+        "type": "1220"
+      },
+      {
+        "position": "050",
+        "name": "Number of originals of document required",
+        "requirement": "C",
+        "type": "1218"
+      }
+    ]
+  },
+  "DSI": {
+    "code": "DSI",
+    "name": "EDIFACT",
+    "description": "To identify a data set.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Data set identification",
+        "requirement": "M",
+        "type": "C782"
+      },
+      {
+        "position": "020",
+        "name": "Party identification details",
+        "requirement": "C",
+        "type": "C082"
+      },
+      {
+        "position": "030",
+        "name": "Status, coded",
+        "requirement": "C",
+        "type": "4405"
+      },
+      {
+        "position": "040",
+        "name": "Sequence information",
+        "requirement": "C",
+        "type": "C286"
+      },
+      {
+        "position": "050",
+        "name": "Revision number",
+        "requirement": "C",
+        "type": "1060"
+      }
+    ]
+  },
+  "DTM": {
+    "code": "DTM",
+    "name": "EDIFACT",
+    "description": "To specify date, and/or time, or period.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Date/time/period",
+        "requirement": "M",
+        "type": "C507"
+      }
+    ]
+  },
+  "EFI": {
+    "code": "EFI",
+    "name": "EDIFACT",
+    "description": "To specify the link of one non-EDIFACT external file to an EDIFACT message.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "File identification",
+        "requirement": "M",
+        "type": "C077"
+      },
+      {
+        "position": "020",
+        "name": "File details",
+        "requirement": "C",
+        "type": "C099"
+      },
+      {
+        "position": "030",
+        "name": "Sequence number",
+        "requirement": "C",
+        "type": "1050"
+      }
+    ]
+  },
+  "ELM": {
+    "code": "ELM",
+    "name": "EDIFACT",
+    "description": "To identify a simple data element and give related details.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Simple data element tag",
+        "requirement": "M",
+        "type": "9150"
+      },
+      {
+        "position": "020",
+        "name": "Simple data element character representation, coded",
+        "requirement": "C",
+        "type": "9153"
+      },
+      {
+        "position": "030",
+        "name": "Simple data element length type, coded",
+        "requirement": "C",
+        "type": "9155"
+      },
+      {
+        "position": "040",
+        "name": "Simple data element maximum length",
+        "requirement": "C",
+        "type": "9156"
+      },
+      {
+        "position": "050",
+        "name": "Simple data element minimum length",
+        "requirement": "C",
+        "type": "9158"
+      },
+      {
+        "position": "060",
+        "name": "Code set indicator, coded",
+        "requirement": "C",
+        "type": "9161"
+      },
+      {
+        "position": "070",
+        "name": "Class designator, coded",
+        "requirement": "C",
+        "type": "1507"
+      },
+      {
+        "position": "080",
+        "name": "Maintenance operation, coded",
+        "requirement": "C",
+        "type": "4513"
+      }
+    ]
+  },
+  "ELU": {
+    "code": "ELU",
+    "name": "EDIFACT",
+    "description": "To specify the usage of a data element.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Data element tag",
+        "requirement": "M",
+        "type": "9162"
+      },
+      {
+        "position": "020",
+        "name": "Requirement designator, coded",
+        "requirement": "C",
+        "type": "7299"
+      },
+      {
+        "position": "030",
+        "name": "Sequence number",
+        "requirement": "C",
+        "type": "1050"
+      },
+      {
+        "position": "040",
+        "name": "Maintenance operation, coded",
+        "requirement": "C",
+        "type": "4513"
+      }
+    ]
+  },
+  "EMP": {
+    "code": "EMP",
+    "name": "EDIFACT",
+    "description": "To specify employment details.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Employment qualifier",
+        "requirement": "M",
+        "type": "9003"
+      },
+      {
+        "position": "020",
+        "name": "Employment category",
+        "requirement": "C",
+        "type": "C948"
+      },
+      {
+        "position": "030",
+        "name": "Occupation",
+        "requirement": "C",
+        "type": "C951"
+      },
+      {
+        "position": "040",
+        "name": "Qualification classification",
+        "requirement": "C",
+        "type": "C950"
+      },
+      {
+        "position": "050",
+        "name": "Job title",
+        "requirement": "C",
+        "type": "3494"
+      },
+      {
+        "position": "060",
+        "name": "Qualification area, coded",
+        "requirement": "C",
+        "type": "9035"
+      }
+    ]
+  },
+  "EQA": {
+    "code": "EQA",
+    "name": "EDIFACT",
+    "description": "To specify attached or related equipment.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Equipment qualifier",
+        "requirement": "M",
+        "type": "8053"
+      },
+      {
+        "position": "020",
+        "name": "Equipment identification",
+        "requirement": "C",
+        "type": "C237"
+      }
+    ]
+  },
+  "EQD": {
+    "code": "EQD",
+    "name": "EDIFACT",
+    "description": "To identify a unit of equipment.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Equipment qualifier",
+        "requirement": "M",
+        "type": "8053"
+      },
+      {
+        "position": "020",
+        "name": "Equipment identification",
+        "requirement": "C",
+        "type": "C237"
+      },
+      {
+        "position": "030",
+        "name": "Equipment size and type",
+        "requirement": "C",
+        "type": "C224"
+      },
+      {
+        "position": "040",
+        "name": "Equipment supplier, coded",
+        "requirement": "C",
+        "type": "8077"
+      },
+      {
+        "position": "050",
+        "name": "Equipment status, coded",
+        "requirement": "C",
+        "type": "8249"
+      },
+      {
+        "position": "060",
+        "name": "Full/empty indicator, coded",
+        "requirement": "C",
+        "type": "8169"
+      }
+    ]
+  },
+  "EQN": {
+    "code": "EQN",
+    "name": "EDIFACT",
+    "description": "To specify the number of units.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Number of unit details",
+        "requirement": "M",
+        "type": "C523"
+      }
+    ]
+  },
+  "ERC": {
+    "code": "ERC",
+    "name": "EDIFACT",
+    "description": "To identify the type of application error within a message.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Application error detail",
+        "requirement": "M",
+        "type": "C901"
+      }
+    ]
+  },
+  "ERP": {
+    "code": "ERP",
+    "name": "EDIFACT",
+    "description": "To identify the location and type of application error within a message.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Error point details",
+        "requirement": "M",
+        "type": "C701"
+      }
+    ]
+  },
+  "FCA": {
+    "code": "FCA",
+    "name": "EDIFACT",
+    "description": "Description of allocation of charges.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Settlement, coded",
+        "requirement": "M",
+        "type": "4471"
+      },
+      {
+        "position": "020",
+        "name": "Charge/allowance account",
+        "requirement": "C",
+        "type": "C878"
+      }
+    ]
+  },
+  "FII": {
+    "code": "FII",
+    "name": "EDIFACT",
+    "description": "To identify an account and a related financial institution.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Party qualifier",
+        "requirement": "M",
+        "type": "3035"
+      },
+      {
+        "position": "020",
+        "name": "Account identification",
+        "requirement": "C",
+        "type": "C078"
+      },
+      {
+        "position": "030",
+        "name": "Institution identification",
+        "requirement": "C",
+        "type": "C088"
+      },
+      {
+        "position": "040",
+        "name": "Country, coded",
+        "requirement": "C",
+        "type": "3207"
+      }
+    ]
+  },
+  "FNS": {
+    "code": "FNS",
+    "name": "EDIFACT",
+    "description": "To identify a set of footnotes.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Footnote set identification",
+        "requirement": "M",
+        "type": "C783"
+      },
+      {
+        "position": "020",
+        "name": "Party identification details",
+        "requirement": "C",
+        "type": "C082"
+      },
+      {
+        "position": "030",
+        "name": "Status, coded",
+        "requirement": "C",
+        "type": "4405"
+      },
+      {
+        "position": "040",
+        "name": "Maintenance operation, coded",
+        "requirement": "C",
+        "type": "4513"
+      }
+    ]
+  },
+  "FNT": {
+    "code": "FNT",
+    "name": "EDIFACT",
+    "description": "To identify a footnote.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Footnote identification",
+        "requirement": "M",
+        "type": "C784"
+      },
+      {
+        "position": "020",
+        "name": "Party identification details",
+        "requirement": "C",
+        "type": "C082"
+      },
+      {
+        "position": "030",
+        "name": "Status, coded",
+        "requirement": "C",
+        "type": "4405"
+      },
+      {
+        "position": "040",
+        "name": "Maintenance operation, coded",
+        "requirement": "C",
+        "type": "4513"
+      }
+    ]
+  },
+  "FTX": {
+    "code": "FTX",
+    "name": "EDIFACT",
+    "description": "To provide free form or coded text information.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Text subject qualifier",
+        "requirement": "M",
+        "type": "4451"
+      },
+      {
+        "position": "020",
+        "name": "Text function, coded",
+        "requirement": "C",
+        "type": "4453"
+      },
+      {
+        "position": "030",
+        "name": "Text reference",
+        "requirement": "C",
+        "type": "C107"
+      },
+      {
+        "position": "040",
+        "name": "Text literal",
+        "requirement": "C",
+        "type": "C108"
+      },
+      {
+        "position": "050",
+        "name": "Language, coded",
+        "requirement": "C",
+        "type": "3453"
+      }
+    ]
+  },
+  "GDS": {
+    "code": "GDS",
+    "name": "EDIFACT",
+    "description": "To indicate the type of cargo as a general classification.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Nature of cargo",
+        "requirement": "C",
+        "type": "C703"
+      }
+    ]
+  },
+  "GID": {
+    "code": "GID",
+    "name": "EDIFACT",
+    "description": "To indicate totals of a goods item.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Goods item number",
+        "requirement": "C",
+        "type": "1496"
+      },
+      {
+        "position": "020",
+        "name": "Number and type of packages",
+        "requirement": "C",
+        "type": "C213"
+      },
+      {
+        "position": "030",
+        "name": "Number and type of packages",
+        "requirement": "C",
+        "type": "C213"
+      },
+      {
+        "position": "040",
+        "name": "Number and type of packages",
+        "requirement": "C",
+        "type": "C213"
+      }
+    ]
+  },
+  "GIN": {
+    "code": "GIN",
+    "name": "EDIFACT",
+    "description": "To give specific identification numbers, either as single numbers or ranges.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Identity number qualifier",
+        "requirement": "M",
+        "type": "7405"
+      },
+      {
+        "position": "020",
+        "name": "Identity number range",
+        "requirement": "M",
+        "type": "C208"
+      },
+      {
+        "position": "030",
+        "name": "Identity number range",
+        "requirement": "C",
+        "type": "C208"
+      },
+      {
+        "position": "040",
+        "name": "Identity number range",
+        "requirement": "C",
+        "type": "C208"
+      },
+      {
+        "position": "050",
+        "name": "Identity number range",
+        "requirement": "C",
+        "type": "C208"
+      },
+      {
+        "position": "060",
+        "name": "Identity number range",
+        "requirement": "C",
+        "type": "C208"
+      }
+    ]
+  },
+  "GIR": {
+    "code": "GIR",
+    "name": "EDIFACT",
+    "description": "To specify a related set of identification numbers.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Set identification qualifier",
+        "requirement": "M",
+        "type": "7297"
+      },
+      {
+        "position": "020",
+        "name": "Identification number",
+        "requirement": "M",
+        "type": "C206"
+      },
+      {
+        "position": "030",
+        "name": "Identification number",
+        "requirement": "C",
+        "type": "C206"
+      },
+      {
+        "position": "040",
+        "name": "Identification number",
+        "requirement": "C",
+        "type": "C206"
+      },
+      {
+        "position": "050",
+        "name": "Identification number",
+        "requirement": "C",
+        "type": "C206"
+      },
+      {
+        "position": "060",
+        "name": "Identification number",
+        "requirement": "C",
+        "type": "C206"
+      }
+    ]
+  },
+  "GIS": {
+    "code": "GIS",
+    "name": "EDIFACT",
+    "description": "To transmit a processing indicator.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Processing indicator",
+        "requirement": "M",
+        "type": "C529"
+      }
+    ]
+  },
+  "GOR": {
+    "code": "GOR",
+    "name": "EDIFACT",
+    "description": "To indicate the requirement for a specific govermental action and/or procedure or which specific procedure is valid for a specific part of the transport.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Transport movement, coded",
+        "requirement": "C",
+        "type": "8323"
+      },
+      {
+        "position": "020",
+        "name": "Government action",
+        "requirement": "C",
+        "type": "C232"
+      },
+      {
+        "position": "030",
+        "name": "Government action",
+        "requirement": "C",
+        "type": "C232"
+      },
+      {
+        "position": "040",
+        "name": "Government action",
+        "requirement": "C",
+        "type": "C232"
+      },
+      {
+        "position": "050",
+        "name": "Government action",
+        "requirement": "C",
+        "type": "C232"
+      }
+    ]
+  },
+  "GRU": {
+    "code": "GRU",
+    "name": "EDIFACT",
+    "description": "To specify the usage of a segment group within a message type structure and its maintenance operation.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Group identification",
+        "requirement": "M",
+        "type": "9164"
+      },
+      {
+        "position": "020",
+        "name": "Requirement designator, coded",
+        "requirement": "C",
+        "type": "7299"
+      },
+      {
+        "position": "030",
+        "name": "Maximum number of occurrences",
+        "requirement": "C",
+        "type": "6176"
+      },
+      {
+        "position": "040",
+        "name": "Maintenance operation, coded",
+        "requirement": "C",
+        "type": "4513"
+      },
+      {
+        "position": "050",
+        "name": "Sequence number",
+        "requirement": "C",
+        "type": "1050"
+      }
+    ]
+  },
+  "HAN": {
+    "code": "HAN",
+    "name": "EDIFACT",
+    "description": "To specify handling and where necessary, notify hazards.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Handling instructions",
+        "requirement": "C",
+        "type": "C524"
+      },
+      {
+        "position": "020",
+        "name": "Hazardous material",
+        "requirement": "C",
+        "type": "C218"
+      }
+    ]
+  },
+  "ICD": {
+    "code": "ICD",
+    "name": "EDIFACT",
+    "description": "To describe the insurance cover.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Insurance cover type",
+        "requirement": "M",
+        "type": "C330"
+      },
+      {
+        "position": "020",
+        "name": "Insurance cover details",
+        "requirement": "M",
+        "type": "C331"
+      }
+    ]
+  },
+  "IDE": {
+    "code": "IDE",
+    "name": "EDIFACT",
+    "description": "To identify an object.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Identification qualifier",
+        "requirement": "M",
+        "type": "7495"
+      },
+      {
+        "position": "020",
+        "name": "Identification number",
+        "requirement": "M",
+        "type": "C206"
+      },
+      {
+        "position": "030",
+        "name": "Party identification details",
+        "requirement": "C",
+        "type": "C082"
+      },
+      {
+        "position": "040",
+        "name": "Status, coded",
+        "requirement": "C",
+        "type": "4405"
+      },
+      {
+        "position": "050",
+        "name": "Configuration level",
+        "requirement": "C",
+        "type": "1222"
+      },
+      {
+        "position": "060",
+        "name": "Position identification",
+        "requirement": "C",
+        "type": "C778"
+      },
+      {
+        "position": "070",
+        "name": "Product characteristic",
+        "requirement": "C",
+        "type": "C240"
+      }
+    ]
+  },
+  "IHC": {
+    "code": "IHC",
+    "name": "EDIFACT",
+    "description": "To specify characteristics of a person such as ethnic origin.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Person characteristic qualifier",
+        "requirement": "M",
+        "type": "3289"
+      },
+      {
+        "position": "020",
+        "name": "Person inherited characteristic details",
+        "requirement": "C",
+        "type": "C818"
+      }
+    ]
+  },
+  "IMD": {
+    "code": "IMD",
+    "name": "EDIFACT",
+    "description": "To describe an item in either an industry or free format.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Item description type, coded",
+        "requirement": "C",
+        "type": "7077"
+      },
+      {
+        "position": "020",
+        "name": "Item characteristic, coded",
+        "requirement": "C",
+        "type": "7081"
+      },
+      {
+        "position": "030",
+        "name": "Item description",
+        "requirement": "C",
+        "type": "C273"
+      },
+      {
+        "position": "040",
+        "name": "Surface/layer indicator, coded",
+        "requirement": "C",
+        "type": "7383"
+      }
+    ]
+  },
+  "IND": {
+    "code": "IND",
+    "name": "EDIFACT",
+    "description": "To specify an index.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Index identification",
+        "requirement": "C",
+        "type": "C545"
+      },
+      {
+        "position": "020",
+        "name": "Index value",
+        "requirement": "C",
+        "type": "C546"
+      }
+    ]
+  },
+  "INP": {
+    "code": "INP",
+    "name": "EDIFACT",
+    "description": "To specify parties to an instruction and where relevant, the instruction.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Parties to instruction",
+        "requirement": "C",
+        "type": "C849"
+      },
+      {
+        "position": "020",
+        "name": "Instruction",
+        "requirement": "C",
+        "type": "C522"
+      },
+      {
+        "position": "030",
+        "name": "Status of instruction",
+        "requirement": "C",
+        "type": "C850"
+      },
+      {
+        "position": "040",
+        "name": "Action request/notification, coded",
+        "requirement": "C",
+        "type": "1229"
+      }
+    ]
+  },
+  "INV": {
+    "code": "INV",
+    "name": "EDIFACT",
+    "description": "To provide the different information related to the inventory management functions and needed to process properly the inventory movements and the inventory balances.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Inventory movement direction, coded",
+        "requirement": "C",
+        "type": "4501"
+      },
+      {
+        "position": "020",
+        "name": "Type of inventory affected, coded",
+        "requirement": "C",
+        "type": "7491"
+      },
+      {
+        "position": "030",
+        "name": "Reason for inventory movement, coded",
+        "requirement": "C",
+        "type": "4499"
+      },
+      {
+        "position": "040",
+        "name": "Inventory balance method, coded",
+        "requirement": "C",
+        "type": "4503"
+      },
+      {
+        "position": "050",
+        "name": "Instruction",
+        "requirement": "C",
+        "type": "C522"
+      }
+    ]
+  },
+  "IRQ": {
+    "code": "IRQ",
+    "name": "EDIFACT",
+    "description": "To indicate which information is requested in a responding message.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Information request",
+        "requirement": "M",
+        "type": "C333"
+      }
+    ]
+  },
+  "LAN": {
+    "code": "LAN",
+    "name": "EDIFACT",
+    "description": "To specify a language.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Language qualifier",
+        "requirement": "M",
+        "type": "3455"
+      },
+      {
+        "position": "020",
+        "name": "Language details",
+        "requirement": "C",
+        "type": "C508"
+      }
+    ]
+  },
+  "LIN": {
+    "code": "LIN",
+    "name": "EDIFACT",
+    "description": "To identify a line item and configuration.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Line item number",
+        "requirement": "C",
+        "type": "1082"
+      },
+      {
+        "position": "020",
+        "name": "Action request/notification, coded",
+        "requirement": "C",
+        "type": "1229"
+      },
+      {
+        "position": "030",
+        "name": "Item number identification",
+        "requirement": "C",
+        "type": "C212"
+      },
+      {
+        "position": "040",
+        "name": "Sub-line information",
+        "requirement": "C",
+        "type": "C829"
+      },
+      {
+        "position": "050",
+        "name": "Configuration level",
+        "requirement": "C",
+        "type": "1222"
+      },
+      {
+        "position": "060",
+        "name": "Configuration, coded",
+        "requirement": "C",
+        "type": "7083"
+      }
+    ]
+  },
+  "LOC": {
+    "code": "LOC",
+    "name": "EDIFACT",
+    "description": "To identify a country/place/location/related location one/related location two.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Place/location qualifier",
+        "requirement": "M",
+        "type": "3227"
+      },
+      {
+        "position": "020",
+        "name": "Location identification",
+        "requirement": "C",
+        "type": "C517"
+      },
+      {
+        "position": "030",
+        "name": "Related location one identification",
+        "requirement": "C",
+        "type": "C519"
+      },
+      {
+        "position": "040",
+        "name": "Related location two identification",
+        "requirement": "C",
+        "type": "C553"
+      },
+      {
+        "position": "050",
+        "name": "Relation, coded",
+        "requirement": "C",
+        "type": "5479"
+      }
+    ]
+  },
+  "MEA": {
+    "code": "MEA",
+    "name": "EDIFACT",
+    "description": "To specify physical measurements, including dimension tolerances, weights and counts.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Measurement application qualifier",
+        "requirement": "M",
+        "type": "6311"
+      },
+      {
+        "position": "020",
+        "name": "Measurement details",
+        "requirement": "C",
+        "type": "C502"
+      },
+      {
+        "position": "030",
+        "name": "Value/range",
+        "requirement": "C",
+        "type": "C174"
+      },
+      {
+        "position": "040",
+        "name": "Surface/layer indicator, coded",
+        "requirement": "C",
+        "type": "7383"
+      }
+    ]
+  },
+  "MEM": {
+    "code": "MEM",
+    "name": "EDIFACT",
+    "description": "To specify details about membership.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Membership qualifier",
+        "requirement": "M",
+        "type": "7449"
+      },
+      {
+        "position": "020",
+        "name": "Membership category",
+        "requirement": "C",
+        "type": "C942"
+      },
+      {
+        "position": "030",
+        "name": "Membership status",
+        "requirement": "C",
+        "type": "C944"
+      },
+      {
+        "position": "040",
+        "name": "Membership level",
+        "requirement": "C",
+        "type": "C945"
+      },
+      {
+        "position": "050",
+        "name": "Rate/tariff class",
+        "requirement": "C",
+        "type": "C203"
+      },
+      {
+        "position": "060",
+        "name": "Reason for change",
+        "requirement": "C",
+        "type": "C960"
+      }
+    ]
+  },
+  "MKS": {
+    "code": "MKS",
+    "name": "EDIFACT",
+    "description": "To specify to which market and/or through which sales distribution channel and/or for which end-use the sales of product/service have been made or are given as forecast.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Sector/subject identification qualifier",
+        "requirement": "M",
+        "type": "7293"
+      },
+      {
+        "position": "020",
+        "name": "Sales channel identification",
+        "requirement": "M",
+        "type": "C332"
+      },
+      {
+        "position": "030",
+        "name": "Action request/notification, coded",
+        "requirement": "C",
+        "type": "1229"
+      }
+    ]
+  },
+  "MOA": {
+    "code": "MOA",
+    "name": "EDIFACT",
+    "description": "To specify a monetary amount.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Monetary amount",
+        "requirement": "M",
+        "type": "C516"
+      }
+    ]
+  },
+  "MSG": {
+    "code": "MSG",
+    "name": "EDIFACT",
+    "description": "To identify a message type and to give its class and maintenance operation.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Message identifier",
+        "requirement": "M",
+        "type": "C709"
+      },
+      {
+        "position": "020",
+        "name": "Class designator, coded",
+        "requirement": "C",
+        "type": "1507"
+      },
+      {
+        "position": "030",
+        "name": "Maintenance operation, coded",
+        "requirement": "C",
+        "type": "4513"
+      }
+    ]
+  },
+  "NAD": {
+    "code": "NAD",
+    "name": "EDIFACT",
+    "description": "To specify the name/address and their related function, either by CO82 only and/or unstructured by CO58 or structured by CO80 thru 3207.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Party qualifier",
+        "requirement": "M",
+        "type": "3035"
+      },
+      {
+        "position": "020",
+        "name": "Party identification details",
+        "requirement": "C",
+        "type": "C082"
+      },
+      {
+        "position": "030",
+        "name": "Name and address",
+        "requirement": "C",
+        "type": "C058"
+      },
+      {
+        "position": "040",
+        "name": "Party name",
+        "requirement": "C",
+        "type": "C080"
+      },
+      {
+        "position": "050",
+        "name": "Street",
+        "requirement": "C",
+        "type": "C059"
+      },
+      {
+        "position": "060",
+        "name": "City name",
+        "requirement": "C",
+        "type": "3164"
+      },
+      {
+        "position": "070",
+        "name": "Country sub-entity identification",
+        "requirement": "C",
+        "type": "3229"
+      },
+      {
+        "position": "080",
+        "name": "Postcode identification",
+        "requirement": "C",
+        "type": "3251"
+      },
+      {
+        "position": "090",
+        "name": "Country, coded",
+        "requirement": "C",
+        "type": "3207"
+      }
+    ]
+  },
+  "NAT": {
+    "code": "NAT",
+    "name": "EDIFACT",
+    "description": "To specify a nationality.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Nationality qualifier",
+        "requirement": "M",
+        "type": "3493"
+      },
+      {
+        "position": "020",
+        "name": "Nationality details",
+        "requirement": "C",
+        "type": "C042"
+      }
+    ]
+  },
+  "PAC": {
+    "code": "PAC",
+    "name": "EDIFACT",
+    "description": "To describe the number and type of packages/physical units.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Number of packages",
+        "requirement": "C",
+        "type": "7224"
+      },
+      {
+        "position": "020",
+        "name": "Packaging details",
+        "requirement": "C",
+        "type": "C531"
+      },
+      {
+        "position": "030",
+        "name": "Package type",
+        "requirement": "C",
+        "type": "C202"
+      },
+      {
+        "position": "040",
+        "name": "Package type identification",
+        "requirement": "C",
+        "type": "C402"
+      },
+      {
+        "position": "050",
+        "name": "Returnable package details",
+        "requirement": "C",
+        "type": "C532"
+      }
+    ]
+  },
+  "PAI": {
+    "code": "PAI",
+    "name": "EDIFACT",
+    "description": "To specify the instructions for payment.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Payment instruction details",
+        "requirement": "M",
+        "type": "C534"
+      }
+    ]
+  },
+  "PAT": {
+    "code": "PAT",
+    "name": "EDIFACT",
+    "description": "To specify the payment terms basis.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Payment terms type qualifier",
+        "requirement": "M",
+        "type": "4279"
+      },
+      {
+        "position": "020",
+        "name": "Payment terms",
+        "requirement": "C",
+        "type": "C110"
+      },
+      {
+        "position": "030",
+        "name": "Terms/time information",
+        "requirement": "C",
+        "type": "C112"
+      }
+    ]
+  },
+  "PCD": {
+    "code": "PCD",
+    "name": "EDIFACT",
+    "description": "To specify percentage information.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Percentage details",
+        "requirement": "M",
+        "type": "C501"
+      }
+    ]
+  },
+  "PCI": {
+    "code": "PCI",
+    "name": "EDIFACT",
+    "description": "To specify markings and labels on individual packages or physical units.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Marking instructions, coded",
+        "requirement": "C",
+        "type": "4233"
+      },
+      {
+        "position": "020",
+        "name": "Marks & labels",
+        "requirement": "C",
+        "type": "C210"
+      },
+      {
+        "position": "030",
+        "name": "Container/package status, coded",
+        "requirement": "C",
+        "type": "8275"
+      },
+      {
+        "position": "040",
+        "name": "Type of marking",
+        "requirement": "C",
+        "type": "C827"
+      }
+    ]
+  },
+  "PDI": {
+    "code": "PDI",
+    "name": "EDIFACT",
+    "description": "To specify items of person demographic information.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Sex, coded",
+        "requirement": "C",
+        "type": "3499"
+      },
+      {
+        "position": "020",
+        "name": "Marital status details",
+        "requirement": "C",
+        "type": "C085"
+      },
+      {
+        "position": "030",
+        "name": "Religion details",
+        "requirement": "C",
+        "type": "C101"
+      }
+    ]
+  },
+  "PGI": {
+    "code": "PGI",
+    "name": "EDIFACT",
+    "description": "To indicate the group in which a product belongs.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Product group type, coded",
+        "requirement": "M",
+        "type": "5379"
+      },
+      {
+        "position": "020",
+        "name": "Product group",
+        "requirement": "C",
+        "type": "C288"
+      }
+    ]
+  },
+  "PIA": {
+    "code": "PIA",
+    "name": "EDIFACT",
+    "description": "To specify additional or substitutional item identification codes.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Product id. function qualifier",
+        "requirement": "M",
+        "type": "4347"
+      },
+      {
+        "position": "020",
+        "name": "Item number identification",
+        "requirement": "M",
+        "type": "C212"
+      },
+      {
+        "position": "030",
+        "name": "Item number identification",
+        "requirement": "C",
+        "type": "C212"
+      },
+      {
+        "position": "040",
+        "name": "Item number identification",
+        "requirement": "C",
+        "type": "C212"
+      },
+      {
+        "position": "050",
+        "name": "Item number identification",
+        "requirement": "C",
+        "type": "C212"
+      },
+      {
+        "position": "060",
+        "name": "Item number identification",
+        "requirement": "C",
+        "type": "C212"
+      }
+    ]
+  },
+  "PIT": {
+    "code": "PIT",
+    "name": "EDIFACT",
+    "description": "To specify details relating to pricing of a product.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Line item number",
+        "requirement": "C",
+        "type": "1082"
+      },
+      {
+        "position": "020",
+        "name": "Action request/notification, coded",
+        "requirement": "C",
+        "type": "1229"
+      },
+      {
+        "position": "030",
+        "name": "Price change information",
+        "requirement": "C",
+        "type": "C292"
+      },
+      {
+        "position": "040",
+        "name": "Article availability, coded",
+        "requirement": "C",
+        "type": "7011"
+      },
+      {
+        "position": "050",
+        "name": "Sub-line indicator, coded",
+        "requirement": "C",
+        "type": "5495"
+      },
+      {
+        "position": "060",
+        "name": "Configuration level",
+        "requirement": "C",
+        "type": "1222"
+      },
+      {
+        "position": "070",
+        "name": "Configuration, coded",
+        "requirement": "C",
+        "type": "7083"
+      }
+    ]
+  },
+  "PNA": {
+    "code": "PNA",
+    "name": "EDIFACT",
+    "description": "To specify information necessary to establish the identity of a party.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Party qualifier",
+        "requirement": "M",
+        "type": "3035"
+      },
+      {
+        "position": "020",
+        "name": "Identification number",
+        "requirement": "C",
+        "type": "C206"
+      },
+      {
+        "position": "030",
+        "name": "Party identification details",
+        "requirement": "C",
+        "type": "C082"
+      },
+      {
+        "position": "040",
+        "name": "Name type, coded",
+        "requirement": "C",
+        "type": "3403"
+      },
+      {
+        "position": "050",
+        "name": "Name status, coded",
+        "requirement": "C",
+        "type": "3397"
+      },
+      {
+        "position": "060",
+        "name": "Name component details",
+        "requirement": "C",
+        "type": "C816"
+      },
+      {
+        "position": "070",
+        "name": "Name component details",
+        "requirement": "C",
+        "type": "C816"
+      },
+      {
+        "position": "080",
+        "name": "Name component details",
+        "requirement": "C",
+        "type": "C816"
+      },
+      {
+        "position": "090",
+        "name": "Name component details",
+        "requirement": "C",
+        "type": "C816"
+      },
+      {
+        "position": "100",
+        "name": "Name component details",
+        "requirement": "C",
+        "type": "C816"
+      }
+    ]
+  },
+  "PRC": {
+    "code": "PRC",
+    "name": "EDIFACT",
+    "description": "To identify a process.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Process type and description",
+        "requirement": "M",
+        "type": "C242"
+      }
+    ]
+  },
+  "PRI": {
+    "code": "PRI",
+    "name": "EDIFACT",
+    "description": "To specify price information.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Price information",
+        "requirement": "C",
+        "type": "C509"
+      },
+      {
+        "position": "020",
+        "name": "Sub-line price change, coded",
+        "requirement": "C",
+        "type": "5213"
+      }
+    ]
+  },
+  "PSD": {
+    "code": "PSD",
+    "name": "EDIFACT",
+    "description": "To define the physical sample parameters associated with a test, resulting in discrete measurements.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Sample process status, coded",
+        "requirement": "C",
+        "type": "4407"
+      },
+      {
+        "position": "020",
+        "name": "Sample selection method, coded",
+        "requirement": "C",
+        "type": "7039"
+      },
+      {
+        "position": "030",
+        "name": "Frequency details",
+        "requirement": "C",
+        "type": "C526"
+      },
+      {
+        "position": "040",
+        "name": "Sample description, coded",
+        "requirement": "C",
+        "type": "7045"
+      },
+      {
+        "position": "050",
+        "name": "Sample direction, coded",
+        "requirement": "C",
+        "type": "7047"
+      },
+      {
+        "position": "060",
+        "name": "Sample location details",
+        "requirement": "C",
+        "type": "C514"
+      },
+      {
+        "position": "070",
+        "name": "Sample location details",
+        "requirement": "C",
+        "type": "C514"
+      },
+      {
+        "position": "080",
+        "name": "Sample location details",
+        "requirement": "C",
+        "type": "C514"
+      }
+    ]
+  },
+  "PTY": {
+    "code": "PTY",
+    "name": "EDIFACT",
+    "description": "The segment is used to communicate priority information.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Priority qualifier",
+        "requirement": "M",
+        "type": "4035"
+      },
+      {
+        "position": "020",
+        "name": "Priority details",
+        "requirement": "C",
+        "type": "C585"
+      }
+    ]
+  },
+  "QTY": {
+    "code": "QTY",
+    "name": "EDIFACT",
+    "description": "To specify a pertinent quantity.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Quantity details",
+        "requirement": "M",
+        "type": "C186"
+      }
+    ]
+  },
+  "QVR": {
+    "code": "QVR",
+    "name": "EDIFACT",
+    "description": "To specify item details relating to quantity variances.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Quantity difference information",
+        "requirement": "C",
+        "type": "C279"
+      },
+      {
+        "position": "020",
+        "name": "Discrepancy, coded",
+        "requirement": "C",
+        "type": "4221"
+      },
+      {
+        "position": "030",
+        "name": "Reason for change",
+        "requirement": "C",
+        "type": "C960"
+      }
+    ]
+  },
+  "RCS": {
+    "code": "RCS",
+    "name": "EDIFACT",
+    "description": "To specify sector/subject requirements and conditions.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Sector/subject identification qualifier",
+        "requirement": "M",
+        "type": "7293"
+      },
+      {
+        "position": "020",
+        "name": "Requirement/condition identification",
+        "requirement": "C",
+        "type": "C550"
+      },
+      {
+        "position": "030",
+        "name": "Action request/notification, coded",
+        "requirement": "C",
+        "type": "1229"
+      }
+    ]
+  },
+  "REL": {
+    "code": "REL",
+    "name": "EDIFACT",
+    "description": "To identify the direct relationship between the data/information contained in one segment and the data/information contained in one or more other segments.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Relationship qualifier",
+        "requirement": "M",
+        "type": "9141"
+      },
+      {
+        "position": "020",
+        "name": "Relationship",
+        "requirement": "C",
+        "type": "C941"
+      }
+    ]
+  },
+  "RFF": {
+    "code": "RFF",
+    "name": "EDIFACT",
+    "description": "To specify a reference.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Reference",
+        "requirement": "M",
+        "type": "C506"
+      }
+    ]
+  },
+  "RNG": {
+    "code": "RNG",
+    "name": "EDIFACT",
+    "description": "To identify a range.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Range type qualifier",
+        "requirement": "M",
+        "type": "6167"
+      },
+      {
+        "position": "020",
+        "name": "Range",
+        "requirement": "C",
+        "type": "C280"
+      }
+    ]
+  },
+  "RTE": {
+    "code": "RTE",
+    "name": "EDIFACT",
+    "description": "To specify rate information.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Rate details",
+        "requirement": "M",
+        "type": "C128"
+      }
+    ]
+  },
+  "SAL": {
+    "code": "SAL",
+    "name": "EDIFACT",
+    "description": "Identification of a remuneration type.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Remuneration type identification",
+        "requirement": "C",
+        "type": "C049"
+      }
+    ]
+  },
+  "SCC": {
+    "code": "SCC",
+    "name": "EDIFACT",
+    "description": "To specify scheduling conditions.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Delivery plan status indicator, coded",
+        "requirement": "M",
+        "type": "4017"
+      },
+      {
+        "position": "020",
+        "name": "Delivery requirements, coded",
+        "requirement": "C",
+        "type": "4493"
+      },
+      {
+        "position": "030",
+        "name": "Pattern description",
+        "requirement": "C",
+        "type": "C329"
+      }
+    ]
+  },
+  "SCD": {
+    "code": "SCD",
+    "name": "EDIFACT",
+    "description": "To specify a component of a data structure (e.g. an array or table).",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Component function qualifier",
+        "requirement": "M",
+        "type": "7497"
+      },
+      {
+        "position": "020",
+        "name": "Structure component identification",
+        "requirement": "C",
+        "type": "C786"
+      },
+      {
+        "position": "030",
+        "name": "Party identification details",
+        "requirement": "C",
+        "type": "C082"
+      },
+      {
+        "position": "040",
+        "name": "Status, coded",
+        "requirement": "C",
+        "type": "4405"
+      },
+      {
+        "position": "050",
+        "name": "Configuration level",
+        "requirement": "C",
+        "type": "1222"
+      },
+      {
+        "position": "060",
+        "name": "Position identification",
+        "requirement": "C",
+        "type": "C778"
+      },
+      {
+        "position": "070",
+        "name": "Product characteristic",
+        "requirement": "C",
+        "type": "C240"
+      }
+    ]
+  },
+  "SEG": {
+    "code": "SEG",
+    "name": "EDIFACT",
+    "description": "To identify a segment and give its class and maintenance operation.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Segment tag",
+        "requirement": "M",
+        "type": "9166"
+      },
+      {
+        "position": "020",
+        "name": "Class designator, coded",
+        "requirement": "C",
+        "type": "1507"
+      },
+      {
+        "position": "030",
+        "name": "Maintenance operation, coded",
+        "requirement": "C",
+        "type": "4513"
+      }
+    ]
+  },
+  "SEL": {
+    "code": "SEL",
+    "name": "EDIFACT",
+    "description": "To specify a seal number related to equipment.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Seal number",
+        "requirement": "M",
+        "type": "9308"
+      },
+      {
+        "position": "020",
+        "name": "Seal issuer",
+        "requirement": "C",
+        "type": "C215"
+      },
+      {
+        "position": "030",
+        "name": "Seal condition, coded",
+        "requirement": "C",
+        "type": "4517"
+      }
+    ]
+  },
+  "SEQ": {
+    "code": "SEQ",
+    "name": "EDIFACT",
+    "description": "To provide specific details related to the delivery sequence.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Status indicator, coded",
+        "requirement": "C",
+        "type": "1245"
+      },
+      {
+        "position": "020",
+        "name": "Sequence information",
+        "requirement": "C",
+        "type": "C286"
+      }
+    ]
+  },
+  "SFI": {
+    "code": "SFI",
+    "name": "EDIFACT",
+    "description": "To identify regulatory safety information.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Hierarchical id. number",
+        "requirement": "M",
+        "type": "7164"
+      },
+      {
+        "position": "020",
+        "name": "Safety section",
+        "requirement": "C",
+        "type": "C814"
+      },
+      {
+        "position": "030",
+        "name": "Additional safety information",
+        "requirement": "C",
+        "type": "C815"
+      },
+      {
+        "position": "040",
+        "name": "Maintenance operation, coded",
+        "requirement": "C",
+        "type": "4513"
+      }
+    ]
+  },
+  "SGP": {
+    "code": "SGP",
+    "name": "EDIFACT",
+    "description": "To specify the placement of goods in relation to equipment.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Equipment identification",
+        "requirement": "M",
+        "type": "C237"
+      },
+      {
+        "position": "020",
+        "name": "Number of packages",
+        "requirement": "C",
+        "type": "7224"
+      }
+    ]
+  },
+  "SGU": {
+    "code": "SGU",
+    "name": "EDIFACT",
+    "description": "To specify the details of the usage of a segment within a message type structure.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Segment tag",
+        "requirement": "M",
+        "type": "9166"
+      },
+      {
+        "position": "020",
+        "name": "Requirement designator, coded",
+        "requirement": "C",
+        "type": "7299"
+      },
+      {
+        "position": "030",
+        "name": "Maximum number of occurrences",
+        "requirement": "C",
+        "type": "6176"
+      },
+      {
+        "position": "040",
+        "name": "Level number",
+        "requirement": "C",
+        "type": "7168"
+      },
+      {
+        "position": "050",
+        "name": "Sequence number",
+        "requirement": "C",
+        "type": "1050"
+      },
+      {
+        "position": "060",
+        "name": "Message section, coded",
+        "requirement": "C",
+        "type": "1049"
+      },
+      {
+        "position": "070",
+        "name": "Maintenance operation, coded",
+        "requirement": "C",
+        "type": "4513"
+      }
+    ]
+  },
+  "SPS": {
+    "code": "SPS",
+    "name": "EDIFACT",
+    "description": "To define the sampling parameters associated with summary statistics reported.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Frequency details",
+        "requirement": "C",
+        "type": "C526"
+      },
+      {
+        "position": "020",
+        "name": "Confidence limit",
+        "requirement": "C",
+        "type": "6074"
+      },
+      {
+        "position": "030",
+        "name": "Size details",
+        "requirement": "C",
+        "type": "C512"
+      },
+      {
+        "position": "040",
+        "name": "Size details",
+        "requirement": "C",
+        "type": "C512"
+      },
+      {
+        "position": "050",
+        "name": "Size details",
+        "requirement": "C",
+        "type": "C512"
+      },
+      {
+        "position": "060",
+        "name": "Size details",
+        "requirement": "C",
+        "type": "C512"
+      },
+      {
+        "position": "070",
+        "name": "Size details",
+        "requirement": "C",
+        "type": "C512"
+      }
+    ]
+  },
+  "STA": {
+    "code": "STA",
+    "name": "EDIFACT",
+    "description": "To transmit summary statistics related to a specified collection of test result values.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Statistic type, coded",
+        "requirement": "M",
+        "type": "6331"
+      },
+      {
+        "position": "020",
+        "name": "Statistical details",
+        "requirement": "C",
+        "type": "C527"
+      }
+    ]
+  },
+  "STC": {
+    "code": "STC",
+    "name": "EDIFACT",
+    "description": "To specify a statistical concept.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Statistical concept identification",
+        "requirement": "M",
+        "type": "C785"
+      },
+      {
+        "position": "020",
+        "name": "Party identification details",
+        "requirement": "C",
+        "type": "C082"
+      },
+      {
+        "position": "030",
+        "name": "Status, coded",
+        "requirement": "C",
+        "type": "4405"
+      },
+      {
+        "position": "040",
+        "name": "Maintenance operation, coded",
+        "requirement": "C",
+        "type": "4513"
+      }
+    ]
+  },
+  "STG": {
+    "code": "STG",
+    "name": "EDIFACT",
+    "description": "To provide information related to the kind of stage in a process, the number of stages and the actual stage.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Stages qualifier",
+        "requirement": "M",
+        "type": "9421"
+      },
+      {
+        "position": "020",
+        "name": "Number of stages",
+        "requirement": "C",
+        "type": "6426"
+      },
+      {
+        "position": "030",
+        "name": "Actual stage count",
+        "requirement": "C",
+        "type": "6428"
+      }
+    ]
+  },
+  "STS": {
+    "code": "STS",
+    "name": "EDIFACT",
+    "description": "To specify the type of industry sector/application to which this segment refers, giving the status and status reason relevant to conducting business and/or services.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Status type",
+        "requirement": "C",
+        "type": "C601"
+      },
+      {
+        "position": "020",
+        "name": "Status event",
+        "requirement": "C",
+        "type": "C555"
+      },
+      {
+        "position": "030",
+        "name": "Status reason",
+        "requirement": "C",
+        "type": "C556"
+      },
+      {
+        "position": "040",
+        "name": "Status reason",
+        "requirement": "C",
+        "type": "C556"
+      },
+      {
+        "position": "050",
+        "name": "Status reason",
+        "requirement": "C",
+        "type": "C556"
+      },
+      {
+        "position": "060",
+        "name": "Status reason",
+        "requirement": "C",
+        "type": "C556"
+      },
+      {
+        "position": "070",
+        "name": "Status reason",
+        "requirement": "C",
+        "type": "C556"
+      }
+    ]
+  },
+  "TAX": {
+    "code": "TAX",
+    "name": "EDIFACT",
+    "description": "To specify relevant duty/tax/fee information.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Duty/tax/fee function qualifier",
+        "requirement": "M",
+        "type": "5283"
+      },
+      {
+        "position": "020",
+        "name": "Duty/tax/fee type",
+        "requirement": "C",
+        "type": "C241"
+      },
+      {
+        "position": "030",
+        "name": "Duty/tax/fee account detail",
+        "requirement": "C",
+        "type": "C533"
+      },
+      {
+        "position": "040",
+        "name": "Duty/tax/fee assessment basis",
+        "requirement": "C",
+        "type": "5286"
+      },
+      {
+        "position": "050",
+        "name": "Duty/tax/fee detail",
+        "requirement": "C",
+        "type": "C243"
+      },
+      {
+        "position": "060",
+        "name": "Duty/tax/fee category, coded",
+        "requirement": "C",
+        "type": "5305"
+      },
+      {
+        "position": "070",
+        "name": "Party tax identification number",
+        "requirement": "C",
+        "type": "3446"
+      }
+    ]
+  },
+  "TCC": {
+    "code": "TCC",
+    "name": "EDIFACT",
+    "description": "To specify charges.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Charge",
+        "requirement": "C",
+        "type": "C200"
+      },
+      {
+        "position": "020",
+        "name": "Rate/tariff class",
+        "requirement": "C",
+        "type": "C203"
+      },
+      {
+        "position": "030",
+        "name": "Commodity/rate detail",
+        "requirement": "C",
+        "type": "C528"
+      },
+      {
+        "position": "040",
+        "name": "Rate/tariff class detail",
+        "requirement": "C",
+        "type": "C554"
+      }
+    ]
+  },
+  "TDT": {
+    "code": "TDT",
+    "name": "EDIFACT",
+    "description": "To specify the transport details such as mode of transport, means of transport, its conveyance reference number and the identification of the means of transport. The segment may be pointed to by the TPL segment.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Transport stage qualifier",
+        "requirement": "M",
+        "type": "8051"
+      },
+      {
+        "position": "020",
+        "name": "Conveyance reference number",
+        "requirement": "C",
+        "type": "8028"
+      },
+      {
+        "position": "030",
+        "name": "Mode of transport",
+        "requirement": "C",
+        "type": "C220"
+      },
+      {
+        "position": "040",
+        "name": "Transport means",
+        "requirement": "C",
+        "type": "C228"
+      },
+      {
+        "position": "050",
+        "name": "Carrier",
+        "requirement": "C",
+        "type": "C040"
+      },
+      {
+        "position": "060",
+        "name": "Transit direction, coded",
+        "requirement": "C",
+        "type": "8101"
+      },
+      {
+        "position": "070",
+        "name": "Excess transportation information",
+        "requirement": "C",
+        "type": "C401"
+      },
+      {
+        "position": "080",
+        "name": "Transport identification",
+        "requirement": "C",
+        "type": "C222"
+      },
+      {
+        "position": "090",
+        "name": "Transport ownership, coded",
+        "requirement": "C",
+        "type": "8281"
+      }
+    ]
+  },
+  "TEM": {
+    "code": "TEM",
+    "name": "EDIFACT",
+    "description": "To describe the nature of the test performed.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Test method",
+        "requirement": "C",
+        "type": "C244"
+      },
+      {
+        "position": "020",
+        "name": "Test route of administering, coded",
+        "requirement": "C",
+        "type": "4419"
+      },
+      {
+        "position": "030",
+        "name": "Test media, coded",
+        "requirement": "C",
+        "type": "3077"
+      },
+      {
+        "position": "040",
+        "name": "Measurement application qualifier",
+        "requirement": "C",
+        "type": "6311"
+      },
+      {
+        "position": "050",
+        "name": "Test revision number",
+        "requirement": "C",
+        "type": "7188"
+      },
+      {
+        "position": "060",
+        "name": "Test reason",
+        "requirement": "C",
+        "type": "C515"
+      }
+    ]
+  },
+  "TMD": {
+    "code": "TMD",
+    "name": "EDIFACT",
+    "description": "To specify operational transport movement details for a goods item or equipment (which may differ from the contractual conditions).",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Movement type",
+        "requirement": "C",
+        "type": "C219"
+      },
+      {
+        "position": "020",
+        "name": "Equipment plan",
+        "requirement": "C",
+        "type": "8332"
+      },
+      {
+        "position": "030",
+        "name": "Haulage arrangements, coded",
+        "requirement": "C",
+        "type": "8341"
+      }
+    ]
+  },
+  "TMP": {
+    "code": "TMP",
+    "name": "EDIFACT",
+    "description": "To specify the temperature setting.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Temperature qualifier",
+        "requirement": "M",
+        "type": "6245"
+      },
+      {
+        "position": "020",
+        "name": "Temperature setting",
+        "requirement": "C",
+        "type": "C239"
+      }
+    ]
+  },
+  "TOD": {
+    "code": "TOD",
+    "name": "EDIFACT",
+    "description": "To specify terms of delivery or transport.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Terms of delivery or transport function, coded",
+        "requirement": "C",
+        "type": "4055"
+      },
+      {
+        "position": "020",
+        "name": "Transport charges method of payment, coded",
+        "requirement": "C",
+        "type": "4215"
+      },
+      {
+        "position": "030",
+        "name": "Terms of delivery or transport",
+        "requirement": "C",
+        "type": "C100"
+      }
+    ]
+  },
+  "TPL": {
+    "code": "TPL",
+    "name": "EDIFACT",
+    "description": "To specify placement of goods or equipment in relation to the transport used. The segment serves as a pointer to the TDT segment group.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Transport identification",
+        "requirement": "M",
+        "type": "C222"
+      }
+    ]
+  },
+  "TSR": {
+    "code": "TSR",
+    "name": "EDIFACT",
+    "description": "To specify the contract and carriage conditions and service and priority requirements for the transport.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Contract and carriage condition",
+        "requirement": "C",
+        "type": "C536"
+      },
+      {
+        "position": "020",
+        "name": "Service",
+        "requirement": "C",
+        "type": "C233"
+      },
+      {
+        "position": "030",
+        "name": "Transport priority",
+        "requirement": "C",
+        "type": "C537"
+      },
+      {
+        "position": "040",
+        "name": "Nature of cargo",
+        "requirement": "C",
+        "type": "C703"
+      }
+    ]
+  },
+  "UCD": {
+    "code": "UCD",
+    "name": "EDIFACT",
+    "description": "To identify an erroneous simple, composite or component data element, and to identify the nature of the error.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Syntax error, coded",
+        "requirement": "M",
+        "type": "0085"
+      },
+      {
+        "position": "020",
+        "name": "Data element identification",
+        "requirement": "M",
+        "type": "S011"
+      }
+    ]
+  },
+  "UCF": {
+    "code": "UCF",
+    "name": "EDIFACT",
+    "description": "To identify a functional group in the subject interchange and to indicate acknowledgement or rejection (action taken) of the UNG and UNE segments, and to identify any error related to these segments. Depending on the action code, it may also indicate the action taken on the messages within that functional group.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Functional group reference number",
+        "requirement": "M",
+        "type": "0048"
+      },
+      {
+        "position": "020",
+        "name": "Application sender's identification",
+        "requirement": "M",
+        "type": "S006"
+      },
+      {
+        "position": "030",
+        "name": "Application recipient's identification",
+        "requirement": "M",
+        "type": "S007"
+      },
+      {
+        "position": "040",
+        "name": "Action, coded",
+        "requirement": "M",
+        "type": "0083"
+      },
+      {
+        "position": "050",
+        "name": "Syntax error, coded",
+        "requirement": "C",
+        "type": "0085"
+      },
+      {
+        "position": "060",
+        "name": "Service segment tag, coded",
+        "requirement": "C",
+        "type": "0013"
+      },
+      {
+        "position": "070",
+        "name": "Data element identification",
+        "requirement": "C",
+        "type": "S011"
+      }
+    ]
+  },
+  "UCI": {
+    "code": "UCI",
+    "name": "EDIFACT",
+    "description": "To identify the subject interchange, to indicate interchange receipt, to indicate acknowledgement or rejection (action taken) of the UNA, UNB and UNZ segments, and to identify any error related to these segments. Depending on the action code, it may also indicate the action taken on the functional groups and messages within that interchange.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Interchange control reference",
+        "requirement": "M",
+        "type": "0020"
+      },
+      {
+        "position": "020",
+        "name": "Interchange sender",
+        "requirement": "M",
+        "type": "S002"
+      },
+      {
+        "position": "030",
+        "name": "Interchange recipient",
+        "requirement": "M",
+        "type": "S003"
+      },
+      {
+        "position": "040",
+        "name": "Action, coded",
+        "requirement": "M",
+        "type": "0083"
+      },
+      {
+        "position": "050",
+        "name": "Syntax error, coded",
+        "requirement": "C",
+        "type": "0085"
+      },
+      {
+        "position": "060",
+        "name": "Service segment tag, coded",
+        "requirement": "C",
+        "type": "0013"
+      },
+      {
+        "position": "070",
+        "name": "Data element identification",
+        "requirement": "C",
+        "type": "S011"
+      }
+    ]
+  },
+  "UCM": {
+    "code": "UCM",
+    "name": "EDIFACT",
+    "description": "To identify a message in the subject interchange, and to indicate that message's acknowledgement or rejection (action taken), and to identify any error related to the UNH and UNT segments.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Message reference number",
+        "requirement": "M",
+        "type": "0062"
+      },
+      {
+        "position": "020",
+        "name": "Message identifier",
+        "requirement": "M",
+        "type": "S009"
+      },
+      {
+        "position": "030",
+        "name": "Action, coded",
+        "requirement": "M",
+        "type": "0083"
+      },
+      {
+        "position": "040",
+        "name": "Syntax error, coded",
+        "requirement": "C",
+        "type": "0085"
+      },
+      {
+        "position": "050",
+        "name": "Service segment tag, coded",
+        "requirement": "C",
+        "type": "0013"
+      },
+      {
+        "position": "060",
+        "name": "Data element identification",
+        "requirement": "C",
+        "type": "S011"
+      }
+    ]
+  },
+  "UCS": {
+    "code": "UCS",
+    "name": "EDIFACT",
+    "description": "To identify either a segment containing an error or a missing segment, and to identify any error related to the complete segment.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Segment position in message",
+        "requirement": "M",
+        "type": "0096"
+      },
+      {
+        "position": "020",
+        "name": "Syntax error, coded",
+        "requirement": "C",
+        "type": "0085"
+      }
+    ]
+  },
+  "UNB": {
+    "code": "UNB",
+    "name": "EDIFACT",
+    "description": "To start, identify and specify an interchange.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Syntax identifier",
+        "requirement": "M",
+        "type": "S001"
+      },
+      {
+        "position": "020",
+        "name": "Interchange sender",
+        "requirement": "M",
+        "type": "S002"
+      },
+      {
+        "position": "030",
+        "name": "Interchange recipient",
+        "requirement": "M",
+        "type": "S003"
+      },
+      {
+        "position": "040",
+        "name": "Date/time of preparation",
+        "requirement": "M",
+        "type": "S004"
+      },
+      {
+        "position": "050",
+        "name": "Interchange control reference",
+        "requirement": "M",
+        "type": "0020"
+      },
+      {
+        "position": "060",
+        "name": "Recipient's reference, password",
+        "requirement": "C",
+        "type": "S005"
+      },
+      {
+        "position": "070",
+        "name": "Application reference",
+        "requirement": "C",
+        "type": "0026"
+      },
+      {
+        "position": "080",
+        "name": "Processing priority code",
+        "requirement": "C",
+        "type": "0029"
+      },
+      {
+        "position": "090",
+        "name": "Acknowledgement request",
+        "requirement": "C",
+        "type": "0031"
+      },
+      {
+        "position": "100",
+        "name": "Communications agreement ID",
+        "requirement": "C",
+        "type": "0032"
+      },
+      {
+        "position": "110",
+        "name": "Test indicator",
+        "requirement": "C",
+        "type": "0035"
+      }
+    ]
+  },
+  "UNE": {
+    "code": "UNE",
+    "name": "EDIFACT",
+    "description": "To end and check the completeness of a functional group.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Number of messages",
+        "requirement": "M",
+        "type": "0060"
+      },
+      {
+        "position": "020",
+        "name": "Functional group reference number",
+        "requirement": "M",
+        "type": "0048"
+      }
+    ]
+  },
+  "UNG": {
+    "code": "UNG",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a functional group.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Functional group identification",
+        "requirement": "M",
+        "type": "0038"
+      },
+      {
+        "position": "020",
+        "name": "Application sender's identification",
+        "requirement": "M",
+        "type": "S006"
+      },
+      {
+        "position": "030",
+        "name": "Application recipient's identification",
+        "requirement": "M",
+        "type": "S007"
+      },
+      {
+        "position": "040",
+        "name": "Date/time of preparation",
+        "requirement": "M",
+        "type": "S004"
+      },
+      {
+        "position": "050",
+        "name": "Functional group reference number",
+        "requirement": "M",
+        "type": "0048"
+      },
+      {
+        "position": "060",
+        "name": "Controlling agency",
+        "requirement": "M",
+        "type": "0051"
+      },
+      {
+        "position": "070",
+        "name": "Message version",
+        "requirement": "M",
+        "type": "S008"
+      },
+      {
+        "position": "080",
+        "name": "Application password",
+        "requirement": "C",
+        "type": "0058"
+      }
+    ]
+  },
+  "UNH": {
+    "code": "UNH",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Message reference number",
+        "requirement": "M",
+        "type": "0062"
+      },
+      {
+        "position": "020",
+        "name": "Message identifier",
+        "requirement": "M",
+        "type": "S009"
+      },
+      {
+        "position": "030",
+        "name": "Common access reference",
+        "requirement": "C",
+        "type": "0068"
+      },
+      {
+        "position": "040",
+        "name": "Status of the  transfer",
+        "requirement": "C",
+        "type": "S010"
+      }
+    ]
+  },
+  "UNS": {
+    "code": "UNS",
+    "name": "EDIFACT",
+    "description": "To separate header, detail and summary sections of a message.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Section identification",
+        "requirement": "M",
+        "type": "0081"
+      }
+    ]
+  },
+  "UNT": {
+    "code": "UNT",
+    "name": "EDIFACT",
+    "description": "To end and check the completeness of a message.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Number of segments in the message",
+        "requirement": "M",
+        "type": "0074"
+      },
+      {
+        "position": "020",
+        "name": "Message reference number",
+        "requirement": "M",
+        "type": "0062"
+      }
+    ]
+  },
+  "UNZ": {
+    "code": "UNZ",
+    "name": "EDIFACT",
+    "description": "To end and check the completeness of an interchange.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Interchange control count",
+        "requirement": "M",
+        "type": "0036"
+      },
+      {
+        "position": "020",
+        "name": "Interchange control reference",
+        "requirement": "M",
+        "type": "0020"
+      }
+    ]
+  },
+  "VLI": {
+    "code": "VLI",
+    "name": "EDIFACT",
+    "description": "To identify a coded or non coded value list.",
+    "elements": [
+      {
+        "position": "010",
+        "name": "Value list identification",
+        "requirement": "M",
+        "type": "C780"
+      },
+      {
+        "position": "020",
+        "name": "Party identification details",
+        "requirement": "C",
+        "type": "C082"
+      },
+      {
+        "position": "030",
+        "name": "Status, coded",
+        "requirement": "C",
+        "type": "4405"
+      },
+      {
+        "position": "040",
+        "name": "Value list name",
+        "requirement": "C",
+        "type": "1514"
+      },
+      {
+        "position": "050",
+        "name": "Class designator, coded",
+        "requirement": "C",
+        "type": "1507"
+      },
+      {
+        "position": "060",
+        "name": "Value list type, coded",
+        "requirement": "C",
+        "type": "1505"
+      },
+      {
+        "position": "070",
+        "name": "Product characteristic",
+        "requirement": "C",
+        "type": "C240"
+      },
+      {
+        "position": "080",
+        "name": "Maintenance operation, coded",
+        "requirement": "C",
+        "type": "4513"
+      }
+    ]
+  }
+}

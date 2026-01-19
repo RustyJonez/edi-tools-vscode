@@ -1,0 +1,1067 @@
+{
+  "APERAK": {
+    "code": "APERAK",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Application error and acknowledgement message is APERAK.  Note: Application error and acknowledgement messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 APERAK 0052 D 0054 21A 0051 UN"
+  },
+  "AUTACK": {
+    "code": "AUTACK",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "AUTHOR": {
+    "code": "AUTHOR",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Authorization message is AUTHOR.  Note: Authorization messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 AUTHOR 0052 D 0054 21A 0051 UN"
+  },
+  "AVLREQ": {
+    "code": "AVLREQ",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Availability request - interactive message is AVLREQ.  Note: Availability request - interactive messages conforming to this document must contain the following data in segment UIH, composite S306:  Data element  0065 AVLREQ 0052 D 0054 21A 0051 UN"
+  },
+  "AVLRSP": {
+    "code": "AVLRSP",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Availability response - interactive message is AVLRSP.  Note: Availability response - interactive messages conforming to this document must contain the following data in segment UIH, composite S306:  Data element  0065 AVLRSP 0052 D 0054 21A 0051 UN"
+  },
+  "BALANC": {
+    "code": "BALANC",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Balance message is BALANC.  Note: Balance messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 BALANC 0052 D 0054 21A 0051 UN"
+  },
+  "BANSTA": {
+    "code": "BANSTA",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Banking status message is BANSTA.  Note: Banking status messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 BANSTA 0052 D 0054 21A 0051 UN"
+  },
+  "BAPLIE": {
+    "code": "BAPLIE",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Bayplan/stowage plan occupied and empty locations message is BAPLIE.  Note: Bayplan/stowage plan occupied and empty locations messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 BAPLIE 0052 D 0054 21A 0051 UN"
+  },
+  "BERMAN": {
+    "code": "BERMAN",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Berth management message is BERMAN.  Note: Berth management messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 BERMAN 0052 D 0054 21A 0051 UN"
+  },
+  "BMISRM": {
+    "code": "BMISRM",
+    "name": "EDIFACT",
+    "description": "A segment to identify the cargo."
+  },
+  "BOPBNK": {
+    "code": "BOPBNK",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Bank transactions and portfolio transactions report message is BOPBNK.  Note: Bank transactions and portfolio transactions report messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 BOPBNK 0052 D 0054 21A 0051 UN"
+  },
+  "BOPCUS": {
+    "code": "BOPCUS",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Balance of payment customer transaction report message is BOPCUS.  Note: Balance of payment customer transaction report messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 BOPCUS 0052 D 0054 21A 0051 UN"
+  },
+  "BOPDIR": {
+    "code": "BOPDIR",
+    "name": "EDIFACT",
+    "description": "A service segment placed at the start of the detail section to avoid collisions.  Part 2: direct reporting of transactions via accounts held with non-residents, reporting of BOP-related surveys and of foreign assets and liabilities."
+  },
+  "BOPINF": {
+    "code": "BOPINF",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Balance of payment information from customer message is BOPINF.  Note: Balance of payment information from customer messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 BOPINF 0052 D 0054 21A 0051 UN"
+  },
+  "BUSCRD": {
+    "code": "BUSCRD",
+    "name": "EDIFACT",
+    "description": "A segment identifying a line item by a number which is assigned to the company being reported. A data group number may also be included."
+  },
+  "CALINF": {
+    "code": "CALINF",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Vessel call information message is CALINF.  Note: Vessel call information messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 CALINF 0052 D 0054 21A 0051 UN"
+  },
+  "CASINT": {
+    "code": "CASINT",
+    "name": "EDIFACT",
+    "description": "A service segment placed at the start of the detail section to avoid segment collision."
+  },
+  "CASRES": {
+    "code": "CASRES",
+    "name": "EDIFACT",
+    "description": "A segment identifying the name and address of a party."
+  },
+  "CHACCO": {
+    "code": "CHACCO",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Chart of accounts message is CHACCO.  Note: Chart of accounts messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 CHACCO 0052 D 0054 21A 0051 UN"
+  },
+  "CLASET": {
+    "code": "CLASET",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Classification information set message is CLASET.  Note: Classification information set messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 CLASET 0052 D 0054 21A 0051 UN"
+  },
+  "CNTCND": {
+    "code": "CNTCND",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Contractual conditions message is CNTCND.  Note: Contractual conditions messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 CNTCND 0052 D 0054 21A 0051 UN"
+  },
+  "COACSU": {
+    "code": "COACSU",
+    "name": "EDIFACT",
+    "description": "A segment identifying a specific document and its number, e.g. invoice, credit note or remittance advice for which commercial account summary information is being provided."
+  },
+  "COARRI": {
+    "code": "COARRI",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Container discharge/loading report message is COARRI.  Note: Container discharge/loading report messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 COARRI 0052 D 0054 21A 0051 UN"
+  },
+  "CODECO": {
+    "code": "CODECO",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Container gate-in/gate-out report message is CODECO.  Note: Container gate-in/gate-out report messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 CODECO 0052 D 0054 21A 0051 UN"
+  },
+  "CODENO": {
+    "code": "CODENO",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Permit expiration/clearance ready notice message is CODENO.  Note: Permit expiration/clearance ready notice messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 CODENO 0052 D 0054 21A 0051 UN"
+  },
+  "COEDOR": {
+    "code": "COEDOR",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Transport equipment stock and profile report  message is COEDOR.  Note: Transport equipment stock and profile report  messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 COEDOR 0052 D 0054 21A 0051 UN"
+  },
+  "COHAOR": {
+    "code": "COHAOR",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Container special handling order message is COHAOR.  Note: Container special handling order messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 COHAOR 0052 D 0054 21A 0051 UN"
+  },
+  "COLREQ": {
+    "code": "COLREQ",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Request for a documentary collection message is COLREQ.  Note: Request for a documentary collection messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 COLREQ 0052 D 0054 21A 0051 UN"
+  },
+  "COMDIS": {
+    "code": "COMDIS",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Commercial dispute message is COMDIS.  Note: Commercial dispute messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 COMDIS 0052 D 0054 21A 0051 UN"
+  },
+  "CONAPW": {
+    "code": "CONAPW",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Advice on pending works message is CONAPW.  Note: Advice on pending works messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 CONAPW 0052 D 0054 21A 0051 UN"
+  },
+  "CONDPV": {
+    "code": "CONDPV",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Direct payment valuation message is CONDPV.  Note: Direct payment valuation messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 CONDPV 0052 D 0054 21A 0051 UN"
+  },
+  "CONDRA": {
+    "code": "CONDRA",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Drawing administration message is CONDRA.  Note: Drawing administration messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 CONDRA 0052 D 0054 21A 0051 UN"
+  },
+  "CONDRO": {
+    "code": "CONDRO",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Drawing organisation message is CONDRO.  Note: Drawing organisation messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 CONDRO 0052 D 0054 21A 0051 UN"
+  },
+  "CONEST": {
+    "code": "CONEST",
+    "name": "EDIFACT",
+    "description": "A service segment placed at the beginning of the detail section to avoid collision."
+  },
+  "CONITT": {
+    "code": "CONITT",
+    "name": "EDIFACT",
+    "description": "A service segment placed at the beginning of the detail section to avoid collision."
+  },
+  "CONPVA": {
+    "code": "CONPVA",
+    "name": "EDIFACT",
+    "description": "A service segment placed at the beginning of the detail section to avoid collision."
+  },
+  "CONQVA": {
+    "code": "CONQVA",
+    "name": "EDIFACT",
+    "description": "A segment to identify the item of work (or group of items) to which the quantities apply."
+  },
+  "CONRPW": {
+    "code": "CONRPW",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Response of pending works message is CONRPW.  Note: Response of pending works messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 CONRPW 0052 D 0054 21A 0051 UN"
+  },
+  "CONTEN": {
+    "code": "CONTEN",
+    "name": "EDIFACT",
+    "description": "A service segment placed at the beginning of the detail section to avoid collision."
+  },
+  "CONTRL": {
+    "code": "CONTRL",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "CONWQD": {
+    "code": "CONWQD",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Work item quantity determination message is CONWQD.  Note: Work item quantity determination messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 CONWQD 0052 D 0054 21A 0051 UN"
+  },
+  "COPARN": {
+    "code": "COPARN",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Container announcement message is COPARN.  Note: Container announcement messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 COPARN 0052 D 0054 21A 0051 UN"
+  },
+  "COPAYM": {
+    "code": "COPAYM",
+    "name": "EDIFACT",
+    "description": "A service segment placed at the beginning of the detail section to avoid segment collision."
+  },
+  "COPINO": {
+    "code": "COPINO",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Container pre-notification message is COPINO.  Note: Container pre-notification messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 COPINO 0052 D 0054 21A 0051 UN"
+  },
+  "COPRAR": {
+    "code": "COPRAR",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Container discharge/loading order message is COPRAR.  Note: Container discharge/loading order messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 COPRAR 0052 D 0054 21A 0051 UN"
+  },
+  "COREOR": {
+    "code": "COREOR",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Container release order message is COREOR.  Note: Container release order messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 COREOR 0052 D 0054 21A 0051 UN"
+  },
+  "COSTCO": {
+    "code": "COSTCO",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Container stuffing/stripping confirmation message is COSTCO.  Note: Container stuffing/stripping confirmation messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 COSTCO 0052 D 0054 21A 0051 UN"
+  },
+  "COSTOR": {
+    "code": "COSTOR",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Container stuffing/stripping order message is COSTOR.  Note: Container stuffing/stripping order messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 COSTOR 0052 D 0054 21A 0051 UN"
+  },
+  "CREADV": {
+    "code": "CREADV",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Credit advice message is CREADV.  Note: Credit advice messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 CREADV 0052 D 0054 21A 0051 UN"
+  },
+  "CREEXT": {
+    "code": "CREEXT",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Extended credit advice message is CREEXT.  Note: Extended credit advice messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 CREEXT 0052 D 0054 21A 0051 UN"
+  },
+  "CREMUL": {
+    "code": "CREMUL",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Multiple credit advice message is CREMUL.  Note: Multiple credit advice messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 CREMUL 0052 D 0054 21A 0051 UN"
+  },
+  "CUSCAR": {
+    "code": "CUSCAR",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Customs cargo report message is CUSCAR.  Note: Customs cargo report messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 CUSCAR 0052 D 0054 21A 0051 UN"
+  },
+  "CUSDEC": {
+    "code": "CUSDEC",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Customs declaration message is CUSDEC.  Note: Customs declaration messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 CUSDEC 0052 D 0054 21A 0051 UN"
+  },
+  "CUSEXP": {
+    "code": "CUSEXP",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Customs express consignment declaration message is CUSEXP.  Note: Customs express consignment declaration messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 CUSEXP 0052 D 0054 21A 0051 UN"
+  },
+  "CUSPED": {
+    "code": "CUSPED",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Periodic customs declaration message is CUSPED.  Note: Periodic customs declaration messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 CUSPED 0052 D 0054 21A 0051 UN"
+  },
+  "CUSREP": {
+    "code": "CUSREP",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Customs conveyance report message is CUSREP.  Note: Customs conveyance report messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 CUSREP 0052 D 0054 21A 0051 UN"
+  },
+  "CUSRES": {
+    "code": "CUSRES",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Customs response message is CUSRES.  Note: Customs response messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 CUSRES 0052 D 0054 21A 0051 UN"
+  },
+  "DAPLOS": {
+    "code": "DAPLOS",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Data Plot Sheet is DAPLOS.  Note: Data Plot Sheets conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 DAPLOS 0052 D 0054 21A 0051 UN"
+  },
+  "DEBADV": {
+    "code": "DEBADV",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Debit advice message is DEBADV.  Note: Debit advice messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 DEBADV 0052 D 0054 21A 0051 UN"
+  },
+  "DEBMUL": {
+    "code": "DEBMUL",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Multiple debit advice message is DEBMUL.  Note: Multiple debit advice messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 DEBMUL 0052 D 0054 21A 0051 UN"
+  },
+  "DEBREC": {
+    "code": "DEBREC",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Debts recovery message is DEBREC.  Note: Debts recovery messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 DEBREC 0052 D 0054 21A 0051 UN"
+  },
+  "DELFOR": {
+    "code": "DELFOR",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Delivery schedule message is DELFOR.  Note: Delivery schedule messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 DELFOR 0052 D 0054 21A 0051 UN"
+  },
+  "DELJIT": {
+    "code": "DELJIT",
+    "name": "EDIFACT",
+    "description": "A segment providing specific details related to the delivery sequence requested by the buyer or recipient of the product."
+  },
+  "DESADV": {
+    "code": "DESADV",
+    "name": "EDIFACT",
+    "description": "A segment identifying the sequence in which packing of the consignment occurs, e.g. boxes loaded onto a pallet."
+  },
+  "DESTIM": {
+    "code": "DESTIM",
+    "name": "EDIFACT",
+    "description": "A segment to avoid segment collision."
+  },
+  "DGRECA": {
+    "code": "DGRECA",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Dangerous goods recapitulation message is DGRECA.  Note: Dangerous goods recapitulation messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 DGRECA 0052 D 0054 21A 0051 UN"
+  },
+  "DIRDEB": {
+    "code": "DIRDEB",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Direct debit message is DIRDEB.  Note: Direct debit messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 DIRDEB 0052 D 0054 21A 0051 UN"
+  },
+  "DIRDEF": {
+    "code": "DIRDEF",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Directory definition message is DIRDEF.  Note: Directory definition messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 DIRDEF 0052 D 0054 21A 0051 UN"
+  },
+  "DMRDEF": {
+    "code": "DMRDEF",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Data maintenance request definition message is DMRDEF.  Note: Data maintenance request definition messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 DMRDEF 0052 D 0054 21A 0051 UN"
+  },
+  "DMSTAT": {
+    "code": "DMSTAT",
+    "name": "EDIFACT",
+    "description": "A segment used to relate individual iterations of the detail section to a particular level in the status report or query.  A query type may either be an entry point query (e.g., an inquiry from a submitter to the entry point secretariat) or a DMR query (e.g., an inquiry initiated at any other point in the activity model).  A report type may either be an entry point status (e.g., provided as status from the entry point) or a DMR status (e.g., DMR status provided at any point in the DMR process).  The notification of log number assignments is sent by entry point and central secretariats to respond to the receipt of DMRs or regional status reports."
+  },
+  "DOCADV": {
+    "code": "DOCADV",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Documentary credit advice message is DOCADV.  Note: Documentary credit advice messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 DOCADV 0052 D 0054 21A 0051 UN"
+  },
+  "DOCAMA": {
+    "code": "DOCAMA",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Advice of an amendment of a documentary credit message is DOCAMA.  Note: Advice of an amendment of a documentary credit messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 DOCAMA 0052 D 0054 21A 0051 UN"
+  },
+  "DOCAMI": {
+    "code": "DOCAMI",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Documentary credit amendment information message is DOCAMI.  Note: Documentary credit amendment information messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 DOCAMI 0052 D 0054 21A 0051 UN"
+  },
+  "DOCAMR": {
+    "code": "DOCAMR",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Request for an amendment of a documentary credit message is DOCAMR.  Note: Request for an amendment of a documentary credit messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 DOCAMR 0052 D 0054 21A 0051 UN"
+  },
+  "DOCAPP": {
+    "code": "DOCAPP",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Documentary credit application message is DOCAPP.  Note: Documentary credit application messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 DOCAPP 0052 D 0054 21A 0051 UN"
+  },
+  "DOCARE": {
+    "code": "DOCARE",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Response to an amendment of a documentary credit message is DOCARE.  Note: Response to an amendment of a documentary credit messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 DOCARE 0052 D 0054 21A 0051 UN"
+  },
+  "DOCINF": {
+    "code": "DOCINF",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Documentary credit issuance information message is DOCINF.  Note: Documentary credit issuance information messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 DOCINF 0052 D 0054 21A 0051 UN"
+  },
+  "ENTREC": {
+    "code": "ENTREC",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Accounting entries message is ENTREC.  Note: Accounting entries messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 ENTREC 0052 D 0054 21A 0051 UN"
+  },
+  "FINCAN": {
+    "code": "FINCAN",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Financial cancellation message is FINCAN.  Note: Financial cancellation messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 FINCAN 0052 D 0054 21A 0051 UN"
+  },
+  "FINPAY": {
+    "code": "FINPAY",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Multiple interbank funds transfer message is FINPAY.  Note: Multiple interbank funds transfer messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 FINPAY 0052 D 0054 21A 0051 UN"
+  },
+  "FINSTA": {
+    "code": "FINSTA",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Financial statement of an account message is FINSTA.  Note: Financial statement of an account messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 FINSTA 0052 D 0054 21A 0051 UN"
+  },
+  "GENRAL": {
+    "code": "GENRAL",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the General purpose message is GENRAL.  Note: General purpose messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 GENRAL 0052 D 0054 21A 0051 UN"
+  },
+  "GESMES": {
+    "code": "GESMES",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Generic statistical message is GESMES.  Note: Generic statistical messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 GESMES 0052 D 0054 21A 0051 UN"
+  },
+  "GOVCBR": {
+    "code": "GOVCBR",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Government Cross Border Regulatory message is GOVCBR.  Note: Government Cross Border Regulatory messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 GOVCBR 0052 D 0054 21A 0051 UN"
+  },
+  "HANMOV": {
+    "code": "HANMOV",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Cargo/goods handling and movement message is HANMOV.  Note: Cargo/goods handling and movement messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 HANMOV 0052 D 0054 21A 0051 UN"
+  },
+  "ICASRP": {
+    "code": "ICASRP",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Insurance claim assessment and reporting message is ICASRP.  Note: Insurance claim assessment and reporting messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 ICASRP 0052 D 0054 21A 0051 UN"
+  },
+  "ICSOLI": {
+    "code": "ICSOLI",
+    "name": "EDIFACT",
+    "description": "A service segment placed at the start of the detail section to avoid segment collision."
+  },
+  "IFCSUM": {
+    "code": "IFCSUM",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Forwarding and consolidation summary message is IFCSUM.  Note: Forwarding and consolidation summary messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 IFCSUM 0052 D 0054 21A 0051 UN"
+  },
+  "IFTCCA": {
+    "code": "IFTCCA",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Forwarding and transport shipment charge calculation message is IFTCCA.  Note: Forwarding and transport shipment charge calculation messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 IFTCCA 0052 D 0054 21A 0051 UN"
+  },
+  "IFTDGN": {
+    "code": "IFTDGN",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Dangerous goods notification message is IFTDGN.  Note: Dangerous goods notification messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 IFTDGN 0052 D 0054 21A 0051 UN"
+  },
+  "IFTFCC": {
+    "code": "IFTFCC",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the International transport freight costs and other charges message is IFTFCC.  Note: International transport freight costs and other charges messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 IFTFCC 0052 D 0054 21A 0051 UN"
+  },
+  "IFTICL": {
+    "code": "IFTICL",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Cargo insurance claims message is IFTICL.  Note: Cargo insurance claims messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 IFTICL 0052 D 0054 21A 0051 UN"
+  },
+  "IFTMAN": {
+    "code": "IFTMAN",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Arrival notice message is IFTMAN.  Note: Arrival notice messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 IFTMAN 0052 D 0054 21A 0051 UN"
+  },
+  "IFTMBC": {
+    "code": "IFTMBC",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Booking confirmation message is IFTMBC.  Note: Booking confirmation messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 IFTMBC 0052 D 0054 21A 0051 UN"
+  },
+  "IFTMBF": {
+    "code": "IFTMBF",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Firm booking message is IFTMBF.  Note: Firm booking messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 IFTMBF 0052 D 0054 21A 0051 UN"
+  },
+  "IFTMBP": {
+    "code": "IFTMBP",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Provisional booking message is IFTMBP.  Note: Provisional booking messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 IFTMBP 0052 D 0054 21A 0051 UN"
+  },
+  "IFTMCA": {
+    "code": "IFTMCA",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Consignment advice message is IFTMCA.  Note: Consignment advice messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 IFTMCA 0052 D 0054 21A 0051 UN"
+  },
+  "IFTMCS": {
+    "code": "IFTMCS",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Instruction contract status message is IFTMCS.  Note: Instruction contract status messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 IFTMCS 0052 D 0054 21A 0051 UN"
+  },
+  "IFTMIN": {
+    "code": "IFTMIN",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Instruction message is IFTMIN.  Note: Instruction messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 IFTMIN 0052 D 0054 21A 0051 UN"
+  },
+  "IFTRIN": {
+    "code": "IFTRIN",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Forwarding and transport rate information message is IFTRIN.  Note: Forwarding and transport rate information messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 IFTRIN 0052 D 0054 21A 0051 UN"
+  },
+  "IFTSAI": {
+    "code": "IFTSAI",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Forwarding and transport schedule and availability information message is IFTSAI.  Note: Forwarding and transport schedule and availability information messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 IFTSAI 0052 D 0054 21A 0051 UN"
+  },
+  "IFTSTA": {
+    "code": "IFTSTA",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the International multimodal status report message is IFTSTA.  Note: International multimodal status report messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 IFTSTA 0052 D 0054 21A 0051 UN"
+  },
+  "IFTSTQ": {
+    "code": "IFTSTQ",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the International multimodal status request message is IFTSTQ.  Note: International multimodal status request messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 IFTSTQ 0052 D 0054 21A 0051 UN"
+  },
+  "IHCEBI": {
+    "code": "IHCEBI",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Interactive health insurance eligibility and benefits inquiry and response is IHCEBI.  Note: Interactive health insurance eligibility and benefits inquiry and responses conforming to this document must contain the following data in segment UIH, composite S306:  Data element  0065 IHCEBI 0052 D 0054 21A 0051 UN"
+  },
+  "IHCLME": {
+    "code": "IHCLME",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Health care claim or encounter request and response - interactive message is IHCLME.  Note: Health care claim or encounter request and response - interactive messages conforming to this document must contain the following data in segment UIH, composite S306:  Data element  0065 IHCLME 0052 D 0054 21A 0051 UN"
+  },
+  "IMPDEF": {
+    "code": "IMPDEF",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the EDI implementation guide definition message is IMPDEF.  Note: EDI implementation guide definition messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 IMPDEF 0052 D 0054 21A 0051 UN"
+  },
+  "INFCON": {
+    "code": "INFCON",
+    "name": "EDIFACT",
+    "description": "A segment to identify the location of the component being reported. It is recommended that, where possible, codes should be used to identify the component to facilitate automatic processing."
+  },
+  "INFENT": {
+    "code": "INFENT",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Enterprise accounting information message is INFENT.  Note: Enterprise accounting information messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 INFENT 0052 D 0054 21A 0051 UN"
+  },
+  "INSDES": {
+    "code": "INSDES",
+    "name": "EDIFACT",
+    "description": "A segment identifying the line item for which Instruction to Despatch message information is being provided. All other segments in the detail section following this segment refer to this line item."
+  },
+  "INSPRE": {
+    "code": "INSPRE",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Insurance premium message is INSPRE.  Note: Insurance premium messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 INSPRE 0052 D 0054 21A 0051 UN"
+  },
+  "INSREQ": {
+    "code": "INSREQ",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Inspection request message is INSREQ.  Note: Inspection request messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 INSREQ 0052 D 0054 21A 0051 UN"
+  },
+  "INSRPT": {
+    "code": "INSRPT",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Inspection report message is INSRPT.  Note: Inspection report messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 INSRPT 0052 D 0054 21A 0051 UN"
+  },
+  "INVOIC": {
+    "code": "INVOIC",
+    "name": "EDIFACT",
+    "description": "A segment identifying the line item by the line number and configuration level, and additionally, identifying the product or service invoiced. Other product identification numbers, e.g. Buyer product number etc., can be specified within the following PIA segment."
+  },
+  "INVRPT": {
+    "code": "INVRPT",
+    "name": "EDIFACT",
+    "description": "A segment identifying the sequence in which packing has been done, e.g. handling unit (pallet), package (box)."
+  },
+  "IPPOAD": {
+    "code": "IPPOAD",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Insurance policy administration message is IPPOAD.  Note: Insurance policy administration messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 IPPOAD 0052 D 0054 21A 0051 UN"
+  },
+  "IPPOMO": {
+    "code": "IPPOMO",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Motor insurance policy message is IPPOMO.  Note: Motor insurance policy messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 IPPOMO 0052 D 0054 21A 0051 UN"
+  },
+  "ISENDS": {
+    "code": "ISENDS",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Intermediary system enablement or disablement message is ISENDS.  Note: Intermediary system enablement or disablement messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 ISENDS 0052 D 0054 21A 0051 UN"
+  },
+  "ITRRPT": {
+    "code": "ITRRPT",
+    "name": "EDIFACT",
+    "description": "A segment used to indicate the start of a loop related to a given original despatch using data element 7365 Processing indicator description code identifying a consignment driven process."
+  },
+  "JAPRES": {
+    "code": "JAPRES",
+    "name": "EDIFACT",
+    "description": "A mandatory service segment placed before the first user segment in the detail section to avoid segment collision."
+  },
+  "JINFDE": {
+    "code": "JINFDE",
+    "name": "EDIFACT",
+    "description": "A mandatory service segment placed before the first user segment in the detail section to avoid segment collision."
+  },
+  "JOBAPP": {
+    "code": "JOBAPP",
+    "name": "EDIFACT",
+    "description": "A mandatory service segment placed before the first user segment in the detail section to avoid segment collision."
+  },
+  "JOBCON": {
+    "code": "JOBCON",
+    "name": "EDIFACT",
+    "description": "A mandatory service segment placed before the first user segment in the detail section to avoid segment collision."
+  },
+  "JOBMOD": {
+    "code": "JOBMOD",
+    "name": "EDIFACT",
+    "description": "A mandatory service segment placed before the first user segment in the detail section to avoid segment collision."
+  },
+  "JOBOFF": {
+    "code": "JOBOFF",
+    "name": "EDIFACT",
+    "description": "A mandatory service segment placed before the first user segment in the detail section to avoid segment collision."
+  },
+  "JUPREQ": {
+    "code": "JUPREQ",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Justified payment request message is JUPREQ.  Note: Justified payment request messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 JUPREQ 0052 D 0054 21A 0051 UN"
+  },
+  "KEYMAN": {
+    "code": "KEYMAN",
+    "name": "EDIFACT",
+    "description": "To head, identify and specify a message."
+  },
+  "LEDGER": {
+    "code": "LEDGER",
+    "name": "EDIFACT",
+    "description": "A segment giving detailed information on the sequence of the ledger."
+  },
+  "LREACT": {
+    "code": "LREACT",
+    "name": "EDIFACT",
+    "description": "This indicator specifies a code which indicates whether this group is a policy, insured, coverage or relationship group."
+  },
+  "LRECLM": {
+    "code": "LRECLM",
+    "name": "EDIFACT",
+    "description": "A segment defining the type of claim."
+  },
+  "MEDPID": {
+    "code": "MEDPID",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Person identification message is MEDPID.  Note: Person identification messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 MEDPID 0052 D 0054 21A 0051 UN"
+  },
+  "MEDPRE": {
+    "code": "MEDPRE",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Medical prescription message is MEDPRE.  Note: Medical prescription messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 MEDPRE 0052 D 0054 21A 0051 UN"
+  },
+  "MEDREQ": {
+    "code": "MEDREQ",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Medical service request message is MEDREQ.  Note: Medical service request messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 MEDREQ 0052 D 0054 21A 0051 UN"
+  },
+  "MEDRPT": {
+    "code": "MEDRPT",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Medical service report message is MEDRPT.  Note: Medical service report messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 MEDRPT 0052 D 0054 21A 0051 UN"
+  },
+  "MEDRUC": {
+    "code": "MEDRUC",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Medical resource usage and cost message is MEDRUC.  Note: Medical resource usage and cost messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 MEDRUC 0052 D 0054 21A 0051 UN"
+  },
+  "MEQPOS": {
+    "code": "MEQPOS",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Means of transport and equipment position message is MEQPOS.  Note: Means of transport and equipment position messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 MEQPOS 0052 D 0054 21A 0051 UN"
+  },
+  "MOVINS": {
+    "code": "MOVINS",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Stowage instruction message is MOVINS.  Note: Stowage instruction messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 MOVINS 0052 D 0054 21A 0051 UN"
+  },
+  "MSCONS": {
+    "code": "MSCONS",
+    "name": "EDIFACT",
+    "description": "A segment placed at the start of the detail section to avoid segment collision."
+  },
+  "ORDCHG": {
+    "code": "ORDCHG",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Purchase order change request message is ORDCHG.  Note: Purchase order change request messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 ORDCHG 0052 D 0054 21A 0051 UN"
+  },
+  "ORDERS": {
+    "code": "ORDERS",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Purchase order message is ORDERS.  Note: Purchase order messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 ORDERS 0052 D 0054 21A 0051 UN"
+  },
+  "ORDRSP": {
+    "code": "ORDRSP",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Purchase order response message is ORDRSP.  Note: Purchase order response messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 ORDRSP 0052 D 0054 21A 0051 UN"
+  },
+  "OSTENQ": {
+    "code": "OSTENQ",
+    "name": "EDIFACT",
+    "description": "A segment giving references to the purchase order(s) enquired. Other references may also be given, e.g. sellers reference number."
+  },
+  "OSTRPT": {
+    "code": "OSTRPT",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Order status report message is OSTRPT.  Note: Order status report messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 OSTRPT 0052 D 0054 21A 0051 UN"
+  },
+  "PARTIN": {
+    "code": "PARTIN",
+    "name": "EDIFACT",
+    "description": "A service segment placed at the start of the detail section to avoid segment collision."
+  },
+  "PASREQ": {
+    "code": "PASREQ",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Travel, tourism and leisure product application status request - interactive message is PASREQ.  Note: Travel, tourism and leisure product application status request - interactive messages conforming to this document must contain the following data in segment UIH, composite S306:  Data element  0065 PASREQ 0052 D 0054 21A 0051 UN"
+  },
+  "PASRSP": {
+    "code": "PASRSP",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Travel, tourism and leisure product application status response - interactive message is PASRSP.  Note: Travel, tourism and leisure product application status response - interactive messages conforming to this document must contain the following data in segment UIH, composite S306:  Data element  0065 PASRSP 0052 D 0054 21A 0051 UN"
+  },
+  "PAXLST": {
+    "code": "PAXLST",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Passenger list message is PAXLST.  Note: Passenger list messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 PAXLST 0052 D 0054 21A 0051 UN"
+  },
+  "PAYDUC": {
+    "code": "PAYDUC",
+    "name": "EDIFACT",
+    "description": "A segment relevant to the processing of segment group 6, to indicate whether all individual employee payment details, or only changes from a nominated standard payment are provided."
+  },
+  "PAYEXT": {
+    "code": "PAYEXT",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Extended payment order message is PAYEXT.  Note: Extended payment order messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 PAYEXT 0052 D 0054 21A 0051 UN"
+  },
+  "PAYMUL": {
+    "code": "PAYMUL",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Multiple payment order message is PAYMUL.  Note: Multiple payment order messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 PAYMUL 0052 D 0054 21A 0051 UN"
+  },
+  "PAYORD": {
+    "code": "PAYORD",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Payment order message is PAYORD.  Note: Payment order messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 PAYORD 0052 D 0054 21A 0051 UN"
+  },
+  "PRICAT": {
+    "code": "PRICAT",
+    "name": "EDIFACT",
+    "description": "A segment identifying the products Price/Tariff group where applicable."
+  },
+  "PRIHIS": {
+    "code": "PRIHIS",
+    "name": "EDIFACT",
+    "description": "A segment identifying the line item by the line number and additionally, identifying the product. Other product identification numbers, e.g., substitute stock number, can be specified within the following PIA segment."
+  },
+  "PROCST": {
+    "code": "PROCST",
+    "name": "EDIFACT",
+    "description": "A segment used to identify the specific report line item and format the data represents. Generally relates to specific contractual data items required for the receiving customer. May use an external code list to identify the reporting line item, generally for a specific government entity."
+  },
+  "PRODAT": {
+    "code": "PRODAT",
+    "name": "EDIFACT",
+    "description": "A segment identifying the line item by the line item number and the product by its item number. Detailed product description can be specified using the following segment group: IMD-FTX. Data element 1229 may be used to identify the current line item updating the correspondent line item of a previously sent PRODAT message."
+  },
+  "PRODEX": {
+    "code": "PRODEX",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Product exchange reconciliation message is PRODEX.  Note: Product exchange reconciliation messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 PRODEX 0052 D 0054 21A 0051 UN"
+  },
+  "PROINQ": {
+    "code": "PROINQ",
+    "name": "EDIFACT",
+    "description": "A segment specifying the inquiry request line and if available, the identification of the product or service for which the inquiry is being made."
+  },
+  "PROSRV": {
+    "code": "PROSRV",
+    "name": "EDIFACT",
+    "description": "A segment to identify a claim document for reimbursement or report of service, issued by a service or repair centre."
+  },
+  "PROTAP": {
+    "code": "PROTAP",
+    "name": "EDIFACT",
+    "description": "A mandatory service segment placed before the first user segment in the detail section to avoid segment collision."
+  },
+  "PRPAID": {
+    "code": "PRPAID",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Insurance premium payment message is PRPAID.  Note: Insurance premium payment messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 PRPAID 0052 D 0054 21A 0051 UN"
+  },
+  "QALITY": {
+    "code": "QALITY",
+    "name": "EDIFACT",
+    "description": "A segment identifying the line item by its number and additionally, identifying the product involved by a product identification number. Other product identification numbers are specified in the following PIA segment, e.g. Customer part number, etc."
+  },
+  "QUOTES": {
+    "code": "QUOTES",
+    "name": "EDIFACT",
+    "description": "A segment identifying the line item by the line number and configuration level, and additionally, identifying the product or service quoted. Other product identification numbers, e.g. Buyer product number, etc. can be specified within the following PIA segment."
+  },
+  "RDRMES": {
+    "code": "RDRMES",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Raw data reporting message is RDRMES.  Note: Raw data reporting messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 RDRMES 0052 D 0054 21A 0051 UN"
+  },
+  "REBORD": {
+    "code": "REBORD",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Reinsurance bordereau message is REBORD.  Note: Reinsurance bordereau messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 REBORD 0052 D 0054 21A 0051 UN"
+  },
+  "RECADV": {
+    "code": "RECADV",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Receiving advice message is RECADV.  Note: Receiving advice messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 RECADV 0052 D 0054 21A 0051 UN"
+  },
+  "RECALC": {
+    "code": "RECALC",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Reinsurance calculation message is RECALC.  Note: Reinsurance calculation messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 RECALC 0052 D 0054 21A 0051 UN"
+  },
+  "RECECO": {
+    "code": "RECECO",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Credit risk cover message is RECECO.  Note: Credit risk cover messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 RECECO 0052 D 0054 21A 0051 UN"
+  },
+  "RECLAM": {
+    "code": "RECLAM",
+    "name": "EDIFACT",
+    "description": "A segment to provide references concerning the loss or event, reinsurance contract detail references, and for attached documents."
+  },
+  "RECORD": {
+    "code": "RECORD",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Reinsurance core data message is RECORD.  Note: Reinsurance core data messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 RECORD 0052 D 0054 21A 0051 UN"
+  },
+  "REGENT": {
+    "code": "REGENT",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Registration of enterprise message is REGENT.  Note: Registration of enterprise messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 REGENT 0052 D 0054 21A 0051 UN"
+  },
+  "RELIST": {
+    "code": "RELIST",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Reinsured objects list message is RELIST.  Note: Reinsured objects list messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 RELIST 0052 D 0054 21A 0051 UN"
+  },
+  "REMADV": {
+    "code": "REMADV",
+    "name": "EDIFACT",
+    "description": "A segment for identifying the reference document against which payment is being made."
+  },
+  "REPREM": {
+    "code": "REPREM",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Reinsurance premium message is REPREM.  Note: Reinsurance premium messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 REPREM 0052 D 0054 21A 0051 UN"
+  },
+  "REQDOC": {
+    "code": "REQDOC",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Request for document message is REQDOC.  Note: Request for document messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 REQDOC 0052 D 0054 21A 0051 UN"
+  },
+  "REQOTE": {
+    "code": "REQOTE",
+    "name": "EDIFACT",
+    "description": "A segment identifying the line item by the line number and configuration level, and additionally, identifying the product or service requested for quotation. Other product identification numbers, e.g. Buyer product number, etc. can be specified within the following PIA segment."
+  },
+  "RESETT": {
+    "code": "RESETT",
+    "name": "EDIFACT",
+    "description": "A segment to specify the permanent financial account to which the underlying items are pertaining to."
+  },
+  "RESMSG": {
+    "code": "RESMSG",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Reservation message is RESMSG.  Note: Reservation messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 RESMSG 0052 D 0054 21A 0051 UN"
+  },
+  "RESREQ": {
+    "code": "RESREQ",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Reservation request - interactive message is RESREQ.  Note: Reservation request - interactive messages conforming to this document must contain the following data in segment UIH, composite S306:  Data element  0065 RESREQ 0052 D 0054 21A 0051 UN"
+  },
+  "RESRSP": {
+    "code": "RESRSP",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Reservation response - interactive message is RESRSP.  Note: Reservation response - interactive messages conforming to this document must contain the following data in segment UIH, composite S306:  Data element  0065 RESRSP 0052 D 0054 21A 0051 UN"
+  },
+  "RETACC": {
+    "code": "RETACC",
+    "name": "EDIFACT",
+    "description": "A segment to specify the account rendering currency (statement currency) of the sub-account, and if required the settlement currency and the exchange rate used to convert from original account currency into settlement currency."
+  },
+  "RETANN": {
+    "code": "RETANN",
+    "name": "EDIFACT",
+    "description": "A segment identifying a line item by the line item number and configuration level, and additionally, identifying the return product. Other product identification numbers, e.g. supplier product number etc., can be specified within the following PIA segment."
+  },
+  "RETINS": {
+    "code": "RETINS",
+    "name": "EDIFACT",
+    "description": "A segment identifying a line item by the line item number and configuration level, and additionally, identifying the product for return. Other product identification numbers, e.g. supplier product number etc., can be specified within the following PIA segment."
+  },
+  "RPCALL": {
+    "code": "RPCALL",
+    "name": "EDIFACT",
+    "description": "A segment to identify an individual repair call for an appliance."
+  },
+  "SAFHAZ": {
+    "code": "SAFHAZ",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Safety and hazard data message is SAFHAZ.  Note: Safety and hazard data messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 SAFHAZ 0052 D 0054 21A 0051 UN"
+  },
+  "SANCRT": {
+    "code": "SANCRT",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the International movement of goods governmental regulatory message is SANCRT.  Note: International movement of goods governmental regulatory messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 SANCRT 0052 D 0054 21A 0051 UN"
+  },
+  "SKDREQ": {
+    "code": "SKDREQ",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Schedule request - interactive message is SKDREQ.  Note: Schedule request - interactive messages conforming to this document must contain the following data in segment UIH, composite S306:  Data element  0065 SKDREQ 0052 D 0054 21A 0051 UN"
+  },
+  "SKDUPD": {
+    "code": "SKDUPD",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Schedule update - interactive message is SKDUPD.  Note: Schedule update - interactive messages conforming to this document must contain the following data in segment UIH, composite S306:  Data element  0065 SKDUPD 0052 D 0054 21A 0051 UN"
+  },
+  "SLSFCT": {
+    "code": "SLSFCT",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Sales forecast message is SLSFCT.  Note: Sales forecast messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 SLSFCT 0052 D 0054 21A 0051 UN"
+  },
+  "SLSRPT": {
+    "code": "SLSRPT",
+    "name": "EDIFACT",
+    "description": "A segment to identify the activity, e.g. sales, the quantity of the activity, and other data related to the specific activity such as buying party, selling price, date sold, etc."
+  },
+  "SOCADE": {
+    "code": "SOCADE",
+    "name": "EDIFACT",
+    "description": "A mandatory service segment placed before the first user segment in the detail section to avoid segment collision."
+  },
+  "SSIMOD": {
+    "code": "SSIMOD",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Modification of identity details message is SSIMOD.  Note: Modification of identity details messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 SSIMOD 0052 D 0054 21A 0051 UN"
+  },
+  "SSRECH": {
+    "code": "SSRECH",
+    "name": "EDIFACT",
+    "description": "A mandatory service segment placed before the first user segment in the detail section to avoid segment collision."
+  },
+  "SSREGW": {
+    "code": "SSREGW",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Notification of registration of a worker message is SSREGW.  Note: Notification of registration of a worker messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 SSREGW 0052 D 0054 21A 0051 UN"
+  },
+  "STATAC": {
+    "code": "STATAC",
+    "name": "EDIFACT",
+    "description": "A segment identifying the reference document against which payment is to be made."
+  },
+  "STLRPT": {
+    "code": "STLRPT",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Settlement transaction reporting message is STLRPT.  Note: Settlement transaction reporting messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 STLRPT 0052 D 0054 21A 0051 UN"
+  },
+  "SUPCOT": {
+    "code": "SUPCOT",
+    "name": "EDIFACT",
+    "description": "A service segment placed at the start of the summary section to avoid segment collision."
+  },
+  "SUPMAN": {
+    "code": "SUPMAN",
+    "name": "EDIFACT",
+    "description": "A service segment placed at the start of the summary section to avoid segment collision."
+  },
+  "SUPRES": {
+    "code": "SUPRES",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Supplier response message is SUPRES.  Note: Supplier response messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 SUPRES 0052 D 0054 21A 0051 UN"
+  },
+  "TANSTA": {
+    "code": "TANSTA",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Tank status report message is TANSTA.  Note: Tank status report messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 TANSTA 0052 D 0054 21A 0051 UN"
+  },
+  "TAXCON": {
+    "code": "TAXCON",
+    "name": "EDIFACT",
+    "description": "This segment separates the header information from the detailed control information. It will have the value D."
+  },
+  "TIQREQ": {
+    "code": "TIQREQ",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Travel, tourism and leisure information inquiry request - interactive message is TIQREQ.  Note: Travel, tourism and leisure information inquiry request - interactive messages conforming to this document must contain the following data in segment UIH, composite S306:  Data element  0065 TIQREQ 0052 D 0054 21A 0051 UN"
+  },
+  "TIQRSP": {
+    "code": "TIQRSP",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Travel, tourism and leisure information inquiry response - interactive message is TIQRSP.  Note: Travel, tourism and leisure information inquiry response - interactive messages conforming to this document must contain the following data in segment UIH, composite S306:  Data element  0065 TIQRSP 0052 D 0054 21A 0051 UN"
+  },
+  "TPFREP": {
+    "code": "TPFREP",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Terminal performance message is TPFREP.  Note: Terminal performance messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 TPFREP 0052 D 0054 21A 0051 UN"
+  },
+  "TSDUPD": {
+    "code": "TSDUPD",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Timetable static data update - interactive message is TSDUPD.  Note: Timetable static data update - interactive messages conforming to this document must contain the following data in segment UIH, composite S306:  Data element  0065 TSDUPD 0052 D 0054 21A 0051 UN"
+  },
+  "TUPREQ": {
+    "code": "TUPREQ",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Travel, tourism and leisure data update request - interactive message is TUPREQ.  Note: Travel, tourism and leisure data update request - interactive messages conforming to this document must contain the following data in segment UIH, composite S306:  Data element  0065 TUPREQ 0052 D 0054 21A 0051 UN"
+  },
+  "TUPRSP": {
+    "code": "TUPRSP",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Travel, tourism and leisure data update response - interactive message is TUPRSP.  Note: Travel, tourism and leisure data update response - interactive messages conforming to this document must contain the following data in segment UIH, composite S306:  Data element  0065 TUPRSP 0052 D 0054 21A 0051 UN"
+  },
+  "UTILMD": {
+    "code": "UTILMD",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Utilities master data message is UTILMD.  Note: Utilities master data messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 UTILMD 0052 D 0054 21A 0051 UN"
+  },
+  "UTILTS": {
+    "code": "UTILTS",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Utilities time series message is UTILTS.  Note: Utilities time series messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 UTILTS 0052 D 0054 21A 0051 UN"
+  },
+  "VATDEC": {
+    "code": "VATDEC",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Value added tax message is VATDEC.  Note: Value added tax messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 VATDEC 0052 D 0054 21A 0051 UN"
+  },
+  "VERMAS": {
+    "code": "VERMAS",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Verified gross mass message is VERMAS.  Note: Verified gross mass messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 VERMAS 0052 D 0054 21A 0051 UN"
+  },
+  "VESDEP": {
+    "code": "VESDEP",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Vessel departure message is VESDEP.  Note: Vessel departure messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 VESDEP 0052 D 0054 21A 0051 UN"
+  },
+  "WASDIS": {
+    "code": "WASDIS",
+    "name": "EDIFACT",
+    "description": "A service segment starting and uniquely identifying a message. The message type code for the Waste disposal information message is WASDIS.  Note: Waste disposal information messages conforming to this document must contain the following data in segment UNH, composite S009:  Data element  0065 WASDIS 0052 D 0054 21A 0051 UN"
+  },
+  "WKGRDC": {
+    "code": "WKGRDC",
+    "name": "EDIFACT",
+    "description": "A mandatory service segment placed before the first user segment in the detail section to avoid segment collision."
+  },
+  "WKGRRE": {
+    "code": "WKGRRE",
+    "name": "EDIFACT",
+    "description": "A mandatory service segment placed before the first user segment in the detail section to avoid segment collision."
+  }
+}

@@ -1,0 +1,37 @@
+# Dependencies
+node_modules/
+
+# Build output
+out/
+*.vsix
+
+# Logs
+*.log
+scraper-output.log
+
+# Development scripts (not needed for distribution)
+scripts/
+dev.sh
+
+# Test files
+test-*.js
+test-*.x12
+test-*.edifact
+
+# Documentation (keep README.md only)
+CHANGELOG.md
+GETTING_STARTED.md
+PROJECT_SUMMARY.md
+TESTING_IN_CODE_SERVER.md
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor directories
+.idea/
+*.swp
+*.swo
+
+# Lock files (regenerated on install)
+package-lock.json

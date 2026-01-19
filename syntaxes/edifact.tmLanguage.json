@@ -1,0 +1,69 @@
+{
+  "name": "EDIFACT",
+  "scopeName": "source.edifact",
+  "fileTypes": ["edifact"],
+  "patterns": [
+    {"include": "#envelope"},
+    {"include": "#delimiters"},
+    {"include": "#transactionset"},
+    {"include": "#heading"},
+    {"include": "#item"},
+    {"include": "#detail"}
+  ],
+  "repository": {
+    "envelope": {
+      "match": "UNB",
+      "name": "keyword.control.edifact"
+    },
+    "delimiters": {
+      "match": "(\\+)|(\\:)|(\\')",
+      "captures": {
+        "1": {"name": "string.edifact"},
+        "2": {"name": "entity.name.edifact"},
+        "3": {"name": "entity.name.edifact"}
+      }
+    },
+    "transactionset": {
+      "match": "(UNH)(\\+)(.*)(\\+)(\\w*)(\\:)",
+      "captures": {
+        "1": {"name": "keyword.control.edifact"},
+        "2": {"name": "string.edifact"},
+        "4": {"name": "string.edifact"},
+        "5": {"name": "variable.parameter.edifact"}
+      }
+    },
+    "heading": {
+      "patterns": [
+        {
+          "match": "(^[A-Z0-9]{3})|\\b(AGR|BGM|BY|CAV|CCI|CNT|DDE|DDK|DDQ|DP|DTM|ERC|FTX|GC|GRP|GRU|IDE|INP|IT|IV|LOC|MKS|MR|MS|NAD|PIA|PQ|PRC|REG|RFF|QTY|SE|SEQ|SO|STS|SU|TAX|UCI|UD|UNA|UNB|UNH|UNOC|UNS|UNT|UNZ)\\b",
+          "name": "constant.numeric.edifact"
+        },
+        {
+          "match": "\\b(PAT|MED|DOS|EPI|AGB|EML|ACB)\\b",
+          "name": "entity.name.edifact"
+        },
+        {
+          "match": "\\b(PRK|GPK|HPK|PRE)\\b",
+          "name": "variable.parameter.edifact"
+        }
+      ]
+    },
+    "item": {
+      "match": "\\b(?<!\\+)(LIN).*\\b",
+      "name": "storage.type.edifact"
+    },
+    "detail": {
+      "patterns": [
+        {"include": "#delimiters"},
+        {
+          "match": "\\b(?<!\\+)(LIN)|(PIA)|(IMD)|(MEA)|(QTY)|(PCD)|(ALI)|(DTM)|(GIN)|(GIR)|(QVR)|(EQD)|(FTX)|(DGS)|((SG)+\\d)\\b",
+          "name": "storage.type.edifact"
+        },
+        {
+          "match": "\\b(?<!\\+)(UNS)\\b",
+          "name": "variable.parameter.edifact"
+        }
+      ]
+    }
+  }
+}
