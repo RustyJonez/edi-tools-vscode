@@ -6119,6 +6119,2578 @@
       }
     ]
   },
+  "E001": {
+    "elementNumber": "E001",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "3477",
+        "name": "Address format, coded",
+        "requirement": "M"
+      },
+      {
+        "position": "020",
+        "elementId": "3286",
+        "name": "Address component",
+        "requirement": "M"
+      },
+      {
+        "position": "030",
+        "elementId": "3286",
+        "name": "Address component",
+        "requirement": "C"
+      },
+      {
+        "position": "040",
+        "elementId": "3286",
+        "name": "Address component",
+        "requirement": "C"
+      },
+      {
+        "position": "050",
+        "elementId": "3286",
+        "name": "Address component",
+        "requirement": "C"
+      },
+      {
+        "position": "060",
+        "elementId": "3286",
+        "name": "Address component",
+        "requirement": "C"
+      },
+      {
+        "position": "070",
+        "elementId": "3286",
+        "name": "Address component",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E002": {
+    "elementNumber": "E002",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "4439",
+        "name": "Payment conditions, coded",
+        "requirement": "M"
+      },
+      {
+        "position": "020",
+        "elementId": "5004",
+        "name": "Monetary amount",
+        "requirement": "C"
+      },
+      {
+        "position": "030",
+        "elementId": "6345",
+        "name": "Currency, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "040",
+        "elementId": "3036",
+        "name": "Party name",
+        "requirement": "C"
+      },
+      {
+        "position": "050",
+        "elementId": "4440",
+        "name": "Free text",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E003": {
+    "elementNumber": "E003",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "9021",
+        "name": "Attribute type, coded",
+        "requirement": "M"
+      },
+      {
+        "position": "020",
+        "elementId": "9018",
+        "name": "Attribute",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E004": {
+    "elementNumber": "E004",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "4183",
+        "name": "Special conditions, coded",
+        "requirement": "M"
+      },
+      {
+        "position": "020",
+        "elementId": "6350",
+        "name": "Number of units",
+        "requirement": "C"
+      },
+      {
+        "position": "030",
+        "elementId": "6353",
+        "name": "Number of units qualifier",
+        "requirement": "C"
+      },
+      {
+        "position": "040",
+        "elementId": "5479",
+        "name": "Relation, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "050",
+        "elementId": "2160",
+        "name": "Days of operation",
+        "requirement": "C"
+      },
+      {
+        "position": "060",
+        "elementId": "5004",
+        "name": "Monetary amount",
+        "requirement": "C"
+      },
+      {
+        "position": "070",
+        "elementId": "5025",
+        "name": "Monetary amount type qualifier",
+        "requirement": "C"
+      },
+      {
+        "position": "080",
+        "elementId": "6345",
+        "name": "Currency, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "090",
+        "elementId": "4440",
+        "name": "Free text",
+        "requirement": "C"
+      },
+      {
+        "position": "100",
+        "elementId": "4440",
+        "name": "Free text",
+        "requirement": "C"
+      },
+      {
+        "position": "110",
+        "elementId": "4440",
+        "name": "Free text",
+        "requirement": "C"
+      },
+      {
+        "position": "120",
+        "elementId": "4440",
+        "name": "Free text",
+        "requirement": "C"
+      },
+      {
+        "position": "130",
+        "elementId": "4440",
+        "name": "Free text",
+        "requirement": "C"
+      },
+      {
+        "position": "140",
+        "elementId": "4440",
+        "name": "Free text",
+        "requirement": "C"
+      },
+      {
+        "position": "150",
+        "elementId": "4440",
+        "name": "Free text",
+        "requirement": "C"
+      },
+      {
+        "position": "160",
+        "elementId": "4440",
+        "name": "Free text",
+        "requirement": "C"
+      },
+      {
+        "position": "170",
+        "elementId": "4440",
+        "name": "Free text",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E005": {
+    "elementNumber": "E005",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "4183",
+        "name": "Special conditions, coded",
+        "requirement": "M"
+      },
+      {
+        "position": "020",
+        "elementId": "4473",
+        "name": "Information type identification",
+        "requirement": "C"
+      },
+      {
+        "position": "030",
+        "elementId": "4440",
+        "name": "Free text",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E006": {
+    "elementNumber": "E006",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "4183",
+        "name": "Special conditions, coded",
+        "requirement": "M"
+      },
+      {
+        "position": "020",
+        "elementId": "7365",
+        "name": "Processing indicator, coded",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E007": {
+    "elementNumber": "E007",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "8015",
+        "name": "Traffic restriction, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "020",
+        "elementId": "8017",
+        "name": "Traffic restriction type, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "030",
+        "elementId": "8035",
+        "name": "Traffic restriction type qualifier",
+        "requirement": "C"
+      },
+      {
+        "position": "040",
+        "elementId": "4440",
+        "name": "Free text",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E008": {
+    "elementNumber": "E008",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "3227",
+        "name": "Place/location qualifier",
+        "requirement": "M"
+      },
+      {
+        "position": "020",
+        "elementId": "3224",
+        "name": "Place/location",
+        "requirement": "M"
+      },
+      {
+        "position": "030",
+        "elementId": "5479",
+        "name": "Relation, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "040",
+        "elementId": "6060",
+        "name": "Quantity",
+        "requirement": "C"
+      },
+      {
+        "position": "050",
+        "elementId": "6063",
+        "name": "Quantity qualifier",
+        "requirement": "C"
+      },
+      {
+        "position": "060",
+        "elementId": "2002",
+        "name": "Time",
+        "requirement": "C"
+      },
+      {
+        "position": "070",
+        "elementId": "8179",
+        "name": "Type of means of transport identification",
+        "requirement": "C"
+      },
+      {
+        "position": "080",
+        "elementId": "8179",
+        "name": "Type of means of transport identification",
+        "requirement": "C"
+      },
+      {
+        "position": "090",
+        "elementId": "8179",
+        "name": "Type of means of transport identification",
+        "requirement": "C"
+      },
+      {
+        "position": "100",
+        "elementId": "8179",
+        "name": "Type of means of transport identification",
+        "requirement": "C"
+      },
+      {
+        "position": "110",
+        "elementId": "8179",
+        "name": "Type of means of transport identification",
+        "requirement": "C"
+      },
+      {
+        "position": "120",
+        "elementId": "6000",
+        "name": "Latitude",
+        "requirement": "C"
+      },
+      {
+        "position": "130",
+        "elementId": "6002",
+        "name": "Longitude",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E009": {
+    "elementNumber": "E009",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "2000",
+        "name": "Date",
+        "requirement": "M"
+      },
+      {
+        "position": "020",
+        "elementId": "4510",
+        "name": "Requested information",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E010": {
+    "elementNumber": "E010",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "4009",
+        "name": "Option, coded",
+        "requirement": "M"
+      },
+      {
+        "position": "020",
+        "elementId": "4018",
+        "name": "Associated option information",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E011": {
+    "elementNumber": "E011",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "5243",
+        "name": "Rate/tariff class identification",
+        "requirement": "M"
+      },
+      {
+        "position": "020",
+        "elementId": "7365",
+        "name": "Processing indicator, coded",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E012": {
+    "elementNumber": "E012",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "3035",
+        "name": "Party qualifier",
+        "requirement": "M"
+      },
+      {
+        "position": "020",
+        "elementId": "3036",
+        "name": "Party name",
+        "requirement": "C"
+      },
+      {
+        "position": "030",
+        "elementId": "3039",
+        "name": "Party identification",
+        "requirement": "C"
+      },
+      {
+        "position": "040",
+        "elementId": "3397",
+        "name": "Name status, coded",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E013": {
+    "elementNumber": "E013",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "2005",
+        "name": "Date/time/period qualifier",
+        "requirement": "M"
+      },
+      {
+        "position": "020",
+        "elementId": "2380",
+        "name": "Date/time/period",
+        "requirement": "M"
+      },
+      {
+        "position": "030",
+        "elementId": "2379",
+        "name": "Date/time/period format qualifier",
+        "requirement": "C"
+      },
+      {
+        "position": "040",
+        "elementId": "4440",
+        "name": "Free text",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E014": {
+    "elementNumber": "E014",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "1154",
+        "name": "Reference number",
+        "requirement": "C"
+      },
+      {
+        "position": "020",
+        "elementId": "1153",
+        "name": "Reference qualifier",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E082": {
+    "elementNumber": "E082",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "3039",
+        "name": "Party identification",
+        "requirement": "M"
+      },
+      {
+        "position": "020",
+        "elementId": "1131",
+        "name": "Code list qualifier",
+        "requirement": "C"
+      },
+      {
+        "position": "030",
+        "elementId": "3055",
+        "name": "Code list responsible agency, coded",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E206": {
+    "elementNumber": "E206",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "7402",
+        "name": "Identity number",
+        "requirement": "M"
+      },
+      {
+        "position": "020",
+        "elementId": "7405",
+        "name": "Identity number qualifier",
+        "requirement": "C"
+      },
+      {
+        "position": "030",
+        "elementId": "4405",
+        "name": "Status, coded",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E211": {
+    "elementNumber": "E211",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "6411",
+        "name": "Measure unit qualifier",
+        "requirement": "M"
+      },
+      {
+        "position": "020",
+        "elementId": "6168",
+        "name": "Length dimension",
+        "requirement": "C"
+      },
+      {
+        "position": "030",
+        "elementId": "6140",
+        "name": "Width dimension",
+        "requirement": "C"
+      },
+      {
+        "position": "040",
+        "elementId": "6008",
+        "name": "Height dimension",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E212": {
+    "elementNumber": "E212",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "7140",
+        "name": "Item number",
+        "requirement": "C"
+      },
+      {
+        "position": "020",
+        "elementId": "7143",
+        "name": "Item number type, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "030",
+        "elementId": "1131",
+        "name": "Code list qualifier",
+        "requirement": "C"
+      },
+      {
+        "position": "040",
+        "elementId": "3055",
+        "name": "Code list responsible agency, coded",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E504": {
+    "elementNumber": "E504",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "6347",
+        "name": "Currency details qualifier",
+        "requirement": "M"
+      },
+      {
+        "position": "020",
+        "elementId": "6345",
+        "name": "Currency, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "030",
+        "elementId": "6343",
+        "name": "Currency qualifier",
+        "requirement": "C"
+      },
+      {
+        "position": "040",
+        "elementId": "6348",
+        "name": "Currency rate base",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E517": {
+    "elementNumber": "E517",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "3225",
+        "name": "Place/location identification",
+        "requirement": "C"
+      },
+      {
+        "position": "020",
+        "elementId": "1131",
+        "name": "Code list qualifier",
+        "requirement": "C"
+      },
+      {
+        "position": "030",
+        "elementId": "3055",
+        "name": "Code list responsible agency, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "040",
+        "elementId": "3224",
+        "name": "Place/location",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E523": {
+    "elementNumber": "E523",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "6350",
+        "name": "Number of units",
+        "requirement": "C"
+      },
+      {
+        "position": "020",
+        "elementId": "6353",
+        "name": "Number of units qualifier",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E778": {
+    "elementNumber": "E778",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "7164",
+        "name": "Hierarchical id. number",
+        "requirement": "C"
+      },
+      {
+        "position": "020",
+        "elementId": "1050",
+        "name": "Sequence number",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E816": {
+    "elementNumber": "E816",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "3405",
+        "name": "Name component qualifier",
+        "requirement": "M"
+      },
+      {
+        "position": "020",
+        "elementId": "3398",
+        "name": "Name component",
+        "requirement": "C"
+      },
+      {
+        "position": "030",
+        "elementId": "3401",
+        "name": "Name component usage, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "040",
+        "elementId": "3295",
+        "name": "Name component original representation, coded",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E817": {
+    "elementNumber": "E817",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "3299",
+        "name": "Address purpose, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "020",
+        "elementId": "3131",
+        "name": "Address type, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "030",
+        "elementId": "3475",
+        "name": "Address status, coded",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E819": {
+    "elementNumber": "E819",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "3229",
+        "name": "Country sub-entity identification",
+        "requirement": "C"
+      },
+      {
+        "position": "020",
+        "elementId": "1131",
+        "name": "Code list qualifier",
+        "requirement": "C"
+      },
+      {
+        "position": "030",
+        "elementId": "3055",
+        "name": "Code list responsible agency, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "040",
+        "elementId": "3228",
+        "name": "Country sub-entity",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E901": {
+    "elementNumber": "E901",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "9321",
+        "name": "Application error identification",
+        "requirement": "M"
+      },
+      {
+        "position": "020",
+        "elementId": "1131",
+        "name": "Code list qualifier",
+        "requirement": "C"
+      },
+      {
+        "position": "030",
+        "elementId": "3055",
+        "name": "Code list responsible agency, coded",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E958": {
+    "elementNumber": "E958",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "6060",
+        "name": "Quantity",
+        "requirement": "C"
+      },
+      {
+        "position": "020",
+        "elementId": "4405",
+        "name": "Status, coded",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E959": {
+    "elementNumber": "E959",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "7161",
+        "name": "Special services, coded",
+        "requirement": "M"
+      },
+      {
+        "position": "020",
+        "elementId": "2002",
+        "name": "Time",
+        "requirement": "C"
+      },
+      {
+        "position": "030",
+        "elementId": "2002",
+        "name": "Time",
+        "requirement": "C"
+      },
+      {
+        "position": "040",
+        "elementId": "2000",
+        "name": "Date",
+        "requirement": "C"
+      },
+      {
+        "position": "050",
+        "elementId": "3224",
+        "name": "Place/location",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E961": {
+    "elementNumber": "E961",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "8179",
+        "name": "Type of means of transport identification",
+        "requirement": "C"
+      },
+      {
+        "position": "020",
+        "elementId": "8216",
+        "name": "Number of stops",
+        "requirement": "C"
+      },
+      {
+        "position": "030",
+        "elementId": "2162",
+        "name": "Leg duration",
+        "requirement": "C"
+      },
+      {
+        "position": "040",
+        "elementId": "5482",
+        "name": "Percentage",
+        "requirement": "C"
+      },
+      {
+        "position": "050",
+        "elementId": "2160",
+        "name": "Days of operation",
+        "requirement": "C"
+      },
+      {
+        "position": "060",
+        "elementId": "2380",
+        "name": "Date/time/period",
+        "requirement": "C"
+      },
+      {
+        "position": "070",
+        "elementId": "8215",
+        "name": "Complexing transport indicator",
+        "requirement": "C"
+      },
+      {
+        "position": "080",
+        "elementId": "3225",
+        "name": "Place/location identification",
+        "requirement": "C"
+      },
+      {
+        "position": "090",
+        "elementId": "3225",
+        "name": "Place/location identification",
+        "requirement": "C"
+      },
+      {
+        "position": "100",
+        "elementId": "3225",
+        "name": "Place/location identification",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E962": {
+    "elementNumber": "E962",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "3463",
+        "name": "Gate identification",
+        "requirement": "C"
+      },
+      {
+        "position": "020",
+        "elementId": "3223",
+        "name": "Related place/location one identification",
+        "requirement": "C"
+      },
+      {
+        "position": "030",
+        "elementId": "3223",
+        "name": "Related place/location one identification",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E963": {
+    "elementNumber": "E963",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "6314",
+        "name": "Measurement value",
+        "requirement": "C"
+      },
+      {
+        "position": "020",
+        "elementId": "6411",
+        "name": "Measure unit qualifier",
+        "requirement": "C"
+      },
+      {
+        "position": "030",
+        "elementId": "2002",
+        "name": "Time",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E964": {
+    "elementNumber": "E964",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "2002",
+        "name": "Time",
+        "requirement": "C"
+      },
+      {
+        "position": "020",
+        "elementId": "2002",
+        "name": "Time",
+        "requirement": "C"
+      },
+      {
+        "position": "030",
+        "elementId": "2156",
+        "name": "Check-in date and time",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E965": {
+    "elementNumber": "E965",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "9039",
+        "name": "Facility type, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "020",
+        "elementId": "9038",
+        "name": "Facility type description",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E966": {
+    "elementNumber": "E966",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "3035",
+        "name": "Party qualifier",
+        "requirement": "M"
+      },
+      {
+        "position": "020",
+        "elementId": "3148",
+        "name": "Communication number",
+        "requirement": "M"
+      },
+      {
+        "position": "030",
+        "elementId": "3155",
+        "name": "Communication channel qualifier",
+        "requirement": "C"
+      },
+      {
+        "position": "040",
+        "elementId": "3036",
+        "name": "Party name",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E967": {
+    "elementNumber": "E967",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "1153",
+        "name": "Reference qualifier",
+        "requirement": "M"
+      },
+      {
+        "position": "020",
+        "elementId": "1154",
+        "name": "Reference number",
+        "requirement": "C"
+      },
+      {
+        "position": "030",
+        "elementId": "3036",
+        "name": "Party name",
+        "requirement": "C"
+      },
+      {
+        "position": "040",
+        "elementId": "1145",
+        "name": "Traveller reference number",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E968": {
+    "elementNumber": "E968",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "1001",
+        "name": "Document/message name, coded",
+        "requirement": "M"
+      },
+      {
+        "position": "020",
+        "elementId": "1004",
+        "name": "Document/message number",
+        "requirement": "M"
+      },
+      {
+        "position": "030",
+        "elementId": "7111",
+        "name": "Characteristic value, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "040",
+        "elementId": "3225",
+        "name": "Place/location identification",
+        "requirement": "C"
+      },
+      {
+        "position": "050",
+        "elementId": "3207",
+        "name": "Country, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "060",
+        "elementId": "3207",
+        "name": "Country, coded",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E969": {
+    "elementNumber": "E969",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "2000",
+        "name": "Date",
+        "requirement": "M"
+      },
+      {
+        "position": "020",
+        "elementId": "2000",
+        "name": "Date",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E970": {
+    "elementNumber": "E970",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "3036",
+        "name": "Party name",
+        "requirement": "M"
+      },
+      {
+        "position": "020",
+        "elementId": "3459",
+        "name": "Frequent traveller identification",
+        "requirement": "M"
+      },
+      {
+        "position": "030",
+        "elementId": "1145",
+        "name": "Traveller reference number",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E971": {
+    "elementNumber": "E971",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "4451",
+        "name": "Text subject qualifier",
+        "requirement": "M"
+      },
+      {
+        "position": "020",
+        "elementId": "4473",
+        "name": "Information type identification",
+        "requirement": "C"
+      },
+      {
+        "position": "030",
+        "elementId": "4405",
+        "name": "Status, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "040",
+        "elementId": "3036",
+        "name": "Party name",
+        "requirement": "C"
+      },
+      {
+        "position": "050",
+        "elementId": "3453",
+        "name": "Language, coded",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E972": {
+    "elementNumber": "E972",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "4025",
+        "name": "Business function, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "020",
+        "elementId": "1225",
+        "name": "Message function, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "030",
+        "elementId": "3055",
+        "name": "Code list responsible agency, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "040",
+        "elementId": "1225",
+        "name": "Message function, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "050",
+        "elementId": "1225",
+        "name": "Message function, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "060",
+        "elementId": "1225",
+        "name": "Message function, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "070",
+        "elementId": "1225",
+        "name": "Message function, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "080",
+        "elementId": "1225",
+        "name": "Message function, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "090",
+        "elementId": "1225",
+        "name": "Message function, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "100",
+        "elementId": "1225",
+        "name": "Message function, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "110",
+        "elementId": "1225",
+        "name": "Message function, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "120",
+        "elementId": "1225",
+        "name": "Message function, coded",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E973": {
+    "elementNumber": "E973",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "3036",
+        "name": "Party name",
+        "requirement": "C"
+      },
+      {
+        "position": "020",
+        "elementId": "3225",
+        "name": "Place/location identification",
+        "requirement": "C"
+      },
+      {
+        "position": "030",
+        "elementId": "3224",
+        "name": "Place/location",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E974": {
+    "elementNumber": "E974",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "3197",
+        "name": "Agent identification",
+        "requirement": "C"
+      },
+      {
+        "position": "020",
+        "elementId": "3465",
+        "name": "In-house identification",
+        "requirement": "C"
+      },
+      {
+        "position": "030",
+        "elementId": "3197",
+        "name": "Agent identification",
+        "requirement": "C"
+      },
+      {
+        "position": "040",
+        "elementId": "3036",
+        "name": "Party name",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E975": {
+    "elementNumber": "E975",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "3225",
+        "name": "Place/location identification",
+        "requirement": "C"
+      },
+      {
+        "position": "020",
+        "elementId": "3224",
+        "name": "Place/location",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E976": {
+    "elementNumber": "E976",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "3207",
+        "name": "Country, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "020",
+        "elementId": "6345",
+        "name": "Currency, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "030",
+        "elementId": "3453",
+        "name": "Language, coded",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E977": {
+    "elementNumber": "E977",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "4467",
+        "name": "Form of payment identification",
+        "requirement": "C"
+      },
+      {
+        "position": "020",
+        "elementId": "4469",
+        "name": "Payment type identification",
+        "requirement": "C"
+      },
+      {
+        "position": "030",
+        "elementId": "5267",
+        "name": "Service to be paid, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "040",
+        "elementId": "5004",
+        "name": "Monetary amount",
+        "requirement": "C"
+      },
+      {
+        "position": "050",
+        "elementId": "6345",
+        "name": "Currency, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "060",
+        "elementId": "1154",
+        "name": "Reference number",
+        "requirement": "C"
+      },
+      {
+        "position": "070",
+        "elementId": "2000",
+        "name": "Date",
+        "requirement": "C"
+      },
+      {
+        "position": "080",
+        "elementId": "3225",
+        "name": "Place/location identification",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E978": {
+    "elementNumber": "E978",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "3036",
+        "name": "Party name",
+        "requirement": "M"
+      },
+      {
+        "position": "020",
+        "elementId": "1154",
+        "name": "Reference number",
+        "requirement": "C"
+      },
+      {
+        "position": "030",
+        "elementId": "2000",
+        "name": "Date",
+        "requirement": "C"
+      },
+      {
+        "position": "040",
+        "elementId": "3449",
+        "name": "Bank identification",
+        "requirement": "C"
+      },
+      {
+        "position": "050",
+        "elementId": "1145",
+        "name": "Traveller reference number",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E979": {
+    "elementNumber": "E979",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "3036",
+        "name": "Party name",
+        "requirement": "C"
+      },
+      {
+        "position": "020",
+        "elementId": "9040",
+        "name": "Reservation control number",
+        "requirement": "C"
+      },
+      {
+        "position": "030",
+        "elementId": "9043",
+        "name": "Reservation control number qualifier",
+        "requirement": "C"
+      },
+      {
+        "position": "040",
+        "elementId": "2000",
+        "name": "Date",
+        "requirement": "C"
+      },
+      {
+        "position": "050",
+        "elementId": "2164",
+        "name": "Millisecond time",
+        "requirement": "C"
+      },
+      {
+        "position": "060",
+        "elementId": "1154",
+        "name": "Reference number",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E980": {
+    "elementNumber": "E980",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "4187",
+        "name": "Special requirement type identification",
+        "requirement": "M"
+      },
+      {
+        "position": "020",
+        "elementId": "4405",
+        "name": "Status, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "030",
+        "elementId": "6060",
+        "name": "Quantity",
+        "requirement": "C"
+      },
+      {
+        "position": "040",
+        "elementId": "3036",
+        "name": "Party name",
+        "requirement": "C"
+      },
+      {
+        "position": "050",
+        "elementId": "7365",
+        "name": "Processing indicator, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "060",
+        "elementId": "3225",
+        "name": "Place/location identification",
+        "requirement": "C"
+      },
+      {
+        "position": "070",
+        "elementId": "3225",
+        "name": "Place/location identification",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E981": {
+    "elementNumber": "E981",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "4184",
+        "name": "Special requirement detail",
+        "requirement": "C"
+      },
+      {
+        "position": "020",
+        "elementId": "6411",
+        "name": "Measure unit qualifier",
+        "requirement": "C"
+      },
+      {
+        "position": "030",
+        "elementId": "6060",
+        "name": "Quantity",
+        "requirement": "C"
+      },
+      {
+        "position": "040",
+        "elementId": "1145",
+        "name": "Traveller reference number",
+        "requirement": "C"
+      },
+      {
+        "position": "050",
+        "elementId": "7111",
+        "name": "Characteristic value, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "060",
+        "elementId": "7111",
+        "name": "Characteristic value, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "070",
+        "elementId": "7111",
+        "name": "Characteristic value, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "080",
+        "elementId": "7111",
+        "name": "Characteristic value, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "090",
+        "elementId": "7111",
+        "name": "Characteristic value, coded",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E982": {
+    "elementNumber": "E982",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "5263",
+        "name": "Rate type identification",
+        "requirement": "C"
+      },
+      {
+        "position": "020",
+        "elementId": "5004",
+        "name": "Monetary amount",
+        "requirement": "C"
+      },
+      {
+        "position": "030",
+        "elementId": "6345",
+        "name": "Currency, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "040",
+        "elementId": "5501",
+        "name": "Rate plan, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "050",
+        "elementId": "5025",
+        "name": "Monetary amount type qualifier",
+        "requirement": "C"
+      },
+      {
+        "position": "060",
+        "elementId": "2152",
+        "name": "Number of periods",
+        "requirement": "C"
+      },
+      {
+        "position": "070",
+        "elementId": "5377",
+        "name": "Price change indicator, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "080",
+        "elementId": "5160",
+        "name": "Total monetary amount",
+        "requirement": "C"
+      },
+      {
+        "position": "090",
+        "elementId": "2000",
+        "name": "Date",
+        "requirement": "C"
+      },
+      {
+        "position": "100",
+        "elementId": "2000",
+        "name": "Date",
+        "requirement": "C"
+      },
+      {
+        "position": "110",
+        "elementId": "4183",
+        "name": "Special conditions, coded",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E983": {
+    "elementNumber": "E983",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "5243",
+        "name": "Rate/tariff class identification",
+        "requirement": "C"
+      },
+      {
+        "position": "020",
+        "elementId": "6162",
+        "name": "Range minimum",
+        "requirement": "C"
+      },
+      {
+        "position": "030",
+        "elementId": "6152",
+        "name": "Range maximum",
+        "requirement": "C"
+      },
+      {
+        "position": "040",
+        "elementId": "7365",
+        "name": "Processing indicator, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "050",
+        "elementId": "6345",
+        "name": "Currency, coded",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E984": {
+    "elementNumber": "E984",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "5261",
+        "name": "Charge unit, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "020",
+        "elementId": "5004",
+        "name": "Monetary amount",
+        "requirement": "C"
+      },
+      {
+        "position": "030",
+        "elementId": "7008",
+        "name": "Item description",
+        "requirement": "C"
+      },
+      {
+        "position": "040",
+        "elementId": "6060",
+        "name": "Quantity",
+        "requirement": "C"
+      },
+      {
+        "position": "050",
+        "elementId": "2155",
+        "name": "Charge period type, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "060",
+        "elementId": "6345",
+        "name": "Currency, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "070",
+        "elementId": "3225",
+        "name": "Place/location identification",
+        "requirement": "C"
+      },
+      {
+        "position": "080",
+        "elementId": "4440",
+        "name": "Free text",
+        "requirement": "C"
+      },
+      {
+        "position": "090",
+        "elementId": "4513",
+        "name": "Maintenance operation, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "100",
+        "elementId": "7299",
+        "name": "Requirement designator, coded",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E985": {
+    "elementNumber": "E985",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "3500",
+        "name": "Surname",
+        "requirement": "M"
+      },
+      {
+        "position": "020",
+        "elementId": "3035",
+        "name": "Party qualifier",
+        "requirement": "C"
+      },
+      {
+        "position": "030",
+        "elementId": "6060",
+        "name": "Quantity",
+        "requirement": "C"
+      },
+      {
+        "position": "040",
+        "elementId": "4405",
+        "name": "Status, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "050",
+        "elementId": "3453",
+        "name": "Language, coded",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E986": {
+    "elementNumber": "E986",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "3460",
+        "name": "Given name",
+        "requirement": "C"
+      },
+      {
+        "position": "020",
+        "elementId": "3035",
+        "name": "Party qualifier",
+        "requirement": "C"
+      },
+      {
+        "position": "030",
+        "elementId": "1145",
+        "name": "Traveller reference number",
+        "requirement": "C"
+      },
+      {
+        "position": "040",
+        "elementId": "3504",
+        "name": "Title",
+        "requirement": "C"
+      },
+      {
+        "position": "050",
+        "elementId": "8219",
+        "name": "Traveller accompanied by infant indicator",
+        "requirement": "C"
+      },
+      {
+        "position": "060",
+        "elementId": "3453",
+        "name": "Language, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "070",
+        "elementId": "3499",
+        "name": "Sex, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "080",
+        "elementId": "2018",
+        "name": "Age",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E987": {
+    "elementNumber": "E987",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "2000",
+        "name": "Date",
+        "requirement": "M"
+      },
+      {
+        "position": "020",
+        "elementId": "2002",
+        "name": "Time",
+        "requirement": "C"
+      },
+      {
+        "position": "030",
+        "elementId": "2000",
+        "name": "Date",
+        "requirement": "C"
+      },
+      {
+        "position": "040",
+        "elementId": "2002",
+        "name": "Time",
+        "requirement": "C"
+      },
+      {
+        "position": "050",
+        "elementId": "2148",
+        "name": "Date variation",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E988": {
+    "elementNumber": "E988",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "3036",
+        "name": "Party name",
+        "requirement": "M"
+      },
+      {
+        "position": "020",
+        "elementId": "3036",
+        "name": "Party name",
+        "requirement": "C"
+      },
+      {
+        "position": "030",
+        "elementId": "3036",
+        "name": "Party name",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E989": {
+    "elementNumber": "E989",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "7135",
+        "name": "Product identification",
+        "requirement": "C"
+      },
+      {
+        "position": "020",
+        "elementId": "7037",
+        "name": "Characteristic identification",
+        "requirement": "C"
+      },
+      {
+        "position": "030",
+        "elementId": "7139",
+        "name": "Product identification characteristic, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "040",
+        "elementId": "7009",
+        "name": "Item description identification",
+        "requirement": "C"
+      },
+      {
+        "position": "050",
+        "elementId": "7009",
+        "name": "Item description identification",
+        "requirement": "C"
+      },
+      {
+        "position": "060",
+        "elementId": "7009",
+        "name": "Item description identification",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E990": {
+    "elementNumber": "E990",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "1050",
+        "name": "Sequence number",
+        "requirement": "M"
+      },
+      {
+        "position": "020",
+        "elementId": "1050",
+        "name": "Sequence number",
+        "requirement": "C"
+      },
+      {
+        "position": "030",
+        "elementId": "1050",
+        "name": "Sequence number",
+        "requirement": "C"
+      },
+      {
+        "position": "040",
+        "elementId": "1050",
+        "name": "Sequence number",
+        "requirement": "C"
+      },
+      {
+        "position": "050",
+        "elementId": "1050",
+        "name": "Sequence number",
+        "requirement": "C"
+      },
+      {
+        "position": "060",
+        "elementId": "1050",
+        "name": "Sequence number",
+        "requirement": "C"
+      },
+      {
+        "position": "070",
+        "elementId": "1050",
+        "name": "Sequence number",
+        "requirement": "C"
+      },
+      {
+        "position": "080",
+        "elementId": "1050",
+        "name": "Sequence number",
+        "requirement": "C"
+      },
+      {
+        "position": "090",
+        "elementId": "1050",
+        "name": "Sequence number",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E991": {
+    "elementNumber": "E991",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "8154",
+        "name": "Equipment size and type",
+        "requirement": "C"
+      },
+      {
+        "position": "020",
+        "elementId": "7402",
+        "name": "Identity number",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E992": {
+    "elementNumber": "E992",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "3223",
+        "name": "Related place/location one identification",
+        "requirement": "C"
+      },
+      {
+        "position": "020",
+        "elementId": "3233",
+        "name": "Related place/location two identification",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E993": {
+    "elementNumber": "E993",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "7135",
+        "name": "Product identification",
+        "requirement": "C"
+      },
+      {
+        "position": "020",
+        "elementId": "3036",
+        "name": "Party name",
+        "requirement": "C"
+      },
+      {
+        "position": "030",
+        "elementId": "6168",
+        "name": "Length dimension",
+        "requirement": "C"
+      },
+      {
+        "position": "040",
+        "elementId": "8216",
+        "name": "Number of stops",
+        "requirement": "C"
+      },
+      {
+        "position": "050",
+        "elementId": "2160",
+        "name": "Days of operation",
+        "requirement": "C"
+      },
+      {
+        "position": "060",
+        "elementId": "6350",
+        "name": "Number of units",
+        "requirement": "C"
+      },
+      {
+        "position": "070",
+        "elementId": "6060",
+        "name": "Quantity",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E994": {
+    "elementNumber": "E994",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "3225",
+        "name": "Place/location identification",
+        "requirement": "C"
+      },
+      {
+        "position": "020",
+        "elementId": "6350",
+        "name": "Number of units",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E995": {
+    "elementNumber": "E995",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "7273",
+        "name": "Service requirement, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "020",
+        "elementId": "2000",
+        "name": "Date",
+        "requirement": "C"
+      },
+      {
+        "position": "030",
+        "elementId": "2002",
+        "name": "Time",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E996": {
+    "elementNumber": "E996",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "7037",
+        "name": "Characteristic identification",
+        "requirement": "C"
+      },
+      {
+        "position": "020",
+        "elementId": "4510",
+        "name": "Requested information",
+        "requirement": "C"
+      },
+      {
+        "position": "030",
+        "elementId": "7161",
+        "name": "Special services, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "040",
+        "elementId": "7009",
+        "name": "Item description identification",
+        "requirement": "C"
+      },
+      {
+        "position": "050",
+        "elementId": "7009",
+        "name": "Item description identification",
+        "requirement": "C"
+      },
+      {
+        "position": "060",
+        "elementId": "7009",
+        "name": "Item description identification",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E997": {
+    "elementNumber": "E997",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "1154",
+        "name": "Reference number",
+        "requirement": "M"
+      },
+      {
+        "position": "020",
+        "elementId": "9143",
+        "name": "Relationship, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "030",
+        "elementId": "4187",
+        "name": "Special requirement type identification",
+        "requirement": "C"
+      },
+      {
+        "position": "040",
+        "elementId": "7111",
+        "name": "Characteristic value, coded",
+        "requirement": "C"
+      },
+      {
+        "position": "050",
+        "elementId": "4184",
+        "name": "Special requirement detail",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E998": {
+    "elementNumber": "E998",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "4465",
+        "name": "Adjustment reason, coded",
+        "requirement": "M"
+      },
+      {
+        "position": "020",
+        "elementId": "5482",
+        "name": "Percentage",
+        "requirement": "C"
+      },
+      {
+        "position": "030",
+        "elementId": "3036",
+        "name": "Party name",
+        "requirement": "C"
+      },
+      {
+        "position": "040",
+        "elementId": "6350",
+        "name": "Number of units",
+        "requirement": "C"
+      }
+    ]
+  },
+  "E999": {
+    "elementNumber": "E999",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "3225",
+        "name": "Place/location identification",
+        "requirement": "C"
+      },
+      {
+        "position": "020",
+        "elementId": "3036",
+        "name": "Party name",
+        "requirement": "C"
+      },
+      {
+        "position": "030",
+        "elementId": "2002",
+        "name": "Time",
+        "requirement": "C"
+      },
+      {
+        "position": "040",
+        "elementId": "2002",
+        "name": "Time",
+        "requirement": "C"
+      }
+    ]
+  },
   "S001": {
     "elementNumber": "S001",
     "name": "EDIFACT",
@@ -6349,6 +8921,50 @@
         "position": "050",
         "elementId": "0057",
         "name": "Association assigned code",
+        "requirement": "C"
+      }
+    ]
+  },
+  "S010": {
+    "elementNumber": "S010",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "0070",
+        "name": "Sequence of transfers",
+        "requirement": "M"
+      },
+      {
+        "position": "020",
+        "elementId": "0073",
+        "name": "First and last transfer",
+        "requirement": "C"
+      }
+    ]
+  },
+  "S011": {
+    "elementNumber": "S011",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "0098",
+        "name": "Erroneous data element position in segment",
+        "requirement": "M"
+      },
+      {
+        "position": "020",
+        "elementId": "0104",
+        "name": "Erroneous component data element position",
         "requirement": "C"
       }
     ]

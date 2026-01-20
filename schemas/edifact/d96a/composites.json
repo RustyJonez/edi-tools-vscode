@@ -5238,5 +5238,283 @@
         "requirement": "C"
       }
     ]
+  },
+  "S001": {
+    "elementNumber": "S001",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "0001",
+        "name": "Syntax identifier",
+        "requirement": "M"
+      },
+      {
+        "position": "020",
+        "elementId": "0002",
+        "name": "Syntax version number",
+        "requirement": "M"
+      }
+    ]
+  },
+  "S002": {
+    "elementNumber": "S002",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "0004",
+        "name": "Sender identification",
+        "requirement": "M"
+      },
+      {
+        "position": "020",
+        "elementId": "0007",
+        "name": "Partner identification code qualifier",
+        "requirement": "C"
+      },
+      {
+        "position": "030",
+        "elementId": "0008",
+        "name": "Address for reverse routing",
+        "requirement": "C"
+      }
+    ]
+  },
+  "S003": {
+    "elementNumber": "S003",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "0010",
+        "name": "Recipient identification",
+        "requirement": "M"
+      },
+      {
+        "position": "020",
+        "elementId": "0007",
+        "name": "Partner identification code qualifier",
+        "requirement": "C"
+      },
+      {
+        "position": "030",
+        "elementId": "0014",
+        "name": "Routing address",
+        "requirement": "C"
+      }
+    ]
+  },
+  "S004": {
+    "elementNumber": "S004",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "0017",
+        "name": "Date of preparation",
+        "requirement": "M"
+      },
+      {
+        "position": "020",
+        "elementId": "0019",
+        "name": "Time of preparation",
+        "requirement": "M"
+      }
+    ]
+  },
+  "S005": {
+    "elementNumber": "S005",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "0022",
+        "name": "Recipient's reference/password",
+        "requirement": "M"
+      },
+      {
+        "position": "020",
+        "elementId": "0025",
+        "name": "Recipient's reference/password qualifier",
+        "requirement": "C"
+      }
+    ]
+  },
+  "S006": {
+    "elementNumber": "S006",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "0040",
+        "name": "Sender identification",
+        "requirement": "M"
+      },
+      {
+        "position": "020",
+        "elementId": "0007",
+        "name": "Partner identification code qualifier",
+        "requirement": "C"
+      }
+    ]
+  },
+  "S007": {
+    "elementNumber": "S007",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "0044",
+        "name": "Recipient's identification",
+        "requirement": "M"
+      },
+      {
+        "position": "020",
+        "elementId": "0007",
+        "name": "Partner identification code qualifier",
+        "requirement": "C"
+      }
+    ]
+  },
+  "S008": {
+    "elementNumber": "S008",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "0052",
+        "name": "Message version number",
+        "requirement": "M"
+      },
+      {
+        "position": "020",
+        "elementId": "0054",
+        "name": "Message release number",
+        "requirement": "M"
+      },
+      {
+        "position": "030",
+        "elementId": "0057",
+        "name": "Association assigned code",
+        "requirement": "C"
+      }
+    ]
+  },
+  "S009": {
+    "elementNumber": "S009",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "0065",
+        "name": "Message type",
+        "requirement": "M"
+      },
+      {
+        "position": "020",
+        "elementId": "0052",
+        "name": "Message version number",
+        "requirement": "M"
+      },
+      {
+        "position": "030",
+        "elementId": "0054",
+        "name": "Message release number",
+        "requirement": "M"
+      },
+      {
+        "position": "040",
+        "elementId": "0051",
+        "name": "Controlling agency",
+        "requirement": "M"
+      },
+      {
+        "position": "050",
+        "elementId": "0057",
+        "name": "Association assigned code",
+        "requirement": "C"
+      }
+    ]
+  },
+  "S010": {
+    "elementNumber": "S010",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "0070",
+        "name": "Sequence of transfers",
+        "requirement": "M"
+      },
+      {
+        "position": "020",
+        "elementId": "0073",
+        "name": "First and last transfer",
+        "requirement": "C"
+      }
+    ]
+  },
+  "S011": {
+    "elementNumber": "S011",
+    "name": "EDIFACT",
+    "definition": "",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "010",
+        "elementId": "0098",
+        "name": "Erroneous data element position in segment",
+        "requirement": "M"
+      },
+      {
+        "position": "020",
+        "elementId": "0104",
+        "name": "Erroneous component data element position",
+        "requirement": "C"
+      }
+    ]
   }
 }

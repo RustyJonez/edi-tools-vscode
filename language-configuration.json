@@ -7,8 +7,8 @@
   "surroundingPairs": [],
   "folding": {
     "markers": {
-      "start": "^(ISA|GS|ST|HL)",
-      "end": "^(IEA|GE|SE)"
+      "start": "^(ISA|GS|ST|HL|UNA|UNB|UNH)",
+      "end": "^(IEA|GE|SE|UNT|UNZ)"
     }
   }
 }
