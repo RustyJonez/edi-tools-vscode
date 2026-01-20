@@ -25,6 +25,9 @@
     "validation"
   ],
   "main": "./out/extension.js",
+  "activationEvents": [
+    "onLanguage:plaintext"
+  ],
   "contributes": {
     "languages": [
       {
@@ -38,9 +41,6 @@
           ".edi",
           ".x12",
           ".asv"
-        ],
-        "filenamePatterns": [
-          "*.txt"
         ],
         "firstLine": "^ISA",
         "configuration": "./language-configuration.json"
