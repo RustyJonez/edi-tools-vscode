@@ -1,82 +1,59 @@
-# EDI X12 Tools
+# EDI Tools (for VSCode)
 
+<p align="center">
+<img height="100px" src="https://github.com/RustyJonez/edi-tools-vscode/blob/main/img/logo.png?raw=true"/>
+</p>
+
+<p align="center">
 Syntax highlighting, formatting, and reference tools for EDI X12 and EDIFACT documents in Visual Studio Code.
-
-<!-- Screenshots placeholder - add actual screenshots here -->
+</p>
 
 ## Features
 
 ### Syntax Highlighting
-- **X12** - Segments, elements, and delimiters (.edi, .x12, .asv, .txt)
-- **EDIFACT** - Full syntax support (.edifact, UNA/UNB detection)
-- Color-coded envelope, header, detail, and summary segments
+- **X12** - Color coded by envelope, header, detail, and summary loops.
+- **EDIFACT** - Basic highlighting by segment and delimiter (more coming soon)
 
-### Hover Information
+### Hover Tooltips:
+<img src="https://github.com/RustyJonez/edi-tools-vscode/blob/main/img/tooltips.gif?raw=true">
+
 Hover over segments and elements for instant reference:
-- Segment names and descriptions
-- Element definitions with data types and lengths
+- Segment name/description
+- Element information
 - Code value translations (qualifier lookups)
 - EDIFACT composite element structure
 - Direct links to Stedi reference documentation
 
 ### Editor Action Buttons
-Quick access buttons at the top of every EDI document:
+Quick access buttons at the top of every EDI document (also available via command pallette):
 - **Quick Format** - Normalize delimiters and add line breaks
-- **Lookup Transaction** - Open reference for the document's transaction set
-- **Update IDs** - Modify sender/receiver identifiers
+<img src="https://github.com/RustyJonez/edi-tools-vscode/blob/main/img/quick_format.gif?raw=true">
+- **Update IDs** - Modify sender/receiver identifiers and qualifiers
+<img src="https://github.com/RustyJonez/edi-tools-vscode/blob/main/img/update_ids.gif?raw=true">
 
-### Formatting Commands
+- **Lookup Transaction** - Open STEDI reference for the document transaction set/message type.
+
+### Commands:
 
 | Command | Keybinding | Description |
 |---------|------------|-------------|
 | Quick Format | `Ctrl+E Ctrl+E` | Normalize delimiters + add line breaks |
-| Normalize Delimiters | `Ctrl+E Ctrl+N` | Convert to standard delimiters (*/~) |
+| Normalize Delimiters | `Ctrl+E Ctrl+N` | Convert to standard delimiters (*/~, X12 only) |
 | Add Line Breaks | `Ctrl+E Ctrl+L` | Add line breaks after segment terminators |
-
-### Reference Lookup
-
-| Command | Keybinding | Description |
-|---------|------------|-------------|
 | Lookup Segment at Cursor | `Ctrl+E Ctrl+S` | Open Stedi reference for current segment |
 | Lookup Transaction Set | `Ctrl+E Ctrl+T` | Open Stedi reference for document type |
-| Search Segment | - | Search any segment code |
-| Search Transaction Set | - | Search any transaction set |
+| Search Segment | - | Search any segment on STEDI reference |
+| Search Transaction Set | - | Search any transaction set on STEDI |
 
-### Update Sender/Receiver IDs
-Modify interchange identifiers directly in the editor:
-- **X12**: Updates ISA-05/06/07/08 (qualifiers and IDs) and GS-02/03
-- **EDIFACT**: Updates UNB sender/receiver with optional qualifiers
 
-## Installation
-
-### From VSIX
-1. Download the `.vsix` file
-2. In VSCode: Extensions > ... > Install from VSIX
-
-### From Source
+### Install From Source
 ```bash
-git clone https://github.com/yourusername/edi-x12-tools.git
+git clone https://github.com/RustyJonez/edi-tools-vscode.git
 cd edi-x12-tools
 npm install
 npm run compile
 ```
 Press `F5` to launch the Extension Development Host.
-
-## Supported File Types
-
-| Extension | Format |
-|-----------|--------|
-| `.edi`, `.x12`, `.asv` | X12 EDI |
-| `.txt` (starting with ISA) | X12 EDI |
-| `.edifact` | EDIFACT |
-| Files starting with UNA/UNB | EDIFACT |
-
-## Configuration
-
-| Setting | Default | Description |
-|---------|---------|-------------|
-| `ediX12Tools.hover.enabled` | `true` | Enable hover tooltips |
-| `ediX12Tools.hover.showElements` | `true` | Show element list in segment hovers |
 
 ## Requirements
 
