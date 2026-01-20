@@ -14,20 +14,15 @@ Syntax highlighting, formatting, and reference tools for EDI X12 and EDIFACT doc
 - **X12** - Color coded by envelope, header, detail, and summary loops.
 - **EDIFACT** - Basic highlighting by segment and delimiter (more coming soon)
 
-### Hover Tooltips:
+### Hover Tooltips
+Hover the cursor over and elements for instant reference:
 <img src="https://github.com/RustyJonez/edi-tools-vscode/blob/main/img/tooltips.gif?raw=true">
-
-Hover over segments and elements for instant reference:
-- Segment name/description
-- Element information
-- Code value translations (qualifier lookups)
-- EDIFACT composite element structure
-- Direct links to Stedi reference documentation
 
 ### Editor Action Buttons
 Quick access buttons at the top of every EDI document (also available via command pallette):
 - **Quick Format** - Normalize delimiters and add line breaks
 <img src="https://github.com/RustyJonez/edi-tools-vscode/blob/main/img/quick_format.gif?raw=true">
+
 - **Update IDs** - Modify sender/receiver identifiers and qualifiers
 <img src="https://github.com/RustyJonez/edi-tools-vscode/blob/main/img/update_ids.gif?raw=true">
 
@@ -45,6 +40,7 @@ Quick access buttons at the top of every EDI document (also available via comman
 | Search Segment | - | Search any segment on STEDI reference |
 | Search Transaction Set | - | Search any transaction set on STEDI |
 
+----------
 
 ### Install From Source
 ```bash
