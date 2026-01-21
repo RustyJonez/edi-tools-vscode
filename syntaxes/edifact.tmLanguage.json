@@ -8,19 +8,20 @@
     {"include": "#transactionset"},
     {"include": "#heading"},
     {"include": "#item"},
-    {"include": "#detail"}
+    {"include": "#detail"},
+    {"include": "#summary"}
   ],
   "repository": {
     "envelope": {
-      "match": "UNB",
+      "match": "\\b(?<!\\+|\\s)(UNA|UNB|UNG|UNO|UNP|USD|USU)\\b",
       "name": "keyword.control.edifact"
     },
     "delimiters": {
-      "match": "(\\+)|(\\:)|(\\')",
+      "match": "(\\+)|(\\:)|(')",
       "captures": {
         "1": {"name": "string.edifact"},
-        "2": {"name": "entity.name.edifact"},
-        "3": {"name": "entity.name.edifact"}
+        "2": {"name": "comment.edifact"},
+        "3": {"name": "comment.edifact"}
       }
     },
     "transactionset": {
@@ -35,35 +36,40 @@
     "heading": {
       "patterns": [
         {
-          "match": "(^[A-Z0-9]{3})|\\b(AGR|BGM|BY|CAV|CCI|CNT|DDE|DDK|DDQ|DP|DTM|ERC|FTX|GC|GRP|GRU|IDE|INP|IT|IV|LOC|MKS|MR|MS|NAD|PIA|PQ|PRC|REG|RFF|QTY|SE|SEQ|SO|STS|SU|TAX|UCI|UD|UNA|UNB|UNH|UNOC|UNS|UNT|UNZ)\\b",
+          "match": "\\b(?<!\\+|\\s)(AAI|ADI|ADR|ADS|AGR|AJT|ALC|ALI|ALS|APD|APP|APR|ARD|ARR|ASD|ASI|ATI|ATR|ATT|AUT|BAS|BCD|BGM|BII|BLI|BUS|CAV|CCD|CCI|CDI|CDS|CDV|CED|CIN|CLA|CLI|CLT|CMN|CMP|CNI|CNX|CNY|COD|COM|CON|COT|CPI|CPT|CRI|CST|CTA|CUR|CUX|DAM|DAV|DFN|DGS|DII|DIM|DIS|DLI|DLM|DMS|DNT|DOC|DRD|DSG|DSI|DTI|DTM|EDT|EFI|ELM|ELU|ELV|EMP|EQA|EQD|EQN|ERC|ERI|ERP|EVE|FCA|FII|FNS|FNT|FOR|FRM|FRQ|FSQ|FTI|FTX|GDS|GEI|GID|GIN|GIR|GIS|GOR|GPO|GRU|HAN|HDI|HDR|HDS|HYN|ICD|ICI|IDE|IFD|IFT|IHC|IMD|IND|INP|IRQ|ITC|ITD|ITM|LAN|LKP|LNG|LOC|MAP|MEA|MEM|MES|MKS|MOA|MOV|MSD|MSG|MTD|NAA|NAD|NAT|NME|NUN|ODI|ODS|ORG|OTI|PAC|PAI|PAS|PAT|PCC|PCD|PCI|PDI|PDT|PER|PIA|PIT|PLI|PMT|PNA|POC|POP|POR|POS|PRC|PRD|PRE|PRI|PRO|PRT|PRV|PSD|PSI|PTY|PYT|QRS|QTI|QTY|QUA|QVR|RCI|RCS|REL|RFF|RFR|RJL|RLS|RNG|ROD|RPI|RSL|RTC|RTE|RTI|RUL|SAL|SCC|SCD|SDT|SEG|SEL|SER|SFI|SGP|SGU|SPR|SPS|SSR|STA|STC|STG|STS|TAX|TCC|TCE|TDI|TDT|TEM|TFF|TIF|TIZ|TMD|TMP|TOD|TPL|TRF|TRU|TSR|TVL|TXS|UCI|UGH|UGT|UIH|UIT|USA|USB|USC|USE|USF|USH|USL|USR|UST|USX|USY|VEH|VLI|UCD|UCF|UCM|UCS|UIB|UIR|UIZ)\\b",
           "name": "constant.numeric.edifact"
-        },
-        {
-          "match": "\\b(PAT|MED|DOS|EPI|AGB|EML|ACB)\\b",
-          "name": "entity.name.edifact"
-        },
-        {
-          "match": "\\b(PRK|GPK|HPK|PRE)\\b",
-          "name": "variable.parameter.edifact"
         }
       ]
     },
     "item": {
-      "match": "\\b(?<!\\+)(LIN).*\\b",
-      "name": "storage.type.edifact"
+      "begin": "\\b(?<!\\+|\\s)(CPS|LIN|PGI|SEQ|UNS)\\b",
+      "beginCaptures": {
+        "1": {"name": "support.class.edifact"}
+      },
+      "end": "\\b(?<!\\+|\\s)(CNT|UNT|UNE|UNS|UNZ)\\b",
+      "endCaptures": {
+        "1": {"name": "keyword.control.edifact"}
+      },
+      "patterns": [
+        {"include": "#detail"},
+        {"include": "#delimiters"}
+      ]
     },
     "detail": {
       "patterns": [
-        {"include": "#delimiters"},
         {
-          "match": "\\b(?<!\\+)(LIN)|(PIA)|(IMD)|(MEA)|(QTY)|(PCD)|(ALI)|(DTM)|(GIN)|(GIR)|(QVR)|(EQD)|(FTX)|(DGS)|((SG)+\\d)\\b",
-          "name": "storage.type.edifact"
+          "match": "\\b(?<!\\+|\\s)(CPS|LIN|PGI|SEQ)\\b",
+          "name": "support.class.edifact"
         },
         {
-          "match": "\\b(?<!\\+)(UNS)\\b",
+          "match": "\\b(?<!\\+|\\s)(AAI|ADI|ADR|ADS|AGR|AJT|ALC|ALI|ALS|APD|APP|APR|ARD|ARR|ASD|ASI|ATI|ATR|ATT|AUT|BAS|BCD|BGM|BII|BLI|BUS|CAV|CCD|CCI|CDI|CDS|CDV|CED|CIN|CLA|CLI|CLT|CMN|CMP|CNI|CNX|CNY|COD|COM|CON|COT|CPI|CPS|CPT|CRI|CST|CTA|CUR|CUX|DAM|DAV|DFN|DGS|DII|DIM|DIS|DLI|DLM|DMS|DNT|DOC|DRD|DSG|DSI|DTI|DTM|EDT|EFI|ELM|ELU|ELV|EMP|EQA|EQD|EQN|ERC|ERI|ERP|EVE|FCA|FII|FNS|FNT|FOR|FRM|FRQ|FSQ|FTI|FTX|GDS|GEI|GID|GIN|GIR|GOR|GPO|GRU|HAN|HDI|HDR|HDS|HYN|ICD|ICI|IDE|IFD|IFT|IHC|IMD|IND|INP|IRQ|ITC|ITD|ITM|LAN|LIN|LKP|LNG|LOC|MAP|MEA|MEM|MES|MKS|MOA|MOV|MSD|MSG|MTD|NAA|NAD|NAT|NME|NUN|ODI|ODS|ORG|OTI|PAC|PAI|PAS|PAT|PCC|PCD|PCI|PDI|PDT|PER|PGI|PIA|PIT|PLI|PMT|PNA|POC|POP|POR|POS|PRC|PRD|PRE|PRI|PRO|PRT|PRV|PSD|PSI|PTY|PYT|QRS|QTI|QTY|QUA|QVR|RCI|RCS|REL|RFF|RFR|RJL|RLS|RNG|ROD|RPI|RSL|RTC|RTE|RTI|RUL|SAL|SCC|SCD|SDT|SEG|SEL|SEQ|SER|SFI|SGP|SGU|SPR|SPS|SSR|STA|STC|STG|STS|TAX|TCC|TCE|TDI|TDT|TEM|TFF|TIF|TIZ|TMD|TMP|TOD|TPL|TRF|TRU|TSR|TVL|TXS|UCI|UGH|UGT|UIH|UIT|USA|USB|USC|USE|USF|USH|USL|USR|UST|USX|USY|VEH|VLI)\\b",
           "name": "variable.parameter.edifact"
         }
       ]
+    },
+      "summary": {
+      "match": "\\b(?<!\\+|\\s)(CNT|UNT|UNE|UNS|UNZ)\\b",
+      "name": "keyword.control.edifact"
     }
   }
 }

@@ -8,11 +8,14 @@ let statusBarController: StatusBarController | undefined;
 
 /**
  * Auto-detect EDI language (X12 or EDIFACT) based on first line of document
- * This allows .txt files to be automatically detected and syntax highlighted
+ * This allows .txt and .edi files to be automatically detected and syntax highlighted correctly
  */
 function detectEdiLanguage(document: vscode.TextDocument): void {
-    // Only process plaintext files (typically .txt)
-    if (document.languageId !== 'plaintext') {
+    // Only process plaintext, x12, or edifact files
+    // We check x12/edifact too because .edi extension might assign the wrong one
+    if (document.languageId !== 'plaintext' &&
+        document.languageId !== 'x12' &&
+        document.languageId !== 'edifact') {
         return;
     }
 
@@ -26,15 +29,19 @@ function detectEdiLanguage(document: vscode.TextDocument): void {
 
     // Check for X12 format (starts with ISA)
     if (firstLine.startsWith('ISA')) {
-        vscode.languages.setTextDocumentLanguage(document, 'x12');
-        console.log('[EDI Extension] Detected X12 format, switching language mode');
+        if (document.languageId !== 'x12') {
+            vscode.languages.setTextDocumentLanguage(document, 'x12');
+            console.log('[EDI Extension] Detected X12 format, switching language mode');
+        }
         return;
     }
 
     // Check for EDIFACT format (starts with UNA or UNB)
     if (firstLine.startsWith('UNA') || firstLine.startsWith('UNB')) {
-        vscode.languages.setTextDocumentLanguage(document, 'edifact');
-        console.log('[EDI Extension] Detected EDIFACT format, switching language mode');
+        if (document.languageId !== 'edifact') {
+            vscode.languages.setTextDocumentLanguage(document, 'edifact');
+            console.log('[EDI Extension] Detected EDIFACT format, switching language mode');
+        }
         return;
     }
 }

@@ -834,7 +834,32 @@ async function updateEdifactIds(editor: vscode.TextEditor, text: string): Promis
     }
 
     const newUnbSegment = unbElements.join(elementDelim) + "'";
-    const updatedText = text.replace(unbMatch[0], newUnbSegment);
+    let updatedText = text.replace(unbMatch[0], newUnbSegment);
+
+    // Also update UNG segment(s) if present
+    // UNG is the functional group header and uses the same sender/receiver IDs
+    // UNG structure: UNG+group_id+sender+receiver+datetime+ref+...
+    const ungPattern = new RegExp(`UNG${escapedElemDelim}[^']*'`, 'g');
+    const ungMatches = text.match(ungPattern);
+
+    if (ungMatches && ungMatches.length > 0) {
+        // Update all UNG segments found
+        for (const ungMatch of ungMatches) {
+            const ungElements = ungMatch.slice(0, -1).split(elementDelim);
+
+            // UNG Element 2: Sender, Element 3: Receiver
+            if (updateSender && ungElements.length > 2) {
+                ungElements[2] = senderQual ? `${senderId}${componentDelim}${senderQual}` : senderId;
+            }
+
+            if (updateReceiver && ungElements.length > 3) {
+                ungElements[3] = receiverQual ? `${receiverId}${componentDelim}${receiverQual}` : receiverId;
+            }
+
+            const newUngSegment = ungElements.join(elementDelim) + "'";
+            updatedText = updatedText.replace(ungMatch, newUngSegment);
+        }
+    }
 
     // Apply changes
     await editor.edit(editBuilder => {
