@@ -3,7 +3,7 @@
   "displayName": "EDI Tools",
   "description": "Syntax highlighting, formatting, and validation tools for EDI X12 and EDIFACT documents",
   "icon": "img/logo.png",
-  "version": "0.2.5",
+  "version": "0.2.6",
   "publisher": "RustyJonez",
   "repository": {
     "type": "git",
