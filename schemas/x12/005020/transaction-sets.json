@@ -1354,6 +1354,11 @@
     "name": "X12",
     "description": "This X12 Transaction Set contains the format and establishes the data content of the Text Message Transaction Set (864) for use within the context of an Electronic Data Interchange (EDI) environment. The transaction set can be used to provide users with a capability to electronically move messages, contracts, explanations, and other one-time communications.  It is the intent of this transaction set to provide electronic communication (messages) for people, not for computer processing. The use of the transaction set to transmit quasi or unique transaction set standards is discouraged.  The use of the Text Message transaction set demands of the sender certain detailed information about the recipient. The transaction set's purpose is to provide communication to the recipient in some human-readable form. The recipient's network will dictate what capabilities are available for delivery of the information. It is the responsibility of the sender to obtain this information and include it in the transmission."
   },
+  "865": {
+    "code": "865",
+    "name": "X12",
+    "description": "This X12 Transaction Set contains the format and establishes the data contents of the Purchase Order Change Acknowledgment/Request - Seller Initiated Transaction Set (865) for use within the context of an Electronic Data Interchange (EDI) environment. The transaction set can be used to convey acceptance or rejection of changes to a previously submitted purchase order by the seller or to notify the buyer of changes initiated by the seller to a previously submitted purchase order by the seller."
+  },
   "866": {
     "code": "866",
     "name": "X12",
@@ -1533,6 +1538,11 @@
     "code": "944",
     "name": "X12",
     "description": "This X12 Transaction Set contains the format and establishes the data contents of the Warehouse Stock Transfer Receipt Advice Transaction Set (944) for use within the context of an Electronic Data Interchange (EDI) environment. The transaction set can be used by a receiving location to advise a depositor or an agent of the depositor that a transfer shipment has been received. This transaction set provides the depositor or the depositor's agent with detail information concerning product that has been received."
+  },
+  "945": {
+    "code": "945",
+    "name": "X12",
+    "description": "This X12 Transaction Set contains the format and establishes the data contents of the Warehouse Shipping Advice Transaction Set (945) for use within the context of an Electronic Data Interchange (EDI) environment. The transaction set can be used by the warehouse to advise the depositor that shipment was made. It is used to reconcile order quantities with shipment quantities."
   },
   "947": {
     "code": "947",

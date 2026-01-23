@@ -214,6 +214,11 @@
     "name": "X12",
     "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Motor Carrier Shipment Status Inquiry Transaction Set (213) for use within the context of an Electronic Data Interchange (EDI) environment. The transaction set can be used to request shipment status from a motor carrier. The requestor may be a shipper or consignee."
   },
+  "214": {
+    "code": "214",
+    "name": "X12",
+    "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Transportation Carrier Shipment Status Message (214) for use within the context of an Electronic Data Interchange (EDI) environment. This transaction set can be used by a transportation carrier to provide shippers, consignees, and their agents with the status of shipments in terms of dates, times, locations, route, identifying numbers, and conveyance."
+  },
   "217": {
     "code": "217",
     "name": "X12",

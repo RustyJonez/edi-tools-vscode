@@ -39771,5 +39771,109 @@
         "type": "373"
       }
     ]
+  },
+  "CD2": {
+    "code": "CD2",
+    "name": "X12",
+    "description": "To provide characteristics that may have multiple values",
+    "elements": [
+      {
+        "position": "01",
+        "name": "Code Category",
+        "requirement": "M",
+        "type": "1136"
+      },
+      {
+        "position": "02",
+        "name": "Product/Service ID Qualifier",
+        "requirement": "M",
+        "type": "235"
+      },
+      {
+        "position": "03",
+        "name": "Medical Code Value",
+        "requirement": "M",
+        "type": "1137"
+      },
+      {
+        "position": "04",
+        "name": "Medical Code Value",
+        "requirement": "O",
+        "type": "1137"
+      },
+      {
+        "position": "05",
+        "name": "Medical Code Value",
+        "requirement": "O",
+        "type": "1137"
+      },
+      {
+        "position": "06",
+        "name": "Medical Code Value",
+        "requirement": "O",
+        "type": "1137"
+      },
+      {
+        "position": "07",
+        "name": "Medical Code Value",
+        "requirement": "O",
+        "type": "1137"
+      },
+      {
+        "position": "08",
+        "name": "Medical Code Value",
+        "requirement": "O",
+        "type": "1137"
+      }
+    ]
+  },
+  "PAS": {
+    "code": "PAS",
+    "name": "X12",
+    "description": "To provide high level information about the property valuation",
+    "elements": [
+      {
+        "position": "01",
+        "name": "Property Value Estimate Type Code",
+        "requirement": "M",
+        "type": "1077"
+      },
+      {
+        "position": "02",
+        "name": "Amount Qualifier Code",
+        "requirement": "M",
+        "type": "522"
+      },
+      {
+        "position": "03",
+        "name": "Monetary Amount",
+        "requirement": "M",
+        "type": "782"
+      },
+      {
+        "position": "04",
+        "name": "Monetary Amount",
+        "requirement": "C",
+        "type": "782"
+      },
+      {
+        "position": "05",
+        "name": "Monetary Amount",
+        "requirement": "C",
+        "type": "782"
+      },
+      {
+        "position": "06",
+        "name": "Improvement Status Code",
+        "requirement": "O",
+        "type": "1090"
+      },
+      {
+        "position": "07",
+        "name": "Yes/No Condition or Response Code",
+        "requirement": "O",
+        "type": "1073"
+      }
+    ]
   }
 }

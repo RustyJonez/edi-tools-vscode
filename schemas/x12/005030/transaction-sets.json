@@ -169,6 +169,11 @@
     "name": "X12",
     "description": "This X12 Transaction Set contains the format and establishes the data contents of the Student Loan Transfer and Status Verification Transaction Set (144) for use within the context of an Electronic Data Interchange (EDI) environment. This transaction set is used by lending institutions (\\"
   },
+  "146": {
+    "code": "146",
+    "name": "X12",
+    "description": "This X12 Transaction Set contains the format and establishes the data contents of The Request for Student Educational Record (Transcript) Transaction Set (146) within the context of an Electronic Data Interchange (EDI) environment. This transaction set is used by educational institutions to which a student has applied for admission. This request is then sent to the educational institution which the student is currently attending or previously attended."
+  },
   "147": {
     "code": "147",
     "name": "X12",
@@ -1313,6 +1318,11 @@
     "code": "857",
     "name": "X12",
     "description": "This X12 Transaction Set contains the format and establishes the data contents of the Shipment and Billing Notice Transaction Set (857) for use within the context of an Electronic Data Interchange (EDI) environment. This transaction set provides the recipient of a shipment with data for both receipt planning and payment generation.  EDI and telecommunications technologies suggest efficiencies in the way business data is processed. For example, the sender of a shipment may send the recipient's receiving function a Ship Notice/Manifest (856), and the payables function an Invoice (810), even though the contents of these two documents may be largely redundant. In certain business environments, the Shipment and Billing Notice permits the consolidation of these two documents into one.  Specifically, this transaction set is appropriate where the shipment data, when it includes terms and item prices, can be used both to plan receipts and to generate payment. In this environment, the exact prices for the items shipped may not be known in advance by both parties. This transaction set is not appropriate in so-called Evaluated Receipts Settlement (ERS) environments, in which the exact prices for the items shipped have been agreed upon by, and are known to, both parties in advance.  This transaction set is not to be used to replace the Ship Notice/Manifest (856) or Invoice (810) individually, but only to replace both, together. For example, do not use this transaction set in place of a Ship Notice/Manifest while continuing to send either paper or electronic invoice."
+  },
+  "858": {
+    "code": "858",
+    "name": "X12",
+    "description": "This X12 Transaction Set contains the format and establishes the data contents of the Shipment Information Transaction Set (858) for use within the context of an Electronic Data Interchange (EDI) environment. The transaction set can be used to provide the sender with the capability to transmit detailed bill-of-lading, rating, and/or scheduling information pertinent to a shipment.  This transaction set can also be used to exchange Government Bills of Lading (GBLs), Commercial Bills of Lading (CBLs), Transportation Control and Movement Documents (TCMDs), and Personal Property Government Bills of Lading (PPGBLs). It may be used by the U.S. Civilian Government, U.S. Department of Defense, and any of their trading partners to exchange information about the shipment of freight, household goods, and passengers. This transaction set fulfills information requirements established by U.S. Government transportation movement rules and regulations."
   },
   "859": {
     "code": "859",

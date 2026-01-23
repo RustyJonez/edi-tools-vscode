@@ -69,6 +69,11 @@
     "name": "X12",
     "description": "This X12 Transaction Set contains the format and establishes the data contents of the Election Campaign and Lobbyist Reporting Transaction Set (113) for use within the context of an Electronic Data Interchange (EDI) environment. This Bi-directional transaction set can be used by candidates, candidate committees, party committees, political action groups, lobbyists and other entities to exchange disclosure data."
   },
+  "120": {
+    "code": "120",
+    "name": "X12",
+    "description": "This X12 Transaction Set contains the format and establishes the data contents of the Vehicle Shipping Order Transaction Set (120) for use within the context of an Electronic Data Interchange (EDI) environment. This transaction set can be used to notify a carrier of the impending arrival of a motor vehicle which the carrier is to ship to the destination herein specified or on which that carrier is to perform a service. It may be sent to a carrier by the vehicle manufacturer, by another carrier, or by an agent of the manufacturer."
+  },
   "121": {
     "code": "121",
     "name": "X12",
@@ -78,6 +83,11 @@
     "code": "124",
     "name": "X12",
     "description": "This X12 Transaction Set contains the format and establishes the data contents of the Vehicle Damage Transaction Set (124) for use within the context of an Electronic Data Interchange (EDI) environment. This standard can be used to provide vehicle damage information flow between Property \\u0026 Casualty (P\\u0026C) insurance companies, independent agents, service providers, information providers, self-insurers and financial institutions. Business functions consist of the estimating of vehicle damage and the detailed reporting of parts and labor cost connected with repairing the estimated damage."
+  },
+  "125": {
+    "code": "125",
+    "name": "X12",
+    "description": "This X12 Transaction Set contains the format and establishes the data contents of the Multilevel Railcar Load Details Transaction Set (125) for use within the context of an Electronic Data Interchange (EDI) environment. This transaction set can be used by the origin rail carrier or loading contractor to report the departure of a multilevel railcar and its contents to the vehicle manufacturer. It is used by the vehicle manufacturer, origin rail carrier, or loading contractor to forward data pertaining to the loaded railcar and its contents to the destination rail carrier or haulaway carrier(s) or both upon departure. It is also used by the destination rail carrier, or unloading contractor to report to the vehicle manufacturer, the arrival of a railcar at the destination rail ramp."
   },
   "126": {
     "code": "126",
@@ -178,6 +188,11 @@
     "code": "149",
     "name": "X12",
     "description": "This X12 Transaction Set contains the format and establishes the data contents of the Notice of Tax Adjustment or Assessment Transaction Set (149) for use within the context of an Electronic Data Interchange (EDI) environment. This transaction set can be used by a taxing authority to transmit to a taxpayer either a notice of adjustment to a prior tax filing, or a notice of assessment of taxes due to the taxing authority, which may be a notice of warrant."
+  },
+  "150": {
+    "code": "150",
+    "name": "X12",
+    "description": "This X12 Transaction Set contains the format and establishes the data contents of the Tax Rate Notification Transaction Set (150) for use within an Electronic Data Interchange (EDI) environment. This transaction set can be used by taxing authorities to electronically transmit information concerning tax rates."
   },
   "151": {
     "code": "151",
@@ -508,6 +523,11 @@
     "code": "261",
     "name": "X12",
     "description": "This X12 Transaction Set contains the format and establishes the data content of the Real Estate Information Request Transaction Set (261) for use within an Electronic Data Interchange (EDI) environment. This transaction set can be used to initiate, modify or cancel a request for real estate information. This transaction set will be used to transfer information among real estate industry participants."
+  },
+  "262": {
+    "code": "262",
+    "name": "X12",
+    "description": "This X12 Transaction Set contains the format and establishes the data contents of the Real Estate Information Report Transaction Set (262) for use within the context of an Electronic Data Interchange (EDI) environment. This transaction set can be used for the transfer and reporting of real estate information among real estate industry participants."
   },
   "263": {
     "code": "263",

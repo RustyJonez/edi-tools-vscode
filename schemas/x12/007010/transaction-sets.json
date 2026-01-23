@@ -129,6 +129,11 @@
     "name": "X12",
     "description": "This X12 Transaction Set contains the format and establishes the data contents of the Educational Institution Record Transaction Set (133) for use within the context of an Electronic Data Interchange (EDI) environment. The Educational Institution Record conveys descriptive characteristics of postsecondary and elementary/secondary educational institutions. Data contained in this record includes information about institutional location, type, student enrollment, staffing governance, finance, programs, and services at an educational institution."
   },
+  "135": {
+    "code": "135",
+    "name": "X12",
+    "description": "This X12 Transaction Set contains the format and establishes the data contents of the Student Aid Origination Record Transaction Set (135) for use within the context of an Electronic Data Interchange (EDI) environment. This transaction set can be used by lending institutions (\\"
+  },
   "138": {
     "code": "138",
     "name": "X12",
@@ -393,6 +398,11 @@
     "code": "214",
     "name": "X12",
     "description": "This X12 Transaction Set contains the format and establishes the data contents of the Transportation Carrier Shipment Status Message Transaction Set (214) for use within the context of an Electronic Data Interchange (EDI) environment. This transaction set can be used by a transportation carrier to provide shippers, consignees, and their agents with the status of shipments in terms of dates, times, locations, route, identifying numbers, and conveyance."
+  },
+  "215": {
+    "code": "215",
+    "name": "X12",
+    "description": "This X12 Transaction Set contains the format and establishes the data contents of the Motor Carrier Pickup Manifest Transaction Set (215) for use within the context of an Electronic Data Interchange (EDI) environment. This transaction set can be used to allow shippers, or other parties, to provide a motor carrier with a manifest of all of the shipments tendered to a carrier. It is not to be used to provide a motor carrier with data relative to a load tender, legal bill of lading, pickup notification, or appointment scheduling."
   },
   "216": {
     "code": "216",
@@ -1223,6 +1233,11 @@
     "code": "839",
     "name": "X12",
     "description": "This X12 Transaction Set contains the format and establishes the data contents of the Project Cost Reporting Transaction Set (839) for use within the context of an Electronic Data Interchange (EDI) environment. This transaction set provides the transmission of cost and schedule information to support performance measurement (earned value), program management reporting, and contract funds status reporting. This transaction set will also support the Department of Defense (DoD), Department of Energy (DoE), NASA, and other government agency Cost/Schedule Control Systems Criteria (C/SCSC) and funds status reporting requirements. It is designed to serve the needs of government agencies, prime contractors, and their subcontractors."
+  },
+  "840": {
+    "code": "840",
+    "name": "X12",
+    "description": "This X12 Transaction Set contains the format and establishes the data contents of the Request for Quotation Transaction Set (840) for use within the context of an Electronic Data Interchange (EDI) environment. The transaction set can be used to provide potential buyers with the ability to solicit price, delivery schedule, and other items from potential sellers of goods and services."
   },
   "841": {
     "code": "841",

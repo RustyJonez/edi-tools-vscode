@@ -65551,5 +65551,441 @@
         "type": "761"
       }
     ]
+  },
+  "IS2": {
+    "code": "IS2",
+    "name": "X12",
+    "description": "To transmit scheduled events such as arrivals, departures, and interchange times",
+    "elements": [
+      {
+        "position": "01",
+        "name": "Standard Carrier Alpha Code",
+        "requirement": "M",
+        "type": "140"
+      },
+      {
+        "position": "02",
+        "name": "Event Code",
+        "requirement": "M",
+        "type": "304"
+      },
+      {
+        "position": "03",
+        "name": "Accomplish Code",
+        "requirement": "M",
+        "type": "190"
+      },
+      {
+        "position": "04",
+        "name": "Standard Point Location Code",
+        "requirement": "M",
+        "type": "154"
+      },
+      {
+        "position": "05",
+        "name": "Date",
+        "requirement": "M",
+        "type": "373"
+      },
+      {
+        "position": "06",
+        "name": "Time",
+        "requirement": "M",
+        "type": "337"
+      },
+      {
+        "position": "07",
+        "name": "Time Code",
+        "requirement": "O",
+        "type": "623"
+      },
+      {
+        "position": "08",
+        "name": "Standard Carrier Alpha Code",
+        "requirement": "O",
+        "type": "140"
+      },
+      {
+        "position": "09",
+        "name": "Interchange Train Identification",
+        "requirement": "O",
+        "type": "41"
+      },
+      {
+        "position": "10",
+        "name": "Date",
+        "requirement": "O",
+        "type": "373"
+      },
+      {
+        "position": "11",
+        "name": "Block Identifier",
+        "requirement": "O",
+        "type": "42"
+      },
+      {
+        "position": "12",
+        "name": "Date",
+        "requirement": "O",
+        "type": "373"
+      },
+      {
+        "position": "13",
+        "name": "Time",
+        "requirement": "O",
+        "type": "337"
+      },
+      {
+        "position": "14",
+        "name": "Date",
+        "requirement": "O",
+        "type": "373"
+      },
+      {
+        "position": "15",
+        "name": "Time",
+        "requirement": "O",
+        "type": "337"
+      },
+      {
+        "position": "16",
+        "name": "City Name",
+        "requirement": "C",
+        "type": "19"
+      },
+      {
+        "position": "17",
+        "name": "State or Province Code",
+        "requirement": "O",
+        "type": "156"
+      }
+    ]
+  },
+  "ISA": {
+    "code": "ISA",
+    "name": "X12",
+    "description": "To start and identify an interchange of zero or more functional groups and interchange-related control segments",
+    "elements": [
+      {
+        "position": "01",
+        "name": "Authorization Information Qualifier",
+        "requirement": "M",
+        "type": "I01"
+      },
+      {
+        "position": "02",
+        "name": "Authorization Information",
+        "requirement": "M",
+        "type": "I02"
+      },
+      {
+        "position": "03",
+        "name": "Security Information Qualifier",
+        "requirement": "M",
+        "type": "I03"
+      },
+      {
+        "position": "04",
+        "name": "Security Information",
+        "requirement": "M",
+        "type": "I04"
+      },
+      {
+        "position": "05",
+        "name": "Interchange ID Qualifier",
+        "requirement": "M",
+        "type": "I05"
+      },
+      {
+        "position": "06",
+        "name": "Interchange Sender ID",
+        "requirement": "M",
+        "type": "I06"
+      },
+      {
+        "position": "07",
+        "name": "Interchange ID Qualifier",
+        "requirement": "M",
+        "type": "I05"
+      },
+      {
+        "position": "08",
+        "name": "Interchange Receiver ID",
+        "requirement": "M",
+        "type": "I07"
+      },
+      {
+        "position": "09",
+        "name": "Interchange Date",
+        "requirement": "M",
+        "type": "I08"
+      },
+      {
+        "position": "10",
+        "name": "Interchange Time",
+        "requirement": "M",
+        "type": "I09"
+      },
+      {
+        "position": "11",
+        "name": "Repetition Separator",
+        "requirement": "M",
+        "type": "I65"
+      },
+      {
+        "position": "12",
+        "name": "Interchange Control Version Number",
+        "requirement": "M",
+        "type": "I11"
+      },
+      {
+        "position": "13",
+        "name": "Interchange Control Number",
+        "requirement": "M",
+        "type": "I12"
+      },
+      {
+        "position": "14",
+        "name": "Acknowledgment Requested",
+        "requirement": "M",
+        "type": "I13"
+      },
+      {
+        "position": "15",
+        "name": "Interchange Usage Indicator",
+        "requirement": "M",
+        "type": "I14"
+      },
+      {
+        "position": "16",
+        "name": "Component Element Separator",
+        "requirement": "M",
+        "type": "I15"
+      }
+    ]
+  },
+  "RPA": {
+    "code": "RPA",
+    "name": "X12",
+    "description": "To identify rate amounts or percents for a specific cost or other line item",
+    "elements": [
+      {
+        "position": "01",
+        "name": "Rate or Value Type Code",
+        "requirement": "M",
+        "type": "562"
+      },
+      {
+        "position": "02",
+        "name": "Monetary Amount",
+        "requirement": "C",
+        "type": "782"
+      },
+      {
+        "position": "03",
+        "name": "Rate",
+        "requirement": "C",
+        "type": "118"
+      },
+      {
+        "position": "01",
+        "name": "Unit or Basis for Measurement Code",
+        "requirement": "M",
+        "type": "355"
+      },
+      {
+        "position": "02",
+        "name": "Exponent",
+        "requirement": "O",
+        "type": "1018"
+      },
+      {
+        "position": "03",
+        "name": "Multiplier",
+        "requirement": "O",
+        "type": "649"
+      },
+      {
+        "position": "04",
+        "name": "Unit or Basis for Measurement Code",
+        "requirement": "O",
+        "type": "355"
+      },
+      {
+        "position": "05",
+        "name": "Exponent",
+        "requirement": "O",
+        "type": "1018"
+      },
+      {
+        "position": "06",
+        "name": "Multiplier",
+        "requirement": "O",
+        "type": "649"
+      },
+      {
+        "position": "07",
+        "name": "Unit or Basis for Measurement Code",
+        "requirement": "O",
+        "type": "355"
+      },
+      {
+        "position": "08",
+        "name": "Exponent",
+        "requirement": "O",
+        "type": "1018"
+      },
+      {
+        "position": "09",
+        "name": "Multiplier",
+        "requirement": "O",
+        "type": "649"
+      },
+      {
+        "position": "10",
+        "name": "Unit or Basis for Measurement Code",
+        "requirement": "O",
+        "type": "355"
+      },
+      {
+        "position": "11",
+        "name": "Exponent",
+        "requirement": "O",
+        "type": "1018"
+      },
+      {
+        "position": "12",
+        "name": "Multiplier",
+        "requirement": "O",
+        "type": "649"
+      },
+      {
+        "position": "13",
+        "name": "Unit or Basis for Measurement Code",
+        "requirement": "O",
+        "type": "355"
+      },
+      {
+        "position": "14",
+        "name": "Exponent",
+        "requirement": "O",
+        "type": "1018"
+      },
+      {
+        "position": "15",
+        "name": "Multiplier",
+        "requirement": "O",
+        "type": "649"
+      },
+      {
+        "position": "05",
+        "name": "Percentage as Decimal",
+        "requirement": "C",
+        "type": "954"
+      }
+    ]
+  },
+  "W01": {
+    "code": "W01",
+    "name": "X12",
+    "description": "To transmit basic and most frequent shipment-related line-item data elements",
+    "elements": [
+      {
+        "position": "01",
+        "name": "Quantity",
+        "requirement": "M",
+        "type": "380"
+      },
+      {
+        "position": "02",
+        "name": "Unit or Basis for Measurement Code",
+        "requirement": "M",
+        "type": "355"
+      },
+      {
+        "position": "03",
+        "name": "U.P.C. Case Code",
+        "requirement": "C",
+        "type": "438"
+      },
+      {
+        "position": "04",
+        "name": "Product/Service ID Qualifier",
+        "requirement": "C",
+        "type": "235"
+      },
+      {
+        "position": "05",
+        "name": "Product/Service ID",
+        "requirement": "C",
+        "type": "234"
+      },
+      {
+        "position": "06",
+        "name": "Product/Service ID Qualifier",
+        "requirement": "C",
+        "type": "235"
+      },
+      {
+        "position": "07",
+        "name": "Product/Service ID",
+        "requirement": "C",
+        "type": "234"
+      },
+      {
+        "position": "08",
+        "name": "Freight Class Code",
+        "requirement": "O",
+        "type": "59"
+      },
+      {
+        "position": "09",
+        "name": "Rate Class Code",
+        "requirement": "O",
+        "type": "121"
+      },
+      {
+        "position": "10",
+        "name": "Commodity Code Qualifier",
+        "requirement": "C",
+        "type": "23"
+      },
+      {
+        "position": "11",
+        "name": "Commodity Code",
+        "requirement": "C",
+        "type": "22"
+      },
+      {
+        "position": "12",
+        "name": "Pallet Block and Tiers",
+        "requirement": "O",
+        "type": "416"
+      },
+      {
+        "position": "13",
+        "name": "Warehouse Lot Number",
+        "requirement": "O",
+        "type": "451"
+      },
+      {
+        "position": "14",
+        "name": "Product/Service Condition Code",
+        "requirement": "O",
+        "type": "286"
+      },
+      {
+        "position": "15",
+        "name": "Product/Service ID Qualifier",
+        "requirement": "C",
+        "type": "235"
+      },
+      {
+        "position": "16",
+        "name": "Product/Service ID",
+        "requirement": "C",
+        "type": "234"
+      }
+    ]
   }
 }

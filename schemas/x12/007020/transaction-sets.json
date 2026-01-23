@@ -529,6 +529,11 @@
     "name": "X12",
     "description": "This X12 Transaction Set contains the format and establishes the data contents of the Real Estate Information Report Transaction Set (262) for use within the context of an Electronic Data Interchange (EDI) environment. This transaction set can be used for the transfer and reporting of real estate information among real estate industry participants."
   },
+  "263": {
+    "code": "263",
+    "name": "X12",
+    "description": "This X12 Transaction Set contains the format and establishes the data contents of the Residential Mortgage Insurance Application Response Transaction Set (263) for use within the context of an Electronic Data Interchange (EDI) environment. This standard is used by a mortgage insurance company to communicate the receipt and disposition of a Residential Mortgage Insurance Application Transaction Set (872). It will be used to provide the mortgage originator with the results of the insurance application and, if accepted, will provide basic information about the insurance coverage. It can also be used to confirm certification of coverage. It is not intended to replace the legal commitment (Certificate of Coverage of Insurance) which will continue to be delivered in its current form."
+  },
   "264": {
     "code": "264",
     "name": "X12",

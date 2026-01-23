@@ -474,6 +474,11 @@
     "name": "X12",
     "description": "This X12 Transaction Set contains the format and establishes the data contents of the Account Assignment/Inquiry and Service/Status Transaction Set (248) for use within the context of an Electronic Data Interchange (EDI) environment. The transaction set can be used for two-way, multi-transactional purposes of assigning accounts for collection, reporting status inquiries and inquiry responses and to update accounts between entities."
   },
+  "249": {
+    "code": "249",
+    "name": "X12",
+    "description": "This X12 Transaction Set contains the format and establishes the data contents of the Animal Toxicological Data Transaction Set (249) for use within the context of an Electronic Data Interchange (EDI) environment. The transaction set can be used to exchange animal toxicology data collected from studies conducted on pesticides, drugs, or other substances. This transaction set accommodates the lowest reportable level of individual animal toxicology data for transfer between industry and the government, within industry itself, and between government agencies. The transaction set will enable the exchange of both definitive end points or in-life study data, as well as observational or opinion type data."
+  },
   "250": {
     "code": "250",
     "name": "X12",

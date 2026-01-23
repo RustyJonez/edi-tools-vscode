@@ -1179,6 +1179,11 @@
     "name": "X12",
     "description": "This X12 Transaction Set contains the format and establishes the data contents of the Price/Sales Catalog Transaction Set (832) for use within the context of an Electronic Data Interchange (EDI) environment. The transaction set can be used to provide for customary and established business and industry practice relative to furnishing or requesting the price of goods or services in the form of a catalog."
   },
+  "833": {
+    "code": "833",
+    "name": "X12",
+    "description": "This X12 Transaction Set contains the format and establishes the data contents of the Mortgage Credit Report Order Transaction Set (833) for use within the context of an Electronic Data Interchange (EDI) environment. This transaction set can be used by a mortgage originator to request, track, and cancel a series of value-added, investigative credit reports which are typically required in mortgage lending. It is a collection of borrower information that is needed to order a mortgage credit report."
+  },
   "834": {
     "code": "834",
     "name": "X12",
@@ -1269,6 +1274,11 @@
     "name": "X12",
     "description": "This X12 Transaction Set contains the format and establishes the data contents of the Asset Schedule Transaction Set (851) for use within the context of an Electronic Data Interchange (EDI) environment. This transaction set provides for the customary and established business and industry practice relative to establishing a schedule of assets and the contractual terms and conditions relating to those assets agreed upon between lessor, lessee, buyer, seller, or any other party needing to establish a precise list of assets."
   },
+  "852": {
+    "code": "852",
+    "name": "X12",
+    "description": "This X12 Transaction Set contains the format and establishes the data contents of the Product Activity Data Transaction Set (852) for use within the context of an Electronic Data Interchange (EDI) environment. The transaction set can be used to advise a trading partner of inventory, sales, and other product activity information. Product activity data enables a trading partner to plan and ship, or propose inventory replenishment quantities, for distribution centers, warehouses or retail outlets.  The receiver of the transaction set will maintain some type of inventory/product movement records for its trading partners to enable replenishment calculations based on data provided by the distributor, warehouse or retailer."
+  },
   "853": {
     "code": "853",
     "name": "X12",
@@ -1298,6 +1308,11 @@
     "code": "858",
     "name": "X12",
     "description": "This X12 Transaction Set contains the format and establishes the data contents of the Shipment Information Transaction Set (858) for use within the context of an Electronic Data Interchange (EDI) environment. The transaction set can be used to provide the sender with the capability to transmit detailed bill-of-lading, rating, and/or scheduling information pertinent to a shipment.  This transaction set can also be used to exchange Government Bills of Lading (GBLs), Commercial Bills of Lading (CBLs), Transportation Control and Movement Documents (TCMDs), and Personal Property Government Bills of Lading (PPGBLs). It may be used by the U.S. Civilian Government, U.S. Department of Defense, and any of their trading partners to exchange information about the shipment of freight, household goods, and passengers. This transaction set fulfills information requirements established by U.S. Government transportation movement rules and regulations."
+  },
+  "859": {
+    "code": "859",
+    "name": "X12",
+    "description": "This X12 Transaction Set contains the format and establishes the data contents of the Freight Invoice Transaction Set (859) for use within the context of an Electronic Data Interchange (EDI) environment. The transaction set can be used to provide the sender with the capability to transmit an invoice, including charges, allowances, and details, for transportation services rendered.  This transaction set can also be used to exchange transportation services invoice information based on services provided in accordance with Government transportation rules and regulations. It may be used by the U.S. Civilian Government, U.S. Department of Defense, and any of their trading partners to exchange invoice information resulting from the shipment of freight, household goods, and passengers. This transaction set fulfills financial information requirements established by the U.S. Government."
   },
   "860": {
     "code": "860",

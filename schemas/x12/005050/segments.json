@@ -65952,5 +65952,258 @@
         "type": "761"
       }
     ]
+  },
+  "POC": {
+    "code": "POC",
+    "name": "X12",
+    "description": "To specify changes to a line item",
+    "elements": [
+      {
+        "position": "01",
+        "name": "Assigned Identification",
+        "requirement": "O",
+        "type": "350"
+      },
+      {
+        "position": "02",
+        "name": "Change or Response Type Code",
+        "requirement": "M",
+        "type": "670"
+      },
+      {
+        "position": "03",
+        "name": "Quantity",
+        "requirement": "C",
+        "type": "380"
+      },
+      {
+        "position": "04",
+        "name": "Quantity Left to Receive",
+        "requirement": "O",
+        "type": "671"
+      },
+      {
+        "position": "01",
+        "name": "Unit or Basis for Measurement Code",
+        "requirement": "M",
+        "type": "355"
+      },
+      {
+        "position": "02",
+        "name": "Exponent",
+        "requirement": "O",
+        "type": "1018"
+      },
+      {
+        "position": "03",
+        "name": "Multiplier",
+        "requirement": "O",
+        "type": "649"
+      },
+      {
+        "position": "04",
+        "name": "Unit or Basis for Measurement Code",
+        "requirement": "O",
+        "type": "355"
+      },
+      {
+        "position": "05",
+        "name": "Exponent",
+        "requirement": "O",
+        "type": "1018"
+      },
+      {
+        "position": "06",
+        "name": "Multiplier",
+        "requirement": "O",
+        "type": "649"
+      },
+      {
+        "position": "07",
+        "name": "Unit or Basis for Measurement Code",
+        "requirement": "O",
+        "type": "355"
+      },
+      {
+        "position": "08",
+        "name": "Exponent",
+        "requirement": "O",
+        "type": "1018"
+      },
+      {
+        "position": "09",
+        "name": "Multiplier",
+        "requirement": "O",
+        "type": "649"
+      },
+      {
+        "position": "10",
+        "name": "Unit or Basis for Measurement Code",
+        "requirement": "O",
+        "type": "355"
+      },
+      {
+        "position": "11",
+        "name": "Exponent",
+        "requirement": "O",
+        "type": "1018"
+      },
+      {
+        "position": "12",
+        "name": "Multiplier",
+        "requirement": "O",
+        "type": "649"
+      },
+      {
+        "position": "13",
+        "name": "Unit or Basis for Measurement Code",
+        "requirement": "O",
+        "type": "355"
+      },
+      {
+        "position": "14",
+        "name": "Exponent",
+        "requirement": "O",
+        "type": "1018"
+      },
+      {
+        "position": "15",
+        "name": "Multiplier",
+        "requirement": "O",
+        "type": "649"
+      },
+      {
+        "position": "06",
+        "name": "Unit Price",
+        "requirement": "C",
+        "type": "212"
+      },
+      {
+        "position": "07",
+        "name": "Basis of Unit Price Code",
+        "requirement": "O",
+        "type": "639"
+      },
+      {
+        "position": "08",
+        "name": "Product/Service ID Qualifier",
+        "requirement": "C",
+        "type": "235"
+      },
+      {
+        "position": "09",
+        "name": "Product/Service ID",
+        "requirement": "C",
+        "type": "234"
+      },
+      {
+        "position": "10",
+        "name": "Product/Service ID Qualifier",
+        "requirement": "C",
+        "type": "235"
+      },
+      {
+        "position": "11",
+        "name": "Product/Service ID",
+        "requirement": "C",
+        "type": "234"
+      },
+      {
+        "position": "12",
+        "name": "Product/Service ID Qualifier",
+        "requirement": "C",
+        "type": "235"
+      },
+      {
+        "position": "13",
+        "name": "Product/Service ID",
+        "requirement": "C",
+        "type": "234"
+      },
+      {
+        "position": "14",
+        "name": "Product/Service ID Qualifier",
+        "requirement": "C",
+        "type": "235"
+      },
+      {
+        "position": "15",
+        "name": "Product/Service ID",
+        "requirement": "C",
+        "type": "234"
+      },
+      {
+        "position": "16",
+        "name": "Product/Service ID Qualifier",
+        "requirement": "C",
+        "type": "235"
+      },
+      {
+        "position": "17",
+        "name": "Product/Service ID",
+        "requirement": "C",
+        "type": "234"
+      },
+      {
+        "position": "18",
+        "name": "Product/Service ID Qualifier",
+        "requirement": "C",
+        "type": "235"
+      },
+      {
+        "position": "19",
+        "name": "Product/Service ID",
+        "requirement": "C",
+        "type": "234"
+      },
+      {
+        "position": "20",
+        "name": "Product/Service ID Qualifier",
+        "requirement": "C",
+        "type": "235"
+      },
+      {
+        "position": "21",
+        "name": "Product/Service ID",
+        "requirement": "C",
+        "type": "234"
+      },
+      {
+        "position": "22",
+        "name": "Product/Service ID Qualifier",
+        "requirement": "C",
+        "type": "235"
+      },
+      {
+        "position": "23",
+        "name": "Product/Service ID",
+        "requirement": "C",
+        "type": "234"
+      },
+      {
+        "position": "24",
+        "name": "Product/Service ID Qualifier",
+        "requirement": "C",
+        "type": "235"
+      },
+      {
+        "position": "25",
+        "name": "Product/Service ID",
+        "requirement": "C",
+        "type": "234"
+      },
+      {
+        "position": "26",
+        "name": "Product/Service ID Qualifier",
+        "requirement": "C",
+        "type": "235"
+      },
+      {
+        "position": "27",
+        "name": "Product/Service ID",
+        "requirement": "C",
+        "type": "234"
+      }
+    ]
   }
 }

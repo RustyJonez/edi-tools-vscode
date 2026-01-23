@@ -389,6 +389,11 @@
     "name": "X12",
     "description": "This X12 Transaction Set contains the format and establishes the data contents of the Motor Carrier Delivery Trailer Manifest Transaction Set (212) for use within the context of an Electronic Data Interchange (EDI) environment. This transaction set can be used to allow motor carriers to provide consignees or other interested parties with the contents of a trailer, containing multiple shipments, that has been tendered for delivery. It is not to be used to provide the recipient with data relative to a full truckload shipment."
   },
+  "213": {
+    "code": "213",
+    "name": "X12",
+    "description": "This X12 Transaction Set contains the format and establishes the data contents of the Motor Carrier Shipment Status Inquiry Transaction Set (213) for use within the context of an Electronic Data Interchange (EDI) environment. The transaction set can be used to request shipment status from a motor carrier. The requestor may be a shipper or consignee."
+  },
   "214": {
     "code": "214",
     "name": "X12",
@@ -478,6 +483,11 @@
     "code": "250",
     "name": "X12",
     "description": "This X12 Transaction Set contains the format and establishes the data contents of the Purchase Order Shipment Management Document Transaction Set (250) for use within the context of an Electronic Data Interchange (EDI) environment. This transaction set can be used to allow a retailer or manufacturer to communicate purchase order data, to a transportation provider, for the purpose of managing the purchase order cycle from the time of pickup request through delivery."
+  },
+  "251": {
+    "code": "251",
+    "name": "X12",
+    "description": "This X12 Transaction Set contains the format and establishes the data contents of the Pricing Support Transaction Set (251) for use within the context of an Electronic Data Interchange (EDI) environment. This transaction set can be used to request or transmit budget or actual data for labor and overhead rates, factors, and other supporting data for a specified period of time.  This bi-directional transaction set can stand alone, or can be used to support the Contract Pricing Proposal (805) Transaction Set."
   },
   "252": {
     "code": "252",

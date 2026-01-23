@@ -66589,5 +66589,36 @@
         "type": "761"
       }
     ]
+  },
+  "CRD": {
+    "code": "CRD",
+    "name": "X12",
+    "description": "To supply the detail information necessary to fulfill mandated requirements for the reporting of non-domestic materials and/or components included in domestically produced products",
+    "elements": [
+      {
+        "position": "01",
+        "name": "Country Code",
+        "requirement": "M",
+        "type": "26"
+      },
+      {
+        "position": "02",
+        "name": "Amount Qualifier Code",
+        "requirement": "C",
+        "type": "522"
+      },
+      {
+        "position": "03",
+        "name": "Monetary Amount",
+        "requirement": "C",
+        "type": "782"
+      },
+      {
+        "position": "04",
+        "name": "Percent, Integer Format",
+        "requirement": "C",
+        "type": "488"
+      }
+    ]
   }
 }

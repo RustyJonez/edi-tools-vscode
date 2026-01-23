@@ -65889,5 +65889,30 @@
         "type": "761"
       }
     ]
+  },
+  "FA1": {
+    "code": "FA1",
+    "name": "X12",
+    "description": "To specify the organization controlling the content of the accounting citation, and the purpose associated with the accounting citation",
+    "elements": [
+      {
+        "position": "01",
+        "name": "Agency Qualifier Code",
+        "requirement": "M",
+        "type": "559"
+      },
+      {
+        "position": "02",
+        "name": "Service, Promotion, Allowance, or Charge Code",
+        "requirement": "O",
+        "type": "1300"
+      },
+      {
+        "position": "03",
+        "name": "Allowance or Charge Indicator",
+        "requirement": "O",
+        "type": "248"
+      }
+    ]
   }
 }

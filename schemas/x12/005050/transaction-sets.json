@@ -49,6 +49,11 @@
     "name": "X12",
     "description": "This X12 Transaction Set contains the format and establishes the data contents of the Vessel Content Details Transaction Set (109) for use within the context of an Electronic Data Interchange (EDI) environment. The transaction set can be used to provide all the information necessary to report event details for a shipment and status for one or more containers bound for a port. It is intended to accommodate the details for one status or event associated with many containers, as well as more than one status or event for one shipment."
   },
+  "110": {
+    "code": "110",
+    "name": "X12",
+    "description": "This X12 Transaction Set contains the format and establishes the data contents of the Air Freight Details and Invoice Transaction Set (110) for use within the context of an Electronic Data Interchange (EDI) environment. The transaction set can be used to provide a customer with an air invoice for transportation and other charges related to shipments, including Original Invoices, Past Due Billings, Balance Due Bills and Revisions."
+  },
   "111": {
     "code": "111",
     "name": "X12",
@@ -68,6 +73,11 @@
     "code": "120",
     "name": "X12",
     "description": "This X12 Transaction Set contains the format and establishes the data contents of the Vehicle Shipping Order Transaction Set (120) for use within the context of an Electronic Data Interchange (EDI) environment. This transaction set can be used to notify a carrier of the impending arrival of a motor vehicle which the carrier is to ship to the destination herein specified or on which that carrier is to perform a service. It may be sent to a carrier by the vehicle manufacturer, by another carrier, or by an agent of the manufacturer."
+  },
+  "121": {
+    "code": "121",
+    "name": "X12",
+    "description": "This X12 Transaction Set contains the format and establishes the data contents of the Vehicle Service Transaction Set (121) for use within the context of an Electronic Data Interchange (EDI) environment. This transaction set can be used by a carrier to notify a Vehicle Manufacturer that a requested movement or service has been performed on motor vehicles or that a change in status has occurred."
   },
   "124": {
     "code": "124",
@@ -984,6 +994,11 @@
     "name": "X12",
     "description": "This X12 Transaction Set contains the format and establishes the data contents of the Pricing History Transaction Set (503) for use within the context of an Electronic Data Interchange (EDI) environment. This bi-directional transaction set can be used by a purchasing party or vendor to request pricing history information for an item. The transaction set can also be used to respond to a request for pricing history information."
   },
+  "504": {
+    "code": "504",
+    "name": "X12",
+    "description": "This X12 Transaction Set contains the format and establishes the data contents of the Clauses and Provisions Transaction Set (504) for use within the context of an Electronic Data Interchange (EDI) environment. This bi-directional transaction set can be used to request or respond to requests for clauses and special provisions."
+  },
   "511": {
     "code": "511",
     "name": "X12",
@@ -1279,6 +1294,11 @@
     "name": "X12",
     "description": "This X12 Transaction Set contains the format and establishes the data contents of the Asset Schedule Transaction Set (851) for use within the context of an Electronic Data Interchange (EDI) environment. This transaction set provides for the customary and established business and industry practice relative to establishing a schedule of assets and the contractual terms and conditions relating to those assets agreed upon between lessor, lessee, buyer, seller, or any other party needing to establish a precise list of assets."
   },
+  "852": {
+    "code": "852",
+    "name": "X12",
+    "description": "This X12 Transaction Set contains the format and establishes the data contents of the Product Activity Data Transaction Set (852) for use within the context of an Electronic Data Interchange (EDI) environment. The transaction set can be used to advise a trading partner of inventory, sales, and other product activity information. Product activity data enables a trading partner to plan and ship, or propose inventory replenishment quantities, for distribution centers, warehouses or retail outlets.  The receiver of the transaction set will maintain some type of inventory/product movement records for its trading partners to enable replenishment calculations based on data provided by the distributor, warehouse or retailer."
+  },
   "853": {
     "code": "853",
     "name": "X12",
@@ -1298,6 +1318,11 @@
     "code": "856",
     "name": "X12",
     "description": "This X12 Transaction Set contains the format and establishes the data contents of the Ship Notice/Manifest Transaction Set (856) for use within the context of an Electronic Data Interchange (EDI) environment. The transaction set can be used to list the contents of a shipment of goods as well as additional information relating to the shipment, such as order information, product description, physical characteristics, type of packaging, marking, carrier information, and configuration of goods within the transportation equipment. The transaction set enables the sender to describe the contents and configuration of a shipment in various levels of detail and provides an ordered flexibility to convey information.  The sender of this transaction is the organization responsible for detailing and communicating the contents of a shipment, or shipments, to one or more receivers of the transaction set. The receiver of this transaction set can be any organization having an interest in the contents of a shipment or information about the contents of a shipment."
+  },
+  "857": {
+    "code": "857",
+    "name": "X12",
+    "description": "This X12 Transaction Set contains the format and establishes the data contents of the Shipment and Billing Notice Transaction Set (857) for use within the context of an Electronic Data Interchange (EDI) environment. This transaction set provides the recipient of a shipment with data for both receipt planning and payment generation.  EDI and telecommunications technologies suggest efficiencies in the way business data is processed. For example, the sender of a shipment may send the recipient's receiving function a Ship Notice/Manifest (856), and the payables function an Invoice (810), even though the contents of these two documents may be largely redundant. In certain business environments, the Shipment and Billing Notice permits the consolidation of these two documents into one.  Specifically, this transaction set is appropriate where the shipment data, when it includes terms and item prices, can be used both to plan receipts and to generate payment. In this environment, the exact prices for the items shipped may not be known in advance by both parties. This transaction set is not appropriate in so-called Evaluated Receipts Settlement (ERS) environments, in which the exact prices for the items shipped have been agreed upon by, and are known to, both parties in advance.  This transaction set is not to be used to replace the Ship Notice/Manifest (856) or Invoice (810) individually, but only to replace both, together. For example, do not use this transaction set in place of a Ship Notice/Manifest while continuing to send either paper or electronic invoice."
   },
   "858": {
     "code": "858",
@@ -1373,6 +1398,11 @@
     "code": "873",
     "name": "X12",
     "description": "This X12 Transaction Set contains the format and establishes the data contents of the Commodity Movement Services Transaction Set (873) for use within the context of an Electronic Data Interchange (EDI) environment. This standard can be used to convey request and response information for commodity movement services. This transaction is not to be used for product sales or purchases."
+  },
+  "874": {
+    "code": "874",
+    "name": "X12",
+    "description": "This X12 Transaction Set contains the format and establishes the data contents of the Commodity Movement Services Response Transaction Set (874) for use within the context of an Electronic Data Interchange (EDI) environment. This standard can be used to return validation information in response to the Commodity Movement Services Transaction Set (873)."
   },
   "875": {
     "code": "875",

@@ -64522,5 +64522,78 @@
         "type": "373"
       }
     ]
+  },
+  "SER": {
+    "code": "SER",
+    "name": "X12",
+    "description": "To specify the details of the service charges levied",
+    "elements": [
+      {
+        "position": "01",
+        "name": "Product/Service ID Qualifier",
+        "requirement": "M",
+        "type": "235"
+      },
+      {
+        "position": "02",
+        "name": "Product/Service ID",
+        "requirement": "M",
+        "type": "234"
+      },
+      {
+        "position": "03",
+        "name": "Monetary Amount",
+        "requirement": "C",
+        "type": "782"
+      },
+      {
+        "position": "04",
+        "name": "Monetary Amount",
+        "requirement": "C",
+        "type": "782"
+      },
+      {
+        "position": "05",
+        "name": "Unit Price",
+        "requirement": "O",
+        "type": "212"
+      },
+      {
+        "position": "06",
+        "name": "Quantity",
+        "requirement": "O",
+        "type": "380"
+      },
+      {
+        "position": "07",
+        "name": "Description",
+        "requirement": "O",
+        "type": "352"
+      },
+      {
+        "position": "08",
+        "name": "Price Identifier Code",
+        "requirement": "O",
+        "type": "236"
+      },
+      {
+        "position": "09",
+        "name": "Payment Method Code",
+        "requirement": "O",
+        "type": "107"
+      },
+      {
+        "position": "10",
+        "name": "Reference Identification Qualifier",
+        "requirement": "C",
+        "type": "128"
+      },
+      {
+        "position": "11",
+        "name": "Reference Identification",
+        "requirement": "C",
+        "type": "127"
+      }
+    ]
   }
 }

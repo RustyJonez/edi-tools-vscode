@@ -1,4 +1,9 @@
 {
+  "100": {
+    "code": "100",
+    "name": "X12",
+    "description": "This X12 Transaction Set contains the format and establishes the data contents of the Insurance Plan Description Transaction Set (100) for use within the context of an Electronic Data Interchange (EDI) environment. The transaction set is used to transmit life insurance, annuity, and disability insurance product availability and features, historical performance, investment options, distributions channels, and offering company information."
+  },
   "101": {
     "code": "101",
     "name": "X12",
@@ -54,6 +59,11 @@
     "name": "X12",
     "description": "This X12 Transaction Set contains the format and establishes the data contents of the Individual Insurance Policy and Client Information Transaction Set (111) for use within the context of an Electronic Data Interchange (EDI) environment.  This standard can be used to exchange policy and client information among organizations administering individual life and health insurance contracts and their trading partners (e.g., agents, brokers). It is not intended to be used for group insurance."
   },
+  "112": {
+    "code": "112",
+    "name": "X12",
+    "description": "This X12 Transaction Set contains the format and establishes the data contents of the Property Damage Report Transaction Set (112) for use within the context of an Electronic Data Interchange (EDI) environment. This transaction set will be used to provide property damage information between property and casualty insurance companies, independent agents, service and information providers. This information includes, but is not limited to providing cost estimates involving functions such as demolishing, new constructions, damage repair and replacement."
+  },
   "113": {
     "code": "113",
     "name": "X12",
@@ -63,6 +73,11 @@
     "code": "120",
     "name": "X12",
     "description": "This X12 Transaction Set contains the format and establishes the data contents of the Vehicle Shipping Order Transaction Set (120) for use within the context of an Electronic Data Interchange (EDI) environment. This transaction set can be used to notify a carrier of the impending arrival of a motor vehicle which the carrier is to ship to the destination herein specified or on which that carrier is to perform a service. It may be sent to a carrier by the vehicle manufacturer, by another carrier, or by an agent of the manufacturer."
+  },
+  "121": {
+    "code": "121",
+    "name": "X12",
+    "description": "This X12 Transaction Set contains the format and establishes the data contents of the Vehicle Service Transaction Set (121) for use within the context of an Electronic Data Interchange (EDI) environment. This transaction set can be used by a carrier to notify a Vehicle Manufacturer that a requested movement or service has been performed on motor vehicles or that a change in status has occurred."
   },
   "124": {
     "code": "124",
@@ -898,6 +913,11 @@
     "code": "453",
     "name": "X12",
     "description": "This X12 Transaction Set contains the format and establishes the data contents of the Railroad Service Commitment Advice Transaction Set (453) for use within the context of an Electronic Data Interchange (EDI) environment. The transaction set can be used by a Rail Interline Service Management shipment sponsor to communicate service commitment details to transportation service providers."
+  },
+  "455": {
+    "code": "455",
+    "name": "X12",
+    "description": "This X12 Transaction Set contains the format and establishes the data contents of the Railroad Parameter Trace Registration Transaction Set (455) for use within the context of an Electronic Data Interchange (EDI) environment. The transaction set can be used by a freight carrier to: (1) request the establishment of a set of parameters used to select movement activity from a central data store over time; (2) request information about past activities within a date range that meets a set of parameters; and (3) request the establishment of a set of parameters for subsequent use on demand."
   },
   "456": {
     "code": "456",

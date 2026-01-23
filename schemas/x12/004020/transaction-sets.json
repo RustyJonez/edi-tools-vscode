@@ -479,6 +479,11 @@
     "name": "X12",
     "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Application for Mortgage Insurance Benefits Transaction Set (260) for use within the context of an Electronic Data Interchange (EDI) environment. This transaction set can be used by mortgage lenders to file claims with both government agencies and private mortgage insurers in the event that defaults or foreclosure activity allow for the collection of a third-party guarantee/insurance benefit. The information in a standard format will allow all mortgage insurance claim payments to be requested similarly, whether they be to an investor, insurer, or guarantor."
   },
+  "261": {
+    "code": "261",
+    "name": "X12",
+    "description": "This Draft Standard for Trial Use contains the format and establishes the data content of the Real Estate Information Request Transaction Set (261) for use within an Electronic Data Interchange (EDI) environment. This transaction set can be used to initiate, modify or cancel a request for real estate information. This transaction set will be used to transfer information among real estate industry participants."
+  },
   "262": {
     "code": "262",
     "name": "X12",
@@ -513,6 +518,11 @@
     "code": "268",
     "name": "X12",
     "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Annuity Activity Transaction Set (268) for use within the context of an Electronic Data Interchange (EDI) environment. The transaction set is used to convey annuity account activity from annuity providers to distributors (e.g., broker/dealers, financial planners, banks, savings and loans) for the purpose of communicating account positions and transaction activity."
+  },
+  "270": {
+    "code": "270",
+    "name": "X12",
+    "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Eligibility, Coverage or Benefit Inquiry Transaction Set (270) for use within the context of an Electronic Data Interchange (EDI) environment. This transaction set can be used to inquire about the eligibility, coverages or benefits associated with a benefit plan, employer, plan sponsor, subscriber or a dependent under the subscriber's policy. The transaction set is intended to be used by all lines of insurance such as Health, Life, and Property and Casualty."
   },
   "271": {
     "code": "271",

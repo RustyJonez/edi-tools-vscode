@@ -61541,5 +61541,108 @@
         "type": "373"
       }
     ]
+  },
+  "SAC": {
+    "code": "SAC",
+    "name": "X12",
+    "description": "To request or identify a service, promotion, allowance, or charge; to specify the amount or percentage for the service, promotion, allowance, or charge",
+    "elements": [
+      {
+        "position": "01",
+        "name": "Allowance or Charge Indicator",
+        "requirement": "M",
+        "type": "248"
+      },
+      {
+        "position": "02",
+        "name": "Service, Promotion, Allowance, or Charge Code",
+        "requirement": "C",
+        "type": "1300"
+      },
+      {
+        "position": "03",
+        "name": "Agency Qualifier Code",
+        "requirement": "C",
+        "type": "559"
+      },
+      {
+        "position": "04",
+        "name": "Agency Service, Promotion, Allowance, or Charge Code",
+        "requirement": "C",
+        "type": "1301"
+      },
+      {
+        "position": "05",
+        "name": "Amount",
+        "requirement": "O",
+        "type": "610"
+      },
+      {
+        "position": "06",
+        "name": "Allowance/ Charge Percent Qualifier",
+        "requirement": "C",
+        "type": "378"
+      },
+      {
+        "position": "07",
+        "name": "Percent",
+        "requirement": "C",
+        "type": "332"
+      },
+      {
+        "position": "08",
+        "name": "Rate",
+        "requirement": "O",
+        "type": "118"
+      },
+      {
+        "position": "09",
+        "name": "Unit or Basis for Measurement Code",
+        "requirement": "C",
+        "type": "355"
+      },
+      {
+        "position": "10",
+        "name": "Quantity",
+        "requirement": "C",
+        "type": "380"
+      },
+      {
+        "position": "11",
+        "name": "Quantity",
+        "requirement": "O",
+        "type": "380"
+      },
+      {
+        "position": "12",
+        "name": "Allowance or Charge Method of Handling Code",
+        "requirement": "O",
+        "type": "331"
+      },
+      {
+        "position": "13",
+        "name": "Reference Identification",
+        "requirement": "C",
+        "type": "127"
+      },
+      {
+        "position": "14",
+        "name": "Option Number",
+        "requirement": "O",
+        "type": "770"
+      },
+      {
+        "position": "15",
+        "name": "Description",
+        "requirement": "C",
+        "type": "352"
+      },
+      {
+        "position": "16",
+        "name": "Language Code",
+        "requirement": "O",
+        "type": "819"
+      }
+    ]
   }
 }

@@ -119,6 +119,11 @@
     "name": "X12",
     "description": "This standard provides for the format and establishes the data contents of a purchase order change acknowledgment transaction set. This transaction set can be used: (1) by the seller to acknowledge or convey acceptance of changes to a previously submitted purchase order or (2) by a seller to notify the buyer of changes initiated by the seller to a previously submitted purchase order."
   },
+  "866": {
+    "code": "866",
+    "name": "X12",
+    "description": "This standard provides the format and establishes the data content of the Production Sequence Transaction Set within the context of an Electronic Data Interchange (EDI) environment. This transaction set provides for the receiver of goods to request the order in which shipments of goods arrive, or to specify the order in which the goods are to be unloaded from the conveyance method, or both. This specifies the sequence in which the goods are to enter the materials handling process, or are to be consumed in the production process, or both. This transaction set shall not be used to authorize labor, materials, or other resources. This transaction set shall not be used to revise any product characteristic specification."
+  },
   "867": {
     "code": "867",
     "name": "X12",

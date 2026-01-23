@@ -1159,6 +1159,11 @@
     "name": "X12",
     "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Mortgage Credit Report Order Transaction Set (833) for use within the context of an Electronic Data Interchange (EDI) environment. This transaction set can be used by a mortgage originator to request, track, and cancel a series of value-added, investigative credit reports which are typically required in mortgage lending. It is a collection of borrower information that is needed to order a mortgage credit report."
   },
+  "834": {
+    "code": "834",
+    "name": "X12",
+    "description": "This Draft Standard for Trial Use contains the format and establishes the data contents of the Benefit Enrollment and Maintenance Transaction Set (834) for use within the context of an Electronic Data Interchange (EDI) environment. This transaction set can be used to establish communication between the sponsor of the insurance product and the payer. Such transaction(s) may or may not take place through a third party administrator (TPA).  For the purpose of this standard, the sponsor is the party or entity that ultimately pays for the coverage, benefit or product. A sponsor can be an employer, union, government agency, association, or insurance agency.  The payer refers to an entity that pays claims, administers the insurance product or benefit, or both. A payer can be an insurance company, health maintenance organization (HMO), preferred provider organization (PPO), government agency (Medicare, Medicaid, Champus, etc.), or an entity that may be contracted by one of these former groups.  For the purpose of the 834 transaction set, a third party administrator (TPA) can be contracted by a sponsor to handle data gathering from those covered by the sponsor if the sponsor does not elect to perform this function itself."
+  },
   "835": {
     "code": "835",
     "name": "X12",

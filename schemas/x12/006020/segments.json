@@ -66810,5 +66810,62 @@
         "type": "761"
       }
     ]
+  },
+  "APR": {
+    "code": "APR",
+    "name": "X12",
+    "description": "Used to limit the application of restrictions to a subset of standard Association of American Railroads Pool Codes",
+    "elements": [
+      {
+        "position": "01",
+        "name": "Yes/No Condition or Response Code",
+        "requirement": "M",
+        "type": "1073"
+      },
+      {
+        "position": "02",
+        "name": "Association of American Railroads (AAR) Pool Code",
+        "requirement": "M",
+        "type": "1011"
+      },
+      {
+        "position": "03",
+        "name": "Association of American Railroads (AAR) Pool Code",
+        "requirement": "O",
+        "type": "1011"
+      }
+    ]
+  },
+  "AT1": {
+    "code": "AT1",
+    "name": "X12",
+    "description": "To reference a Bill of Lading line number",
+    "elements": [
+      {
+        "position": "01",
+        "name": "Lading Line Item Number",
+        "requirement": "M",
+        "type": "213"
+      }
+    ]
+  },
+  "CA1": {
+    "code": "CA1",
+    "name": "X12",
+    "description": "To identify the rate request identification number and any applicable suffix",
+    "elements": [
+      {
+        "position": "01",
+        "name": "Rate Request ID",
+        "requirement": "M",
+        "type": "1662"
+      },
+      {
+        "position": "02",
+        "name": "Rate Response Suffix",
+        "requirement": "O",
+        "type": "1663"
+      }
+    ]
   }
 }
