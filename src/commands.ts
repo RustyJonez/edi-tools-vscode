@@ -81,6 +81,23 @@ export function registerCommands(context: vscode.ExtensionContext): void {
     context.subscriptions.push(
         vscode.commands.registerCommand('ediX12Tools.addEdifactLineBreaks', addEdifactLineBreaks)
     );
+
+    // Validate Document
+    context.subscriptions.push(
+        vscode.commands.registerCommand('ediX12Tools.validateDocument', validateDocument)
+    );
+
+    // Clear Validation
+    context.subscriptions.push(
+        vscode.commands.registerCommand('ediX12Tools.clearValidation', clearValidation)
+    );
+
+    // Clear diagnostics on document close
+    context.subscriptions.push(
+        vscode.workspace.onDidCloseTextDocument(doc => {
+            getDiagnosticCollection().delete(doc.uri);
+        })
+    );
 }
 
 function isEdiDocument(): boolean {
@@ -877,4 +894,360 @@ async function updateEdifactIds(editor: vscode.TextEditor, text: string): Promis
 
 function escapeRegExp(string: string): string {
     return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+// Diagnostic collection for validation errors
+let diagnosticCollection: vscode.DiagnosticCollection | undefined;
+
+/**
+ * Get or create the diagnostic collection
+ */
+export function getDiagnosticCollection(): vscode.DiagnosticCollection {
+    if (!diagnosticCollection) {
+        diagnosticCollection = vscode.languages.createDiagnosticCollection('edi');
+    }
+    return diagnosticCollection;
+}
+
+/**
+ * Validate the current EDI document and show diagnostics
+ */
+async function validateDocument(): Promise<void> {
+    const editor = vscode.window.activeTextEditor;
+    if (!editor) {
+        vscode.window.showErrorMessage('No active editor');
+        return;
+    }
+
+    const document = editor.document;
+    const languageId = document.languageId;
+    const text = document.getText();
+
+    // Detect document type from languageId or content
+    let isEdifact = false;
+    if (languageId === 'edifact') {
+        isEdifact = true;
+    } else if (languageId === 'x12') {
+        isEdifact = false;
+    } else {
+        // Try to detect from content
+        if (text.startsWith('UNA') || text.startsWith('UNB') || text.includes('UNH+')) {
+            isEdifact = true;
+        } else if (text.startsWith('ISA')) {
+            isEdifact = false;
+        } else {
+            vscode.window.showErrorMessage('Not an EDI document (no ISA or UNB/UNH envelope found)');
+            return;
+        }
+    }
+    const diagnostics: vscode.Diagnostic[] = [];
+
+    // Import validators dynamically to avoid circular dependencies
+    const { validateElement, validateDateWithFormat } = await import('./validators');
+
+    // Load schemas - we need to access them for validation
+    const fs = await import('fs');
+    const path = await import('path');
+
+    // Get extension path - try extension API first, fallback to __dirname
+    const extension = vscode.extensions.getExtension('RustyJonez.edi-tools');
+    const extensionPath = extension?.extensionPath || path.join(__dirname, '..');
+
+    console.log(`[EDI Validate] Extension path: ${extensionPath}`);
+
+    // Detect version
+    let version = isEdifact ? detectEdifactVersionFromDoc(document) : detectX12VersionFromDoc(document);
+    let schemaDir = path.join(extensionPath, 'schemas', isEdifact ? 'edifact' : 'x12', version);
+
+    // Fallback to common versions if detected version doesn't exist
+    if (!fs.existsSync(schemaDir)) {
+        console.log(`[EDI Validate] Version ${version} not found, trying fallbacks...`);
+        const fallbackVersions = isEdifact
+            ? ['d96a', 'd01b', 'd03a', 'd98b', 'd21a']
+            : ['004010', '005010', '008010', '003070', '003060', '003010', '007020'];
+
+        for (const fallback of fallbackVersions) {
+            const fallbackDir = path.join(extensionPath, 'schemas', isEdifact ? 'edifact' : 'x12', fallback);
+            if (fs.existsSync(fallbackDir)) {
+                console.log(`[EDI Validate] Using fallback version: ${fallback}`);
+                version = fallback;
+                schemaDir = fallbackDir;
+                break;
+            }
+        }
+    }
+
+    console.log(`[EDI Validate] Schema dir: ${schemaDir}`);
+    console.log(`[EDI Validate] Version: ${version}, isEdifact: ${isEdifact}`);
+
+    // Load segment and element schemas
+    let segments: Record<string, any> = {};
+    let elements: Record<string, any> = {};
+    let composites: Record<string, any> = {};
+
+    const segmentsPath = path.join(schemaDir, 'segments.json');
+    const elementsPath = path.join(schemaDir, 'elements.json');
+    const compositesPath = path.join(schemaDir, 'composites.json');
+
+    console.log(`[EDI Validate] Segments path exists: ${fs.existsSync(segmentsPath)}`);
+    console.log(`[EDI Validate] Elements path exists: ${fs.existsSync(elementsPath)}`);
+
+    if (fs.existsSync(segmentsPath)) {
+        segments = JSON.parse(fs.readFileSync(segmentsPath, 'utf-8'));
+        console.log(`[EDI Validate] Loaded ${Object.keys(segments).length} segments`);
+    }
+    if (fs.existsSync(elementsPath)) {
+        elements = JSON.parse(fs.readFileSync(elementsPath, 'utf-8'));
+        console.log(`[EDI Validate] Loaded ${Object.keys(elements).length} elements`);
+    }
+    if (isEdifact && fs.existsSync(compositesPath)) {
+        composites = JSON.parse(fs.readFileSync(compositesPath, 'utf-8'));
+        console.log(`[EDI Validate] Loaded ${Object.keys(composites).length} composites`);
+    }
+
+    const delimiter = isEdifact ? '+' : '*';
+
+    // Validate each line (segment)
+    for (let lineNum = 0; lineNum < document.lineCount; lineNum++) {
+        const line = document.lineAt(lineNum);
+        const lineText = line.text;
+
+        if (!lineText.trim()) continue;
+
+        // Extract segment code
+        const segmentMatch = lineText.match(/^([A-Z0-9]{2,3})(?=\*|\+|:)/);
+        if (!segmentMatch) {
+            continue;
+        }
+
+        const segmentCode = segmentMatch[1];
+        const segmentInfo = segments[segmentCode];
+
+        if (!segmentInfo || !segmentInfo.elements) {
+            continue;
+        }
+
+        // Parse elements
+        const parts = lineText.split(delimiter);
+        let currentPos = segmentCode.length;
+
+        for (let i = 1; i < parts.length && i <= segmentInfo.elements.length; i++) {
+            currentPos++; // Account for delimiter
+            const elementStart = currentPos;
+
+            // Remove segment terminator from last element
+            let elementValue = parts[i];
+            if (i === parts.length - 1) {
+                elementValue = elementValue.replace(/[~'\n\r]+$/g, '');
+            }
+
+            const elementEnd = elementStart + elementValue.length;
+            currentPos = elementStart + parts[i].length;
+
+            // Skip empty elements
+            if (!elementValue.trim()) continue;
+
+            // Get element schema
+            const elementInfo = segmentInfo.elements[i - 1];
+            if (!elementInfo) {
+                continue;
+            }
+
+            // Check if this is a composite or simple element
+            // Composites have types like C001, S001, etc.
+            const compositeInfo = isEdifact ? composites[elementInfo.type] : null;
+            const elementDetail = elements[elementInfo.type];
+
+            // For EDIFACT, prioritize composites over simple elements
+            if (compositeInfo) {
+                // Check if this is a single-component composite (no colons) or multi-component
+                const isSingleComponent = !elementValue.includes(':');
+
+                if (isSingleComponent && compositeInfo.components && compositeInfo.components.length > 0) {
+                    // Single component - validate against first component's schema
+                    const componentInfo = compositeInfo.components[0];
+                    const componentDetail = elements[componentInfo.elementId];
+
+                    if (componentDetail && elementValue.trim()) {
+                        const componentSchema = {
+                            dataType: componentDetail.dataType || 'AN',
+                            minLength: componentDetail.minLength || 0,
+                            maxLength: componentDetail.maxLength || 999,
+                            codes: componentDetail.codes
+                        };
+                        const validation = validateElement(elementValue, componentSchema);
+
+                        if (!validation.isValid) {
+                            const range = new vscode.Range(lineNum, elementStart, lineNum, elementEnd);
+                            const severity = validation.severity === 'error'
+                                ? vscode.DiagnosticSeverity.Error
+                                : vscode.DiagnosticSeverity.Warning;
+
+                            const diagnostic = new vscode.Diagnostic(range, validation.message, severity);
+                            diagnostic.source = 'EDI Validator';
+                            diagnostic.code = validation.errorType;
+                            diagnostics.push(diagnostic);
+                        }
+                    }
+                } else {
+                    // Multi-component composite - validate each component
+                    const components = elementValue.split(':');
+                    let compPos = elementStart;
+
+                    // Check if this is a date/time composite (C507, S004, etc.) and extract format qualifier
+                    const isDateComposite = ['C507', 'S004'].includes(elementInfo.type);
+                    const dateFormatQualifier = isDateComposite && components.length >= 3 ? components[2] : undefined;
+
+                    for (let c = 0; c < components.length; c++) {
+                        const compValue = components[c];
+                        const compEnd = compPos + compValue.length;
+
+                        if (compValue.trim() && compositeInfo.components && c < compositeInfo.components.length) {
+                            const componentInfo = compositeInfo.components[c];
+                            const componentDetail = elements[componentInfo.elementId];
+
+                            if (componentDetail) {
+                                let validation;
+
+                                // Special handling for date/time values in date composites
+                                // Component 2 (index 1) is the actual date/time value
+                                if (isDateComposite && c === 1 && dateFormatQualifier) {
+                                    // Use format-aware date validation
+                                    validation = validateDateWithFormat(compValue, dateFormatQualifier);
+                                } else {
+                                    // Standard element validation
+                                    const componentSchema = {
+                                        dataType: componentDetail.dataType || 'AN',
+                                        minLength: componentDetail.minLength || 0,
+                                        maxLength: componentDetail.maxLength || 999,
+                                        codes: componentDetail.codes
+                                    };
+                                    validation = validateElement(compValue, componentSchema);
+                                }
+
+                                if (!validation.isValid) {
+                                    const range = new vscode.Range(lineNum, compPos, lineNum, compEnd);
+                                    const severity = validation.severity === 'error'
+                                        ? vscode.DiagnosticSeverity.Error
+                                        : vscode.DiagnosticSeverity.Warning;
+
+                                    const diagnostic = new vscode.Diagnostic(range, validation.message, severity);
+                                    diagnostic.source = 'EDI Validator';
+                                    diagnostic.code = validation.errorType;
+                                    diagnostics.push(diagnostic);
+                                }
+                            }
+                        }
+
+                        compPos = compEnd + 1; // +1 for ':'
+                    }
+                }
+            } else if (elementDetail) {
+                // This is a simple element
+                const validation = validateElement(elementValue, {
+                    dataType: elementDetail.dataType || 'AN',
+                    minLength: elementDetail.minLength || 0,
+                    maxLength: elementDetail.maxLength || 999,
+                    codes: elementDetail.codes
+                });
+
+                if (!validation.isValid) {
+                    const range = new vscode.Range(lineNum, elementStart, lineNum, elementEnd);
+                    const severity = validation.severity === 'error'
+                        ? vscode.DiagnosticSeverity.Error
+                        : vscode.DiagnosticSeverity.Warning;
+
+                    const diagnostic = new vscode.Diagnostic(range, validation.message, severity);
+                    diagnostic.source = 'EDI Validator';
+                    diagnostic.code = validation.errorType;
+                    diagnostics.push(diagnostic);
+                }
+            }
+        }
+    }
+
+    // Set diagnostics
+    const collection = getDiagnosticCollection();
+    collection.set(document.uri, diagnostics);
+
+    // Show Problems panel if there are diagnostics
+    if (diagnostics.length > 0) {
+        vscode.commands.executeCommand('workbench.actions.view.problems');
+    }
+
+    // Show summary
+    const errorCount = diagnostics.filter(d => d.severity === vscode.DiagnosticSeverity.Error).length;
+    const warningCount = diagnostics.filter(d => d.severity === vscode.DiagnosticSeverity.Warning).length;
+
+    if (diagnostics.length === 0) {
+        vscode.window.showInformationMessage('EDI Validation: No issues found');
+    } else {
+        vscode.window.showWarningMessage(`EDI Validation: ${errorCount} error(s), ${warningCount} warning(s)`);
+    }
+}
+
+/**
+ * Clear validation errors for the current document
+ */
+function clearValidation(): void {
+    const editor = vscode.window.activeTextEditor;
+    if (!editor) {
+        vscode.window.showErrorMessage('No active editor');
+        return;
+    }
+
+    const document = editor.document;
+    const collection = getDiagnosticCollection();
+    collection.delete(document.uri);
+
+    vscode.window.showInformationMessage('EDI Validation: Cleared all issues');
+}
+
+/**
+ * Detect EDIFACT version from document
+ */
+function detectEdifactVersionFromDoc(document: vscode.TextDocument): string {
+    const lineCount = Math.min(20, document.lineCount);
+    for (let i = 0; i < lineCount; i++) {
+        const line = document.lineAt(i).text;
+        const unhMatch = line.match(/^UNH\+[^+]+\+[^:]+:D:(\d{2}[AB]):UN/i);
+        if (unhMatch) {
+            return 'd' + unhMatch[1].toLowerCase();
+        }
+    }
+    return 'd96a'; // Default fallback
+}
+
+/**
+ * Detect X12 version from document
+ */
+function detectX12VersionFromDoc(document: vscode.TextDocument): string {
+    if (document.lineCount > 0) {
+        const firstLine = document.lineAt(0).text;
+        if (firstLine.startsWith('ISA') && firstLine.length >= 89) {
+            const isaVersion = firstLine.substring(84, 89).trim();
+            // Convert 5-char format (00401) to 6-char format (004010)
+            let version = isaVersion.length === 5 ? isaVersion + '0' : isaVersion;
+
+            // Map common version variations to available schemas
+            // e.g., 004000 -> 004010 (closest match)
+            const versionMappings: Record<string, string> = {
+                '002000': '002040',
+                '003000': '003010',
+                '004000': '004010',
+                '005000': '005010',
+                '006000': '006010',
+                '007000': '007010',
+                '008000': '008010',
+            };
+
+            if (versionMappings[version]) {
+                console.log(`[EDI Validate] Mapping version ${version} to ${versionMappings[version]}`);
+                version = versionMappings[version];
+            }
+
+            return version;
+        }
+    }
+    return '004010'; // Default fallback
 }

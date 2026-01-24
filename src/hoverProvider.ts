@@ -1,6 +1,7 @@
 import * as vscode from 'vscode';
 import * as path from 'path';
 import * as fs from 'fs';
+import { validateElement, validateDateWithFormat, ElementSchema } from './validators';
 
 interface SegmentInfo {
     code: string;
@@ -112,11 +113,30 @@ export class EdiHoverProvider implements vscode.HoverProvider {
     private normalizeX12Version(isaVersion: string): string {
         // ISA format: 00401 -> Standard format: 004010
         // Pattern: XXYYZ -> XXYY0Z or XXYY00 depending on Z
+        let version = isaVersion;
         if (isaVersion.length === 5) {
             // Add a trailing 0: 00401 -> 004010
-            return isaVersion + '0';
+            version = isaVersion + '0';
         }
-        return isaVersion;
+
+        // Map common version variations to available schemas
+        // e.g., 004000 -> 004010, 002000 -> 002040 (closest match)
+        const versionMappings: Record<string, string> = {
+            '002000': '002040',
+            '003000': '003010',
+            '004000': '004010',
+            '005000': '005010',
+            '006000': '006010',
+            '007000': '007010',
+            '008000': '008010',
+        };
+
+        if (versionMappings[version]) {
+            console.log(`[EDI Hover] Mapping version ${version} to ${versionMappings[version]}`);
+            version = versionMappings[version];
+        }
+
+        return version;
     }
 
     /**
@@ -373,7 +393,7 @@ export class EdiHoverProvider implements vscode.HoverProvider {
 
                         vscode.window.setStatusBarMessage(`EDI: Showing ${segmentCode}-${elementPosition.toString().padStart(2, '0')}-${componentPos.toString().padStart(2, '0')}`, 2000);
 
-                        const markdown = this.createComponentMarkdown(segmentCode, elementPosition, componentPos, componentInfo, componentValue, componentDetail, languagePrefix, version);
+                        const markdown = this.createComponentMarkdown(segmentCode, elementPosition, componentPos, componentInfo, componentValue, componentDetail, languagePrefix, version, elementInfo.type, elementValue);
                         return new vscode.Hover(markdown);
                     } else {
                         // No composite metadata available, show generic component info
@@ -538,28 +558,110 @@ export class EdiHoverProvider implements vscode.HoverProvider {
         // Header with element ID and name
         md.appendMarkdown(`### ${elementId} - ${elementInfo.name}\n\n`);
 
-        // For composite elements, show composite structure
+        // For composite elements, check if it's a single component (no colons) or multi-component
         if (compositeInfo && compositeInfo.components && compositeInfo.components.length > 0) {
-            const typeInfo = `\`Type: ${compositeInfo.dataType}\` \`Length: ${compositeInfo.minLength}-${compositeInfo.maxLength}\` \`${elementInfo.requirement}\``;
-            md.appendMarkdown(`${typeInfo}\n\n`);
+            const isSingleComponent = !elementValue.includes(':');
 
-            // Definition
-            if (compositeInfo.definition) {
-                md.appendMarkdown(`*${compositeInfo.definition}*\n\n`);
-            }
+            if (isSingleComponent && compositeInfo.components.length > 0) {
+                // Single component composite - show the first component's details with codes
+                const firstComponent = compositeInfo.components[0];
+                const componentDetail = this.getElementDetail(firstComponent.elementId, languagePrefix, version);
 
-            // Current value
-            if (elementValue) {
-                md.appendMarkdown(`**Current value:** \`${elementValue}\`\n\n`);
-            }
+                if (componentDetail) {
+                    const typeInfo = `\`Type: ${componentDetail.dataType}\` \`Length: ${componentDetail.minLength}-${componentDetail.maxLength}\` \`${elementInfo.requirement}\``;
+                    md.appendMarkdown(`${typeInfo}\n\n`);
 
-            // Show composite components
-            md.appendMarkdown(`**Composite structure:**\n\n`);
-            for (const component of compositeInfo.components) {
-                const req = component.requirement === 'M' ? 'Required' : 'Conditional';
-                md.appendMarkdown(`- **${component.position}** \`${component.elementId}\`: ${component.name} (${req})\n`);
+                    md.appendMarkdown(`*${firstComponent.name} (${compositeInfo.name})*\n\n`);
+
+                    // Current value with translation
+                    if (elementValue) {
+                        md.appendMarkdown(`**Current value:** \`${elementValue}\`\n\n`);
+
+                        // Validate the component value
+                        const schema: ElementSchema = {
+                            dataType: componentDetail.dataType,
+                            minLength: componentDetail.minLength,
+                            maxLength: componentDetail.maxLength,
+                            codes: componentDetail.codes
+                        };
+                        const validation = validateElement(elementValue, schema);
+                        if (!validation.isValid) {
+                            const icon = validation.severity === 'error' ? '❌' : '⚠️';
+                            md.appendMarkdown(`${icon} **${validation.severity.charAt(0).toUpperCase() + validation.severity.slice(1)}:** ${validation.message}\n\n`);
+                        }
+
+                        // Show code translation if available
+                        if (componentDetail.codes && componentDetail.codes.length > 0) {
+                            const codeTranslation = componentDetail.codes.find(c => c.code === elementValue);
+                            if (codeTranslation) {
+                                md.appendMarkdown(`**Translation:** ${codeTranslation.description}\n\n`);
+                            }
+
+                            // Show available codes (limit to first 10)
+                            md.appendMarkdown(`**Available codes:**\n\n`);
+                            const codesToShow = componentDetail.codes.slice(0, 10);
+                            for (const code of codesToShow) {
+                                const highlight = code.code === elementValue ? '**' : '';
+                                md.appendMarkdown(`- ${highlight}\`${code.code}\`: ${code.description}${highlight}\n`);
+                            }
+
+                            if (componentDetail.codes.length > 10) {
+                                md.appendMarkdown(`\n_...and ${componentDetail.codes.length - 10} more_\n`);
+                            }
+                        }
+                    }
+
+                    // Show that this is part of a composite with other optional components
+                    if (compositeInfo.components.length > 1) {
+                        md.appendMarkdown(`\n**Other composite components:**\n\n`);
+                        for (let i = 1; i < compositeInfo.components.length; i++) {
+                            const comp = compositeInfo.components[i];
+                            md.appendMarkdown(`- **${comp.position}** \`${comp.elementId}\`: ${comp.name} (Optional)\n`);
+                        }
+                        md.appendMarkdown(`\n*Tip: Use \`:\` separator to include additional components*\n`);
+                    }
+                } else {
+                    // Fallback to generic composite display
+                    const typeInfo = `\`Type: ${compositeInfo.dataType}\` \`Length: ${compositeInfo.minLength}-${compositeInfo.maxLength}\` \`${elementInfo.requirement}\``;
+                    md.appendMarkdown(`${typeInfo}\n\n`);
+                    md.appendMarkdown(`**Current value:** \`${elementValue}\`\n\n`);
+                }
+            } else {
+                // Multi-component composite - show composite structure
+                const typeInfo = `\`Type: ${compositeInfo.dataType}\` \`Length: ${compositeInfo.minLength}-${compositeInfo.maxLength}\` \`${elementInfo.requirement}\``;
+                md.appendMarkdown(`${typeInfo}\n\n`);
+
+                // Definition
+                if (compositeInfo.definition) {
+                    md.appendMarkdown(`*${compositeInfo.definition}*\n\n`);
+                }
+
+                // Current value
+                if (elementValue) {
+                    md.appendMarkdown(`**Current value:** \`${elementValue}\`\n\n`);
+
+                    // Validate the element value
+                    const schema: ElementSchema = {
+                        dataType: compositeInfo.dataType,
+                        minLength: compositeInfo.minLength,
+                        maxLength: compositeInfo.maxLength,
+                        codes: compositeInfo.codes
+                    };
+                    const validation = validateElement(elementValue, schema);
+                    if (!validation.isValid) {
+                        const icon = validation.severity === 'error' ? '❌' : '⚠️';
+                        md.appendMarkdown(`${icon} **${validation.severity.charAt(0).toUpperCase() + validation.severity.slice(1)}:** ${validation.message}\n\n`);
+                    }
+                }
+
+                // Show composite components
+                md.appendMarkdown(`**Composite structure:**\n\n`);
+                for (const component of compositeInfo.components) {
+                    const req = component.requirement === 'M' ? 'Required' : 'Conditional';
+                    md.appendMarkdown(`- **${component.position}** \`${component.elementId}\`: ${component.name} (${req})\n`);
+                }
+                md.appendMarkdown(`\n*Tip: Hover over individual components separated by \`:\` to see detailed information*\n`);
             }
-            md.appendMarkdown(`\n*Tip: Hover over individual components separated by \`:\` to see detailed information*\n`);
         } else if (elementDetail) {
             // Regular element with potential codes
             const typeInfo = `\`Type: ${elementDetail.dataType}\` \`Length: ${elementDetail.minLength}-${elementDetail.maxLength}\` \`${elementInfo.requirement}\``;
@@ -573,6 +675,19 @@ export class EdiHoverProvider implements vscode.HoverProvider {
             // Current value with translation
             if (elementValue) {
                 md.appendMarkdown(`**Current value:** \`${elementValue}\`\n\n`);
+
+                // Validate the element value
+                const schema: ElementSchema = {
+                    dataType: elementDetail.dataType,
+                    minLength: elementDetail.minLength,
+                    maxLength: elementDetail.maxLength,
+                    codes: elementDetail.codes
+                };
+                const validation = validateElement(elementValue, schema);
+                if (!validation.isValid) {
+                    const icon = validation.severity === 'error' ? '❌' : '⚠️';
+                    md.appendMarkdown(`${icon} **${validation.severity.charAt(0).toUpperCase() + validation.severity.slice(1)}:** ${validation.message}\n\n`);
+                }
 
                 // If this element has codes, show the translation
                 if (elementDetail.codes && elementDetail.codes.length > 0) {
@@ -630,7 +745,9 @@ export class EdiHoverProvider implements vscode.HoverProvider {
         componentValue: string,
         componentDetail: ElementDetailInfo | null,
         _languagePrefix: string,
-        _version: string
+        _version: string,
+        compositeType?: string,
+        fullElementValue?: string
     ): vscode.MarkdownString {
         const md = new vscode.MarkdownString();
         md.supportHtml = true;
@@ -656,6 +773,45 @@ export class EdiHoverProvider implements vscode.HoverProvider {
             // Current value with translation
             if (componentValue) {
                 md.appendMarkdown(`**Current value:** \`${componentValue}\`\n\n`);
+
+                // Determine if we need context-aware date validation
+                const isDateComposite = compositeType && ['C507', 'S004'].includes(compositeType);
+                const isDateValue = componentPosition === 2; // Component 2 is the date/time value
+
+                let validation;
+                if (isDateComposite && isDateValue && fullElementValue) {
+                    // Extract format qualifier (component 3)
+                    const components = fullElementValue.split(':');
+                    const dateFormatQualifier = components.length >= 3 ? components[2] : undefined;
+
+                    if (dateFormatQualifier) {
+                        // Use format-aware date validation
+                        validation = validateDateWithFormat(componentValue, dateFormatQualifier);
+                    } else {
+                        // Fallback to standard validation
+                        const schema: ElementSchema = {
+                            dataType: componentDetail.dataType,
+                            minLength: componentDetail.minLength,
+                            maxLength: componentDetail.maxLength,
+                            codes: componentDetail.codes
+                        };
+                        validation = validateElement(componentValue, schema);
+                    }
+                } else {
+                    // Standard element validation
+                    const schema: ElementSchema = {
+                        dataType: componentDetail.dataType,
+                        minLength: componentDetail.minLength,
+                        maxLength: componentDetail.maxLength,
+                        codes: componentDetail.codes
+                    };
+                    validation = validateElement(componentValue, schema);
+                }
+
+                if (!validation.isValid) {
+                    const icon = validation.severity === 'error' ? '❌' : '⚠️';
+                    md.appendMarkdown(`${icon} **${validation.severity.charAt(0).toUpperCase() + validation.severity.slice(1)}:** ${validation.message}\n\n`);
+                }
 
                 // If this component has codes, show the translation
                 if (componentDetail.codes && componentDetail.codes.length > 0) {

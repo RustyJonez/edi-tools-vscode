@@ -1,6 +1,6 @@
 import * as vscode from 'vscode';
 import { StatusBarController } from './statusBar';
-import { registerCommands } from './commands';
+import { registerCommands, getDiagnosticCollection } from './commands';
 import { EdiHoverProvider } from './hoverProvider';
 import { EdiCodeLensProvider } from './codeLensProvider';
 
@@ -93,6 +93,9 @@ export async function activate(context: vscode.ExtensionContext) {
             codeLensProvider
         )
     );
+
+    // Register diagnostic collection for validation errors
+    context.subscriptions.push(getDiagnosticCollection());
 }
 
 export function deactivate() {

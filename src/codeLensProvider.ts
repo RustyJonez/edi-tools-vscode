@@ -52,13 +52,29 @@ export class EdiCodeLensProvider implements vscode.CodeLensProvider {
         };
         codeLenses.push(new vscode.CodeLens(topOfDocument, lookupCommand));
 
-        // Update IDs button (placeholder for future implementation)
+        // Update IDs button
         const updateIdsCommand: vscode.Command = {
             title: '$(symbol-numeric) Update IDs',
-            tooltip: 'Update control numbers and identifiers (coming soon)',
+            tooltip: 'Update sender/receiver IDs and control numbers',
             command: 'ediX12Tools.updateIds'
         };
         codeLenses.push(new vscode.CodeLens(topOfDocument, updateIdsCommand));
+
+        // Validate Document button
+        const validateCommand: vscode.Command = {
+            title: '$(check) Validate',
+            tooltip: 'Validate document against EDI schema (length, data types, codes)',
+            command: 'ediX12Tools.validateDocument'
+        };
+        codeLenses.push(new vscode.CodeLens(topOfDocument, validateCommand));
+
+        // Clear Validation button
+        const clearValidationCommand: vscode.Command = {
+            title: '$(clear-all) Clear Validation',
+            tooltip: 'Clear all validation errors and warnings',
+            command: 'ediX12Tools.clearValidation'
+        };
+        codeLenses.push(new vscode.CodeLens(topOfDocument, clearValidationCommand));
 
         return codeLenses;
     }

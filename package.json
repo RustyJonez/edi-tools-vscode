@@ -111,6 +111,14 @@
       {
         "command": "ediX12Tools.addEdifactLineBreaks",
         "title": "EDIFACT: Add Line Breaks"
+      },
+      {
+        "command": "ediX12Tools.validateDocument",
+        "title": "EDI: Validate Document"
+      },
+      {
+        "command": "ediX12Tools.clearValidation",
+        "title": "EDI: Clear Validation"
       }
     ],
     "keybindings": [
