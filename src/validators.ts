@@ -12,6 +12,7 @@ export interface ElementSchema {
     minLength: number;
     maxLength: number;
     codes?: Array<{ code: string; description: string }>;
+    elementNumber?: string; // Optional: for composite code validation
 }
 
 export interface ValidationResult {
@@ -33,8 +34,14 @@ export function validateElement(value: string, schema: ElementSchema): Validatio
     // Code list validation - check first if codes exist
     // This applies to both X12 'ID' types and EDIFACT 'AN' types with code lists
     if (schema.codes && schema.codes.length > 0) {
-        const codeResult = validateCode(value, schema.codes);
-        if (!codeResult.isValid) return codeResult;
+        // Check if this is a composite code element (like X12 element 103 - Packaging Code)
+        if (schema.elementNumber && isCompositeCodeElement(schema.elementNumber)) {
+            const codeResult = validateCompositeCode(value, schema.elementNumber, schema.codes);
+            if (!codeResult.isValid) return codeResult;
+        } else {
+            const codeResult = validateCode(value, schema.codes);
+            if (!codeResult.isValid) return codeResult;
+        }
     }
 
     // Length validation
@@ -303,6 +310,146 @@ export function validateCode(value: string, codes: Array<{ code: string; descrip
     }
 
     return { isValid: true, message: '', severity: 'warning' };
+}
+
+/**
+ * X12 elements that use composite code format (multiple code lists combined)
+ * Key: element number, Value: { part1Length, part1Name, part2Name }
+ */
+const COMPOSITE_CODE_ELEMENTS: Record<string, { part1Length: number; part1Name: string; part2Name: string }> = {
+    '103': { part1Length: 3, part1Name: 'Packaging Form', part2Name: 'Packaging Material' },
+    // Add other composite code elements here as needed
+};
+
+/**
+ * Check if an element uses composite code format
+ */
+export function isCompositeCodeElement(elementNumber: string): boolean {
+    return elementNumber in COMPOSITE_CODE_ELEMENTS;
+}
+
+/**
+ * Validate composite code element (like X12 element 103 - Packaging Code)
+ * These elements combine two code lists: Part 1 (e.g., 3-char form) + Part 2 (e.g., 2-char material)
+ */
+export function validateCompositeCode(
+    value: string,
+    elementNumber: string,
+    codes: Array<{ code: string; description: string }>
+): ValidationResult {
+    const config = COMPOSITE_CODE_ELEMENTS[elementNumber];
+    if (!config) {
+        // Not a composite code element, use standard validation
+        return validateCode(value, codes);
+    }
+
+    const { part1Length, part1Name, part2Name } = config;
+
+    // If value length equals part1Length, it's just Part 1 (valid)
+    if (value.length === part1Length) {
+        const part1Valid = codes.some(c => c.code === value);
+        if (!part1Valid) {
+            return {
+                isValid: false,
+                errorType: 'invalidCode',
+                message: `Invalid ${part1Name} code "${value}"`,
+                severity: 'error'
+            };
+        }
+        return { isValid: true, message: '', severity: 'warning' };
+    }
+
+    // If value length > part1Length, split into Part 1 and Part 2
+    if (value.length > part1Length) {
+        const part1 = value.substring(0, part1Length);
+        const part2 = value.substring(part1Length);
+
+        const part1Valid = codes.some(c => c.code === part1);
+        const part2Valid = codes.some(c => c.code === part2);
+
+        if (!part1Valid && !part2Valid) {
+            return {
+                isValid: false,
+                errorType: 'invalidCode',
+                message: `Invalid composite code "${value}" - both ${part1Name} "${part1}" and ${part2Name} "${part2}" are invalid`,
+                severity: 'error'
+            };
+        }
+
+        if (!part1Valid) {
+            return {
+                isValid: false,
+                errorType: 'invalidCode',
+                message: `Invalid ${part1Name} code "${part1}" in composite code "${value}"`,
+                severity: 'error'
+            };
+        }
+
+        if (!part2Valid) {
+            return {
+                isValid: false,
+                errorType: 'invalidCode',
+                message: `Invalid ${part2Name} code "${part2}" in composite code "${value}"`,
+                severity: 'error'
+            };
+        }
+
+        return { isValid: true, message: '', severity: 'warning' };
+    }
+
+    // Value is shorter than part1Length - check if it's a valid Part 2 only (some implementations allow this)
+    const isValidCode = codes.some(c => c.code === value);
+    if (!isValidCode) {
+        return {
+            isValid: false,
+            errorType: 'invalidCode',
+            message: `Invalid code "${value}" - expected ${part1Length}-char ${part1Name} or ${part1Length}+2-char composite`,
+            severity: 'error'
+        };
+    }
+
+    return { isValid: true, message: '', severity: 'warning' };
+}
+
+/**
+ * Get translation for composite code element
+ */
+export function getCompositeCodeTranslation(
+    value: string,
+    elementNumber: string,
+    codes: Array<{ code: string; description: string }>
+): string | null {
+    const config = COMPOSITE_CODE_ELEMENTS[elementNumber];
+    if (!config) {
+        // Not a composite code element
+        const code = codes.find(c => c.code === value);
+        return code ? code.description : null;
+    }
+
+    const { part1Length } = config;
+
+    if (value.length === part1Length) {
+        const code = codes.find(c => c.code === value);
+        return code ? code.description : null;
+    }
+
+    if (value.length > part1Length) {
+        const part1 = value.substring(0, part1Length);
+        const part2 = value.substring(part1Length);
+
+        const part1Code = codes.find(c => c.code === part1);
+        const part2Code = codes.find(c => c.code === part2);
+
+        if (part1Code && part2Code) {
+            return `${part1Code.description}, ${part2Code.description}`;
+        } else if (part1Code) {
+            return part1Code.description;
+        } else if (part2Code) {
+            return part2Code.description;
+        }
+    }
+
+    return null;
 }
 
 /**

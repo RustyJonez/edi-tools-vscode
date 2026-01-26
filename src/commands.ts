@@ -136,9 +136,30 @@ async function normalizeDelimiters(): Promise<void> {
 
     const text = document.getText();
 
-    // Get delimiter positions (ISA has element delim at position 3, seg delim at position 105)
-    const elemDelim = text.charAt(103);
-    const segDelim = text.charAt(105);
+    // Get delimiter positions from ISA segment
+    // Element delimiter is always at position 3 (right after "ISA")
+    const elemDelim = text.charAt(3);
+
+    // Find segment terminator by looking for the character after ISA16 (sub-element separator)
+    // ISA is 106 characters: positions 0-105, with segment terminator at the end
+    // But ISA length can vary if delimiters are different, so find the first segment boundary
+    // The segment terminator should be the character after the 16th element delimiter
+    let delimCount = 0;
+    let segDelim = '~'; // default
+    for (let i = 3; i < Math.min(text.length, 120); i++) {
+        if (text.charAt(i) === elemDelim) {
+            delimCount++;
+            if (delimCount === 16) {
+                // Next non-element-delimiter character after 16th delimiter is the ISA16 value
+                // The character after that is the segment terminator
+                const isa16Pos = i + 1;
+                if (isa16Pos + 1 < text.length) {
+                    segDelim = text.charAt(isa16Pos + 1);
+                }
+                break;
+            }
+        }
+    }
 
     // Check if already normalized
     if (elemDelim === '*' && segDelim === '~') {
@@ -372,25 +393,47 @@ async function normalizeEdifactDelimiters(): Promise<void> {
         // reserved at position 7
         segmentDelim = text.charAt(8);
     } else if (text.startsWith('UNB')) {
-        // No UNA - use default delimiters, infer from UNB structure
-        // UNB+UNOA:2+... (element=+, component=:, segment=')
-        const unbMatch = text.match(/^UNB(.)/);
-        if (unbMatch) {
-            elementDelim = unbMatch[1];
+        // No UNA - infer delimiters from UNB structure
+        // UNB structure: UNB+UNOA:2+sender+receiver+date:time+ref...
+        // Element delimiter is at position 3 (right after "UNB")
+        elementDelim = text.charAt(3);
+
+        // Find component delimiter within the first element (syntax identifier like "UNOA:2")
+        // It's the character between the 4-char syntax ID and the version number
+        // Pattern: UNB + elemDelim + 4-char-syntax + componentDelim + version + elemDelim
+        const firstElemEnd = text.indexOf(elementDelim, 4);
+        if (firstElemEnd > 4) {
+            // Look for a non-alphanumeric character within the first element
+            const firstElement = text.substring(4, firstElemEnd);
+            for (let i = 0; i < firstElement.length; i++) {
+                const char = firstElement.charAt(i);
+                if (!/[A-Z0-9]/i.test(char)) {
+                    componentDelim = char;
+                    break;
+                }
+            }
         }
-        const componentMatch = text.match(/^UNB[^:]*(.)/);
-        if (componentMatch) {
-            componentDelim = componentMatch[1];
-        }
-        // Find segment terminator (should be after first UNB segment)
-        const segMatch = text.match(/^UNB[^\n]*?(.)\n/);
-        if (segMatch) {
-            segmentDelim = segMatch[1];
-        } else {
-            // Try to find it without newline
-            const segMatch2 = text.match(/^UNB[^']*?(')/);
-            if (segMatch2) {
-                segmentDelim = segMatch2[1];
+
+        // Find segment terminator - it's at the end of the first segment (UNB line)
+        // Count element delimiters to find the end of UNB segment
+        let elemCount = 0;
+        for (let i = 3; i < text.length; i++) {
+            if (text.charAt(i) === elementDelim) {
+                elemCount++;
+            }
+            // UNB has about 10-11 elements, segment terminator comes after
+            // Look for a character that's not the element delimiter, component delimiter, or alphanumeric
+            // after we've seen several elements
+            if (elemCount >= 5) {
+                const char = text.charAt(i);
+                if (char !== elementDelim && char !== componentDelim && !/[A-Z0-9\s]/i.test(char)) {
+                    // Check if this looks like a segment terminator (followed by newline or next segment)
+                    const nextChar = text.charAt(i + 1);
+                    if (nextChar === '\n' || nextChar === '\r' || /[A-Z]/.test(nextChar)) {
+                        segmentDelim = char;
+                        break;
+                    }
+                }
             }
         }
     } else {
@@ -449,14 +492,13 @@ async function normalizeEdifactDelimiters(): Promise<void> {
     updatedText = updatedText.replace(/\u0003/g, "'");  // segment
     updatedText = updatedText.replace(/\u0004/g, '?');  // release
 
-    // Step 3: Update or add UNA header
+    // Step 3: Update UNA header if it was originally present
+    // Don't add UNA if it wasn't there - standard delimiters don't require it
     if (text.startsWith('UNA')) {
         // Replace existing UNA with normalized version
         updatedText = "UNA:+.? '" + updatedText.substring(9);
-    } else {
-        // Prepend UNA if not present
-        updatedText = "UNA:+.? '\n" + updatedText;
     }
+    // If no UNA was present, don't add one - standard delimiters are implied
 
     // Apply changes
     await editor.edit(editBuilder => {
@@ -1073,7 +1115,8 @@ async function validateDocument(): Promise<void> {
                             dataType: componentDetail.dataType || 'AN',
                             minLength: componentDetail.minLength || 0,
                             maxLength: componentDetail.maxLength || 999,
-                            codes: componentDetail.codes
+                            codes: componentDetail.codes,
+                            elementNumber: componentInfo.elementId
                         };
                         const validation = validateElement(elementValue, componentSchema);
 
@@ -1120,7 +1163,8 @@ async function validateDocument(): Promise<void> {
                                         dataType: componentDetail.dataType || 'AN',
                                         minLength: componentDetail.minLength || 0,
                                         maxLength: componentDetail.maxLength || 999,
-                                        codes: componentDetail.codes
+                                        codes: componentDetail.codes,
+                                        elementNumber: componentInfo.elementId
                                     };
                                     validation = validateElement(compValue, componentSchema);
                                 }
@@ -1148,7 +1192,8 @@ async function validateDocument(): Promise<void> {
                     dataType: elementDetail.dataType || 'AN',
                     minLength: elementDetail.minLength || 0,
                     maxLength: elementDetail.maxLength || 999,
-                    codes: elementDetail.codes
+                    codes: elementDetail.codes,
+                    elementNumber: elementInfo.type
                 });
 
                 if (!validation.isValid) {

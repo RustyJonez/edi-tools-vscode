@@ -1,7 +1,7 @@
 import * as vscode from 'vscode';
 import * as path from 'path';
 import * as fs from 'fs';
-import { validateElement, validateDateWithFormat, ElementSchema } from './validators';
+import { validateElement, validateDateWithFormat, ElementSchema, isCompositeCodeElement, getCompositeCodeTranslation } from './validators';
 
 interface SegmentInfo {
     code: string;
@@ -681,7 +681,8 @@ export class EdiHoverProvider implements vscode.HoverProvider {
                     dataType: elementDetail.dataType,
                     minLength: elementDetail.minLength,
                     maxLength: elementDetail.maxLength,
-                    codes: elementDetail.codes
+                    codes: elementDetail.codes,
+                    elementNumber: elementInfo.type
                 };
                 const validation = validateElement(elementValue, schema);
                 if (!validation.isValid) {
@@ -692,10 +693,19 @@ export class EdiHoverProvider implements vscode.HoverProvider {
                 // If this element has codes, show the translation
                 if (elementDetail.codes && elementDetail.codes.length > 0) {
                     console.log(`[EDI] Looking for translation of '${elementValue}' in ${elementDetail.codes.length} codes`);
-                    const codeTranslation = elementDetail.codes.find(c => c.code === elementValue);
-                    if (codeTranslation) {
-                        console.log(`[EDI] Found translation: ${codeTranslation.description}`);
-                        md.appendMarkdown(`**Translation:** ${codeTranslation.description}\n\n`);
+
+                    // Check for composite code elements (like X12 element 103 - Packaging Code)
+                    let translation: string | null = null;
+                    if (isCompositeCodeElement(elementInfo.type)) {
+                        translation = getCompositeCodeTranslation(elementValue, elementInfo.type, elementDetail.codes);
+                    } else {
+                        const codeMatch = elementDetail.codes.find(c => c.code === elementValue);
+                        translation = codeMatch ? codeMatch.description : null;
+                    }
+
+                    if (translation) {
+                        console.log(`[EDI] Found translation: ${translation}`);
+                        md.appendMarkdown(`**Translation:** ${translation}\n\n`);
                     } else {
                         console.log(`[EDI] No translation found for '${elementValue}'`);
                     }
