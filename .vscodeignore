@@ -1,0 +1,19 @@
+# Source files (keep only compiled JavaScript in out/)
+src/**
+**/*.ts
+**/*.map
+tsconfig.json
+
+# Build and development files
+.vscode/**
+.gitignore
+*.vsix
+dev.sh
+scripts/**
+PROJECT_SUMMARY.md
+
+# Dependencies
+node_modules/**
+
+# Git
+.git/**
