@@ -193,6 +193,12 @@ async function normalizeDelimiters(): Promise<void> {
     updatedText = updatedText.replace(/\u0001/g, '*');  // element
     updatedText = updatedText.replace(/\u0002/g, '~');  // segment
 
+    // Ensure last segment has a terminator (e.g., IEA without trailing delimiter)
+    const trimmed = updatedText.replace(/[\s]+$/, '');
+    if (trimmed.length > 0 && !trimmed.endsWith('~')) {
+        updatedText = trimmed + '~' + updatedText.substring(trimmed.length);
+    }
+
     // Apply changes
     await editor.edit(editBuilder => {
         const fullRange = new vscode.Range(
