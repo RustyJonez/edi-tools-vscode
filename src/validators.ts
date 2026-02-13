@@ -17,7 +17,7 @@ export interface ElementSchema {
 
 export interface ValidationResult {
     isValid: boolean;
-    errorType?: 'length' | 'dataType' | 'invalidCode';
+    errorType?: 'length' | 'dataType' | 'invalidCode' | 'mandatory';
     message: string;
     severity: 'error' | 'warning';
 }

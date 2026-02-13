@@ -1086,12 +1086,25 @@ async function validateDocument(): Promise<void> {
             const elementEnd = elementStart + elementValue.length;
             currentPos = elementStart + parts[i].length;
 
-            // Skip empty elements
-            if (!elementValue.trim()) continue;
-
             // Get element schema
             const elementInfo = segmentInfo.elements[i - 1];
             if (!elementInfo) {
+                continue;
+            }
+
+            // Build element position label (e.g., "N1-01", "BGM-01")
+            const elemPos = String(i).padStart(2, '0');
+            const elemLabel = `${segmentCode}-${elemPos}`;
+
+            // Check for mandatory blank elements
+            if (!elementValue.trim()) {
+                if (elementInfo.requirement === 'M') {
+                    const range = new vscode.Range(lineNum, elementStart, lineNum, Math.max(elementEnd, elementStart + 1));
+                    const diagnostic = new vscode.Diagnostic(range, `${elemLabel}: Mandatory element blank`, vscode.DiagnosticSeverity.Error);
+                    diagnostic.source = 'EDI Validator';
+                    diagnostic.code = 'mandatory';
+                    diagnostics.push(diagnostic);
+                }
                 continue;
             }
 
@@ -1126,7 +1139,7 @@ async function validateDocument(): Promise<void> {
                                 ? vscode.DiagnosticSeverity.Error
                                 : vscode.DiagnosticSeverity.Warning;
 
-                            const diagnostic = new vscode.Diagnostic(range, validation.message, severity);
+                            const diagnostic = new vscode.Diagnostic(range, `${elemLabel}: ${validation.message}`, severity);
                             diagnostic.source = 'EDI Validator';
                             diagnostic.code = validation.errorType;
                             diagnostics.push(diagnostic);
@@ -1144,6 +1157,7 @@ async function validateDocument(): Promise<void> {
                     for (let c = 0; c < components.length; c++) {
                         const compValue = components[c];
                         const compEnd = compPos + compValue.length;
+                        const compLabel = `${elemLabel}-${String(c + 1).padStart(2, '0')}`;
 
                         if (compValue.trim() && compositeInfo.components && c < compositeInfo.components.length) {
                             const componentInfo = compositeInfo.components[c];
@@ -1175,11 +1189,21 @@ async function validateDocument(): Promise<void> {
                                         ? vscode.DiagnosticSeverity.Error
                                         : vscode.DiagnosticSeverity.Warning;
 
-                                    const diagnostic = new vscode.Diagnostic(range, validation.message, severity);
+                                    const diagnostic = new vscode.Diagnostic(range, `${compLabel}: ${validation.message}`, severity);
                                     diagnostic.source = 'EDI Validator';
                                     diagnostic.code = validation.errorType;
                                     diagnostics.push(diagnostic);
                                 }
+                            }
+                        } else if (!compValue.trim() && compositeInfo.components && c < compositeInfo.components.length) {
+                            // Check mandatory composite components
+                            const componentInfo = compositeInfo.components[c];
+                            if (componentInfo.requirement === 'M') {
+                                const range = new vscode.Range(lineNum, compPos, lineNum, Math.max(compEnd, compPos + 1));
+                                const diagnostic = new vscode.Diagnostic(range, `${compLabel}: Mandatory component blank`, vscode.DiagnosticSeverity.Error);
+                                diagnostic.source = 'EDI Validator';
+                                diagnostic.code = 'mandatory';
+                                diagnostics.push(diagnostic);
                             }
                         }
 
@@ -1202,9 +1226,28 @@ async function validateDocument(): Promise<void> {
                         ? vscode.DiagnosticSeverity.Error
                         : vscode.DiagnosticSeverity.Warning;
 
-                    const diagnostic = new vscode.Diagnostic(range, validation.message, severity);
+                    const diagnostic = new vscode.Diagnostic(range, `${elemLabel}: ${validation.message}`, severity);
                     diagnostic.source = 'EDI Validator';
                     diagnostic.code = validation.errorType;
+                    diagnostics.push(diagnostic);
+                }
+            }
+        }
+
+        // Check for trailing missing mandatory elements
+        const parsedElementCount = parts.length - 1; // subtract 1 for segment code
+        if (segmentInfo.elements.length > parsedElementCount) {
+            for (let i = parsedElementCount; i < segmentInfo.elements.length; i++) {
+                const elementInfo = segmentInfo.elements[i];
+                if (elementInfo && elementInfo.requirement === 'M') {
+                    const elemPos = String(i + 1).padStart(2, '0');
+                    const elemLabel = `${segmentCode}-${elemPos}`;
+                    // Point to end of the segment line
+                    const lineEnd = lineText.replace(/[~'\n\r]+$/g, '').length;
+                    const range = new vscode.Range(lineNum, lineEnd, lineNum, lineEnd);
+                    const diagnostic = new vscode.Diagnostic(range, `${elemLabel}: Mandatory element missing`, vscode.DiagnosticSeverity.Error);
+                    diagnostic.source = 'EDI Validator';
+                    diagnostic.code = 'mandatory';
                     diagnostics.push(diagnostic);
                 }
             }
