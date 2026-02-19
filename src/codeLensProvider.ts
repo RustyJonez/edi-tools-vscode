@@ -76,6 +76,16 @@ export class EdiCodeLensProvider implements vscode.CodeLensProvider {
         };
         codeLenses.push(new vscode.CodeLens(topOfDocument, clearValidationCommand));
 
+        // Fix Trailer button (X12 only)
+        if (!isEdifact) {
+            const fixTrailerCommand: vscode.Command = {
+                title: '$(wrench) Fix Trailer',
+                tooltip: 'Correct SE/GE/IEA counts and control numbers to match document contents',
+                command: 'ediX12Tools.fixTrailers'
+            };
+            codeLenses.push(new vscode.CodeLens(topOfDocument, fixTrailerCommand));
+        }
+
         return codeLenses;
     }
 

@@ -1,0 +1,102 @@
+{
+  "C001": {
+    "elementNumber": "C001",
+    "name": "Composite Unit of Measure",
+    "definition": "Code specifying the units in which a value is being expressed, or manner in which a measurement has been taken",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "01",
+        "elementId": "355",
+        "name": "Unit or Basis for Measurement Code",
+        "requirement": "M"
+      },
+      {
+        "position": "02",
+        "elementId": "1018",
+        "name": "Exponent",
+        "requirement": "O"
+      },
+      {
+        "position": "03",
+        "elementId": "649",
+        "name": "Multiplier",
+        "requirement": "O"
+      },
+      {
+        "position": "04",
+        "elementId": "355",
+        "name": "Unit or Basis for Measurement Code",
+        "requirement": "O"
+      },
+      {
+        "position": "05",
+        "elementId": "1018",
+        "name": "Exponent",
+        "requirement": "O"
+      },
+      {
+        "position": "06",
+        "elementId": "649",
+        "name": "Multiplier",
+        "requirement": "O"
+      },
+      {
+        "position": "07",
+        "elementId": "355",
+        "name": "Unit or Basis for Measurement Code",
+        "requirement": "O"
+      },
+      {
+        "position": "08",
+        "elementId": "1018",
+        "name": "Exponent",
+        "requirement": "O"
+      },
+      {
+        "position": "09",
+        "elementId": "649",
+        "name": "Multiplier",
+        "requirement": "O"
+      },
+      {
+        "position": "10",
+        "elementId": "355",
+        "name": "Unit or Basis for Measurement Code",
+        "requirement": "O"
+      },
+      {
+        "position": "11",
+        "elementId": "1018",
+        "name": "Exponent",
+        "requirement": "O"
+      },
+      {
+        "position": "12",
+        "elementId": "649",
+        "name": "Multiplier",
+        "requirement": "O"
+      },
+      {
+        "position": "13",
+        "elementId": "355",
+        "name": "Unit or Basis for Measurement Code",
+        "requirement": "O"
+      },
+      {
+        "position": "14",
+        "elementId": "1018",
+        "name": "Exponent",
+        "requirement": "O"
+      },
+      {
+        "position": "15",
+        "elementId": "649",
+        "name": "Multiplier",
+        "requirement": "O"
+      }
+    ]
+  }
+}

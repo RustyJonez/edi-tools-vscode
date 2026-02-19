@@ -53,8 +53,11 @@ export async function activate(context: vscode.ExtensionContext) {
     statusBarController = new StatusBarController();
     context.subscriptions.push(statusBarController);
 
+    // Register hover provider for X12 and EDIFACT (must be created before registerCommands)
+    const hoverProvider = new EdiHoverProvider(context.extensionPath);
+
     // Register all commands
-    registerCommands(context);
+    registerCommands(context, hoverProvider);
 
     // Auto-detect EDI format for .txt files based on first line
     context.subscriptions.push(
@@ -70,9 +73,6 @@ export async function activate(context: vscode.ExtensionContext) {
     if (vscode.window.activeTextEditor) {
         detectEdiLanguage(vscode.window.activeTextEditor.document);
     }
-
-    // Register hover provider for X12 and EDIFACT
-    const hoverProvider = new EdiHoverProvider(context.extensionPath);
 
     // Load schemas from local files
     console.log('[EDI Extension] Loading schemas from:', context.extensionPath);

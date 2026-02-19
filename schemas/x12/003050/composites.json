@@ -1,0 +1,444 @@
+{
+  "C001": {
+    "elementNumber": "C001",
+    "name": "Composite Unit of Measure",
+    "definition": "Code specifying the units in which a value is being expressed, or manner in which a measurement has been taken",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "01",
+        "elementId": "355",
+        "name": "Unit or Basis for Measurement Code",
+        "requirement": "M"
+      },
+      {
+        "position": "02",
+        "elementId": "1018",
+        "name": "Exponent",
+        "requirement": "O"
+      },
+      {
+        "position": "03",
+        "elementId": "649",
+        "name": "Multiplier",
+        "requirement": "O"
+      },
+      {
+        "position": "04",
+        "elementId": "355",
+        "name": "Unit or Basis for Measurement Code",
+        "requirement": "O"
+      },
+      {
+        "position": "05",
+        "elementId": "1018",
+        "name": "Exponent",
+        "requirement": "O"
+      },
+      {
+        "position": "06",
+        "elementId": "649",
+        "name": "Multiplier",
+        "requirement": "O"
+      },
+      {
+        "position": "07",
+        "elementId": "355",
+        "name": "Unit or Basis for Measurement Code",
+        "requirement": "O"
+      },
+      {
+        "position": "08",
+        "elementId": "1018",
+        "name": "Exponent",
+        "requirement": "O"
+      },
+      {
+        "position": "09",
+        "elementId": "649",
+        "name": "Multiplier",
+        "requirement": "O"
+      },
+      {
+        "position": "10",
+        "elementId": "355",
+        "name": "Unit or Basis for Measurement Code",
+        "requirement": "O"
+      },
+      {
+        "position": "11",
+        "elementId": "1018",
+        "name": "Exponent",
+        "requirement": "O"
+      },
+      {
+        "position": "12",
+        "elementId": "649",
+        "name": "Multiplier",
+        "requirement": "O"
+      },
+      {
+        "position": "13",
+        "elementId": "355",
+        "name": "Unit or Basis for Measurement Code",
+        "requirement": "O"
+      },
+      {
+        "position": "14",
+        "elementId": "1018",
+        "name": "Exponent",
+        "requirement": "O"
+      },
+      {
+        "position": "15",
+        "elementId": "649",
+        "name": "Multiplier",
+        "requirement": "O"
+      }
+    ]
+  },
+  "C002": {
+    "elementNumber": "C002",
+    "name": "Actions Indicated",
+    "definition": "Code specifying how the paperwork or report that is identified in the PWK segment relates to the transaction set or to identify the action that is required.",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "01",
+        "elementId": "704",
+        "name": "Paperwork/Report Action Code",
+        "requirement": "M"
+      },
+      {
+        "position": "02",
+        "elementId": "704",
+        "name": "Paperwork/Report Action Code",
+        "requirement": "O"
+      },
+      {
+        "position": "03",
+        "elementId": "704",
+        "name": "Paperwork/Report Action Code",
+        "requirement": "O"
+      },
+      {
+        "position": "04",
+        "elementId": "704",
+        "name": "Paperwork/Report Action Code",
+        "requirement": "O"
+      },
+      {
+        "position": "05",
+        "elementId": "704",
+        "name": "Paperwork/Report Action Code",
+        "requirement": "O"
+      }
+    ]
+  },
+  "C003": {
+    "elementNumber": "C003",
+    "name": "Composite Medical Procedure Identifier",
+    "definition": "Code identifying the type/source of the descriptive number used in Product/Service ID (234).",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "01",
+        "elementId": "235",
+        "name": "Product/Service ID Qualifier",
+        "requirement": "M"
+      },
+      {
+        "position": "02",
+        "elementId": "234",
+        "name": "Product/Service ID",
+        "requirement": "M"
+      },
+      {
+        "position": "03",
+        "elementId": "1339",
+        "name": "Procedure Modifier",
+        "requirement": "O"
+      },
+      {
+        "position": "04",
+        "elementId": "1339",
+        "name": "Procedure Modifier",
+        "requirement": "O"
+      },
+      {
+        "position": "05",
+        "elementId": "1339",
+        "name": "Procedure Modifier",
+        "requirement": "O"
+      },
+      {
+        "position": "06",
+        "elementId": "1339",
+        "name": "Procedure Modifier",
+        "requirement": "O"
+      },
+      {
+        "position": "07",
+        "elementId": "352",
+        "name": "Description",
+        "requirement": "O"
+      }
+    ]
+  },
+  "C004": {
+    "elementNumber": "C004",
+    "name": "Composite Diagnosis Code Pointer",
+    "definition": "A pointer to the claim diagnosis code in the order of importance to this service",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "01",
+        "elementId": "1328",
+        "name": "Diagnosis Code Pointer",
+        "requirement": "M"
+      },
+      {
+        "position": "02",
+        "elementId": "1328",
+        "name": "Diagnosis Code Pointer",
+        "requirement": "O"
+      },
+      {
+        "position": "03",
+        "elementId": "1328",
+        "name": "Diagnosis Code Pointer",
+        "requirement": "O"
+      },
+      {
+        "position": "04",
+        "elementId": "1328",
+        "name": "Diagnosis Code Pointer",
+        "requirement": "O"
+      }
+    ]
+  },
+  "C005": {
+    "elementNumber": "C005",
+    "name": "Tooth Surface",
+    "definition": "Code identifying the area of the tooth that was treated",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "01",
+        "elementId": "1369",
+        "name": "Tooth Surface Code",
+        "requirement": "M"
+      },
+      {
+        "position": "02",
+        "elementId": "1369",
+        "name": "Tooth Surface Code",
+        "requirement": "O"
+      },
+      {
+        "position": "03",
+        "elementId": "1369",
+        "name": "Tooth Surface Code",
+        "requirement": "O"
+      },
+      {
+        "position": "04",
+        "elementId": "1369",
+        "name": "Tooth Surface Code",
+        "requirement": "O"
+      },
+      {
+        "position": "05",
+        "elementId": "1369",
+        "name": "Tooth Surface Code",
+        "requirement": "O"
+      }
+    ]
+  },
+  "C006": {
+    "elementNumber": "C006",
+    "name": "Oral Cavity Designation",
+    "definition": "Code Identifying the area of the oral cavity in which service is rendered",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "01",
+        "elementId": "1361",
+        "name": "Oral Cavity Designation Code",
+        "requirement": "M"
+      },
+      {
+        "position": "02",
+        "elementId": "1361",
+        "name": "Oral Cavity Designation Code",
+        "requirement": "O"
+      },
+      {
+        "position": "03",
+        "elementId": "1361",
+        "name": "Oral Cavity Designation Code",
+        "requirement": "O"
+      },
+      {
+        "position": "04",
+        "elementId": "1361",
+        "name": "Oral Cavity Designation Code",
+        "requirement": "O"
+      },
+      {
+        "position": "05",
+        "elementId": "1361",
+        "name": "Oral Cavity Designation Code",
+        "requirement": "O"
+      }
+    ]
+  },
+  "C022": {
+    "elementNumber": "C022",
+    "name": "Health Care Code Information",
+    "definition": "Code identifying a specific industry code list",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "01",
+        "elementId": "1270",
+        "name": "Code List Qualifier Code",
+        "requirement": "M"
+      },
+      {
+        "position": "02",
+        "elementId": "1271",
+        "name": "Industry Code",
+        "requirement": "M"
+      },
+      {
+        "position": "03",
+        "elementId": "1250",
+        "name": "Date Time Period Format Qualifier",
+        "requirement": "C"
+      },
+      {
+        "position": "04",
+        "elementId": "1251",
+        "name": "Date Time Period",
+        "requirement": "C"
+      },
+      {
+        "position": "05",
+        "elementId": "782",
+        "name": "Monetary Amount",
+        "requirement": "O"
+      },
+      {
+        "position": "06",
+        "elementId": "380",
+        "name": "Quantity",
+        "requirement": "O"
+      }
+    ]
+  },
+  "C023": {
+    "elementNumber": "C023",
+    "name": "Health Care Service Location Information",
+    "definition": "Code identifying the type of facility where services were performed; the first and second positions of the Uniform Bill Type code or the Place of Service code from the Electronic Media Claims National Standard Format",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "01",
+        "elementId": "1331",
+        "name": "Facility Code Value",
+        "requirement": "M"
+      },
+      {
+        "position": "02",
+        "elementId": "1332",
+        "name": "Facility Code Qualifier",
+        "requirement": "O"
+      },
+      {
+        "position": "03",
+        "elementId": "1325",
+        "name": "Claim Frequency Type Code",
+        "requirement": "O"
+      }
+    ]
+  },
+  "C024": {
+    "elementNumber": "C024",
+    "name": "Related Causes Information",
+    "definition": "Code identifying an accompanying cause of an illness, injury or an accident",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "01",
+        "elementId": "1362",
+        "name": "Related-Causes Code",
+        "requirement": "M"
+      },
+      {
+        "position": "02",
+        "elementId": "1362",
+        "name": "Related-Causes Code",
+        "requirement": "O"
+      },
+      {
+        "position": "03",
+        "elementId": "1362",
+        "name": "Related-Causes Code",
+        "requirement": "O"
+      },
+      {
+        "position": "04",
+        "elementId": "156",
+        "name": "State or Province Code",
+        "requirement": "O"
+      },
+      {
+        "position": "05",
+        "elementId": "26",
+        "name": "Country Code",
+        "requirement": "O"
+      }
+    ]
+  },
+  "C030": {
+    "elementNumber": "C030",
+    "name": "Position in Segment",
+    "definition": "This is used to indicate the relative position of a simple data element, or the relative position of a composite data structure with the relative position of the component within the composite data structure, in error; in the data segment the count starts with 1 for the simple data element or composite data structure immediately following the segment ID",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "01",
+        "elementId": "722",
+        "name": "Element Position in Segment",
+        "requirement": "M"
+      },
+      {
+        "position": "02",
+        "elementId": "1528",
+        "name": "Component Data Element Position in Composite",
+        "requirement": "O"
+      }
+    ]
+  }
+}

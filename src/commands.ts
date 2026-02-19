@@ -1,6 +1,8 @@
 import * as vscode from 'vscode';
+import { analyzeTrailers, validateTrailers, getTrailerElementRange } from './trailerValidator';
+import { EdiHoverProvider } from './hoverProvider';
 
-export function registerCommands(context: vscode.ExtensionContext): void {
+export function registerCommands(context: vscode.ExtensionContext, hoverProvider: EdiHoverProvider): void {
     // Quick Format (combines normalize + add line breaks)
     context.subscriptions.push(
         vscode.commands.registerCommand('ediX12Tools.quickFormat', async () => {
@@ -33,6 +35,11 @@ export function registerCommands(context: vscode.ExtensionContext): void {
     // Lookup Segment at Cursor
     context.subscriptions.push(
         vscode.commands.registerCommand('ediX12Tools.lookupSegment', lookupSegment)
+    );
+
+    // Lookup Element at Cursor
+    context.subscriptions.push(
+        vscode.commands.registerCommand('ediX12Tools.lookupElement', () => lookupElementAtCursor(hoverProvider))
     );
 
     // Lookup Transaction Set
@@ -90,6 +97,11 @@ export function registerCommands(context: vscode.ExtensionContext): void {
     // Clear Validation
     context.subscriptions.push(
         vscode.commands.registerCommand('ediX12Tools.clearValidation', clearValidation)
+    );
+
+    // Fix Trailers
+    context.subscriptions.push(
+        vscode.commands.registerCommand('ediX12Tools.fixTrailers', fixTrailers)
     );
 
     // Clear diagnostics on document close
@@ -315,6 +327,22 @@ function lookupTransactionSet(): void {
     }
 
     openTransactionSetReference(txnSet);
+}
+
+async function lookupElementAtCursor(hoverProvider: EdiHoverProvider): Promise<void> {
+    if (!isEdiDocument()) { return; }
+
+    const editor = vscode.window.activeTextEditor!;
+    const position = editor.selection.active;
+    const result = await hoverProvider.resolveElementReference(editor.document, position);
+
+    if (!result) {
+        vscode.window.showWarningMessage('No element found at cursor position');
+        return;
+    }
+
+    vscode.env.openExternal(vscode.Uri.parse(result.url));
+    vscode.window.showInformationMessage(`Opening reference for ${result.label}...`);
 }
 
 function openSegmentReference(segment: string): void {
@@ -1048,12 +1076,28 @@ async function validateDocument(): Promise<void> {
         elements = JSON.parse(fs.readFileSync(elementsPath, 'utf-8'));
         console.log(`[EDI Validate] Loaded ${Object.keys(elements).length} elements`);
     }
-    if (isEdifact && fs.existsSync(compositesPath)) {
+    if (fs.existsSync(compositesPath)) {
         composites = JSON.parse(fs.readFileSync(compositesPath, 'utf-8'));
         console.log(`[EDI Validate] Loaded ${Object.keys(composites).length} composites`);
     }
 
     const delimiter = isEdifact ? '+' : '*';
+
+    // Component (sub-element) separator: ':' for EDIFACT; ISA-16 for X12 (typically '>')
+    let componentSep = isEdifact ? ':' : '>';
+    if (!isEdifact) {
+        const elemDelim = text.charAt(3);
+        let delimCount = 0;
+        for (let ci = 3; ci < Math.min(text.length, 120); ci++) {
+            if (text.charAt(ci) === elemDelim) {
+                delimCount++;
+                if (delimCount === 16) {
+                    componentSep = text.charAt(ci + 1);
+                    break;
+                }
+            }
+        }
+    }
 
     // Validate each line (segment)
     for (let lineNum = 0; lineNum < document.lineCount; lineNum++) {
@@ -1102,8 +1146,10 @@ async function validateDocument(): Promise<void> {
             const elemPos = String(i).padStart(2, '0');
             const elemLabel = `${segmentCode}-${elemPos}`;
 
-            // Check for mandatory blank elements
-            if (!elementValue.trim()) {
+            // Check for mandatory blank elements.
+            // Use length === 0 (not trim) so that space-filled fields like ISA-02/04
+            // (which contain spaces when the qualifier is "00") are not falsely flagged.
+            if (elementValue.length === 0) {
                 if (elementInfo.requirement === 'M') {
                     const range = new vscode.Range(lineNum, elementStart, lineNum, Math.max(elementEnd, elementStart + 1));
                     const diagnostic = new vscode.Diagnostic(range, `${elemLabel}: Mandatory element blank`, vscode.DiagnosticSeverity.Error);
@@ -1115,14 +1161,14 @@ async function validateDocument(): Promise<void> {
             }
 
             // Check if this is a composite or simple element
-            // Composites have types like C001, S001, etc.
-            const compositeInfo = isEdifact ? composites[elementInfo.type] : null;
+            // Composites have types like C001, C002, etc. (X12) or C002, S001, etc. (EDIFACT)
+            const compositeInfo = composites[elementInfo.type] ?? null;
             const elementDetail = elements[elementInfo.type];
 
             // For EDIFACT, prioritize composites over simple elements
             if (compositeInfo) {
-                // Check if this is a single-component composite (no colons) or multi-component
-                const isSingleComponent = !elementValue.includes(':');
+                // Check if this is a single-component composite or multi-component
+                const isSingleComponent = !elementValue.includes(componentSep);
 
                 if (isSingleComponent && compositeInfo.components && compositeInfo.components.length > 0) {
                     // Single component - validate against first component's schema
@@ -1153,7 +1199,7 @@ async function validateDocument(): Promise<void> {
                     }
                 } else {
                     // Multi-component composite - validate each component
-                    const components = elementValue.split(':');
+                    const components = elementValue.split(componentSep);
                     let compPos = elementStart;
 
                     // Check if this is a date/time composite (C507, S004, etc.) and extract format qualifier
@@ -1213,7 +1259,7 @@ async function validateDocument(): Promise<void> {
                             }
                         }
 
-                        compPos = compEnd + 1; // +1 for ':'
+                        compPos = compEnd + 1; // +1 for component separator
                     }
                 }
             } else if (elementDetail) {
@@ -1242,22 +1288,45 @@ async function validateDocument(): Promise<void> {
 
         // Check for trailing missing mandatory elements
         const parsedElementCount = parts.length - 1; // subtract 1 for segment code
-        if (segmentInfo.elements.length > parsedElementCount) {
-            for (let i = parsedElementCount; i < segmentInfo.elements.length; i++) {
-                const elementInfo = segmentInfo.elements[i];
-                if (elementInfo && elementInfo.requirement === 'M') {
-                    const elemPos = String(i + 1).padStart(2, '0');
-                    const elemLabel = `${segmentCode}-${elemPos}`;
-                    // Point to end of the segment line
-                    const lineEnd = lineText.replace(/[~'\n\r]+$/g, '').length;
-                    const range = new vscode.Range(lineNum, lineEnd, lineNum, lineEnd);
-                    const diagnostic = new vscode.Diagnostic(range, `${elemLabel}: Mandatory element missing`, vscode.DiagnosticSeverity.Error);
-                    diagnostic.source = 'EDI Validator';
-                    diagnostic.code = 'mandatory';
-                    diagnostics.push(diagnostic);
+        if (segmentInfo.elements.length > parsedElementCount && parsedElementCount > 0) {
+            const lastPresentElement = segmentInfo.elements[parsedElementCount - 1];
+            const firstTrailingElement = segmentInfo.elements[parsedElementCount];
+
+            if (lastPresentElement && firstTrailingElement) {
+                const lastPos = parseInt(lastPresentElement.position, 10);
+                const firstMissingPos = parseInt(firstTrailingElement.position, 10);
+
+                // Only proceed if positions are increasing (not spurious composite component data
+                // that was inlined into the segment elements array by the schema scraper)
+                if (firstMissingPos > lastPos) {
+                    let prevPos = lastPos;
+                    for (let i = parsedElementCount; i < segmentInfo.elements.length; i++) {
+                        const elementInfo = segmentInfo.elements[i];
+                        if (!elementInfo) continue;
+
+                        const thisPos = parseInt(elementInfo.position, 10);
+                        if (thisPos <= prevPos) break; // Position reset — stop here
+                        prevPos = thisPos;
+
+                        if (elementInfo.requirement === 'M') {
+                            const elemPos = String(i + 1).padStart(2, '0');
+                            const elemLabel = `${segmentCode}-${elemPos}`;
+                            const lineEnd = lineText.replace(/[~'\n\r]+$/g, '').length;
+                            const range = new vscode.Range(lineNum, lineEnd, lineNum, lineEnd);
+                            const diagnostic = new vscode.Diagnostic(range, `${elemLabel}: Mandatory element missing`, vscode.DiagnosticSeverity.Error);
+                            diagnostic.source = 'EDI Validator';
+                            diagnostic.code = 'mandatory';
+                            diagnostics.push(diagnostic);
+                        }
+                    }
                 }
             }
         }
+    }
+
+    // Validate trailer counts and control numbers (X12 only)
+    if (!isEdifact) {
+        validateTrailers(document, delimiter, diagnostics);
     }
 
     // Set diagnostics
@@ -1277,6 +1346,47 @@ async function validateDocument(): Promise<void> {
         vscode.window.showInformationMessage('EDI Validation: No issues found');
     } else {
         vscode.window.showWarningMessage(`EDI Validation: ${errorCount} error(s), ${warningCount} warning(s)`);
+    }
+}
+
+/**
+ * Fix all trailer segment counts and control numbers to match document contents.
+ */
+async function fixTrailers(): Promise<void> {
+    const editor = vscode.window.activeTextEditor;
+    if (!editor) {
+        vscode.window.showErrorMessage('No active editor');
+        return;
+    }
+
+    const document = editor.document;
+    const text = document.getText();
+    if (!text.startsWith('ISA')) {
+        vscode.window.showErrorMessage('Fix Trailer is only available for X12 documents');
+        return;
+    }
+
+    const elemDelim = text.charAt(3);
+    const errors = analyzeTrailers(document, elemDelim);
+    if (errors.length === 0) {
+        vscode.window.showInformationMessage('Trailer counts and control numbers are already correct.');
+        return;
+    }
+
+    const edit = new vscode.WorkspaceEdit();
+    for (const err of errors) {
+        const lineText = document.lineAt(err.lineNum).text;
+        const range = getTrailerElementRange(lineText, err.elemIndex, elemDelim, err.lineNum);
+        edit.replace(document.uri, range, err.correctValue);
+    }
+
+    const success = await vscode.workspace.applyEdit(edit);
+    if (success) {
+        vscode.window.showInformationMessage(
+            `Fixed ${errors.length} trailer value${errors.length !== 1 ? 's' : ''}.`
+        );
+    } else {
+        vscode.window.showErrorMessage('Failed to apply trailer fixes.');
     }
 }
 

@@ -1774,64 +1774,10 @@
         "type": "1635"
       },
       {
-        "position": "01",
-        "name": "Amount Qualifier Code",
-        "requirement": "M",
-        "type": "522"
-      },
-      {
-        "position": "02",
-        "name": "Amount Qualifier Code",
-        "requirement": "O",
-        "type": "522"
-      },
-      {
-        "position": "03",
-        "name": "Value Detail Code",
-        "requirement": "O",
-        "type": "1638"
-      },
-      {
-        "position": "04",
-        "name": "Measurement Significance Code",
-        "requirement": "O",
-        "type": "935"
-      },
-      {
-        "position": "05",
-        "name": "Unit of Time Period or Interval",
-        "requirement": "O",
-        "type": "344"
-      },
-      {
         "position": "06",
-        "name": "Net/Gross Code",
+        "name": "Amount Qualifying Description",
         "requirement": "O",
-        "type": "1637"
-      },
-      {
-        "position": "07",
-        "name": "Measurement Significance Code",
-        "requirement": "O",
-        "type": "935"
-      },
-      {
-        "position": "08",
-        "name": "Description",
-        "requirement": "O",
-        "type": "352"
-      },
-      {
-        "position": "09",
-        "name": "Industry Code",
-        "requirement": "C",
-        "type": "1271"
-      },
-      {
-        "position": "10",
-        "name": "Code List Qualifier Code",
-        "requirement": "C",
-        "type": "1270"
+        "type": "C007"
       },
       {
         "position": "07",
@@ -10147,34 +10093,10 @@
         "type": "1552"
       },
       {
-        "position": "01",
-        "name": "Condition Indicator",
-        "requirement": "M",
-        "type": "1321"
-      },
-      {
         "position": "02",
-        "name": "Condition Indicator",
+        "name": "Conditions Indicated",
         "requirement": "O",
-        "type": "1321"
-      },
-      {
-        "position": "03",
-        "name": "Condition Indicator",
-        "requirement": "O",
-        "type": "1321"
-      },
-      {
-        "position": "04",
-        "name": "Condition Indicator",
-        "requirement": "O",
-        "type": "1321"
-      },
-      {
-        "position": "05",
-        "name": "Condition Indicator",
-        "requirement": "O",
-        "type": "1321"
+        "type": "C045"
       },
       {
         "position": "03",
@@ -11239,136 +11161,16 @@
         "type": "1343"
       },
       {
-        "position": "01",
-        "name": "Facility Code Value",
-        "requirement": "M",
-        "type": "1331"
-      },
-      {
-        "position": "02",
-        "name": "Facility Code Qualifier",
-        "requirement": "M",
-        "type": "1332"
-      },
-      {
-        "position": "03",
-        "name": "Claim Frequency Type Code",
+        "position": "05",
+        "name": "Health Care Service Location Information",
         "requirement": "O",
-        "type": "1325"
+        "type": "C023"
       },
       {
         "position": "06",
-        "name": "Yes/No Condition or Response Code",
+        "name": "Related Causes Information",
         "requirement": "O",
-        "type": "1073"
-      },
-      {
-        "position": "07",
-        "name": "Provider Accept Assignment Code",
-        "requirement": "O",
-        "type": "1359"
-      },
-      {
-        "position": "08",
-        "name": "Yes/No Condition or Response Code",
-        "requirement": "O",
-        "type": "1073"
-      },
-      {
-        "position": "09",
-        "name": "Release of Information Code",
-        "requirement": "O",
-        "type": "1363"
-      },
-      {
-        "position": "10",
-        "name": "Patient Signature Source Code",
-        "requirement": "O",
-        "type": "1351"
-      },
-      {
-        "position": "01",
-        "name": "Related-Causes Code",
-        "requirement": "M",
-        "type": "1362"
-      },
-      {
-        "position": "02",
-        "name": "Related-Causes Code",
-        "requirement": "O",
-        "type": "1362"
-      },
-      {
-        "position": "03",
-        "name": "Related-Causes Code",
-        "requirement": "O",
-        "type": "1362"
-      },
-      {
-        "position": "04",
-        "name": "State or Province Code",
-        "requirement": "O",
-        "type": "156"
-      },
-      {
-        "position": "05",
-        "name": "Country Code",
-        "requirement": "O",
-        "type": "26"
-      },
-      {
-        "position": "12",
-        "name": "Special Program Code",
-        "requirement": "O",
-        "type": "1366"
-      },
-      {
-        "position": "13",
-        "name": "Yes/No Condition or Response Code",
-        "requirement": "O",
-        "type": "1073"
-      },
-      {
-        "position": "14",
-        "name": "Level of Service Code",
-        "requirement": "O",
-        "type": "1338"
-      },
-      {
-        "position": "15",
-        "name": "Yes/No Condition or Response Code",
-        "requirement": "O",
-        "type": "1073"
-      },
-      {
-        "position": "16",
-        "name": "Provider Agreement Code",
-        "requirement": "O",
-        "type": "1360"
-      },
-      {
-        "position": "17",
-        "name": "Claim Status Code",
-        "requirement": "O",
-        "type": "1029"
-      },
-      {
-        "position": "18",
-        "name": "Yes/No Condition or Response Code",
-        "requirement": "O",
-        "type": "1073"
-      },
-      {
-        "position": "19",
-        "name": "Claim Submission Reason Code",
-        "requirement": "O",
-        "type": "1383"
-      },
-      {
-        "position": "20",
-        "name": "Delay Reason Code",
-        "requirement": "O",
-        "type": "1514"
+        "type": "C024"
       }
     ]
   },
@@ -11782,27 +11584,15 @@
     "elements": [
       {
         "position": "01",
-        "name": "Communication Number Qualifier",
-        "requirement": "M",
-        "type": "365"
+        "name": "Communication Number Component",
+        "requirement": "O",
+        "type": "C057"
       },
       {
         "position": "02",
-        "name": "Communication Number",
-        "requirement": "M",
-        "type": "364"
-      },
-      {
-        "position": "01",
-        "name": "Communication Number Qualifier",
-        "requirement": "C",
-        "type": "365"
-      },
-      {
-        "position": "02",
-        "name": "Communication Number",
-        "requirement": "C",
-        "type": "364"
+        "name": "Communication Number Component",
+        "requirement": "O",
+        "type": "C057"
       }
     ]
   },
@@ -13496,112 +13286,16 @@
         "type": "825"
       },
       {
-        "position": "01",
-        "name": "Look-up Value Protocol Code",
-        "requirement": "M",
-        "type": "1675"
-      },
-      {
-        "position": "02",
-        "name": "Filter ID Code",
-        "requirement": "M",
-        "type": "1570"
-      },
-      {
-        "position": "03",
-        "name": "Version Identifier",
-        "requirement": "M",
-        "type": "799"
-      },
-      {
         "position": "04",
-        "name": "Look-up Value",
-        "requirement": "M",
-        "type": "1565"
+        "name": "Certificate Look-up Information",
+        "requirement": "O",
+        "type": "C050"
       },
       {
         "position": "05",
-        "name": "Look-up Value Protocol Code",
-        "requirement": "C",
-        "type": "1675"
-      },
-      {
-        "position": "06",
-        "name": "Filter ID Code",
-        "requirement": "C",
-        "type": "1570"
-      },
-      {
-        "position": "07",
-        "name": "Version Identifier",
-        "requirement": "C",
-        "type": "799"
-      },
-      {
-        "position": "08",
-        "name": "Look-up Value",
-        "requirement": "C",
-        "type": "1565"
-      },
-      {
-        "position": "09",
-        "name": "Look-up Value Protocol Code",
-        "requirement": "C",
-        "type": "1675"
-      },
-      {
-        "position": "10",
-        "name": "Filter ID Code",
-        "requirement": "C",
-        "type": "1570"
-      },
-      {
-        "position": "11",
-        "name": "Version Identifier",
-        "requirement": "C",
-        "type": "799"
-      },
-      {
-        "position": "12",
-        "name": "Look-up Value",
-        "requirement": "C",
-        "type": "1565"
-      },
-      {
-        "position": "01",
-        "name": "Reference Identification Qualifier",
-        "requirement": "M",
-        "type": "128"
-      },
-      {
-        "position": "02",
-        "name": "Reference Identification",
-        "requirement": "M",
-        "type": "127"
-      },
-      {
-        "position": "03",
-        "name": "Reference Identification Qualifier",
-        "requirement": "C",
-        "type": "128"
-      },
-      {
-        "position": "04",
-        "name": "Reference Identification",
-        "requirement": "C",
-        "type": "127"
-      },
-      {
-        "position": "05",
-        "name": "Reference Identification Qualifier",
-        "requirement": "C",
-        "type": "128"
-      },
-      {
-        "position": "06",
-        "name": "Reference Identification",
-        "requirement": "C",
-        "type": "127"
+        "name": "Reference Identifier",
+        "requirement": "O",
+        "type": "C040"
       },
       {
         "position": "06",
@@ -13622,16 +13316,10 @@
         "type": "995"
       },
       {
-        "position": "01",
-        "name": "Security Value Qualifier",
-        "requirement": "M",
-        "type": "1572"
-      },
-      {
-        "position": "02",
-        "name": "Encoded Security Value",
-        "requirement": "M",
-        "type": "1573"
+        "position": "09",
+        "name": "Security Token Value",
+        "requirement": "O",
+        "type": "C033"
       }
     ]
   },
@@ -14182,100 +13870,100 @@
         "type": "782"
       },
       {
-        "position": "01",
+        "position": "03",
         "name": "Unit or Basis for Measurement Code",
         "requirement": "M",
         "type": "355"
       },
       {
-        "position": "02",
+        "position": "04",
         "name": "Exponent",
         "requirement": "O",
         "type": "1018"
-      },
-      {
-        "position": "03",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "04",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
       },
       {
         "position": "05",
-        "name": "Exponent",
+        "name": "Multiplier",
         "requirement": "O",
-        "type": "1018"
+        "type": "649"
       },
       {
         "position": "06",
-        "name": "Multiplier",
+        "name": "Unit or Basis for Measurement Code",
         "requirement": "O",
-        "type": "649"
+        "type": "355"
       },
       {
         "position": "07",
-        "name": "Unit or Basis for Measurement Code",
+        "name": "Exponent",
         "requirement": "O",
-        "type": "355"
+        "type": "1018"
       },
       {
         "position": "08",
-        "name": "Exponent",
+        "name": "Multiplier",
         "requirement": "O",
-        "type": "1018"
+        "type": "649"
       },
       {
         "position": "09",
-        "name": "Multiplier",
+        "name": "Unit or Basis for Measurement Code",
         "requirement": "O",
-        "type": "649"
+        "type": "355"
       },
       {
         "position": "10",
-        "name": "Unit or Basis for Measurement Code",
+        "name": "Exponent",
         "requirement": "O",
-        "type": "355"
+        "type": "1018"
       },
       {
         "position": "11",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "12",
         "name": "Multiplier",
         "requirement": "O",
         "type": "649"
       },
       {
-        "position": "13",
+        "position": "12",
         "name": "Unit or Basis for Measurement Code",
         "requirement": "O",
         "type": "355"
       },
       {
-        "position": "14",
+        "position": "13",
         "name": "Exponent",
         "requirement": "O",
         "type": "1018"
       },
       {
-        "position": "15",
+        "position": "14",
         "name": "Multiplier",
         "requirement": "O",
         "type": "649"
       },
       {
-        "position": "04",
-        "name": "Quantity",
-        "requirement": "C",
-        "type": "380"
+        "position": "15",
+        "name": "Unit or Basis for Measurement Code",
+        "requirement": "O",
+        "type": "355"
+      },
+      {
+        "position": "16",
+        "name": "Exponent",
+        "requirement": "O",
+        "type": "1018"
+      },
+      {
+        "position": "17",
+        "name": "Multiplier",
+        "requirement": "O",
+        "type": "649"
+      },
+      {
+        "position": "18",
+        "name": "Change Quantities",
+        "requirement": "O",
+        "type": "C063"
       }
     ]
   },
@@ -14941,63 +14629,21 @@
     "elements": [
       {
         "position": "01",
-        "name": "Context Name",
-        "requirement": "M",
-        "type": "9999"
+        "name": "Context Identification",
+        "requirement": "O",
+        "type": "C998"
       },
       {
         "position": "02",
-        "name": "Context Reference",
+        "name": "Position in Segment",
         "requirement": "O",
-        "type": "9998"
-      },
-      {
-        "position": "02",
-        "name": "Segment ID Code",
-        "requirement": "O",
-        "type": "721"
+        "type": "C030"
       },
       {
         "position": "03",
-        "name": "Segment Position in Transaction Set",
+        "name": "Reference in Segment",
         "requirement": "O",
-        "type": "719"
-      },
-      {
-        "position": "04",
-        "name": "Loop Identifier Code",
-        "requirement": "O",
-        "type": "447"
-      },
-      {
-        "position": "01",
-        "name": "Element Position in Segment",
-        "requirement": "M",
-        "type": "722"
-      },
-      {
-        "position": "02",
-        "name": "Component Data Element Position in Composite",
-        "requirement": "O",
-        "type": "1528"
-      },
-      {
-        "position": "03",
-        "name": "Repeating Data Element Position",
-        "requirement": "O",
-        "type": "1686"
-      },
-      {
-        "position": "01",
-        "name": "Data Element Reference Number",
-        "requirement": "M",
-        "type": "725"
-      },
-      {
-        "position": "02",
-        "name": "Data Element Reference Number",
-        "requirement": "O",
-        "type": "725"
+        "type": "C999"
       }
     ]
   },
@@ -16525,64 +16171,10 @@
         "type": "1067"
       },
       {
-        "position": "01",
-        "name": "Race or Ethnicity Code",
+        "position": "05",
+        "name": "Composite Race or Ethnicity Information",
         "requirement": "O",
-        "type": "1109"
-      },
-      {
-        "position": "02",
-        "name": "Code List Qualifier Code",
-        "requirement": "C",
-        "type": "1270"
-      },
-      {
-        "position": "03",
-        "name": "Industry Code",
-        "requirement": "C",
-        "type": "1271"
-      },
-      {
-        "position": "06",
-        "name": "Citizenship Status Code",
-        "requirement": "O",
-        "type": "1066"
-      },
-      {
-        "position": "07",
-        "name": "Country Code",
-        "requirement": "O",
-        "type": "26"
-      },
-      {
-        "position": "08",
-        "name": "Basis of Verification Code",
-        "requirement": "O",
-        "type": "659"
-      },
-      {
-        "position": "09",
-        "name": "Quantity",
-        "requirement": "O",
-        "type": "380"
-      },
-      {
-        "position": "10",
-        "name": "Code List Qualifier Code",
-        "requirement": "C",
-        "type": "1270"
-      },
-      {
-        "position": "11",
-        "name": "Industry Code",
-        "requirement": "C",
-        "type": "1271"
-      },
-      {
-        "position": "12",
-        "name": "Country Code",
-        "requirement": "O",
-        "type": "26"
+        "type": "C056"
       }
     ]
   },
@@ -17020,76 +16612,10 @@
         "type": "1322"
       },
       {
-        "position": "01",
-        "name": "Product/Service ID Qualifier",
-        "requirement": "M",
-        "type": "235"
-      },
-      {
-        "position": "02",
-        "name": "Product/Service ID",
-        "requirement": "M",
-        "type": "234"
-      },
-      {
         "position": "03",
-        "name": "Procedure Modifier",
+        "name": "Composite Medical Procedure Identifier",
         "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "04",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "05",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "06",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "07",
-        "name": "Description",
-        "requirement": "O",
-        "type": "352"
-      },
-      {
-        "position": "08",
-        "name": "Product/Service ID",
-        "requirement": "O",
-        "type": "234"
-      },
-      {
-        "position": "09",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "10",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "11",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "12",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
+        "type": "C003"
       },
       {
         "position": "04",
@@ -17146,28 +16672,10 @@
         "type": "380"
       },
       {
-        "position": "01",
-        "name": "Assigned Identification",
-        "requirement": "M",
-        "type": "350"
-      },
-      {
-        "position": "02",
-        "name": "Yes/No Condition or Response Code",
-        "requirement": "M",
-        "type": "1073"
-      },
-      {
-        "position": "14",
-        "name": "Dosage Form Code",
+        "position": "13",
+        "name": "Question and Answer",
         "requirement": "O",
-        "type": "1330"
-      },
-      {
-        "position": "15",
-        "name": "Free-form Message Text",
-        "requirement": "O",
-        "type": "933"
+        "type": "C060"
       }
     ]
   },
@@ -18110,100 +17618,100 @@
         "type": "1402"
       },
       {
-        "position": "01",
+        "position": "02",
         "name": "Unit or Basis for Measurement Code",
         "requirement": "M",
         "type": "355"
       },
       {
-        "position": "02",
+        "position": "03",
         "name": "Exponent",
         "requirement": "O",
         "type": "1018"
-      },
-      {
-        "position": "03",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
       },
       {
         "position": "04",
-        "name": "Unit or Basis for Measurement Code",
+        "name": "Multiplier",
         "requirement": "O",
-        "type": "355"
+        "type": "649"
       },
       {
         "position": "05",
-        "name": "Exponent",
+        "name": "Unit or Basis for Measurement Code",
         "requirement": "O",
-        "type": "1018"
+        "type": "355"
       },
       {
         "position": "06",
-        "name": "Multiplier",
+        "name": "Exponent",
         "requirement": "O",
-        "type": "649"
+        "type": "1018"
       },
       {
         "position": "07",
-        "name": "Unit or Basis for Measurement Code",
+        "name": "Multiplier",
         "requirement": "O",
-        "type": "355"
+        "type": "649"
       },
       {
         "position": "08",
-        "name": "Exponent",
+        "name": "Unit or Basis for Measurement Code",
         "requirement": "O",
-        "type": "1018"
+        "type": "355"
       },
       {
         "position": "09",
-        "name": "Multiplier",
+        "name": "Exponent",
         "requirement": "O",
-        "type": "649"
+        "type": "1018"
       },
       {
         "position": "10",
-        "name": "Unit or Basis for Measurement Code",
+        "name": "Multiplier",
         "requirement": "O",
-        "type": "355"
+        "type": "649"
       },
       {
         "position": "11",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "12",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "13",
         "name": "Unit or Basis for Measurement Code",
         "requirement": "O",
         "type": "355"
       },
       {
-        "position": "14",
+        "position": "12",
         "name": "Exponent",
         "requirement": "O",
         "type": "1018"
       },
       {
-        "position": "15",
+        "position": "13",
         "name": "Multiplier",
         "requirement": "O",
         "type": "649"
       },
       {
-        "position": "03",
-        "name": "Quantity",
-        "requirement": "C",
-        "type": "380"
+        "position": "14",
+        "name": "Unit or Basis for Measurement Code",
+        "requirement": "O",
+        "type": "355"
+      },
+      {
+        "position": "15",
+        "name": "Exponent",
+        "requirement": "O",
+        "type": "1018"
+      },
+      {
+        "position": "16",
+        "name": "Multiplier",
+        "requirement": "O",
+        "type": "649"
+      },
+      {
+        "position": "17",
+        "name": "Change Quantities",
+        "requirement": "O",
+        "type": "C063"
       }
     ]
   },
@@ -18285,76 +17793,10 @@
         "type": "1073"
       },
       {
-        "position": "01",
-        "name": "Product/Service ID Qualifier",
-        "requirement": "M",
-        "type": "235"
-      },
-      {
-        "position": "02",
-        "name": "Product/Service ID",
-        "requirement": "M",
-        "type": "234"
-      },
-      {
-        "position": "03",
-        "name": "Procedure Modifier",
+        "position": "13",
+        "name": "Composite Medical Procedure Identifier",
         "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "04",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "05",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "06",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "07",
-        "name": "Description",
-        "requirement": "O",
-        "type": "352"
-      },
-      {
-        "position": "08",
-        "name": "Product/Service ID",
-        "requirement": "O",
-        "type": "234"
-      },
-      {
-        "position": "09",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "10",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "11",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "12",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
+        "type": "C003"
       }
     ]
   },
@@ -19121,46 +18563,10 @@
         "type": "1139"
       },
       {
-        "position": "01",
-        "name": "Race or Ethnicity Code",
+        "position": "04",
+        "name": "Composite Race or Ethnicity Information",
         "requirement": "O",
-        "type": "1109"
-      },
-      {
-        "position": "02",
-        "name": "Code List Qualifier Code",
-        "requirement": "C",
-        "type": "1270"
-      },
-      {
-        "position": "03",
-        "name": "Industry Code",
-        "requirement": "C",
-        "type": "1271"
-      },
-      {
-        "position": "05",
-        "name": "Gender Code",
-        "requirement": "O",
-        "type": "1068"
-      },
-      {
-        "position": "06",
-        "name": "Date Time Period Format Qualifier",
-        "requirement": "C",
-        "type": "1250"
-      },
-      {
-        "position": "07",
-        "name": "Date Time Period",
-        "requirement": "C",
-        "type": "1251"
-      },
-      {
-        "position": "08",
-        "name": "Yes/No Condition or Response Code",
-        "requirement": "O",
-        "type": "1073"
+        "type": "C056"
       }
     ]
   },
@@ -19359,81 +18765,15 @@
     "elements": [
       {
         "position": "01",
-        "name": "Industry Code",
-        "requirement": "C",
-        "type": "1271"
-      },
-      {
-        "position": "01",
-        "name": "Product/Service ID Qualifier",
-        "requirement": "M",
-        "type": "235"
+        "name": "Health Care Claim Status",
+        "requirement": "O",
+        "type": "C043"
       },
       {
         "position": "02",
-        "name": "Product/Service ID",
-        "requirement": "M",
-        "type": "234"
-      },
-      {
-        "position": "03",
-        "name": "Procedure Modifier",
+        "name": "Composite Medical Procedure Identifier",
         "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "04",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "05",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "06",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "07",
-        "name": "Description",
-        "requirement": "O",
-        "type": "352"
-      },
-      {
-        "position": "08",
-        "name": "Product/Service ID",
-        "requirement": "O",
-        "type": "234"
-      },
-      {
-        "position": "09",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "10",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "11",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "12",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
+        "type": "C003"
       },
       {
         "position": "03",
@@ -21606,46 +20946,10 @@
         "type": "1203"
       },
       {
-        "position": "01",
-        "name": "Account Relationship Code",
-        "requirement": "M",
-        "type": "1636"
-      },
-      {
-        "position": "02",
-        "name": "Account Number",
+        "position": "04",
+        "name": "Tax Advantage Account Information",
         "requirement": "O",
-        "type": "508"
-      },
-      {
-        "position": "05",
-        "name": "Frequency Code",
-        "requirement": "O",
-        "type": "594"
-      },
-      {
-        "position": "06",
-        "name": "Plan Coverage Description",
-        "requirement": "O",
-        "type": "1204"
-      },
-      {
-        "position": "07",
-        "name": "Product Option Code",
-        "requirement": "O",
-        "type": "1161"
-      },
-      {
-        "position": "08",
-        "name": "Product Option Code",
-        "requirement": "O",
-        "type": "1161"
-      },
-      {
-        "position": "09",
-        "name": "Product Option Code",
-        "requirement": "O",
-        "type": "1161"
+        "type": "C062"
       }
     ]
   },
@@ -27362,651 +26666,75 @@
     "elements": [
       {
         "position": "01",
-        "name": "Code List Qualifier Code",
-        "requirement": "M",
-        "type": "1270"
+        "name": "Health Care Code Information",
+        "requirement": "O",
+        "type": "C022"
       },
       {
         "position": "02",
-        "name": "Industry Code",
-        "requirement": "M",
-        "type": "1271"
+        "name": "Health Care Code Information",
+        "requirement": "O",
+        "type": "C022"
       },
       {
         "position": "03",
-        "name": "Date Time Period Format Qualifier",
-        "requirement": "C",
-        "type": "1250"
+        "name": "Health Care Code Information",
+        "requirement": "O",
+        "type": "C022"
       },
       {
         "position": "04",
-        "name": "Date Time Period",
-        "requirement": "C",
-        "type": "1251"
+        "name": "Health Care Code Information",
+        "requirement": "O",
+        "type": "C022"
       },
       {
         "position": "05",
-        "name": "Monetary Amount",
+        "name": "Health Care Code Information",
         "requirement": "O",
-        "type": "782"
+        "type": "C022"
       },
       {
         "position": "06",
-        "name": "Quantity",
+        "name": "Health Care Code Information",
         "requirement": "O",
-        "type": "380"
+        "type": "C022"
       },
       {
         "position": "07",
-        "name": "Version Identifier",
+        "name": "Health Care Code Information",
         "requirement": "O",
-        "type": "799"
+        "type": "C022"
       },
       {
         "position": "08",
-        "name": "Industry Code",
-        "requirement": "C",
-        "type": "1271"
+        "name": "Health Care Code Information",
+        "requirement": "O",
+        "type": "C022"
       },
       {
         "position": "09",
-        "name": "Industry Code",
-        "requirement": "C",
-        "type": "1271"
-      },
-      {
-        "position": "01",
-        "name": "Code List Qualifier Code",
-        "requirement": "M",
-        "type": "1270"
-      },
-      {
-        "position": "02",
-        "name": "Industry Code",
-        "requirement": "M",
-        "type": "1271"
-      },
-      {
-        "position": "03",
-        "name": "Date Time Period Format Qualifier",
-        "requirement": "C",
-        "type": "1250"
-      },
-      {
-        "position": "04",
-        "name": "Date Time Period",
-        "requirement": "C",
-        "type": "1251"
-      },
-      {
-        "position": "05",
-        "name": "Monetary Amount",
+        "name": "Health Care Code Information",
         "requirement": "O",
-        "type": "782"
+        "type": "C022"
       },
       {
-        "position": "06",
-        "name": "Quantity",
+        "position": "10",
+        "name": "Health Care Code Information",
         "requirement": "O",
-        "type": "380"
+        "type": "C022"
       },
       {
-        "position": "07",
-        "name": "Version Identifier",
+        "position": "11",
+        "name": "Health Care Code Information",
         "requirement": "O",
-        "type": "799"
+        "type": "C022"
       },
       {
-        "position": "08",
-        "name": "Industry Code",
-        "requirement": "C",
-        "type": "1271"
-      },
-      {
-        "position": "09",
-        "name": "Industry Code",
-        "requirement": "C",
-        "type": "1271"
-      },
-      {
-        "position": "01",
-        "name": "Code List Qualifier Code",
-        "requirement": "M",
-        "type": "1270"
-      },
-      {
-        "position": "02",
-        "name": "Industry Code",
-        "requirement": "M",
-        "type": "1271"
-      },
-      {
-        "position": "03",
-        "name": "Date Time Period Format Qualifier",
-        "requirement": "C",
-        "type": "1250"
-      },
-      {
-        "position": "04",
-        "name": "Date Time Period",
-        "requirement": "C",
-        "type": "1251"
-      },
-      {
-        "position": "05",
-        "name": "Monetary Amount",
+        "position": "12",
+        "name": "Health Care Code Information",
         "requirement": "O",
-        "type": "782"
-      },
-      {
-        "position": "06",
-        "name": "Quantity",
-        "requirement": "O",
-        "type": "380"
-      },
-      {
-        "position": "07",
-        "name": "Version Identifier",
-        "requirement": "O",
-        "type": "799"
-      },
-      {
-        "position": "08",
-        "name": "Industry Code",
-        "requirement": "C",
-        "type": "1271"
-      },
-      {
-        "position": "09",
-        "name": "Industry Code",
-        "requirement": "C",
-        "type": "1271"
-      },
-      {
-        "position": "01",
-        "name": "Code List Qualifier Code",
-        "requirement": "M",
-        "type": "1270"
-      },
-      {
-        "position": "02",
-        "name": "Industry Code",
-        "requirement": "M",
-        "type": "1271"
-      },
-      {
-        "position": "03",
-        "name": "Date Time Period Format Qualifier",
-        "requirement": "C",
-        "type": "1250"
-      },
-      {
-        "position": "04",
-        "name": "Date Time Period",
-        "requirement": "C",
-        "type": "1251"
-      },
-      {
-        "position": "05",
-        "name": "Monetary Amount",
-        "requirement": "O",
-        "type": "782"
-      },
-      {
-        "position": "06",
-        "name": "Quantity",
-        "requirement": "O",
-        "type": "380"
-      },
-      {
-        "position": "07",
-        "name": "Version Identifier",
-        "requirement": "O",
-        "type": "799"
-      },
-      {
-        "position": "08",
-        "name": "Industry Code",
-        "requirement": "C",
-        "type": "1271"
-      },
-      {
-        "position": "09",
-        "name": "Industry Code",
-        "requirement": "C",
-        "type": "1271"
-      },
-      {
-        "position": "01",
-        "name": "Code List Qualifier Code",
-        "requirement": "M",
-        "type": "1270"
-      },
-      {
-        "position": "02",
-        "name": "Industry Code",
-        "requirement": "M",
-        "type": "1271"
-      },
-      {
-        "position": "03",
-        "name": "Date Time Period Format Qualifier",
-        "requirement": "C",
-        "type": "1250"
-      },
-      {
-        "position": "04",
-        "name": "Date Time Period",
-        "requirement": "C",
-        "type": "1251"
-      },
-      {
-        "position": "05",
-        "name": "Monetary Amount",
-        "requirement": "O",
-        "type": "782"
-      },
-      {
-        "position": "06",
-        "name": "Quantity",
-        "requirement": "O",
-        "type": "380"
-      },
-      {
-        "position": "07",
-        "name": "Version Identifier",
-        "requirement": "O",
-        "type": "799"
-      },
-      {
-        "position": "08",
-        "name": "Industry Code",
-        "requirement": "C",
-        "type": "1271"
-      },
-      {
-        "position": "09",
-        "name": "Industry Code",
-        "requirement": "C",
-        "type": "1271"
-      },
-      {
-        "position": "01",
-        "name": "Code List Qualifier Code",
-        "requirement": "M",
-        "type": "1270"
-      },
-      {
-        "position": "02",
-        "name": "Industry Code",
-        "requirement": "M",
-        "type": "1271"
-      },
-      {
-        "position": "03",
-        "name": "Date Time Period Format Qualifier",
-        "requirement": "C",
-        "type": "1250"
-      },
-      {
-        "position": "04",
-        "name": "Date Time Period",
-        "requirement": "C",
-        "type": "1251"
-      },
-      {
-        "position": "05",
-        "name": "Monetary Amount",
-        "requirement": "O",
-        "type": "782"
-      },
-      {
-        "position": "06",
-        "name": "Quantity",
-        "requirement": "O",
-        "type": "380"
-      },
-      {
-        "position": "07",
-        "name": "Version Identifier",
-        "requirement": "O",
-        "type": "799"
-      },
-      {
-        "position": "08",
-        "name": "Industry Code",
-        "requirement": "C",
-        "type": "1271"
-      },
-      {
-        "position": "09",
-        "name": "Industry Code",
-        "requirement": "C",
-        "type": "1271"
-      },
-      {
-        "position": "01",
-        "name": "Code List Qualifier Code",
-        "requirement": "M",
-        "type": "1270"
-      },
-      {
-        "position": "02",
-        "name": "Industry Code",
-        "requirement": "M",
-        "type": "1271"
-      },
-      {
-        "position": "03",
-        "name": "Date Time Period Format Qualifier",
-        "requirement": "C",
-        "type": "1250"
-      },
-      {
-        "position": "04",
-        "name": "Date Time Period",
-        "requirement": "C",
-        "type": "1251"
-      },
-      {
-        "position": "05",
-        "name": "Monetary Amount",
-        "requirement": "O",
-        "type": "782"
-      },
-      {
-        "position": "06",
-        "name": "Quantity",
-        "requirement": "O",
-        "type": "380"
-      },
-      {
-        "position": "07",
-        "name": "Version Identifier",
-        "requirement": "O",
-        "type": "799"
-      },
-      {
-        "position": "08",
-        "name": "Industry Code",
-        "requirement": "C",
-        "type": "1271"
-      },
-      {
-        "position": "09",
-        "name": "Industry Code",
-        "requirement": "C",
-        "type": "1271"
-      },
-      {
-        "position": "01",
-        "name": "Code List Qualifier Code",
-        "requirement": "M",
-        "type": "1270"
-      },
-      {
-        "position": "02",
-        "name": "Industry Code",
-        "requirement": "M",
-        "type": "1271"
-      },
-      {
-        "position": "03",
-        "name": "Date Time Period Format Qualifier",
-        "requirement": "C",
-        "type": "1250"
-      },
-      {
-        "position": "04",
-        "name": "Date Time Period",
-        "requirement": "C",
-        "type": "1251"
-      },
-      {
-        "position": "05",
-        "name": "Monetary Amount",
-        "requirement": "O",
-        "type": "782"
-      },
-      {
-        "position": "06",
-        "name": "Quantity",
-        "requirement": "O",
-        "type": "380"
-      },
-      {
-        "position": "07",
-        "name": "Version Identifier",
-        "requirement": "O",
-        "type": "799"
-      },
-      {
-        "position": "08",
-        "name": "Industry Code",
-        "requirement": "C",
-        "type": "1271"
-      },
-      {
-        "position": "09",
-        "name": "Industry Code",
-        "requirement": "C",
-        "type": "1271"
-      },
-      {
-        "position": "01",
-        "name": "Code List Qualifier Code",
-        "requirement": "M",
-        "type": "1270"
-      },
-      {
-        "position": "02",
-        "name": "Industry Code",
-        "requirement": "M",
-        "type": "1271"
-      },
-      {
-        "position": "03",
-        "name": "Date Time Period Format Qualifier",
-        "requirement": "C",
-        "type": "1250"
-      },
-      {
-        "position": "04",
-        "name": "Date Time Period",
-        "requirement": "C",
-        "type": "1251"
-      },
-      {
-        "position": "05",
-        "name": "Monetary Amount",
-        "requirement": "O",
-        "type": "782"
-      },
-      {
-        "position": "06",
-        "name": "Quantity",
-        "requirement": "O",
-        "type": "380"
-      },
-      {
-        "position": "07",
-        "name": "Version Identifier",
-        "requirement": "O",
-        "type": "799"
-      },
-      {
-        "position": "08",
-        "name": "Industry Code",
-        "requirement": "C",
-        "type": "1271"
-      },
-      {
-        "position": "09",
-        "name": "Industry Code",
-        "requirement": "C",
-        "type": "1271"
-      },
-      {
-        "position": "01",
-        "name": "Code List Qualifier Code",
-        "requirement": "M",
-        "type": "1270"
-      },
-      {
-        "position": "02",
-        "name": "Industry Code",
-        "requirement": "M",
-        "type": "1271"
-      },
-      {
-        "position": "03",
-        "name": "Date Time Period Format Qualifier",
-        "requirement": "C",
-        "type": "1250"
-      },
-      {
-        "position": "04",
-        "name": "Date Time Period",
-        "requirement": "C",
-        "type": "1251"
-      },
-      {
-        "position": "05",
-        "name": "Monetary Amount",
-        "requirement": "O",
-        "type": "782"
-      },
-      {
-        "position": "06",
-        "name": "Quantity",
-        "requirement": "O",
-        "type": "380"
-      },
-      {
-        "position": "07",
-        "name": "Version Identifier",
-        "requirement": "O",
-        "type": "799"
-      },
-      {
-        "position": "08",
-        "name": "Industry Code",
-        "requirement": "C",
-        "type": "1271"
-      },
-      {
-        "position": "09",
-        "name": "Industry Code",
-        "requirement": "C",
-        "type": "1271"
-      },
-      {
-        "position": "01",
-        "name": "Code List Qualifier Code",
-        "requirement": "M",
-        "type": "1270"
-      },
-      {
-        "position": "02",
-        "name": "Industry Code",
-        "requirement": "M",
-        "type": "1271"
-      },
-      {
-        "position": "03",
-        "name": "Date Time Period Format Qualifier",
-        "requirement": "C",
-        "type": "1250"
-      },
-      {
-        "position": "04",
-        "name": "Date Time Period",
-        "requirement": "C",
-        "type": "1251"
-      },
-      {
-        "position": "05",
-        "name": "Monetary Amount",
-        "requirement": "O",
-        "type": "782"
-      },
-      {
-        "position": "06",
-        "name": "Quantity",
-        "requirement": "O",
-        "type": "380"
-      },
-      {
-        "position": "07",
-        "name": "Version Identifier",
-        "requirement": "O",
-        "type": "799"
-      },
-      {
-        "position": "08",
-        "name": "Industry Code",
-        "requirement": "C",
-        "type": "1271"
-      },
-      {
-        "position": "09",
-        "name": "Industry Code",
-        "requirement": "C",
-        "type": "1271"
-      },
-      {
-        "position": "01",
-        "name": "Code List Qualifier Code",
-        "requirement": "M",
-        "type": "1270"
-      },
-      {
-        "position": "02",
-        "name": "Industry Code",
-        "requirement": "M",
-        "type": "1271"
-      },
-      {
-        "position": "03",
-        "name": "Date Time Period Format Qualifier",
-        "requirement": "C",
-        "type": "1250"
-      },
-      {
-        "position": "04",
-        "name": "Date Time Period",
-        "requirement": "C",
-        "type": "1251"
-      },
-      {
-        "position": "05",
-        "name": "Monetary Amount",
-        "requirement": "O",
-        "type": "782"
-      },
-      {
-        "position": "06",
-        "name": "Quantity",
-        "requirement": "O",
-        "type": "380"
-      },
-      {
-        "position": "07",
-        "name": "Version Identifier",
-        "requirement": "O",
-        "type": "799"
-      },
-      {
-        "position": "08",
-        "name": "Industry Code",
-        "requirement": "C",
-        "type": "1271"
-      },
-      {
-        "position": "09",
-        "name": "Industry Code",
-        "requirement": "C",
-        "type": "1271"
+        "type": "C022"
       }
     ]
   },
@@ -30092,94 +28820,10 @@
         "type": "1216"
       },
       {
-        "position": "01",
-        "name": "Medicare Plan Code",
-        "requirement": "M",
-        "type": "1218"
-      },
-      {
-        "position": "02",
-        "name": "Eligibility Reason Code",
+        "position": "06",
+        "name": "Medicare Status Code",
         "requirement": "O",
-        "type": "1701"
-      },
-      {
-        "position": "03",
-        "name": "Eligibility Reason Code",
-        "requirement": "O",
-        "type": "1701"
-      },
-      {
-        "position": "04",
-        "name": "Eligibility Reason Code",
-        "requirement": "O",
-        "type": "1701"
-      },
-      {
-        "position": "07",
-        "name": "Consolidated Omnibus Budget Reconciliation Act (COBRA) Qualifying Event Code",
-        "requirement": "O",
-        "type": "1219"
-      },
-      {
-        "position": "08",
-        "name": "Employment Status Code",
-        "requirement": "O",
-        "type": "584"
-      },
-      {
-        "position": "09",
-        "name": "Student Status Code",
-        "requirement": "O",
-        "type": "1220"
-      },
-      {
-        "position": "10",
-        "name": "Yes/No Condition or Response Code",
-        "requirement": "O",
-        "type": "1073"
-      },
-      {
-        "position": "11",
-        "name": "Date Time Period Format Qualifier",
-        "requirement": "C",
-        "type": "1250"
-      },
-      {
-        "position": "12",
-        "name": "Date Time Period",
-        "requirement": "C",
-        "type": "1251"
-      },
-      {
-        "position": "13",
-        "name": "Confidentiality Code",
-        "requirement": "O",
-        "type": "1165"
-      },
-      {
-        "position": "14",
-        "name": "City Name",
-        "requirement": "O",
-        "type": "19"
-      },
-      {
-        "position": "15",
-        "name": "State or Province Code",
-        "requirement": "O",
-        "type": "156"
-      },
-      {
-        "position": "16",
-        "name": "Country Code",
-        "requirement": "O",
-        "type": "26"
-      },
-      {
-        "position": "17",
-        "name": "Number",
-        "requirement": "O",
-        "type": "1470"
+        "type": "C052"
       }
     ]
   },
@@ -30287,34 +28931,10 @@
         "type": "1550"
       },
       {
-        "position": "01",
-        "name": "Configuration Type Code",
-        "requirement": "O",
-        "type": "1395"
-      },
-      {
         "position": "02",
-        "name": "Reference Identification",
-        "requirement": "C",
-        "type": "127"
-      },
-      {
-        "position": "03",
-        "name": "Reference Identification",
-        "requirement": "C",
-        "type": "127"
-      },
-      {
-        "position": "04",
-        "name": "X-Peg",
-        "requirement": "C",
-        "type": "863"
-      },
-      {
-        "position": "05",
-        "name": "Y-Peg",
-        "requirement": "C",
-        "type": "864"
+        "name": "Index Identification",
+        "requirement": "O",
+        "type": "C036"
       }
     ]
   },
@@ -30831,34 +29451,10 @@
         "type": "1131"
       },
       {
-        "position": "01",
-        "name": "Race or Ethnicity Code",
+        "position": "04",
+        "name": "Composite Race or Ethnicity Information",
         "requirement": "O",
-        "type": "1109"
-      },
-      {
-        "position": "02",
-        "name": "Code List Qualifier Code",
-        "requirement": "C",
-        "type": "1270"
-      },
-      {
-        "position": "03",
-        "name": "Industry Code",
-        "requirement": "C",
-        "type": "1271"
-      },
-      {
-        "position": "05",
-        "name": "Quantity",
-        "requirement": "O",
-        "type": "380"
-      },
-      {
-        "position": "06",
-        "name": "Yes/No Condition or Response Code",
-        "requirement": "O",
-        "type": "1073"
+        "type": "C056"
       }
     ]
   },
@@ -34679,58 +33275,10 @@
         "type": "93"
       },
       {
-        "position": "01",
-        "name": "Reference Identification Qualifier",
-        "requirement": "M",
-        "type": "128"
-      },
-      {
-        "position": "02",
-        "name": "Reference Identification",
-        "requirement": "M",
-        "type": "127"
-      },
-      {
-        "position": "03",
-        "name": "Reference Identification Qualifier",
-        "requirement": "C",
-        "type": "128"
-      },
-      {
-        "position": "04",
-        "name": "Reference Identification",
-        "requirement": "C",
-        "type": "127"
-      },
-      {
-        "position": "05",
-        "name": "Reference Identification Qualifier",
-        "requirement": "C",
-        "type": "128"
-      },
-      {
-        "position": "06",
-        "name": "Reference Identification",
-        "requirement": "C",
-        "type": "127"
-      },
-      {
-        "position": "10",
-        "name": "Quantity Qualifier",
-        "requirement": "C",
-        "type": "673"
-      },
-      {
-        "position": "11",
-        "name": "Quantity",
+        "position": "09",
+        "name": "Reference Identifier",
         "requirement": "O",
-        "type": "380"
-      },
-      {
-        "position": "12",
-        "name": "Quantity",
-        "requirement": "O",
-        "type": "380"
+        "type": "C040"
       }
     ]
   },
@@ -35560,94 +34108,10 @@
         "type": "1081"
       },
       {
-        "position": "01",
-        "name": "Use of Proceeds Code",
-        "requirement": "M",
-        "type": "1082"
-      },
-      {
-        "position": "02",
-        "name": "Refinance Type Code",
+        "position": "10",
+        "name": "Composite Use of Proceeds",
         "requirement": "O",
-        "type": "1680"
-      },
-      {
-        "position": "03",
-        "name": "Use of Proceeds Code",
-        "requirement": "O",
-        "type": "1082"
-      },
-      {
-        "position": "04",
-        "name": "Yes/No Condition or Response Code",
-        "requirement": "O",
-        "type": "1073"
-      },
-      {
-        "position": "11",
-        "name": "Monetary Amount",
-        "requirement": "O",
-        "type": "782"
-      },
-      {
-        "position": "12",
-        "name": "Monetary Amount",
-        "requirement": "O",
-        "type": "782"
-      },
-      {
-        "position": "13",
-        "name": "Description",
-        "requirement": "O",
-        "type": "352"
-      },
-      {
-        "position": "14",
-        "name": "Description",
-        "requirement": "O",
-        "type": "352"
-      },
-      {
-        "position": "15",
-        "name": "Real Estate Loan Type Code",
-        "requirement": "O",
-        "type": "1093"
-      },
-      {
-        "position": "16",
-        "name": "Description",
-        "requirement": "O",
-        "type": "352"
-      },
-      {
-        "position": "17",
-        "name": "Loan Payment Type Code",
-        "requirement": "O",
-        "type": "1085"
-      },
-      {
-        "position": "18",
-        "name": "Description",
-        "requirement": "O",
-        "type": "352"
-      },
-      {
-        "position": "19",
-        "name": "Number",
-        "requirement": "O",
-        "type": "1470"
-      },
-      {
-        "position": "20",
-        "name": "Description",
-        "requirement": "O",
-        "type": "352"
-      },
-      {
-        "position": "21",
-        "name": "Code Category",
-        "requirement": "O",
-        "type": "1136"
+        "type": "C048"
       }
     ]
   },
@@ -35956,28 +34420,10 @@
         "type": "1081"
       },
       {
-        "position": "01",
-        "name": "Use of Proceeds Code",
-        "requirement": "M",
-        "type": "1082"
-      },
-      {
-        "position": "02",
-        "name": "Refinance Type Code",
-        "requirement": "O",
-        "type": "1680"
-      },
-      {
         "position": "03",
-        "name": "Use of Proceeds Code",
+        "name": "Composite Use of Proceeds",
         "requirement": "O",
-        "type": "1082"
-      },
-      {
-        "position": "04",
-        "name": "Yes/No Condition or Response Code",
-        "requirement": "O",
-        "type": "1073"
+        "type": "C048"
       },
       {
         "position": "04",
@@ -38244,52 +36690,10 @@
         "type": "546"
       },
       {
-        "position": "01",
-        "name": "Tax Service Non-payment Code",
-        "requirement": "M",
-        "type": "1720"
-      },
-      {
-        "position": "02",
-        "name": "Tax Service Non-payment Code",
-        "requirement": "O",
-        "type": "1720"
-      },
-      {
-        "position": "03",
-        "name": "Tax Service Non-payment Code",
-        "requirement": "O",
-        "type": "1720"
-      },
-      {
-        "position": "04",
-        "name": "Tax Service Non-payment Code",
-        "requirement": "O",
-        "type": "1720"
-      },
-      {
-        "position": "05",
-        "name": "Tax Service Non-payment Code",
-        "requirement": "O",
-        "type": "1720"
-      },
-      {
-        "position": "06",
-        "name": "Tax Service Non-payment Code",
-        "requirement": "O",
-        "type": "1720"
-      },
-      {
         "position": "07",
-        "name": "Tax Service Non-payment Code",
+        "name": "Tax Service Non-payment Exception Code",
         "requirement": "O",
-        "type": "1720"
-      },
-      {
-        "position": "08",
-        "name": "Tax Service Non-payment Code",
-        "requirement": "O",
-        "type": "1720"
+        "type": "C055"
       },
       {
         "position": "08",
@@ -39864,40 +38268,10 @@
         "type": "623"
       },
       {
-        "position": "01",
-        "name": "Reference Identification Qualifier",
-        "requirement": "M",
-        "type": "128"
-      },
-      {
-        "position": "02",
-        "name": "Reference Identification",
-        "requirement": "M",
-        "type": "127"
-      },
-      {
-        "position": "03",
-        "name": "Reference Identification Qualifier",
-        "requirement": "C",
-        "type": "128"
-      },
-      {
-        "position": "04",
-        "name": "Reference Identification",
-        "requirement": "C",
-        "type": "127"
-      },
-      {
-        "position": "05",
-        "name": "Reference Identification Qualifier",
-        "requirement": "C",
-        "type": "128"
-      },
-      {
-        "position": "06",
-        "name": "Reference Identification",
-        "requirement": "C",
-        "type": "127"
+        "position": "07",
+        "name": "Reference Identifier",
+        "requirement": "O",
+        "type": "C040"
       }
     ]
   },
@@ -40585,100 +38959,100 @@
         "type": "1132"
       },
       {
-        "position": "01",
+        "position": "05",
         "name": "Unit or Basis for Measurement Code",
         "requirement": "M",
         "type": "355"
       },
       {
-        "position": "02",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "03",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "04",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "05",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
         "position": "06",
-        "name": "Multiplier",
+        "name": "Exponent",
         "requirement": "O",
-        "type": "649"
+        "type": "1018"
       },
       {
         "position": "07",
-        "name": "Unit or Basis for Measurement Code",
+        "name": "Multiplier",
         "requirement": "O",
-        "type": "355"
+        "type": "649"
       },
       {
         "position": "08",
-        "name": "Exponent",
+        "name": "Unit or Basis for Measurement Code",
         "requirement": "O",
-        "type": "1018"
+        "type": "355"
       },
       {
         "position": "09",
-        "name": "Multiplier",
+        "name": "Exponent",
         "requirement": "O",
-        "type": "649"
+        "type": "1018"
       },
       {
         "position": "10",
-        "name": "Unit or Basis for Measurement Code",
+        "name": "Multiplier",
         "requirement": "O",
-        "type": "355"
+        "type": "649"
       },
       {
         "position": "11",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "12",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "13",
         "name": "Unit or Basis for Measurement Code",
         "requirement": "O",
         "type": "355"
       },
       {
-        "position": "14",
+        "position": "12",
         "name": "Exponent",
         "requirement": "O",
         "type": "1018"
       },
       {
-        "position": "15",
+        "position": "13",
         "name": "Multiplier",
         "requirement": "O",
         "type": "649"
       },
       {
-        "position": "06",
-        "name": "Quantity",
-        "requirement": "C",
-        "type": "380"
+        "position": "14",
+        "name": "Unit or Basis for Measurement Code",
+        "requirement": "O",
+        "type": "355"
+      },
+      {
+        "position": "15",
+        "name": "Exponent",
+        "requirement": "O",
+        "type": "1018"
+      },
+      {
+        "position": "16",
+        "name": "Multiplier",
+        "requirement": "O",
+        "type": "649"
+      },
+      {
+        "position": "17",
+        "name": "Unit or Basis for Measurement Code",
+        "requirement": "O",
+        "type": "355"
+      },
+      {
+        "position": "18",
+        "name": "Exponent",
+        "requirement": "O",
+        "type": "1018"
+      },
+      {
+        "position": "19",
+        "name": "Multiplier",
+        "requirement": "O",
+        "type": "649"
+      },
+      {
+        "position": "20",
+        "name": "Change Quantities",
+        "requirement": "O",
+        "type": "C063"
       }
     ]
   },
@@ -42208,40 +40582,10 @@
         "type": "933"
       },
       {
-        "position": "01",
-        "name": "Reference Identification Qualifier",
-        "requirement": "M",
-        "type": "128"
-      },
-      {
-        "position": "02",
-        "name": "Reference Identification",
-        "requirement": "M",
-        "type": "127"
-      },
-      {
         "position": "03",
-        "name": "Reference Identification Qualifier",
-        "requirement": "C",
-        "type": "128"
-      },
-      {
-        "position": "04",
-        "name": "Reference Identification",
-        "requirement": "C",
-        "type": "127"
-      },
-      {
-        "position": "05",
-        "name": "Reference Identification Qualifier",
-        "requirement": "C",
-        "type": "128"
-      },
-      {
-        "position": "06",
-        "name": "Reference Identification",
-        "requirement": "C",
-        "type": "127"
+        "name": "Reference Identifier",
+        "requirement": "O",
+        "type": "C040"
       }
     ]
   },
@@ -43066,112 +41410,40 @@
         "type": "373"
       },
       {
-        "position": "01",
-        "name": "Adjustment Reason Code",
-        "requirement": "M",
-        "type": "426"
-      },
-      {
-        "position": "02",
-        "name": "Reference Identification",
+        "position": "03",
+        "name": "Adjustment Identifier",
         "requirement": "O",
-        "type": "127"
+        "type": "C042"
       },
       {
         "position": "04",
-        "name": "Monetary Amount",
-        "requirement": "M",
-        "type": "782"
-      },
-      {
-        "position": "01",
-        "name": "Adjustment Reason Code",
-        "requirement": "M",
-        "type": "426"
-      },
-      {
-        "position": "02",
-        "name": "Reference Identification",
+        "name": "Adjustment Identifier",
         "requirement": "O",
-        "type": "127"
+        "type": "C042"
+      },
+      {
+        "position": "05",
+        "name": "Adjustment Identifier",
+        "requirement": "O",
+        "type": "C042"
       },
       {
         "position": "06",
-        "name": "Monetary Amount",
-        "requirement": "C",
-        "type": "782"
-      },
-      {
-        "position": "01",
-        "name": "Adjustment Reason Code",
-        "requirement": "M",
-        "type": "426"
-      },
-      {
-        "position": "02",
-        "name": "Reference Identification",
+        "name": "Adjustment Identifier",
         "requirement": "O",
-        "type": "127"
+        "type": "C042"
+      },
+      {
+        "position": "07",
+        "name": "Adjustment Identifier",
+        "requirement": "O",
+        "type": "C042"
       },
       {
         "position": "08",
-        "name": "Monetary Amount",
-        "requirement": "C",
-        "type": "782"
-      },
-      {
-        "position": "01",
-        "name": "Adjustment Reason Code",
-        "requirement": "M",
-        "type": "426"
-      },
-      {
-        "position": "02",
-        "name": "Reference Identification",
+        "name": "Adjustment Identifier",
         "requirement": "O",
-        "type": "127"
-      },
-      {
-        "position": "10",
-        "name": "Monetary Amount",
-        "requirement": "C",
-        "type": "782"
-      },
-      {
-        "position": "01",
-        "name": "Adjustment Reason Code",
-        "requirement": "M",
-        "type": "426"
-      },
-      {
-        "position": "02",
-        "name": "Reference Identification",
-        "requirement": "O",
-        "type": "127"
-      },
-      {
-        "position": "12",
-        "name": "Monetary Amount",
-        "requirement": "C",
-        "type": "782"
-      },
-      {
-        "position": "01",
-        "name": "Adjustment Reason Code",
-        "requirement": "M",
-        "type": "426"
-      },
-      {
-        "position": "02",
-        "name": "Reference Identification",
-        "requirement": "O",
-        "type": "127"
-      },
-      {
-        "position": "14",
-        "name": "Monetary Amount",
-        "requirement": "C",
-        "type": "782"
+        "type": "C042"
       }
     ]
   },
@@ -43692,226 +41964,112 @@
         "type": "380"
       },
       {
-        "position": "01",
-        "name": "Quantity",
-        "requirement": "O",
-        "type": "380"
-      },
-      {
-        "position": "02",
-        "name": "Quantity",
-        "requirement": "C",
-        "type": "380"
-      },
-      {
-        "position": "03",
-        "name": "Quantity",
-        "requirement": "C",
-        "type": "380"
-      },
-      {
         "position": "04",
-        "name": "Quantity",
+        "name": "Change Quantities",
         "requirement": "O",
-        "type": "380"
+        "type": "C063"
       },
       {
         "position": "05",
-        "name": "Quantity",
-        "requirement": "O",
-        "type": "380"
-      },
-      {
-        "position": "06",
-        "name": "Quantity",
-        "requirement": "O",
-        "type": "380"
-      },
-      {
-        "position": "01",
         "name": "Unit or Basis for Measurement Code",
         "requirement": "M",
         "type": "355"
       },
       {
-        "position": "02",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "03",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "04",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "05",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
         "position": "06",
-        "name": "Multiplier",
+        "name": "Exponent",
         "requirement": "O",
-        "type": "649"
+        "type": "1018"
       },
       {
         "position": "07",
-        "name": "Unit or Basis for Measurement Code",
+        "name": "Multiplier",
         "requirement": "O",
-        "type": "355"
+        "type": "649"
       },
       {
         "position": "08",
-        "name": "Exponent",
+        "name": "Unit or Basis for Measurement Code",
         "requirement": "O",
-        "type": "1018"
+        "type": "355"
       },
       {
         "position": "09",
-        "name": "Multiplier",
+        "name": "Exponent",
         "requirement": "O",
-        "type": "649"
+        "type": "1018"
       },
       {
         "position": "10",
-        "name": "Unit or Basis for Measurement Code",
+        "name": "Multiplier",
         "requirement": "O",
-        "type": "355"
+        "type": "649"
       },
       {
         "position": "11",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "12",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "13",
         "name": "Unit or Basis for Measurement Code",
         "requirement": "O",
         "type": "355"
       },
       {
-        "position": "14",
+        "position": "12",
         "name": "Exponent",
         "requirement": "O",
         "type": "1018"
       },
       {
-        "position": "15",
+        "position": "13",
         "name": "Multiplier",
         "requirement": "O",
         "type": "649"
       },
       {
-        "position": "06",
+        "position": "14",
+        "name": "Unit or Basis for Measurement Code",
+        "requirement": "O",
+        "type": "355"
+      },
+      {
+        "position": "15",
+        "name": "Exponent",
+        "requirement": "O",
+        "type": "1018"
+      },
+      {
+        "position": "16",
+        "name": "Multiplier",
+        "requirement": "O",
+        "type": "649"
+      },
+      {
+        "position": "17",
+        "name": "Unit or Basis for Measurement Code",
+        "requirement": "O",
+        "type": "355"
+      },
+      {
+        "position": "18",
+        "name": "Exponent",
+        "requirement": "O",
+        "type": "1018"
+      },
+      {
+        "position": "19",
+        "name": "Multiplier",
+        "requirement": "O",
+        "type": "649"
+      },
+      {
+        "position": "20",
         "name": "Unit Price",
         "requirement": "C",
         "type": "212"
       },
       {
-        "position": "07",
+        "position": "21",
         "name": "Basis of Unit Price Code",
         "requirement": "O",
         "type": "639"
-      },
-      {
-        "position": "08",
-        "name": "Product/Service ID Qualifier",
-        "requirement": "C",
-        "type": "235"
-      },
-      {
-        "position": "09",
-        "name": "Product/Service ID",
-        "requirement": "C",
-        "type": "234"
-      },
-      {
-        "position": "10",
-        "name": "Product/Service ID Qualifier",
-        "requirement": "C",
-        "type": "235"
-      },
-      {
-        "position": "11",
-        "name": "Product/Service ID",
-        "requirement": "C",
-        "type": "234"
-      },
-      {
-        "position": "12",
-        "name": "Product/Service ID Qualifier",
-        "requirement": "C",
-        "type": "235"
-      },
-      {
-        "position": "13",
-        "name": "Product/Service ID",
-        "requirement": "C",
-        "type": "234"
-      },
-      {
-        "position": "14",
-        "name": "Product/Service ID Qualifier",
-        "requirement": "C",
-        "type": "235"
-      },
-      {
-        "position": "15",
-        "name": "Product/Service ID",
-        "requirement": "C",
-        "type": "234"
-      },
-      {
-        "position": "16",
-        "name": "Product/Service ID Qualifier",
-        "requirement": "C",
-        "type": "235"
-      },
-      {
-        "position": "17",
-        "name": "Product/Service ID",
-        "requirement": "C",
-        "type": "234"
-      },
-      {
-        "position": "18",
-        "name": "Product/Service ID Qualifier",
-        "requirement": "C",
-        "type": "235"
-      },
-      {
-        "position": "19",
-        "name": "Product/Service ID",
-        "requirement": "C",
-        "type": "234"
-      },
-      {
-        "position": "20",
-        "name": "Product/Service ID Qualifier",
-        "requirement": "C",
-        "type": "235"
-      },
-      {
-        "position": "21",
-        "name": "Product/Service ID",
-        "requirement": "C",
-        "type": "234"
       },
       {
         "position": "22",
@@ -43945,6 +42103,90 @@
       },
       {
         "position": "27",
+        "name": "Product/Service ID",
+        "requirement": "C",
+        "type": "234"
+      },
+      {
+        "position": "28",
+        "name": "Product/Service ID Qualifier",
+        "requirement": "C",
+        "type": "235"
+      },
+      {
+        "position": "29",
+        "name": "Product/Service ID",
+        "requirement": "C",
+        "type": "234"
+      },
+      {
+        "position": "30",
+        "name": "Product/Service ID Qualifier",
+        "requirement": "C",
+        "type": "235"
+      },
+      {
+        "position": "31",
+        "name": "Product/Service ID",
+        "requirement": "C",
+        "type": "234"
+      },
+      {
+        "position": "32",
+        "name": "Product/Service ID Qualifier",
+        "requirement": "C",
+        "type": "235"
+      },
+      {
+        "position": "33",
+        "name": "Product/Service ID",
+        "requirement": "C",
+        "type": "234"
+      },
+      {
+        "position": "34",
+        "name": "Product/Service ID Qualifier",
+        "requirement": "C",
+        "type": "235"
+      },
+      {
+        "position": "35",
+        "name": "Product/Service ID",
+        "requirement": "C",
+        "type": "234"
+      },
+      {
+        "position": "36",
+        "name": "Product/Service ID Qualifier",
+        "requirement": "C",
+        "type": "235"
+      },
+      {
+        "position": "37",
+        "name": "Product/Service ID",
+        "requirement": "C",
+        "type": "234"
+      },
+      {
+        "position": "38",
+        "name": "Product/Service ID Qualifier",
+        "requirement": "C",
+        "type": "235"
+      },
+      {
+        "position": "39",
+        "name": "Product/Service ID",
+        "requirement": "C",
+        "type": "234"
+      },
+      {
+        "position": "40",
+        "name": "Product/Service ID Qualifier",
+        "requirement": "C",
+        "type": "235"
+      },
+      {
+        "position": "41",
         "name": "Product/Service ID",
         "requirement": "C",
         "type": "234"
@@ -45085,28 +43327,10 @@
         "type": "156"
       },
       {
-        "position": "01",
-        "name": "Provider Specialty Code",
-        "requirement": "M",
-        "type": "1222"
-      },
-      {
-        "position": "02",
-        "name": "Agency Qualifier Code",
+        "position": "05",
+        "name": "Provider Specialty Information",
         "requirement": "O",
-        "type": "559"
-      },
-      {
-        "position": "03",
-        "name": "Yes/No Condition or Response Code",
-        "requirement": "O",
-        "type": "1073"
-      },
-      {
-        "position": "06",
-        "name": "Provider Organization Code",
-        "requirement": "O",
-        "type": "1223"
+        "type": "C035"
       }
     ]
   },
@@ -46171,52 +44395,10 @@
         "type": "352"
       },
       {
-        "position": "01",
-        "name": "Paperwork/Report Action Code",
-        "requirement": "M",
-        "type": "704"
-      },
-      {
-        "position": "02",
-        "name": "Paperwork/Report Action Code",
+        "position": "08",
+        "name": "Actions Indicated",
         "requirement": "O",
-        "type": "704"
-      },
-      {
-        "position": "03",
-        "name": "Paperwork/Report Action Code",
-        "requirement": "O",
-        "type": "704"
-      },
-      {
-        "position": "04",
-        "name": "Paperwork/Report Action Code",
-        "requirement": "O",
-        "type": "704"
-      },
-      {
-        "position": "05",
-        "name": "Paperwork/Report Action Code",
-        "requirement": "O",
-        "type": "704"
-      },
-      {
-        "position": "09",
-        "name": "Request Category Code",
-        "requirement": "O",
-        "type": "1525"
-      },
-      {
-        "position": "10",
-        "name": "Code List Qualifier Code",
-        "requirement": "C",
-        "type": "1270"
-      },
-      {
-        "position": "11",
-        "name": "Industry Code",
-        "requirement": "C",
-        "type": "1271"
+        "type": "C002"
       }
     ]
   },
@@ -47708,52 +45890,16 @@
         "type": "1033"
       },
       {
-        "position": "01",
-        "name": "Claim Adjustment Reason Code",
-        "requirement": "M",
-        "type": "1034"
-      },
-      {
-        "position": "02",
-        "name": "Code List Qualifier Code",
-        "requirement": "C",
-        "type": "1270"
-      },
-      {
         "position": "03",
-        "name": "Industry Code",
-        "requirement": "C",
-        "type": "1271"
+        "name": "Adjustment Reason",
+        "requirement": "O",
+        "type": "C058"
       },
       {
         "position": "04",
-        "name": "Industry Code",
-        "requirement": "C",
-        "type": "1271"
-      },
-      {
-        "position": "05",
-        "name": "Industry Code",
-        "requirement": "C",
-        "type": "1271"
-      },
-      {
-        "position": "06",
-        "name": "Industry Code",
-        "requirement": "C",
-        "type": "1271"
-      },
-      {
-        "position": "07",
-        "name": "Industry Code",
+        "name": "Change Quantities",
         "requirement": "O",
-        "type": "1271"
-      },
-      {
-        "position": "04",
-        "name": "Quantity",
-        "requirement": "O",
-        "type": "380"
+        "type": "C063"
       }
     ]
   },
@@ -48693,76 +46839,16 @@
         "type": "364"
       },
       {
-        "position": "01",
-        "name": "Reference Identification Qualifier",
-        "requirement": "M",
-        "type": "128"
-      },
-      {
-        "position": "02",
-        "name": "Reference Identification",
-        "requirement": "M",
-        "type": "127"
-      },
-      {
-        "position": "03",
-        "name": "Reference Identification Qualifier",
-        "requirement": "C",
-        "type": "128"
-      },
-      {
         "position": "04",
-        "name": "Reference Identification",
-        "requirement": "C",
-        "type": "127"
+        "name": "Reference Identifier",
+        "requirement": "O",
+        "type": "C040"
       },
       {
         "position": "05",
-        "name": "Reference Identification Qualifier",
-        "requirement": "C",
-        "type": "128"
-      },
-      {
-        "position": "06",
-        "name": "Reference Identification",
-        "requirement": "C",
-        "type": "127"
-      },
-      {
-        "position": "01",
-        "name": "Reference Identification Qualifier",
-        "requirement": "M",
-        "type": "128"
-      },
-      {
-        "position": "02",
-        "name": "Reference Identification",
-        "requirement": "M",
-        "type": "127"
-      },
-      {
-        "position": "03",
-        "name": "Reference Identification Qualifier",
-        "requirement": "C",
-        "type": "128"
-      },
-      {
-        "position": "04",
-        "name": "Reference Identification",
-        "requirement": "C",
-        "type": "127"
-      },
-      {
-        "position": "05",
-        "name": "Reference Identification Qualifier",
-        "requirement": "C",
-        "type": "128"
-      },
-      {
-        "position": "06",
-        "name": "Reference Identification",
-        "requirement": "C",
-        "type": "127"
+        "name": "Reference Identifier",
+        "requirement": "O",
+        "type": "C040"
       }
     ]
   },
@@ -49281,40 +47367,10 @@
         "type": "352"
       },
       {
-        "position": "01",
-        "name": "Reference Identification Qualifier",
-        "requirement": "M",
-        "type": "128"
-      },
-      {
-        "position": "02",
-        "name": "Reference Identification",
-        "requirement": "M",
-        "type": "127"
-      },
-      {
-        "position": "03",
-        "name": "Reference Identification Qualifier",
-        "requirement": "C",
-        "type": "128"
-      },
-      {
         "position": "04",
-        "name": "Reference Identification",
-        "requirement": "C",
-        "type": "127"
-      },
-      {
-        "position": "05",
-        "name": "Reference Identification Qualifier",
-        "requirement": "C",
-        "type": "128"
-      },
-      {
-        "position": "06",
-        "name": "Reference Identification",
-        "requirement": "C",
-        "type": "127"
+        "name": "Reference Identifier",
+        "requirement": "O",
+        "type": "C040"
       }
     ]
   },
@@ -51089,244 +49145,22 @@
         "type": "1432"
       },
       {
-        "position": "01",
-        "name": "Assurance Algorithm",
-        "requirement": "M",
-        "type": "1574"
-      },
-      {
-        "position": "02",
-        "name": "Hashing Algorithm",
-        "requirement": "M",
-        "type": "1575"
-      },
-      {
-        "position": "04",
-        "name": "Domain of Computation of Assurance",
-        "requirement": "M",
-        "type": "1434"
-      },
-      {
-        "position": "05",
-        "name": "Assurance Originator",
-        "requirement": "O",
-        "type": "1435"
-      },
-      {
-        "position": "06",
-        "name": "Assurance Recipient",
-        "requirement": "O",
-        "type": "1436"
-      },
-      {
-        "position": "07",
-        "name": "Assurance Reference Number",
-        "requirement": "O",
-        "type": "1443"
-      },
-      {
-        "position": "08",
-        "name": "Date Time Stamp",
-        "requirement": "O",
-        "type": "1437"
-      },
-      {
-        "position": "09",
-        "name": "Assurance Text",
-        "requirement": "O",
-        "type": "1438"
-      },
-      {
-        "position": "01",
-        "name": "Look-up Value Protocol Code",
-        "requirement": "M",
-        "type": "1675"
-      },
-      {
-        "position": "02",
-        "name": "Filter ID Code",
-        "requirement": "M",
-        "type": "1570"
-      },
-      {
         "position": "03",
-        "name": "Version Identifier",
-        "requirement": "M",
-        "type": "799"
+        "name": "Computation Methods",
+        "requirement": "O",
+        "type": "C034"
       },
       {
         "position": "04",
-        "name": "Look-up Value",
-        "requirement": "M",
-        "type": "1565"
+        "name": "Certificate Look-up Information",
+        "requirement": "O",
+        "type": "C050"
       },
       {
         "position": "05",
-        "name": "Look-up Value Protocol Code",
-        "requirement": "C",
-        "type": "1675"
-      },
-      {
-        "position": "06",
-        "name": "Filter ID Code",
-        "requirement": "C",
-        "type": "1570"
-      },
-      {
-        "position": "07",
-        "name": "Version Identifier",
-        "requirement": "C",
-        "type": "799"
-      },
-      {
-        "position": "08",
-        "name": "Look-up Value",
-        "requirement": "C",
-        "type": "1565"
-      },
-      {
-        "position": "09",
-        "name": "Look-up Value Protocol Code",
-        "requirement": "C",
-        "type": "1675"
-      },
-      {
-        "position": "10",
-        "name": "Filter ID Code",
-        "requirement": "C",
-        "type": "1570"
-      },
-      {
-        "position": "11",
-        "name": "Version Identifier",
-        "requirement": "C",
-        "type": "799"
-      },
-      {
-        "position": "12",
-        "name": "Look-up Value",
-        "requirement": "C",
-        "type": "1565"
-      },
-      {
-        "position": "01",
-        "name": "Assurance Token Parameter Code",
-        "requirement": "M",
-        "type": "1439"
-      },
-      {
-        "position": "02",
-        "name": "Assurance Token Parameter Value",
-        "requirement": "M",
-        "type": "1442"
-      },
-      {
-        "position": "03",
-        "name": "Assurance Token Parameter Code",
-        "requirement": "C",
-        "type": "1439"
-      },
-      {
-        "position": "04",
-        "name": "Assurance Token Parameter Value",
+        "name": "Assurance Token Parameters",
         "requirement": "O",
-        "type": "1442"
-      },
-      {
-        "position": "05",
-        "name": "Assurance Token Parameter Code",
-        "requirement": "C",
-        "type": "1439"
-      },
-      {
-        "position": "06",
-        "name": "Assurance Token Parameter Value",
-        "requirement": "O",
-        "type": "1442"
-      },
-      {
-        "position": "07",
-        "name": "Assurance Token Parameter Code",
-        "requirement": "C",
-        "type": "1439"
-      },
-      {
-        "position": "08",
-        "name": "Assurance Token Parameter Value",
-        "requirement": "O",
-        "type": "1442"
-      },
-      {
-        "position": "09",
-        "name": "Assurance Token Parameter Code",
-        "requirement": "C",
-        "type": "1439"
-      },
-      {
-        "position": "10",
-        "name": "Assurance Token Parameter Value",
-        "requirement": "O",
-        "type": "1442"
-      },
-      {
-        "position": "11",
-        "name": "Assurance Token Parameter Code",
-        "requirement": "C",
-        "type": "1439"
-      },
-      {
-        "position": "12",
-        "name": "Assurance Token Parameter Value",
-        "requirement": "O",
-        "type": "1442"
-      },
-      {
-        "position": "13",
-        "name": "Assurance Token Parameter Code",
-        "requirement": "C",
-        "type": "1439"
-      },
-      {
-        "position": "14",
-        "name": "Assurance Token Parameter Value",
-        "requirement": "O",
-        "type": "1442"
-      },
-      {
-        "position": "15",
-        "name": "Assurance Token Parameter Code",
-        "requirement": "C",
-        "type": "1439"
-      },
-      {
-        "position": "16",
-        "name": "Assurance Token Parameter Value",
-        "requirement": "O",
-        "type": "1442"
-      },
-      {
-        "position": "17",
-        "name": "Assurance Token Parameter Code",
-        "requirement": "C",
-        "type": "1439"
-      },
-      {
-        "position": "18",
-        "name": "Assurance Token Parameter Value",
-        "requirement": "O",
-        "type": "1442"
-      },
-      {
-        "position": "19",
-        "name": "Assurance Token Parameter Code",
-        "requirement": "C",
-        "type": "1439"
-      },
-      {
-        "position": "20",
-        "name": "Assurance Token Parameter Value",
-        "requirement": "O",
-        "type": "1442"
+        "type": "C028"
       }
     ]
   },
@@ -51385,160 +49219,22 @@
         "type": "992"
       },
       {
-        "position": "01",
-        "name": "Look-up Value Protocol Code",
-        "requirement": "M",
-        "type": "1675"
-      },
-      {
-        "position": "02",
-        "name": "Filter ID Code",
-        "requirement": "M",
-        "type": "1570"
-      },
-      {
-        "position": "03",
-        "name": "Version Identifier",
-        "requirement": "M",
-        "type": "799"
-      },
-      {
-        "position": "04",
-        "name": "Look-up Value",
-        "requirement": "M",
-        "type": "1565"
-      },
-      {
-        "position": "05",
-        "name": "Look-up Value Protocol Code",
-        "requirement": "C",
-        "type": "1675"
-      },
-      {
-        "position": "06",
-        "name": "Filter ID Code",
-        "requirement": "C",
-        "type": "1570"
-      },
-      {
         "position": "07",
-        "name": "Version Identifier",
-        "requirement": "C",
-        "type": "799"
+        "name": "Certificate Look-up Information",
+        "requirement": "O",
+        "type": "C050"
       },
       {
         "position": "08",
-        "name": "Look-up Value",
-        "requirement": "C",
-        "type": "1565"
+        "name": "Encryption Key Information",
+        "requirement": "O",
+        "type": "C031"
       },
       {
         "position": "09",
-        "name": "Look-up Value Protocol Code",
-        "requirement": "C",
-        "type": "1675"
-      },
-      {
-        "position": "10",
-        "name": "Filter ID Code",
-        "requirement": "C",
-        "type": "1570"
-      },
-      {
-        "position": "11",
-        "name": "Version Identifier",
-        "requirement": "C",
-        "type": "799"
-      },
-      {
-        "position": "12",
-        "name": "Look-up Value",
-        "requirement": "C",
-        "type": "1565"
-      },
-      {
-        "position": "01",
-        "name": "Encryption Key Name",
-        "requirement": "M",
-        "type": "993"
-      },
-      {
-        "position": "02",
-        "name": "Protocol ID",
+        "name": "Encryption Service Information",
         "requirement": "O",
-        "type": "1564"
-      },
-      {
-        "position": "03",
-        "name": "Keying Material",
-        "requirement": "O",
-        "type": "1566"
-      },
-      {
-        "position": "04",
-        "name": "One-time Encryption Key",
-        "requirement": "O",
-        "type": "1567"
-      },
-      {
-        "position": "01",
-        "name": "Encryption Service Code",
-        "requirement": "M",
-        "type": "994"
-      },
-      {
-        "position": "02",
-        "name": "Algorithm ID",
-        "requirement": "O",
-        "type": "1568"
-      },
-      {
-        "position": "03",
-        "name": "Algorithm Mode of Operation",
-        "requirement": "O",
-        "type": "1569"
-      },
-      {
-        "position": "04",
-        "name": "Filter ID Code",
-        "requirement": "C",
-        "type": "1570"
-      },
-      {
-        "position": "05",
-        "name": "Version Identifier",
-        "requirement": "C",
-        "type": "799"
-      },
-      {
-        "position": "06",
-        "name": "Compression ID",
-        "requirement": "C",
-        "type": "1571"
-      },
-      {
-        "position": "07",
-        "name": "Version Identifier",
-        "requirement": "C",
-        "type": "799"
-      },
-      {
-        "position": "08",
-        "name": "Length of Initialization Vector",
-        "requirement": "O",
-        "type": "1704"
-      },
-      {
-        "position": "10",
-        "name": "Length of Data",
-        "requirement": "C",
-        "type": "995"
-      },
-      {
-        "position": "11",
-        "name": "Transformed Data",
-        "requirement": "C",
-        "type": "1700"
+        "type": "C032"
       }
     ]
   },
@@ -51560,244 +49256,22 @@
         "type": "1432"
       },
       {
-        "position": "01",
-        "name": "Assurance Algorithm",
-        "requirement": "M",
-        "type": "1574"
-      },
-      {
-        "position": "02",
-        "name": "Hashing Algorithm",
-        "requirement": "M",
-        "type": "1575"
-      },
-      {
-        "position": "04",
-        "name": "Domain of Computation of Assurance",
-        "requirement": "M",
-        "type": "1434"
-      },
-      {
-        "position": "05",
-        "name": "Assurance Originator",
-        "requirement": "O",
-        "type": "1435"
-      },
-      {
-        "position": "06",
-        "name": "Assurance Recipient",
-        "requirement": "O",
-        "type": "1436"
-      },
-      {
-        "position": "07",
-        "name": "Assurance Reference Number",
-        "requirement": "O",
-        "type": "1443"
-      },
-      {
-        "position": "08",
-        "name": "Date Time Stamp",
-        "requirement": "O",
-        "type": "1437"
-      },
-      {
-        "position": "09",
-        "name": "Assurance Text",
-        "requirement": "O",
-        "type": "1438"
-      },
-      {
-        "position": "01",
-        "name": "Look-up Value Protocol Code",
-        "requirement": "M",
-        "type": "1675"
-      },
-      {
-        "position": "02",
-        "name": "Filter ID Code",
-        "requirement": "M",
-        "type": "1570"
-      },
-      {
         "position": "03",
-        "name": "Version Identifier",
-        "requirement": "M",
-        "type": "799"
+        "name": "Computation Methods",
+        "requirement": "O",
+        "type": "C034"
       },
       {
         "position": "04",
-        "name": "Look-up Value",
-        "requirement": "M",
-        "type": "1565"
+        "name": "Certificate Look-up Information",
+        "requirement": "O",
+        "type": "C050"
       },
       {
         "position": "05",
-        "name": "Look-up Value Protocol Code",
-        "requirement": "C",
-        "type": "1675"
-      },
-      {
-        "position": "06",
-        "name": "Filter ID Code",
-        "requirement": "C",
-        "type": "1570"
-      },
-      {
-        "position": "07",
-        "name": "Version Identifier",
-        "requirement": "C",
-        "type": "799"
-      },
-      {
-        "position": "08",
-        "name": "Look-up Value",
-        "requirement": "C",
-        "type": "1565"
-      },
-      {
-        "position": "09",
-        "name": "Look-up Value Protocol Code",
-        "requirement": "C",
-        "type": "1675"
-      },
-      {
-        "position": "10",
-        "name": "Filter ID Code",
-        "requirement": "C",
-        "type": "1570"
-      },
-      {
-        "position": "11",
-        "name": "Version Identifier",
-        "requirement": "C",
-        "type": "799"
-      },
-      {
-        "position": "12",
-        "name": "Look-up Value",
-        "requirement": "C",
-        "type": "1565"
-      },
-      {
-        "position": "01",
-        "name": "Assurance Token Parameter Code",
-        "requirement": "M",
-        "type": "1439"
-      },
-      {
-        "position": "02",
-        "name": "Assurance Token Parameter Value",
-        "requirement": "M",
-        "type": "1442"
-      },
-      {
-        "position": "03",
-        "name": "Assurance Token Parameter Code",
-        "requirement": "C",
-        "type": "1439"
-      },
-      {
-        "position": "04",
-        "name": "Assurance Token Parameter Value",
+        "name": "Assurance Token Parameters",
         "requirement": "O",
-        "type": "1442"
-      },
-      {
-        "position": "05",
-        "name": "Assurance Token Parameter Code",
-        "requirement": "C",
-        "type": "1439"
-      },
-      {
-        "position": "06",
-        "name": "Assurance Token Parameter Value",
-        "requirement": "O",
-        "type": "1442"
-      },
-      {
-        "position": "07",
-        "name": "Assurance Token Parameter Code",
-        "requirement": "C",
-        "type": "1439"
-      },
-      {
-        "position": "08",
-        "name": "Assurance Token Parameter Value",
-        "requirement": "O",
-        "type": "1442"
-      },
-      {
-        "position": "09",
-        "name": "Assurance Token Parameter Code",
-        "requirement": "C",
-        "type": "1439"
-      },
-      {
-        "position": "10",
-        "name": "Assurance Token Parameter Value",
-        "requirement": "O",
-        "type": "1442"
-      },
-      {
-        "position": "11",
-        "name": "Assurance Token Parameter Code",
-        "requirement": "C",
-        "type": "1439"
-      },
-      {
-        "position": "12",
-        "name": "Assurance Token Parameter Value",
-        "requirement": "O",
-        "type": "1442"
-      },
-      {
-        "position": "13",
-        "name": "Assurance Token Parameter Code",
-        "requirement": "C",
-        "type": "1439"
-      },
-      {
-        "position": "14",
-        "name": "Assurance Token Parameter Value",
-        "requirement": "O",
-        "type": "1442"
-      },
-      {
-        "position": "15",
-        "name": "Assurance Token Parameter Code",
-        "requirement": "C",
-        "type": "1439"
-      },
-      {
-        "position": "16",
-        "name": "Assurance Token Parameter Value",
-        "requirement": "O",
-        "type": "1442"
-      },
-      {
-        "position": "17",
-        "name": "Assurance Token Parameter Code",
-        "requirement": "C",
-        "type": "1439"
-      },
-      {
-        "position": "18",
-        "name": "Assurance Token Parameter Value",
-        "requirement": "O",
-        "type": "1442"
-      },
-      {
-        "position": "19",
-        "name": "Assurance Token Parameter Code",
-        "requirement": "C",
-        "type": "1439"
-      },
-      {
-        "position": "20",
-        "name": "Assurance Token Parameter Value",
-        "requirement": "O",
-        "type": "1442"
+        "type": "C028"
       }
     ]
   },
@@ -51856,160 +49330,22 @@
         "type": "992"
       },
       {
-        "position": "01",
-        "name": "Look-up Value Protocol Code",
-        "requirement": "M",
-        "type": "1675"
-      },
-      {
-        "position": "02",
-        "name": "Filter ID Code",
-        "requirement": "M",
-        "type": "1570"
-      },
-      {
-        "position": "03",
-        "name": "Version Identifier",
-        "requirement": "M",
-        "type": "799"
-      },
-      {
-        "position": "04",
-        "name": "Look-up Value",
-        "requirement": "M",
-        "type": "1565"
-      },
-      {
-        "position": "05",
-        "name": "Look-up Value Protocol Code",
-        "requirement": "C",
-        "type": "1675"
-      },
-      {
-        "position": "06",
-        "name": "Filter ID Code",
-        "requirement": "C",
-        "type": "1570"
-      },
-      {
         "position": "07",
-        "name": "Version Identifier",
-        "requirement": "C",
-        "type": "799"
+        "name": "Certificate Look-up Information",
+        "requirement": "O",
+        "type": "C050"
       },
       {
         "position": "08",
-        "name": "Look-up Value",
-        "requirement": "C",
-        "type": "1565"
+        "name": "Encryption Key Information",
+        "requirement": "O",
+        "type": "C031"
       },
       {
         "position": "09",
-        "name": "Look-up Value Protocol Code",
-        "requirement": "C",
-        "type": "1675"
-      },
-      {
-        "position": "10",
-        "name": "Filter ID Code",
-        "requirement": "C",
-        "type": "1570"
-      },
-      {
-        "position": "11",
-        "name": "Version Identifier",
-        "requirement": "C",
-        "type": "799"
-      },
-      {
-        "position": "12",
-        "name": "Look-up Value",
-        "requirement": "C",
-        "type": "1565"
-      },
-      {
-        "position": "01",
-        "name": "Encryption Key Name",
-        "requirement": "M",
-        "type": "993"
-      },
-      {
-        "position": "02",
-        "name": "Protocol ID",
+        "name": "Encryption Service Information",
         "requirement": "O",
-        "type": "1564"
-      },
-      {
-        "position": "03",
-        "name": "Keying Material",
-        "requirement": "O",
-        "type": "1566"
-      },
-      {
-        "position": "04",
-        "name": "One-time Encryption Key",
-        "requirement": "O",
-        "type": "1567"
-      },
-      {
-        "position": "01",
-        "name": "Encryption Service Code",
-        "requirement": "M",
-        "type": "994"
-      },
-      {
-        "position": "02",
-        "name": "Algorithm ID",
-        "requirement": "O",
-        "type": "1568"
-      },
-      {
-        "position": "03",
-        "name": "Algorithm Mode of Operation",
-        "requirement": "O",
-        "type": "1569"
-      },
-      {
-        "position": "04",
-        "name": "Filter ID Code",
-        "requirement": "C",
-        "type": "1570"
-      },
-      {
-        "position": "05",
-        "name": "Version Identifier",
-        "requirement": "C",
-        "type": "799"
-      },
-      {
-        "position": "06",
-        "name": "Compression ID",
-        "requirement": "C",
-        "type": "1571"
-      },
-      {
-        "position": "07",
-        "name": "Version Identifier",
-        "requirement": "C",
-        "type": "799"
-      },
-      {
-        "position": "08",
-        "name": "Length of Initialization Vector",
-        "requirement": "O",
-        "type": "1704"
-      },
-      {
-        "position": "10",
-        "name": "Length of Data",
-        "requirement": "C",
-        "type": "995"
-      },
-      {
-        "position": "11",
-        "name": "Transformed Data",
-        "requirement": "C",
-        "type": "1700"
+        "type": "C032"
       }
     ]
   },
@@ -56300,129 +53636,21 @@
     "elements": [
       {
         "position": "01",
-        "name": "Industry Code",
-        "requirement": "M",
-        "type": "1271"
+        "name": "Health Care Claim Status",
+        "requirement": "O",
+        "type": "C043"
       },
       {
         "position": "02",
-        "name": "Industry Code",
-        "requirement": "M",
-        "type": "1271"
+        "name": "Health Care Claim Status",
+        "requirement": "O",
+        "type": "C043"
       },
       {
         "position": "03",
-        "name": "Entity Identifier Code",
+        "name": "Health Care Claim Status",
         "requirement": "O",
-        "type": "98"
-      },
-      {
-        "position": "04",
-        "name": "Code List Qualifier Code",
-        "requirement": "O",
-        "type": "1270"
-      },
-      {
-        "position": "02",
-        "name": "Date",
-        "requirement": "O",
-        "type": "373"
-      },
-      {
-        "position": "03",
-        "name": "Action Code",
-        "requirement": "O",
-        "type": "306"
-      },
-      {
-        "position": "04",
-        "name": "Monetary Amount",
-        "requirement": "O",
-        "type": "782"
-      },
-      {
-        "position": "05",
-        "name": "Monetary Amount",
-        "requirement": "O",
-        "type": "782"
-      },
-      {
-        "position": "06",
-        "name": "Date",
-        "requirement": "O",
-        "type": "373"
-      },
-      {
-        "position": "07",
-        "name": "Payment Method Code",
-        "requirement": "O",
-        "type": "591"
-      },
-      {
-        "position": "08",
-        "name": "Date",
-        "requirement": "O",
-        "type": "373"
-      },
-      {
-        "position": "09",
-        "name": "Check Number",
-        "requirement": "O",
-        "type": "429"
-      },
-      {
-        "position": "01",
-        "name": "Industry Code",
-        "requirement": "M",
-        "type": "1271"
-      },
-      {
-        "position": "02",
-        "name": "Industry Code",
-        "requirement": "M",
-        "type": "1271"
-      },
-      {
-        "position": "03",
-        "name": "Entity Identifier Code",
-        "requirement": "O",
-        "type": "98"
-      },
-      {
-        "position": "04",
-        "name": "Code List Qualifier Code",
-        "requirement": "O",
-        "type": "1270"
-      },
-      {
-        "position": "01",
-        "name": "Industry Code",
-        "requirement": "M",
-        "type": "1271"
-      },
-      {
-        "position": "02",
-        "name": "Industry Code",
-        "requirement": "M",
-        "type": "1271"
-      },
-      {
-        "position": "03",
-        "name": "Entity Identifier Code",
-        "requirement": "O",
-        "type": "98"
-      },
-      {
-        "position": "04",
-        "name": "Code List Qualifier Code",
-        "requirement": "O",
-        "type": "1270"
-      },
-      {
-        "position": "12",
-        "name": "Free-form Message Text",
-        "requirement": "O",
-        "type": "933"
+        "type": "C043"
       }
     ]
   },
@@ -56906,76 +54134,10 @@
         "type": "234"
       },
       {
-        "position": "01",
-        "name": "Product/Service ID Qualifier",
-        "requirement": "M",
-        "type": "235"
-      },
-      {
         "position": "02",
-        "name": "Product/Service ID",
-        "requirement": "M",
-        "type": "234"
-      },
-      {
-        "position": "03",
-        "name": "Procedure Modifier",
+        "name": "Composite Medical Procedure Identifier",
         "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "04",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "05",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "06",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "07",
-        "name": "Description",
-        "requirement": "O",
-        "type": "352"
-      },
-      {
-        "position": "08",
-        "name": "Product/Service ID",
-        "requirement": "O",
-        "type": "234"
-      },
-      {
-        "position": "09",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "10",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "11",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "12",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
+        "type": "C003"
       },
       {
         "position": "03",
@@ -57034,150 +54196,48 @@
     "elements": [
       {
         "position": "01",
-        "name": "Product/Service ID Qualifier",
-        "requirement": "M",
-        "type": "235"
+        "name": "Composite Medical Procedure Identifier",
+        "requirement": "O",
+        "type": "C003"
       },
       {
         "position": "02",
-        "name": "Product/Service ID",
-        "requirement": "M",
-        "type": "234"
+        "name": "Oral Cavity Designation",
+        "requirement": "O",
+        "type": "C006"
       },
       {
         "position": "03",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "04",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "05",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "06",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "07",
-        "name": "Description",
-        "requirement": "O",
-        "type": "352"
-      },
-      {
-        "position": "08",
-        "name": "Product/Service ID",
-        "requirement": "O",
-        "type": "234"
-      },
-      {
-        "position": "09",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "10",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "11",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "12",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "02",
-        "name": "Monetary Amount",
-        "requirement": "O",
-        "type": "782"
-      },
-      {
-        "position": "03",
-        "name": "Facility Code Value",
-        "requirement": "O",
-        "type": "1331"
-      },
-      {
-        "position": "01",
-        "name": "Oral Cavity Designation Code",
-        "requirement": "M",
-        "type": "1361"
-      },
-      {
-        "position": "02",
-        "name": "Oral Cavity Designation Code",
-        "requirement": "O",
-        "type": "1361"
-      },
-      {
-        "position": "03",
-        "name": "Oral Cavity Designation Code",
-        "requirement": "O",
-        "type": "1361"
-      },
-      {
-        "position": "04",
-        "name": "Oral Cavity Designation Code",
-        "requirement": "O",
-        "type": "1361"
-      },
-      {
-        "position": "05",
-        "name": "Oral Cavity Designation Code",
-        "requirement": "O",
-        "type": "1361"
-      },
-      {
-        "position": "05",
         "name": "Prosthesis, Crown or Inlay Code",
         "requirement": "O",
         "type": "1358"
       },
       {
-        "position": "06",
+        "position": "04",
         "name": "Quantity",
         "requirement": "O",
         "type": "380"
       },
       {
-        "position": "07",
+        "position": "05",
         "name": "Description",
         "requirement": "O",
         "type": "352"
       },
       {
-        "position": "08",
+        "position": "06",
         "name": "Copay Status Code",
         "requirement": "O",
         "type": "1327"
       },
       {
-        "position": "09",
+        "position": "07",
         "name": "Provider Agreement Code",
         "requirement": "O",
         "type": "1360"
       },
       {
-        "position": "10",
+        "position": "08",
         "name": "Yes/No Condition or Response Code",
         "requirement": "O",
         "type": "1073"
@@ -57196,76 +54256,10 @@
         "type": "127"
       },
       {
-        "position": "01",
-        "name": "Product/Service ID Qualifier",
-        "requirement": "M",
-        "type": "235"
-      },
-      {
         "position": "02",
-        "name": "Product/Service ID",
-        "requirement": "M",
-        "type": "234"
-      },
-      {
-        "position": "03",
-        "name": "Procedure Modifier",
+        "name": "Composite Medical Procedure Identifier",
         "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "04",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "05",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "06",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "07",
-        "name": "Description",
-        "requirement": "O",
-        "type": "352"
-      },
-      {
-        "position": "08",
-        "name": "Product/Service ID",
-        "requirement": "O",
-        "type": "234"
-      },
-      {
-        "position": "09",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "10",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "11",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "12",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
+        "type": "C003"
       },
       {
         "position": "03",
@@ -57667,22 +54661,10 @@
         "type": "1073"
       },
       {
-        "position": "01",
-        "name": "Reason for Service Code",
-        "requirement": "M",
-        "type": "1738"
-      },
-      {
-        "position": "02",
-        "name": "Professional Service Code",
-        "requirement": "M",
-        "type": "1739"
-      },
-      {
-        "position": "03",
-        "name": "Result of Service Code",
-        "requirement": "M",
-        "type": "1740"
+        "position": "07",
+        "name": "Drug Use Review (DUR)",
+        "requirement": "O",
+        "type": "C059"
       }
     ]
   },
@@ -57704,16 +54686,10 @@
         "type": "799"
       },
       {
-        "position": "01",
-        "name": "Security Value Qualifier",
-        "requirement": "M",
-        "type": "1572"
-      },
-      {
-        "position": "02",
-        "name": "Encoded Security Value",
-        "requirement": "M",
-        "type": "1573"
+        "position": "03",
+        "name": "Security Token Value",
+        "requirement": "O",
+        "type": "C033"
       }
     ]
   },
@@ -57724,177 +54700,21 @@
     "elements": [
       {
         "position": "01",
-        "name": "Product/Service ID Qualifier",
-        "requirement": "M",
-        "type": "235"
+        "name": "Composite Medical Procedure Identifier",
+        "requirement": "O",
+        "type": "C003"
       },
       {
         "position": "02",
-        "name": "Product/Service ID",
-        "requirement": "M",
-        "type": "234"
+        "name": "Composite Medical Procedure Identifier",
+        "requirement": "O",
+        "type": "C003"
       },
       {
         "position": "03",
-        "name": "Procedure Modifier",
+        "name": "Change Quantities",
         "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "04",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "05",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "06",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "07",
-        "name": "Description",
-        "requirement": "O",
-        "type": "352"
-      },
-      {
-        "position": "08",
-        "name": "Product/Service ID",
-        "requirement": "O",
-        "type": "234"
-      },
-      {
-        "position": "09",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "10",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "11",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "12",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "02",
-        "name": "Monetary Amount",
-        "requirement": "M",
-        "type": "782"
-      },
-      {
-        "position": "03",
-        "name": "Monetary Amount",
-        "requirement": "O",
-        "type": "782"
-      },
-      {
-        "position": "04",
-        "name": "Product/Service ID",
-        "requirement": "O",
-        "type": "234"
-      },
-      {
-        "position": "05",
-        "name": "Quantity",
-        "requirement": "O",
-        "type": "380"
-      },
-      {
-        "position": "01",
-        "name": "Product/Service ID Qualifier",
-        "requirement": "M",
-        "type": "235"
-      },
-      {
-        "position": "02",
-        "name": "Product/Service ID",
-        "requirement": "M",
-        "type": "234"
-      },
-      {
-        "position": "03",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "04",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "05",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "06",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "07",
-        "name": "Description",
-        "requirement": "O",
-        "type": "352"
-      },
-      {
-        "position": "08",
-        "name": "Product/Service ID",
-        "requirement": "O",
-        "type": "234"
-      },
-      {
-        "position": "09",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "10",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "11",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "12",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "07",
-        "name": "Quantity",
-        "requirement": "O",
-        "type": "380"
+        "type": "C063"
       }
     ]
   },
@@ -57916,76 +54736,10 @@
         "type": "782"
       },
       {
-        "position": "01",
-        "name": "Product/Service ID Qualifier",
-        "requirement": "M",
-        "type": "235"
-      },
-      {
-        "position": "02",
-        "name": "Product/Service ID",
-        "requirement": "M",
-        "type": "234"
-      },
-      {
         "position": "03",
-        "name": "Procedure Modifier",
+        "name": "Composite Medical Procedure Identifier",
         "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "04",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "05",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "06",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "07",
-        "name": "Description",
-        "requirement": "O",
-        "type": "352"
-      },
-      {
-        "position": "08",
-        "name": "Product/Service ID",
-        "requirement": "O",
-        "type": "234"
-      },
-      {
-        "position": "09",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "10",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "11",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "12",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
+        "type": "C003"
       },
       {
         "position": "04",
@@ -59380,46 +56134,16 @@
         "type": "719"
       },
       {
-        "position": "01",
-        "name": "Element Position in Segment",
-        "requirement": "M",
-        "type": "722"
-      },
-      {
-        "position": "02",
-        "name": "Component Data Element Position in Composite",
+        "position": "05",
+        "name": "Position in Segment",
         "requirement": "O",
-        "type": "1528"
+        "type": "C030"
       },
       {
-        "position": "03",
-        "name": "Repeating Data Element Position",
+        "position": "06",
+        "name": "Reference in Segment",
         "requirement": "O",
-        "type": "1686"
-      },
-      {
-        "position": "01",
-        "name": "Data Element Reference Number",
-        "requirement": "M",
-        "type": "725"
-      },
-      {
-        "position": "02",
-        "name": "Data Element Reference Number",
-        "requirement": "O",
-        "type": "725"
-      },
-      {
-        "position": "07",
-        "name": "Copy of Bad Data Element",
-        "requirement": "O",
-        "type": "724"
-      },
-      {
-        "position": "08",
-        "name": "Data Element New Content",
-        "requirement": "O",
-        "type": "961"
+        "type": "C999"
       }
     ]
   },
@@ -60218,45 +56942,15 @@
     "elements": [
       {
         "position": "01",
-        "name": "Code List Qualifier Code",
-        "requirement": "C",
-        "type": "1270"
+        "name": "Health Care Code Information",
+        "requirement": "O",
+        "type": "C022"
       },
       {
         "position": "02",
-        "name": "Industry Code",
-        "requirement": "C",
-        "type": "1271"
-      },
-      {
-        "position": "01",
-        "name": "Tooth Surface Code",
-        "requirement": "M",
-        "type": "1369"
-      },
-      {
-        "position": "02",
-        "name": "Tooth Surface Code",
+        "name": "Tooth Surface",
         "requirement": "O",
-        "type": "1369"
-      },
-      {
-        "position": "03",
-        "name": "Tooth Surface Code",
-        "requirement": "O",
-        "type": "1369"
-      },
-      {
-        "position": "04",
-        "name": "Tooth Surface Code",
-        "requirement": "O",
-        "type": "1369"
-      },
-      {
-        "position": "05",
-        "name": "Tooth Surface Code",
-        "requirement": "O",
-        "type": "1369"
+        "type": "C005"
       }
     ]
   },
@@ -60414,196 +57108,196 @@
         "type": "673"
       },
       {
-        "position": "01",
+        "position": "02",
         "name": "Unit or Basis for Measurement Code",
         "requirement": "M",
         "type": "355"
       },
       {
-        "position": "02",
+        "position": "03",
         "name": "Exponent",
         "requirement": "O",
         "type": "1018"
-      },
-      {
-        "position": "03",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
       },
       {
         "position": "04",
-        "name": "Unit or Basis for Measurement Code",
+        "name": "Multiplier",
         "requirement": "O",
-        "type": "355"
+        "type": "649"
       },
       {
         "position": "05",
-        "name": "Exponent",
+        "name": "Unit or Basis for Measurement Code",
         "requirement": "O",
-        "type": "1018"
+        "type": "355"
       },
       {
         "position": "06",
-        "name": "Multiplier",
+        "name": "Exponent",
         "requirement": "O",
-        "type": "649"
+        "type": "1018"
       },
       {
         "position": "07",
-        "name": "Unit or Basis for Measurement Code",
+        "name": "Multiplier",
         "requirement": "O",
-        "type": "355"
+        "type": "649"
       },
       {
         "position": "08",
-        "name": "Exponent",
+        "name": "Unit or Basis for Measurement Code",
         "requirement": "O",
-        "type": "1018"
+        "type": "355"
       },
       {
         "position": "09",
-        "name": "Multiplier",
+        "name": "Exponent",
         "requirement": "O",
-        "type": "649"
+        "type": "1018"
       },
       {
         "position": "10",
-        "name": "Unit or Basis for Measurement Code",
+        "name": "Multiplier",
         "requirement": "O",
-        "type": "355"
+        "type": "649"
       },
       {
         "position": "11",
-        "name": "Exponent",
+        "name": "Unit or Basis for Measurement Code",
         "requirement": "O",
-        "type": "1018"
+        "type": "355"
       },
       {
         "position": "12",
-        "name": "Multiplier",
+        "name": "Exponent",
         "requirement": "O",
-        "type": "649"
+        "type": "1018"
       },
       {
         "position": "13",
-        "name": "Unit or Basis for Measurement Code",
+        "name": "Multiplier",
         "requirement": "O",
-        "type": "355"
+        "type": "649"
       },
       {
         "position": "14",
-        "name": "Exponent",
+        "name": "Unit or Basis for Measurement Code",
         "requirement": "O",
-        "type": "1018"
+        "type": "355"
       },
       {
         "position": "15",
+        "name": "Exponent",
+        "requirement": "O",
+        "type": "1018"
+      },
+      {
+        "position": "16",
         "name": "Multiplier",
         "requirement": "O",
         "type": "649"
       },
       {
-        "position": "03",
-        "name": "Quantity",
-        "requirement": "M",
-        "type": "380"
+        "position": "17",
+        "name": "Change Quantities",
+        "requirement": "O",
+        "type": "C063"
       },
       {
-        "position": "01",
+        "position": "18",
         "name": "Unit or Basis for Measurement Code",
         "requirement": "M",
         "type": "355"
       },
       {
-        "position": "02",
+        "position": "19",
         "name": "Exponent",
         "requirement": "O",
         "type": "1018"
       },
       {
-        "position": "03",
+        "position": "20",
         "name": "Multiplier",
         "requirement": "O",
         "type": "649"
       },
       {
-        "position": "04",
+        "position": "21",
         "name": "Unit or Basis for Measurement Code",
         "requirement": "O",
         "type": "355"
       },
       {
-        "position": "05",
+        "position": "22",
         "name": "Exponent",
         "requirement": "O",
         "type": "1018"
       },
       {
-        "position": "06",
+        "position": "23",
         "name": "Multiplier",
         "requirement": "O",
         "type": "649"
       },
       {
-        "position": "07",
+        "position": "24",
         "name": "Unit or Basis for Measurement Code",
         "requirement": "O",
         "type": "355"
       },
       {
-        "position": "08",
+        "position": "25",
         "name": "Exponent",
         "requirement": "O",
         "type": "1018"
       },
       {
-        "position": "09",
+        "position": "26",
         "name": "Multiplier",
         "requirement": "O",
         "type": "649"
       },
       {
-        "position": "10",
+        "position": "27",
         "name": "Unit or Basis for Measurement Code",
         "requirement": "O",
         "type": "355"
       },
       {
-        "position": "11",
+        "position": "28",
         "name": "Exponent",
         "requirement": "O",
         "type": "1018"
       },
       {
-        "position": "12",
+        "position": "29",
         "name": "Multiplier",
         "requirement": "O",
         "type": "649"
       },
       {
-        "position": "13",
+        "position": "30",
         "name": "Unit or Basis for Measurement Code",
         "requirement": "O",
         "type": "355"
       },
       {
-        "position": "14",
+        "position": "31",
         "name": "Exponent",
         "requirement": "O",
         "type": "1018"
       },
       {
-        "position": "15",
+        "position": "32",
         "name": "Multiplier",
         "requirement": "O",
         "type": "649"
       },
       {
-        "position": "05",
-        "name": "Quantity",
-        "requirement": "M",
-        "type": "380"
+        "position": "33",
+        "name": "Change Quantities",
+        "requirement": "O",
+        "type": "C063"
       }
     ]
   },
@@ -61498,34 +58192,10 @@
         "type": "337"
       },
       {
-        "position": "01",
-        "name": "Electronic Form Standards Type Code",
-        "requirement": "M",
-        "type": "922"
-      },
-      {
-        "position": "02",
-        "name": "Electronic Form Standards Identifier",
-        "requirement": "M",
-        "type": "1707"
-      },
-      {
-        "position": "03",
-        "name": "Implementation Convention Reference",
-        "requirement": "M",
-        "type": "1705"
-      },
-      {
-        "position": "04",
-        "name": "Version Identifier",
+        "position": "10",
+        "name": "Standards Information",
         "requirement": "O",
-        "type": "799"
-      },
-      {
-        "position": "05",
-        "name": "Revision Value",
-        "requirement": "O",
-        "type": "796"
+        "type": "C053"
       }
     ]
   },
@@ -62057,82 +58727,16 @@
         "type": "1271"
       },
       {
-        "position": "01",
-        "name": "Facility Code Value",
-        "requirement": "M",
-        "type": "1331"
-      },
-      {
-        "position": "02",
-        "name": "Facility Code Qualifier",
-        "requirement": "M",
-        "type": "1332"
-      },
-      {
-        "position": "03",
-        "name": "Claim Frequency Type Code",
-        "requirement": "O",
-        "type": "1325"
-      },
-      {
-        "position": "01",
-        "name": "Related-Causes Code",
-        "requirement": "M",
-        "type": "1362"
-      },
-      {
-        "position": "02",
-        "name": "Related-Causes Code",
-        "requirement": "O",
-        "type": "1362"
-      },
-      {
-        "position": "03",
-        "name": "Related-Causes Code",
-        "requirement": "O",
-        "type": "1362"
-      },
-      {
         "position": "04",
-        "name": "State or Province Code",
+        "name": "Health Care Service Location Information",
         "requirement": "O",
-        "type": "156"
+        "type": "C023"
       },
       {
         "position": "05",
-        "name": "Country Code",
+        "name": "Related Causes Information",
         "requirement": "O",
-        "type": "26"
-      },
-      {
-        "position": "06",
-        "name": "Level of Service Code",
-        "requirement": "O",
-        "type": "1338"
-      },
-      {
-        "position": "07",
-        "name": "Current Health Condition Code",
-        "requirement": "O",
-        "type": "1213"
-      },
-      {
-        "position": "08",
-        "name": "Prognosis Code",
-        "requirement": "O",
-        "type": "923"
-      },
-      {
-        "position": "09",
-        "name": "Release of Information Code",
-        "requirement": "O",
-        "type": "1363"
-      },
-      {
-        "position": "10",
-        "name": "Delay Reason Code",
-        "requirement": "O",
-        "type": "1514"
+        "type": "C024"
       }
     ]
   },
@@ -63250,34 +59854,10 @@
         "type": "1136"
       },
       {
-        "position": "01",
-        "name": "Rate/Value Qualifier",
-        "requirement": "M",
-        "type": "122"
-      },
-      {
         "position": "02",
-        "name": "Rate/Value Qualifier",
+        "name": "Composite Qualifier Identifier",
         "requirement": "O",
-        "type": "122"
-      },
-      {
-        "position": "03",
-        "name": "Rate/Value Qualifier",
-        "requirement": "O",
-        "type": "122"
-      },
-      {
-        "position": "04",
-        "name": "Rate/Value Qualifier",
-        "requirement": "O",
-        "type": "122"
-      },
-      {
-        "position": "05",
-        "name": "Rate/Value Qualifier",
-        "requirement": "O",
-        "type": "122"
+        "type": "C046"
       },
       {
         "position": "03",

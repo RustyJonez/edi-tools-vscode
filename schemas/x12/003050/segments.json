@@ -8617,136 +8617,16 @@
         "type": "1343"
       },
       {
-        "position": "01",
-        "name": "Facility Code Value",
-        "requirement": "M",
-        "type": "1331"
-      },
-      {
-        "position": "02",
-        "name": "Facility Code Qualifier",
+        "position": "05",
+        "name": "Health Care Service Location Information",
         "requirement": "O",
-        "type": "1332"
-      },
-      {
-        "position": "03",
-        "name": "Claim Frequency Type Code",
-        "requirement": "O",
-        "type": "1325"
+        "type": "C023"
       },
       {
         "position": "06",
-        "name": "Yes/No Condition or Response Code",
+        "name": "Related Causes Information",
         "requirement": "O",
-        "type": "1073"
-      },
-      {
-        "position": "07",
-        "name": "Provider Accept Assignment Code",
-        "requirement": "O",
-        "type": "1359"
-      },
-      {
-        "position": "08",
-        "name": "Yes/No Condition or Response Code",
-        "requirement": "O",
-        "type": "1073"
-      },
-      {
-        "position": "09",
-        "name": "Release of Information Code",
-        "requirement": "O",
-        "type": "1363"
-      },
-      {
-        "position": "10",
-        "name": "Patient Signature Source Code",
-        "requirement": "O",
-        "type": "1351"
-      },
-      {
-        "position": "01",
-        "name": "Related-Causes Code",
-        "requirement": "M",
-        "type": "1362"
-      },
-      {
-        "position": "02",
-        "name": "Related-Causes Code",
-        "requirement": "O",
-        "type": "1362"
-      },
-      {
-        "position": "03",
-        "name": "Related-Causes Code",
-        "requirement": "O",
-        "type": "1362"
-      },
-      {
-        "position": "04",
-        "name": "State or Province Code",
-        "requirement": "O",
-        "type": "156"
-      },
-      {
-        "position": "05",
-        "name": "Country Code",
-        "requirement": "O",
-        "type": "26"
-      },
-      {
-        "position": "12",
-        "name": "Special Program Code",
-        "requirement": "O",
-        "type": "1366"
-      },
-      {
-        "position": "13",
-        "name": "Yes/No Condition or Response Code",
-        "requirement": "O",
-        "type": "1073"
-      },
-      {
-        "position": "14",
-        "name": "Level of Service Code",
-        "requirement": "O",
-        "type": "1338"
-      },
-      {
-        "position": "15",
-        "name": "Yes/No Condition or Response Code",
-        "requirement": "O",
-        "type": "1073"
-      },
-      {
-        "position": "16",
-        "name": "Provider Agreement Code",
-        "requirement": "O",
-        "type": "1360"
-      },
-      {
-        "position": "17",
-        "name": "Claim Status Code",
-        "requirement": "O",
-        "type": "1029"
-      },
-      {
-        "position": "18",
-        "name": "Yes/No Condition or Response Code",
-        "requirement": "O",
-        "type": "1073"
-      },
-      {
-        "position": "19",
-        "name": "Claim Submission Reason Code",
-        "requirement": "O",
-        "type": "1383"
-      },
-      {
-        "position": "20",
-        "name": "Delay Reason Code",
-        "requirement": "O",
-        "type": "1514"
+        "type": "C024"
       }
     ]
   },
@@ -10132,184 +10012,16 @@
         "type": "755"
       },
       {
-        "position": "01",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "M",
-        "type": "355"
-      },
-      {
         "position": "02",
-        "name": "Exponent",
+        "name": "Composite Unit of Measure",
         "requirement": "O",
-        "type": "1018"
+        "type": "C001"
       },
       {
         "position": "03",
-        "name": "Multiplier",
+        "name": "Composite Unit of Measure",
         "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "04",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "05",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "06",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "07",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "08",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "09",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "10",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "11",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "12",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "13",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "14",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "15",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "01",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "M",
-        "type": "355"
-      },
-      {
-        "position": "02",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "03",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "04",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "05",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "06",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "07",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "08",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "09",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "10",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "11",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "12",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "13",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "14",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "15",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
+        "type": "C001"
       },
       {
         "position": "04",
@@ -13819,94 +13531,10 @@
         "type": "1402"
       },
       {
-        "position": "01",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "M",
-        "type": "355"
-      },
-      {
         "position": "02",
-        "name": "Exponent",
+        "name": "Composite Unit of Measure",
         "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "03",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "04",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "05",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "06",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "07",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "08",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "09",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "10",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "11",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "12",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "13",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "14",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "15",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
+        "type": "C001"
       },
       {
         "position": "03",
@@ -13994,46 +13622,10 @@
         "type": "1073"
       },
       {
-        "position": "01",
-        "name": "Product/Service ID Qualifier",
-        "requirement": "M",
-        "type": "235"
-      },
-      {
-        "position": "02",
-        "name": "Product/Service ID",
-        "requirement": "M",
-        "type": "234"
-      },
-      {
-        "position": "03",
-        "name": "Procedure Modifier",
+        "position": "13",
+        "name": "Composite Medical Procedure Identifier",
         "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "04",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "05",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "06",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "07",
-        "name": "Description",
-        "requirement": "O",
-        "type": "352"
+        "type": "C003"
       }
     ]
   },
@@ -14714,46 +14306,10 @@
         "type": "1365"
       },
       {
-        "position": "01",
-        "name": "Product/Service ID Qualifier",
-        "requirement": "M",
-        "type": "235"
-      },
-      {
         "position": "02",
-        "name": "Product/Service ID",
-        "requirement": "M",
-        "type": "234"
-      },
-      {
-        "position": "03",
-        "name": "Procedure Modifier",
+        "name": "Composite Medical Procedure Identifier",
         "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "04",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "05",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "06",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "07",
-        "name": "Description",
-        "requirement": "O",
-        "type": "352"
+        "type": "C003"
       },
       {
         "position": "03",
@@ -21030,435 +20586,75 @@
     "elements": [
       {
         "position": "01",
-        "name": "Code List Qualifier Code",
-        "requirement": "M",
-        "type": "1270"
+        "name": "Health Care Code Information",
+        "requirement": "O",
+        "type": "C022"
       },
       {
         "position": "02",
-        "name": "Industry Code",
-        "requirement": "M",
-        "type": "1271"
+        "name": "Health Care Code Information",
+        "requirement": "O",
+        "type": "C022"
       },
       {
         "position": "03",
-        "name": "Date Time Period Format Qualifier",
-        "requirement": "C",
-        "type": "1250"
+        "name": "Health Care Code Information",
+        "requirement": "O",
+        "type": "C022"
       },
       {
         "position": "04",
-        "name": "Date Time Period",
-        "requirement": "C",
-        "type": "1251"
+        "name": "Health Care Code Information",
+        "requirement": "O",
+        "type": "C022"
       },
       {
         "position": "05",
-        "name": "Monetary Amount",
+        "name": "Health Care Code Information",
         "requirement": "O",
-        "type": "782"
+        "type": "C022"
       },
       {
         "position": "06",
-        "name": "Quantity",
+        "name": "Health Care Code Information",
         "requirement": "O",
-        "type": "380"
+        "type": "C022"
       },
       {
-        "position": "01",
-        "name": "Code List Qualifier Code",
-        "requirement": "M",
-        "type": "1270"
-      },
-      {
-        "position": "02",
-        "name": "Industry Code",
-        "requirement": "M",
-        "type": "1271"
-      },
-      {
-        "position": "03",
-        "name": "Date Time Period Format Qualifier",
-        "requirement": "C",
-        "type": "1250"
-      },
-      {
-        "position": "04",
-        "name": "Date Time Period",
-        "requirement": "C",
-        "type": "1251"
-      },
-      {
-        "position": "05",
-        "name": "Monetary Amount",
+        "position": "07",
+        "name": "Health Care Code Information",
         "requirement": "O",
-        "type": "782"
+        "type": "C022"
       },
       {
-        "position": "06",
-        "name": "Quantity",
+        "position": "08",
+        "name": "Health Care Code Information",
         "requirement": "O",
-        "type": "380"
+        "type": "C022"
       },
       {
-        "position": "01",
-        "name": "Code List Qualifier Code",
-        "requirement": "M",
-        "type": "1270"
-      },
-      {
-        "position": "02",
-        "name": "Industry Code",
-        "requirement": "M",
-        "type": "1271"
-      },
-      {
-        "position": "03",
-        "name": "Date Time Period Format Qualifier",
-        "requirement": "C",
-        "type": "1250"
-      },
-      {
-        "position": "04",
-        "name": "Date Time Period",
-        "requirement": "C",
-        "type": "1251"
-      },
-      {
-        "position": "05",
-        "name": "Monetary Amount",
+        "position": "09",
+        "name": "Health Care Code Information",
         "requirement": "O",
-        "type": "782"
+        "type": "C022"
       },
       {
-        "position": "06",
-        "name": "Quantity",
+        "position": "10",
+        "name": "Health Care Code Information",
         "requirement": "O",
-        "type": "380"
+        "type": "C022"
       },
       {
-        "position": "01",
-        "name": "Code List Qualifier Code",
-        "requirement": "M",
-        "type": "1270"
-      },
-      {
-        "position": "02",
-        "name": "Industry Code",
-        "requirement": "M",
-        "type": "1271"
-      },
-      {
-        "position": "03",
-        "name": "Date Time Period Format Qualifier",
-        "requirement": "C",
-        "type": "1250"
-      },
-      {
-        "position": "04",
-        "name": "Date Time Period",
-        "requirement": "C",
-        "type": "1251"
-      },
-      {
-        "position": "05",
-        "name": "Monetary Amount",
+        "position": "11",
+        "name": "Health Care Code Information",
         "requirement": "O",
-        "type": "782"
+        "type": "C022"
       },
       {
-        "position": "06",
-        "name": "Quantity",
+        "position": "12",
+        "name": "Health Care Code Information",
         "requirement": "O",
-        "type": "380"
-      },
-      {
-        "position": "01",
-        "name": "Code List Qualifier Code",
-        "requirement": "M",
-        "type": "1270"
-      },
-      {
-        "position": "02",
-        "name": "Industry Code",
-        "requirement": "M",
-        "type": "1271"
-      },
-      {
-        "position": "03",
-        "name": "Date Time Period Format Qualifier",
-        "requirement": "C",
-        "type": "1250"
-      },
-      {
-        "position": "04",
-        "name": "Date Time Period",
-        "requirement": "C",
-        "type": "1251"
-      },
-      {
-        "position": "05",
-        "name": "Monetary Amount",
-        "requirement": "O",
-        "type": "782"
-      },
-      {
-        "position": "06",
-        "name": "Quantity",
-        "requirement": "O",
-        "type": "380"
-      },
-      {
-        "position": "01",
-        "name": "Code List Qualifier Code",
-        "requirement": "M",
-        "type": "1270"
-      },
-      {
-        "position": "02",
-        "name": "Industry Code",
-        "requirement": "M",
-        "type": "1271"
-      },
-      {
-        "position": "03",
-        "name": "Date Time Period Format Qualifier",
-        "requirement": "C",
-        "type": "1250"
-      },
-      {
-        "position": "04",
-        "name": "Date Time Period",
-        "requirement": "C",
-        "type": "1251"
-      },
-      {
-        "position": "05",
-        "name": "Monetary Amount",
-        "requirement": "O",
-        "type": "782"
-      },
-      {
-        "position": "06",
-        "name": "Quantity",
-        "requirement": "O",
-        "type": "380"
-      },
-      {
-        "position": "01",
-        "name": "Code List Qualifier Code",
-        "requirement": "M",
-        "type": "1270"
-      },
-      {
-        "position": "02",
-        "name": "Industry Code",
-        "requirement": "M",
-        "type": "1271"
-      },
-      {
-        "position": "03",
-        "name": "Date Time Period Format Qualifier",
-        "requirement": "C",
-        "type": "1250"
-      },
-      {
-        "position": "04",
-        "name": "Date Time Period",
-        "requirement": "C",
-        "type": "1251"
-      },
-      {
-        "position": "05",
-        "name": "Monetary Amount",
-        "requirement": "O",
-        "type": "782"
-      },
-      {
-        "position": "06",
-        "name": "Quantity",
-        "requirement": "O",
-        "type": "380"
-      },
-      {
-        "position": "01",
-        "name": "Code List Qualifier Code",
-        "requirement": "M",
-        "type": "1270"
-      },
-      {
-        "position": "02",
-        "name": "Industry Code",
-        "requirement": "M",
-        "type": "1271"
-      },
-      {
-        "position": "03",
-        "name": "Date Time Period Format Qualifier",
-        "requirement": "C",
-        "type": "1250"
-      },
-      {
-        "position": "04",
-        "name": "Date Time Period",
-        "requirement": "C",
-        "type": "1251"
-      },
-      {
-        "position": "05",
-        "name": "Monetary Amount",
-        "requirement": "O",
-        "type": "782"
-      },
-      {
-        "position": "06",
-        "name": "Quantity",
-        "requirement": "O",
-        "type": "380"
-      },
-      {
-        "position": "01",
-        "name": "Code List Qualifier Code",
-        "requirement": "M",
-        "type": "1270"
-      },
-      {
-        "position": "02",
-        "name": "Industry Code",
-        "requirement": "M",
-        "type": "1271"
-      },
-      {
-        "position": "03",
-        "name": "Date Time Period Format Qualifier",
-        "requirement": "C",
-        "type": "1250"
-      },
-      {
-        "position": "04",
-        "name": "Date Time Period",
-        "requirement": "C",
-        "type": "1251"
-      },
-      {
-        "position": "05",
-        "name": "Monetary Amount",
-        "requirement": "O",
-        "type": "782"
-      },
-      {
-        "position": "06",
-        "name": "Quantity",
-        "requirement": "O",
-        "type": "380"
-      },
-      {
-        "position": "01",
-        "name": "Code List Qualifier Code",
-        "requirement": "M",
-        "type": "1270"
-      },
-      {
-        "position": "02",
-        "name": "Industry Code",
-        "requirement": "M",
-        "type": "1271"
-      },
-      {
-        "position": "03",
-        "name": "Date Time Period Format Qualifier",
-        "requirement": "C",
-        "type": "1250"
-      },
-      {
-        "position": "04",
-        "name": "Date Time Period",
-        "requirement": "C",
-        "type": "1251"
-      },
-      {
-        "position": "05",
-        "name": "Monetary Amount",
-        "requirement": "O",
-        "type": "782"
-      },
-      {
-        "position": "06",
-        "name": "Quantity",
-        "requirement": "O",
-        "type": "380"
-      },
-      {
-        "position": "01",
-        "name": "Code List Qualifier Code",
-        "requirement": "M",
-        "type": "1270"
-      },
-      {
-        "position": "02",
-        "name": "Industry Code",
-        "requirement": "M",
-        "type": "1271"
-      },
-      {
-        "position": "03",
-        "name": "Date Time Period Format Qualifier",
-        "requirement": "C",
-        "type": "1250"
-      },
-      {
-        "position": "04",
-        "name": "Date Time Period",
-        "requirement": "C",
-        "type": "1251"
-      },
-      {
-        "position": "05",
-        "name": "Monetary Amount",
-        "requirement": "O",
-        "type": "782"
-      },
-      {
-        "position": "06",
-        "name": "Quantity",
-        "requirement": "O",
-        "type": "380"
-      },
-      {
-        "position": "01",
-        "name": "Code List Qualifier Code",
-        "requirement": "M",
-        "type": "1270"
-      },
-      {
-        "position": "02",
-        "name": "Industry Code",
-        "requirement": "M",
-        "type": "1271"
-      },
-      {
-        "position": "03",
-        "name": "Date Time Period Format Qualifier",
-        "requirement": "C",
-        "type": "1250"
-      },
-      {
-        "position": "04",
-        "name": "Date Time Period",
-        "requirement": "C",
-        "type": "1251"
-      },
-      {
-        "position": "05",
-        "name": "Monetary Amount",
-        "requirement": "O",
-        "type": "782"
-      },
-      {
-        "position": "06",
-        "name": "Quantity",
-        "requirement": "O",
-        "type": "380"
+        "type": "C022"
       }
     ]
   },
@@ -22462,94 +21658,10 @@
         "type": "380"
       },
       {
-        "position": "01",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "M",
-        "type": "355"
-      },
-      {
-        "position": "02",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "03",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "04",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "05",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
         "position": "06",
-        "name": "Multiplier",
+        "name": "Composite Unit of Measure",
         "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "07",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "08",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "09",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "10",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "11",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "12",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "13",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "14",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "15",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
+        "type": "C001"
       },
       {
         "position": "07",
@@ -26564,94 +25676,10 @@
         "type": "739"
       },
       {
-        "position": "01",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "M",
-        "type": "355"
-      },
-      {
-        "position": "02",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "03",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "04",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "05",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "06",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "07",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "08",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "09",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "10",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
         "position": "11",
-        "name": "Exponent",
+        "name": "Composite Unit of Measure",
         "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "12",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "13",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "14",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "15",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
+        "type": "C001"
       },
       {
         "position": "12",
@@ -26660,94 +25688,10 @@
         "type": "739"
       },
       {
-        "position": "01",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "M",
-        "type": "355"
-      },
-      {
-        "position": "02",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "03",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "04",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "05",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "06",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "07",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "08",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "09",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "10",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "11",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "12",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
         "position": "13",
-        "name": "Unit or Basis for Measurement Code",
+        "name": "Composite Unit of Measure",
         "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "14",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "15",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
+        "type": "C001"
       },
       {
         "position": "14",
@@ -26756,400 +25700,28 @@
         "type": "739"
       },
       {
-        "position": "01",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "M",
-        "type": "355"
-      },
-      {
-        "position": "02",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "03",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "04",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "05",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "06",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "07",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "08",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "09",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "10",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "11",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "12",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "13",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "14",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
         "position": "15",
-        "name": "Multiplier",
+        "name": "Composite Unit of Measure",
         "requirement": "O",
-        "type": "649"
+        "type": "C001"
       },
       {
         "position": "16",
-        "name": "Measurement Value",
-        "requirement": "C",
-        "type": "739"
-      },
-      {
-        "position": "01",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "M",
-        "type": "355"
-      },
-      {
-        "position": "02",
-        "name": "Exponent",
+        "name": "Composite Unit of Measure",
         "requirement": "O",
-        "type": "1018"
+        "type": "C001"
       },
       {
-        "position": "03",
-        "name": "Multiplier",
+        "position": "17",
+        "name": "Composite Unit of Measure",
         "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "04",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "05",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "06",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "07",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "08",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "09",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "10",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "11",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "12",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "13",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "14",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "15",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
+        "type": "C001"
       },
       {
         "position": "18",
-        "name": "Measurement Value",
-        "requirement": "C",
-        "type": "739"
-      },
-      {
-        "position": "01",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "M",
-        "type": "355"
-      },
-      {
-        "position": "02",
-        "name": "Exponent",
+        "name": "Composite Unit of Measure",
         "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "03",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "04",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "05",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "06",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "07",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "08",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "09",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "10",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "11",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "12",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "13",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "14",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "15",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "20",
-        "name": "Measurement Value",
-        "requirement": "C",
-        "type": "739"
-      },
-      {
-        "position": "01",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "M",
-        "type": "355"
-      },
-      {
-        "position": "02",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "03",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "04",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "05",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "06",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "07",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "08",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "09",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "10",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "11",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "12",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "13",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "14",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "15",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "22",
-        "name": "Reference Number Qualifier",
-        "requirement": "C",
-        "type": "128"
-      },
-      {
-        "position": "23",
-        "name": "Reference Number",
-        "requirement": "C",
-        "type": "127"
-      },
-      {
-        "position": "24",
-        "name": "Description",
-        "requirement": "O",
-        "type": "352"
+        "type": "C001"
       }
     ]
   },
@@ -28596,94 +27168,10 @@
         "type": "739"
       },
       {
-        "position": "01",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "M",
-        "type": "355"
-      },
-      {
-        "position": "02",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "03",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
         "position": "04",
-        "name": "Unit or Basis for Measurement Code",
+        "name": "Composite Unit of Measure",
         "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "05",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "06",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "07",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "08",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "09",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "10",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "11",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "12",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "13",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "14",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "15",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
+        "type": "C001"
       },
       {
         "position": "05",
@@ -31783,94 +30271,10 @@
         "type": "373"
       },
       {
-        "position": "01",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "M",
-        "type": "355"
-      },
-      {
-        "position": "02",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
         "position": "03",
-        "name": "Multiplier",
+        "name": "Composite Unit of Measure",
         "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "04",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "05",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "06",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "07",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "08",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "09",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "10",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "11",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "12",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "13",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "14",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "15",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
+        "type": "C001"
       },
       {
         "position": "04",
@@ -31971,94 +30375,10 @@
         "type": "1280"
       },
       {
-        "position": "01",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "M",
-        "type": "355"
-      },
-      {
-        "position": "02",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
         "position": "03",
-        "name": "Multiplier",
+        "name": "Composite Unit of Measure",
         "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "04",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "05",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "06",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "07",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "08",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "09",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "10",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "11",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "12",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "13",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "14",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "15",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
+        "type": "C001"
       },
       {
         "position": "04",
@@ -32606,94 +30926,10 @@
         "type": "554"
       },
       {
-        "position": "01",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "M",
-        "type": "355"
-      },
-      {
         "position": "02",
-        "name": "Exponent",
+        "name": "Composite Unit of Measure",
         "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "03",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "04",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "05",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "06",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "07",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "08",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "09",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "10",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "11",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "12",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "13",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "14",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "15",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
+        "type": "C001"
       },
       {
         "position": "03",
@@ -33870,94 +32106,10 @@
         "type": "380"
       },
       {
-        "position": "01",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "M",
-        "type": "355"
-      },
-      {
-        "position": "02",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "03",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "04",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "05",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "06",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "07",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "08",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "09",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "10",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "11",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
         "position": "12",
-        "name": "Multiplier",
+        "name": "Composite Unit of Measure",
         "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "13",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "14",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "15",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
+        "type": "C001"
       }
     ]
   },
@@ -34974,34 +33126,10 @@
         "type": "352"
       },
       {
-        "position": "01",
-        "name": "Paperwork/Report Action Code",
-        "requirement": "M",
-        "type": "704"
-      },
-      {
-        "position": "02",
-        "name": "Paperwork/Report Action Code",
+        "position": "08",
+        "name": "Actions Indicated",
         "requirement": "O",
-        "type": "704"
-      },
-      {
-        "position": "03",
-        "name": "Paperwork/Report Action Code",
-        "requirement": "O",
-        "type": "704"
-      },
-      {
-        "position": "04",
-        "name": "Paperwork/Report Action Code",
-        "requirement": "O",
-        "type": "704"
-      },
-      {
-        "position": "05",
-        "name": "Paperwork/Report Action Code",
-        "requirement": "O",
-        "type": "704"
+        "type": "C002"
       }
     ]
   },
@@ -37019,94 +35147,10 @@
         "type": "380"
       },
       {
-        "position": "01",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "M",
-        "type": "355"
-      },
-      {
-        "position": "02",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "03",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "04",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "05",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "06",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "07",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "08",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
         "position": "09",
-        "name": "Multiplier",
+        "name": "Composite Unit of Measure",
         "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "10",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "11",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "12",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "13",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "14",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "15",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
+        "type": "C001"
       },
       {
         "position": "10",
@@ -37372,94 +35416,10 @@
         "type": "118"
       },
       {
-        "position": "01",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "M",
-        "type": "355"
-      },
-      {
-        "position": "02",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "03",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
         "position": "04",
-        "name": "Unit or Basis for Measurement Code",
+        "name": "Composite Unit of Measure",
         "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "05",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "06",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "07",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "08",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "09",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "10",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "11",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "12",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "13",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "14",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "15",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
+        "type": "C001"
       },
       {
         "position": "05",
@@ -40551,94 +38511,10 @@
         "type": "1132"
       },
       {
-        "position": "01",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "M",
-        "type": "355"
-      },
-      {
-        "position": "02",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
         "position": "03",
-        "name": "Multiplier",
+        "name": "Composite Unit of Measure",
         "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "04",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "05",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "06",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "07",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "08",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "09",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "10",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "11",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "12",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "13",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "14",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "15",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
+        "type": "C001"
       },
       {
         "position": "04",
@@ -41752,94 +39628,10 @@
         "type": "739"
       },
       {
-        "position": "01",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "M",
-        "type": "355"
-      },
-      {
-        "position": "02",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
         "position": "03",
-        "name": "Multiplier",
+        "name": "Composite Unit of Measure",
         "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "04",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "05",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "06",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "07",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "08",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "09",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "10",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "11",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "12",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
-      },
-      {
-        "position": "13",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "O",
-        "type": "355"
-      },
-      {
-        "position": "14",
-        "name": "Exponent",
-        "requirement": "O",
-        "type": "1018"
-      },
-      {
-        "position": "15",
-        "name": "Multiplier",
-        "requirement": "O",
-        "type": "649"
+        "type": "C001"
       },
       {
         "position": "04",
@@ -42093,183 +39885,15 @@
     "elements": [
       {
         "position": "01",
-        "name": "Product/Service ID Qualifier",
-        "requirement": "M",
-        "type": "235"
+        "name": "Composite Medical Procedure Identifier",
+        "requirement": "O",
+        "type": "C003"
       },
       {
         "position": "02",
-        "name": "Product/Service ID",
-        "requirement": "M",
-        "type": "234"
-      },
-      {
-        "position": "03",
-        "name": "Procedure Modifier",
+        "name": "Composite Diagnosis Code Pointer",
         "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "04",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "05",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "06",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "07",
-        "name": "Description",
-        "requirement": "O",
-        "type": "352"
-      },
-      {
-        "position": "02",
-        "name": "Monetary Amount",
-        "requirement": "O",
-        "type": "782"
-      },
-      {
-        "position": "03",
-        "name": "Unit or Basis for Measurement Code",
-        "requirement": "C",
-        "type": "355"
-      },
-      {
-        "position": "04",
-        "name": "Quantity",
-        "requirement": "C",
-        "type": "380"
-      },
-      {
-        "position": "05",
-        "name": "Facility Code Value",
-        "requirement": "O",
-        "type": "1331"
-      },
-      {
-        "position": "06",
-        "name": "Service Type Code",
-        "requirement": "O",
-        "type": "1365"
-      },
-      {
-        "position": "01",
-        "name": "Diagnosis Code Pointer",
-        "requirement": "M",
-        "type": "1328"
-      },
-      {
-        "position": "02",
-        "name": "Diagnosis Code Pointer",
-        "requirement": "O",
-        "type": "1328"
-      },
-      {
-        "position": "03",
-        "name": "Diagnosis Code Pointer",
-        "requirement": "O",
-        "type": "1328"
-      },
-      {
-        "position": "04",
-        "name": "Diagnosis Code Pointer",
-        "requirement": "O",
-        "type": "1328"
-      },
-      {
-        "position": "08",
-        "name": "Monetary Amount",
-        "requirement": "O",
-        "type": "782"
-      },
-      {
-        "position": "09",
-        "name": "Yes/No Condition or Response Code",
-        "requirement": "O",
-        "type": "1073"
-      },
-      {
-        "position": "10",
-        "name": "Multiple Procedure Code",
-        "requirement": "O",
-        "type": "1340"
-      },
-      {
-        "position": "11",
-        "name": "Yes/No Condition or Response Code",
-        "requirement": "O",
-        "type": "1073"
-      },
-      {
-        "position": "12",
-        "name": "Yes/No Condition or Response Code",
-        "requirement": "O",
-        "type": "1073"
-      },
-      {
-        "position": "13",
-        "name": "Review Code",
-        "requirement": "O",
-        "type": "1364"
-      },
-      {
-        "position": "14",
-        "name": "National or Local Assigned Review Value",
-        "requirement": "O",
-        "type": "1341"
-      },
-      {
-        "position": "15",
-        "name": "Copay Status Code",
-        "requirement": "O",
-        "type": "1327"
-      },
-      {
-        "position": "16",
-        "name": "Health Care Professional Shortage Area Code",
-        "requirement": "O",
-        "type": "1334"
-      },
-      {
-        "position": "17",
-        "name": "Reference Number",
-        "requirement": "O",
-        "type": "127"
-      },
-      {
-        "position": "18",
-        "name": "Postal Code",
-        "requirement": "O",
-        "type": "116"
-      },
-      {
-        "position": "19",
-        "name": "Monetary Amount",
-        "requirement": "O",
-        "type": "782"
-      },
-      {
-        "position": "20",
-        "name": "Level of Care Code",
-        "requirement": "O",
-        "type": "1337"
-      },
-      {
-        "position": "21",
-        "name": "Provider Agreement Code",
-        "requirement": "O",
-        "type": "1360"
+        "type": "C004"
       }
     ]
   },
@@ -42285,46 +39909,10 @@
         "type": "234"
       },
       {
-        "position": "01",
-        "name": "Product/Service ID Qualifier",
-        "requirement": "M",
-        "type": "235"
-      },
-      {
         "position": "02",
-        "name": "Product/Service ID",
-        "requirement": "M",
-        "type": "234"
-      },
-      {
-        "position": "03",
-        "name": "Procedure Modifier",
+        "name": "Composite Medical Procedure Identifier",
         "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "04",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "05",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "06",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "07",
-        "name": "Description",
-        "requirement": "O",
-        "type": "352"
+        "type": "C003"
       },
       {
         "position": "03",
@@ -42383,120 +39971,48 @@
     "elements": [
       {
         "position": "01",
-        "name": "Product/Service ID Qualifier",
-        "requirement": "M",
-        "type": "235"
+        "name": "Composite Medical Procedure Identifier",
+        "requirement": "O",
+        "type": "C003"
       },
       {
         "position": "02",
-        "name": "Product/Service ID",
-        "requirement": "M",
-        "type": "234"
+        "name": "Oral Cavity Designation",
+        "requirement": "O",
+        "type": "C006"
       },
       {
         "position": "03",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "04",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "05",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "06",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "07",
-        "name": "Description",
-        "requirement": "O",
-        "type": "352"
-      },
-      {
-        "position": "02",
-        "name": "Monetary Amount",
-        "requirement": "O",
-        "type": "782"
-      },
-      {
-        "position": "03",
-        "name": "Facility Code Value",
-        "requirement": "O",
-        "type": "1331"
-      },
-      {
-        "position": "01",
-        "name": "Oral Cavity Designation Code",
-        "requirement": "M",
-        "type": "1361"
-      },
-      {
-        "position": "02",
-        "name": "Oral Cavity Designation Code",
-        "requirement": "O",
-        "type": "1361"
-      },
-      {
-        "position": "03",
-        "name": "Oral Cavity Designation Code",
-        "requirement": "O",
-        "type": "1361"
-      },
-      {
-        "position": "04",
-        "name": "Oral Cavity Designation Code",
-        "requirement": "O",
-        "type": "1361"
-      },
-      {
-        "position": "05",
-        "name": "Oral Cavity Designation Code",
-        "requirement": "O",
-        "type": "1361"
-      },
-      {
-        "position": "05",
         "name": "Prosthesis, Crown or Inlay Code",
         "requirement": "O",
         "type": "1358"
       },
       {
-        "position": "06",
+        "position": "04",
         "name": "Quantity",
         "requirement": "O",
         "type": "380"
       },
       {
-        "position": "07",
+        "position": "05",
         "name": "Description",
         "requirement": "O",
         "type": "352"
       },
       {
-        "position": "08",
+        "position": "06",
         "name": "Copay Status Code",
         "requirement": "O",
         "type": "1327"
       },
       {
-        "position": "09",
+        "position": "07",
         "name": "Provider Agreement Code",
         "requirement": "O",
         "type": "1360"
       },
       {
-        "position": "10",
+        "position": "08",
         "name": "Yes/No Condition or Response Code",
         "requirement": "O",
         "type": "1073"
@@ -42515,46 +40031,10 @@
         "type": "127"
       },
       {
-        "position": "01",
-        "name": "Product/Service ID Qualifier",
-        "requirement": "M",
-        "type": "235"
-      },
-      {
         "position": "02",
-        "name": "Product/Service ID",
-        "requirement": "M",
-        "type": "234"
-      },
-      {
-        "position": "03",
-        "name": "Procedure Modifier",
+        "name": "Composite Medical Procedure Identifier",
         "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "04",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "05",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "06",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "07",
-        "name": "Description",
-        "requirement": "O",
-        "type": "352"
+        "type": "C003"
       },
       {
         "position": "03",
@@ -42740,99 +40220,15 @@
     "elements": [
       {
         "position": "01",
-        "name": "Product/Service ID Qualifier",
-        "requirement": "M",
-        "type": "235"
+        "name": "Composite Medical Procedure Identifier",
+        "requirement": "O",
+        "type": "C003"
       },
       {
         "position": "02",
-        "name": "Product/Service ID",
-        "requirement": "M",
-        "type": "234"
-      },
-      {
-        "position": "03",
-        "name": "Procedure Modifier",
+        "name": "Composite Diagnosis Code Pointer",
         "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "04",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "05",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "06",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "07",
-        "name": "Description",
-        "requirement": "O",
-        "type": "352"
-      },
-      {
-        "position": "02",
-        "name": "Facility Code Qualifier",
-        "requirement": "C",
-        "type": "1332"
-      },
-      {
-        "position": "03",
-        "name": "Facility Code Value",
-        "requirement": "C",
-        "type": "1331"
-      },
-      {
-        "position": "04",
-        "name": "Monetary Amount",
-        "requirement": "O",
-        "type": "782"
-      },
-      {
-        "position": "01",
-        "name": "Diagnosis Code Pointer",
-        "requirement": "M",
-        "type": "1328"
-      },
-      {
-        "position": "02",
-        "name": "Diagnosis Code Pointer",
-        "requirement": "O",
-        "type": "1328"
-      },
-      {
-        "position": "03",
-        "name": "Diagnosis Code Pointer",
-        "requirement": "O",
-        "type": "1328"
-      },
-      {
-        "position": "04",
-        "name": "Diagnosis Code Pointer",
-        "requirement": "O",
-        "type": "1328"
-      },
-      {
-        "position": "06",
-        "name": "Quantity",
-        "requirement": "O",
-        "type": "380"
-      },
-      {
-        "position": "07",
-        "name": "Yes/No Condition or Response Code",
-        "requirement": "O",
-        "type": "1073"
+        "type": "C004"
       }
     ]
   },
@@ -42868,114 +40264,18 @@
     "elements": [
       {
         "position": "01",
-        "name": "Product/Service ID Qualifier",
-        "requirement": "M",
-        "type": "235"
+        "name": "Composite Medical Procedure Identifier",
+        "requirement": "O",
+        "type": "C003"
       },
       {
         "position": "02",
-        "name": "Product/Service ID",
-        "requirement": "M",
-        "type": "234"
+        "name": "Composite Medical Procedure Identifier",
+        "requirement": "O",
+        "type": "C003"
       },
       {
         "position": "03",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "04",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "05",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "06",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "07",
-        "name": "Description",
-        "requirement": "O",
-        "type": "352"
-      },
-      {
-        "position": "02",
-        "name": "Monetary Amount",
-        "requirement": "M",
-        "type": "782"
-      },
-      {
-        "position": "03",
-        "name": "Monetary Amount",
-        "requirement": "M",
-        "type": "782"
-      },
-      {
-        "position": "04",
-        "name": "Product/Service ID",
-        "requirement": "O",
-        "type": "234"
-      },
-      {
-        "position": "05",
-        "name": "Quantity",
-        "requirement": "O",
-        "type": "380"
-      },
-      {
-        "position": "01",
-        "name": "Product/Service ID Qualifier",
-        "requirement": "M",
-        "type": "235"
-      },
-      {
-        "position": "02",
-        "name": "Product/Service ID",
-        "requirement": "M",
-        "type": "234"
-      },
-      {
-        "position": "03",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "04",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "05",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "06",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "07",
-        "name": "Description",
-        "requirement": "O",
-        "type": "352"
-      },
-      {
-        "position": "07",
         "name": "Quantity",
         "requirement": "O",
         "type": "380"
@@ -43000,46 +40300,10 @@
         "type": "782"
       },
       {
-        "position": "01",
-        "name": "Product/Service ID Qualifier",
-        "requirement": "M",
-        "type": "235"
-      },
-      {
-        "position": "02",
-        "name": "Product/Service ID",
-        "requirement": "M",
-        "type": "234"
-      },
-      {
         "position": "03",
-        "name": "Procedure Modifier",
+        "name": "Composite Medical Procedure Identifier",
         "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "04",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "05",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "06",
-        "name": "Procedure Modifier",
-        "requirement": "O",
-        "type": "1339"
-      },
-      {
-        "position": "07",
-        "name": "Description",
-        "requirement": "O",
-        "type": "352"
+        "type": "C003"
       },
       {
         "position": "04",
@@ -44800,45 +42064,15 @@
     "elements": [
       {
         "position": "01",
-        "name": "Code List Qualifier Code",
-        "requirement": "C",
-        "type": "1270"
+        "name": "Health Care Code Information",
+        "requirement": "O",
+        "type": "C022"
       },
       {
         "position": "02",
-        "name": "Industry Code",
-        "requirement": "C",
-        "type": "1271"
-      },
-      {
-        "position": "01",
-        "name": "Tooth Surface Code",
-        "requirement": "M",
-        "type": "1369"
-      },
-      {
-        "position": "02",
-        "name": "Tooth Surface Code",
+        "name": "Tooth Surface",
         "requirement": "O",
-        "type": "1369"
-      },
-      {
-        "position": "03",
-        "name": "Tooth Surface Code",
-        "requirement": "O",
-        "type": "1369"
-      },
-      {
-        "position": "04",
-        "name": "Tooth Surface Code",
-        "requirement": "O",
-        "type": "1369"
-      },
-      {
-        "position": "05",
-        "name": "Tooth Surface Code",
-        "requirement": "O",
-        "type": "1369"
+        "type": "C005"
       }
     ]
   },
@@ -45692,64 +42926,10 @@
         "type": "1365"
       },
       {
-        "position": "01",
-        "name": "Related-Causes Code",
-        "requirement": "M",
-        "type": "1362"
-      },
-      {
-        "position": "02",
-        "name": "Related-Causes Code",
-        "requirement": "O",
-        "type": "1362"
-      },
-      {
-        "position": "03",
-        "name": "Related-Causes Code",
-        "requirement": "O",
-        "type": "1362"
-      },
-      {
         "position": "04",
-        "name": "State or Province Code",
+        "name": "Related Causes Information",
         "requirement": "O",
-        "type": "156"
-      },
-      {
-        "position": "05",
-        "name": "Country Code",
-        "requirement": "O",
-        "type": "26"
-      },
-      {
-        "position": "06",
-        "name": "Level of Service Code",
-        "requirement": "O",
-        "type": "1338"
-      },
-      {
-        "position": "07",
-        "name": "Current Health Condition Code",
-        "requirement": "O",
-        "type": "1213"
-      },
-      {
-        "position": "08",
-        "name": "Prognosis Code",
-        "requirement": "O",
-        "type": "923"
-      },
-      {
-        "position": "09",
-        "name": "Release of Information Code",
-        "requirement": "O",
-        "type": "1363"
-      },
-      {
-        "position": "10",
-        "name": "Delay Reason Code",
-        "requirement": "O",
-        "type": "1514"
+        "type": "C024"
       }
     ]
   },

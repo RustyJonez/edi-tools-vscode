@@ -1,0 +1,1488 @@
+{
+  "C001": {
+    "elementNumber": "C001",
+    "name": "Composite Unit of Measure",
+    "definition": "Code specifying the units in which a value is being expressed, or manner in which a measurement has been taken",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "01",
+        "elementId": "355",
+        "name": "Unit or Basis for Measurement Code",
+        "requirement": "M"
+      },
+      {
+        "position": "02",
+        "elementId": "1018",
+        "name": "Exponent",
+        "requirement": "O"
+      },
+      {
+        "position": "03",
+        "elementId": "649",
+        "name": "Multiplier",
+        "requirement": "O"
+      },
+      {
+        "position": "04",
+        "elementId": "355",
+        "name": "Unit or Basis for Measurement Code",
+        "requirement": "O"
+      },
+      {
+        "position": "05",
+        "elementId": "1018",
+        "name": "Exponent",
+        "requirement": "O"
+      },
+      {
+        "position": "06",
+        "elementId": "649",
+        "name": "Multiplier",
+        "requirement": "O"
+      },
+      {
+        "position": "07",
+        "elementId": "355",
+        "name": "Unit or Basis for Measurement Code",
+        "requirement": "O"
+      },
+      {
+        "position": "08",
+        "elementId": "1018",
+        "name": "Exponent",
+        "requirement": "O"
+      },
+      {
+        "position": "09",
+        "elementId": "649",
+        "name": "Multiplier",
+        "requirement": "O"
+      },
+      {
+        "position": "10",
+        "elementId": "355",
+        "name": "Unit or Basis for Measurement Code",
+        "requirement": "O"
+      },
+      {
+        "position": "11",
+        "elementId": "1018",
+        "name": "Exponent",
+        "requirement": "O"
+      },
+      {
+        "position": "12",
+        "elementId": "649",
+        "name": "Multiplier",
+        "requirement": "O"
+      },
+      {
+        "position": "13",
+        "elementId": "355",
+        "name": "Unit or Basis for Measurement Code",
+        "requirement": "O"
+      },
+      {
+        "position": "14",
+        "elementId": "1018",
+        "name": "Exponent",
+        "requirement": "O"
+      },
+      {
+        "position": "15",
+        "elementId": "649",
+        "name": "Multiplier",
+        "requirement": "O"
+      }
+    ]
+  },
+  "C002": {
+    "elementNumber": "C002",
+    "name": "Actions Indicated",
+    "definition": "Code specifying how the paperwork or report that is identified in the PWK segment relates to the transaction set or to identify the action that is required",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "01",
+        "elementId": "704",
+        "name": "Paperwork/Report Action Code",
+        "requirement": "M"
+      },
+      {
+        "position": "02",
+        "elementId": "704",
+        "name": "Paperwork/Report Action Code",
+        "requirement": "O"
+      },
+      {
+        "position": "03",
+        "elementId": "704",
+        "name": "Paperwork/Report Action Code",
+        "requirement": "O"
+      },
+      {
+        "position": "04",
+        "elementId": "704",
+        "name": "Paperwork/Report Action Code",
+        "requirement": "O"
+      },
+      {
+        "position": "05",
+        "elementId": "704",
+        "name": "Paperwork/Report Action Code",
+        "requirement": "O"
+      }
+    ]
+  },
+  "C003": {
+    "elementNumber": "C003",
+    "name": "Composite Medical Procedure Identifier",
+    "definition": "Code identifying the type/source of the descriptive number used in Product/Service ID (234)",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "01",
+        "elementId": "235",
+        "name": "Product/Service ID Qualifier",
+        "requirement": "M"
+      },
+      {
+        "position": "02",
+        "elementId": "234",
+        "name": "Product/Service ID",
+        "requirement": "M"
+      },
+      {
+        "position": "03",
+        "elementId": "1339",
+        "name": "Procedure Modifier",
+        "requirement": "O"
+      },
+      {
+        "position": "04",
+        "elementId": "1339",
+        "name": "Procedure Modifier",
+        "requirement": "O"
+      },
+      {
+        "position": "05",
+        "elementId": "1339",
+        "name": "Procedure Modifier",
+        "requirement": "O"
+      },
+      {
+        "position": "06",
+        "elementId": "1339",
+        "name": "Procedure Modifier",
+        "requirement": "O"
+      },
+      {
+        "position": "07",
+        "elementId": "352",
+        "name": "Description",
+        "requirement": "O"
+      },
+      {
+        "position": "08",
+        "elementId": "234",
+        "name": "Product/Service ID",
+        "requirement": "O"
+      },
+      {
+        "position": "09",
+        "elementId": "1339",
+        "name": "Procedure Modifier",
+        "requirement": "O"
+      },
+      {
+        "position": "10",
+        "elementId": "1339",
+        "name": "Procedure Modifier",
+        "requirement": "O"
+      },
+      {
+        "position": "11",
+        "elementId": "1339",
+        "name": "Procedure Modifier",
+        "requirement": "O"
+      },
+      {
+        "position": "12",
+        "elementId": "1339",
+        "name": "Procedure Modifier",
+        "requirement": "O"
+      }
+    ]
+  },
+  "C004": {
+    "elementNumber": "C004",
+    "name": "Composite Diagnosis Code Pointer",
+    "definition": "A pointer to the diagnosis code in the order of importance to this service",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "01",
+        "elementId": "1328",
+        "name": "Diagnosis Code Pointer",
+        "requirement": "M"
+      },
+      {
+        "position": "02",
+        "elementId": "1328",
+        "name": "Diagnosis Code Pointer",
+        "requirement": "O"
+      },
+      {
+        "position": "03",
+        "elementId": "1328",
+        "name": "Diagnosis Code Pointer",
+        "requirement": "O"
+      },
+      {
+        "position": "04",
+        "elementId": "1328",
+        "name": "Diagnosis Code Pointer",
+        "requirement": "O"
+      }
+    ]
+  },
+  "C005": {
+    "elementNumber": "C005",
+    "name": "Tooth Surface",
+    "definition": "Code identifying the area of the tooth that was treated",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "01",
+        "elementId": "1369",
+        "name": "Tooth Surface Code",
+        "requirement": "M"
+      },
+      {
+        "position": "02",
+        "elementId": "1369",
+        "name": "Tooth Surface Code",
+        "requirement": "O"
+      },
+      {
+        "position": "03",
+        "elementId": "1369",
+        "name": "Tooth Surface Code",
+        "requirement": "O"
+      },
+      {
+        "position": "04",
+        "elementId": "1369",
+        "name": "Tooth Surface Code",
+        "requirement": "O"
+      },
+      {
+        "position": "05",
+        "elementId": "1369",
+        "name": "Tooth Surface Code",
+        "requirement": "O"
+      }
+    ]
+  },
+  "C006": {
+    "elementNumber": "C006",
+    "name": "Oral Cavity Designation",
+    "definition": "Code Identifying the area of the oral cavity in which service is rendered",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "01",
+        "elementId": "1361",
+        "name": "Oral Cavity Designation Code",
+        "requirement": "M"
+      },
+      {
+        "position": "02",
+        "elementId": "1361",
+        "name": "Oral Cavity Designation Code",
+        "requirement": "O"
+      },
+      {
+        "position": "03",
+        "elementId": "1361",
+        "name": "Oral Cavity Designation Code",
+        "requirement": "O"
+      },
+      {
+        "position": "04",
+        "elementId": "1361",
+        "name": "Oral Cavity Designation Code",
+        "requirement": "O"
+      },
+      {
+        "position": "05",
+        "elementId": "1361",
+        "name": "Oral Cavity Designation Code",
+        "requirement": "O"
+      }
+    ]
+  },
+  "C007": {
+    "elementNumber": "C007",
+    "name": "Amount Qualifying Description",
+    "definition": "Code to qualify amount",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "01",
+        "elementId": "522",
+        "name": "Amount Qualifier Code",
+        "requirement": "M"
+      },
+      {
+        "position": "02",
+        "elementId": "522",
+        "name": "Amount Qualifier Code",
+        "requirement": "O"
+      },
+      {
+        "position": "03",
+        "elementId": "1638",
+        "name": "Value Detail Code",
+        "requirement": "O"
+      },
+      {
+        "position": "04",
+        "elementId": "935",
+        "name": "Measurement Significance Code",
+        "requirement": "O"
+      },
+      {
+        "position": "05",
+        "elementId": "344",
+        "name": "Unit of Time Period or Interval",
+        "requirement": "O"
+      },
+      {
+        "position": "06",
+        "elementId": "1637",
+        "name": "Net/Gross Code",
+        "requirement": "O"
+      },
+      {
+        "position": "07",
+        "elementId": "935",
+        "name": "Measurement Significance Code",
+        "requirement": "O"
+      },
+      {
+        "position": "08",
+        "elementId": "352",
+        "name": "Description",
+        "requirement": "O"
+      },
+      {
+        "position": "09",
+        "elementId": "1271",
+        "name": "Industry Code",
+        "requirement": "C"
+      },
+      {
+        "position": "10",
+        "elementId": "1270",
+        "name": "Code List Qualifier Code",
+        "requirement": "C"
+      }
+    ]
+  },
+  "C022": {
+    "elementNumber": "C022",
+    "name": "Health Care Code Information",
+    "definition": "Code identifying a specific industry code list",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "01",
+        "elementId": "1270",
+        "name": "Code List Qualifier Code",
+        "requirement": "M"
+      },
+      {
+        "position": "02",
+        "elementId": "1271",
+        "name": "Industry Code",
+        "requirement": "M"
+      },
+      {
+        "position": "03",
+        "elementId": "1250",
+        "name": "Date Time Period Format Qualifier",
+        "requirement": "C"
+      },
+      {
+        "position": "04",
+        "elementId": "1251",
+        "name": "Date Time Period",
+        "requirement": "C"
+      },
+      {
+        "position": "05",
+        "elementId": "782",
+        "name": "Monetary Amount",
+        "requirement": "O"
+      },
+      {
+        "position": "06",
+        "elementId": "380",
+        "name": "Quantity",
+        "requirement": "O"
+      },
+      {
+        "position": "07",
+        "elementId": "799",
+        "name": "Version Identifier",
+        "requirement": "O"
+      },
+      {
+        "position": "08",
+        "elementId": "1271",
+        "name": "Industry Code",
+        "requirement": "C"
+      },
+      {
+        "position": "09",
+        "elementId": "1073",
+        "name": "Yes/No Condition or Response Code",
+        "requirement": "C"
+      }
+    ]
+  },
+  "C023": {
+    "elementNumber": "C023",
+    "name": "Health Care Service Location Information",
+    "definition": "Code identifying where services were, or may be, performed; the National Uniform Billing Committee (NUBC) Facility Type Code for Institutional Services or the Place of Service Codes for Professional or Dental Services.",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "01",
+        "elementId": "1331",
+        "name": "Facility Code Value",
+        "requirement": "M"
+      },
+      {
+        "position": "02",
+        "elementId": "1332",
+        "name": "Facility Code Qualifier",
+        "requirement": "O"
+      },
+      {
+        "position": "03",
+        "elementId": "1325",
+        "name": "Claim Frequency Type Code",
+        "requirement": "O"
+      }
+    ]
+  },
+  "C024": {
+    "elementNumber": "C024",
+    "name": "Related Causes Information",
+    "definition": "Code identifying an accompanying cause of an illness, injury or an accident",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "01",
+        "elementId": "1362",
+        "name": "Related-Causes Code",
+        "requirement": "M"
+      },
+      {
+        "position": "02",
+        "elementId": "1362",
+        "name": "Related-Causes Code",
+        "requirement": "O"
+      },
+      {
+        "position": "03",
+        "elementId": "1362",
+        "name": "Related-Causes Code",
+        "requirement": "O"
+      },
+      {
+        "position": "04",
+        "elementId": "156",
+        "name": "State or Province Code",
+        "requirement": "O"
+      },
+      {
+        "position": "05",
+        "elementId": "26",
+        "name": "Country Code",
+        "requirement": "O"
+      }
+    ]
+  },
+  "C028": {
+    "elementNumber": "C028",
+    "name": "Assurance Token Parameters",
+    "definition": "A code specifying the type of Assurance Token Parameter",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "01",
+        "elementId": "1439",
+        "name": "Assurance Token Parameter Code",
+        "requirement": "M"
+      },
+      {
+        "position": "02",
+        "elementId": "1442",
+        "name": "Assurance Token Parameter Value",
+        "requirement": "M"
+      },
+      {
+        "position": "03",
+        "elementId": "1439",
+        "name": "Assurance Token Parameter Code",
+        "requirement": "C"
+      },
+      {
+        "position": "04",
+        "elementId": "1442",
+        "name": "Assurance Token Parameter Value",
+        "requirement": "O"
+      },
+      {
+        "position": "05",
+        "elementId": "1439",
+        "name": "Assurance Token Parameter Code",
+        "requirement": "C"
+      },
+      {
+        "position": "06",
+        "elementId": "1442",
+        "name": "Assurance Token Parameter Value",
+        "requirement": "O"
+      },
+      {
+        "position": "07",
+        "elementId": "1439",
+        "name": "Assurance Token Parameter Code",
+        "requirement": "C"
+      },
+      {
+        "position": "08",
+        "elementId": "1442",
+        "name": "Assurance Token Parameter Value",
+        "requirement": "O"
+      },
+      {
+        "position": "09",
+        "elementId": "1439",
+        "name": "Assurance Token Parameter Code",
+        "requirement": "C"
+      },
+      {
+        "position": "10",
+        "elementId": "1442",
+        "name": "Assurance Token Parameter Value",
+        "requirement": "O"
+      },
+      {
+        "position": "11",
+        "elementId": "1439",
+        "name": "Assurance Token Parameter Code",
+        "requirement": "C"
+      },
+      {
+        "position": "12",
+        "elementId": "1442",
+        "name": "Assurance Token Parameter Value",
+        "requirement": "O"
+      },
+      {
+        "position": "13",
+        "elementId": "1439",
+        "name": "Assurance Token Parameter Code",
+        "requirement": "C"
+      },
+      {
+        "position": "14",
+        "elementId": "1442",
+        "name": "Assurance Token Parameter Value",
+        "requirement": "O"
+      },
+      {
+        "position": "15",
+        "elementId": "1439",
+        "name": "Assurance Token Parameter Code",
+        "requirement": "C"
+      },
+      {
+        "position": "16",
+        "elementId": "1442",
+        "name": "Assurance Token Parameter Value",
+        "requirement": "O"
+      },
+      {
+        "position": "17",
+        "elementId": "1439",
+        "name": "Assurance Token Parameter Code",
+        "requirement": "C"
+      },
+      {
+        "position": "18",
+        "elementId": "1442",
+        "name": "Assurance Token Parameter Value",
+        "requirement": "O"
+      },
+      {
+        "position": "19",
+        "elementId": "1439",
+        "name": "Assurance Token Parameter Code",
+        "requirement": "C"
+      },
+      {
+        "position": "20",
+        "elementId": "1442",
+        "name": "Assurance Token Parameter Value",
+        "requirement": "O"
+      }
+    ]
+  },
+  "C030": {
+    "elementNumber": "C030",
+    "name": "Position in Segment",
+    "definition": "This is used to indicate the relative position of a simple data element, or the relative position of a composite data structure with the relative position of the component within the composite data structure, in error; in the data segment the count starts with 1 for the simple data element or composite data structure immediately following the segment ID",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "01",
+        "elementId": "722",
+        "name": "Element Position in Segment",
+        "requirement": "M"
+      },
+      {
+        "position": "02",
+        "elementId": "1528",
+        "name": "Component Data Element Position in Composite",
+        "requirement": "O"
+      },
+      {
+        "position": "03",
+        "elementId": "1686",
+        "name": "Repeating Data Element Position",
+        "requirement": "O"
+      }
+    ]
+  },
+  "C031": {
+    "elementNumber": "C031",
+    "name": "Encryption Key Information",
+    "definition": "Name of the key used for encryption; this name is mutually known to the security originator and the security recipient, is unique for this relationship, and is intended to allow the changing of the key from time to time  Note: If any of the optional fields are present, the Key Name should contain either \\",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "01",
+        "elementId": "993",
+        "name": "Encryption Key Name",
+        "requirement": "M"
+      },
+      {
+        "position": "02",
+        "elementId": "1564",
+        "name": "Protocol ID",
+        "requirement": "O"
+      },
+      {
+        "position": "03",
+        "elementId": "1566",
+        "name": "Keying Material",
+        "requirement": "O"
+      },
+      {
+        "position": "04",
+        "elementId": "1567",
+        "name": "One-time Encryption Key",
+        "requirement": "O"
+      }
+    ]
+  },
+  "C032": {
+    "elementNumber": "C032",
+    "name": "Encryption Service Information",
+    "definition": "Coded values representing options for encryption processing, including the use of compression and filtering; the code either defines the encryption mode and the transmission filter specification for filtering binary data into transmittable text or specifics that the following subelements define these values",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "01",
+        "elementId": "994",
+        "name": "Encryption Service Code",
+        "requirement": "M"
+      },
+      {
+        "position": "02",
+        "elementId": "1568",
+        "name": "Algorithm ID",
+        "requirement": "O"
+      },
+      {
+        "position": "03",
+        "elementId": "1569",
+        "name": "Algorithm Mode of Operation",
+        "requirement": "O"
+      },
+      {
+        "position": "04",
+        "elementId": "1570",
+        "name": "Filter ID Code",
+        "requirement": "C"
+      },
+      {
+        "position": "05",
+        "elementId": "799",
+        "name": "Version Identifier",
+        "requirement": "C"
+      },
+      {
+        "position": "06",
+        "elementId": "1571",
+        "name": "Compression ID",
+        "requirement": "C"
+      },
+      {
+        "position": "07",
+        "elementId": "799",
+        "name": "Version Identifier",
+        "requirement": "C"
+      },
+      {
+        "position": "08",
+        "elementId": "1704",
+        "name": "Length of Initialization Vector",
+        "requirement": "O"
+      }
+    ]
+  },
+  "C033": {
+    "elementNumber": "C033",
+    "name": "Security Token Value",
+    "definition": "Type of Security Value",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "01",
+        "elementId": "1572",
+        "name": "Security Value Qualifier",
+        "requirement": "M"
+      },
+      {
+        "position": "02",
+        "elementId": "1573",
+        "name": "Encoded Security Value",
+        "requirement": "M"
+      }
+    ]
+  },
+  "C034": {
+    "elementNumber": "C034",
+    "name": "Computation Methods",
+    "definition": "Code specifying the algorithm used to compute the assurance token",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "01",
+        "elementId": "1574",
+        "name": "Assurance Algorithm",
+        "requirement": "M"
+      },
+      {
+        "position": "02",
+        "elementId": "1575",
+        "name": "Hashing Algorithm",
+        "requirement": "M"
+      }
+    ]
+  },
+  "C035": {
+    "elementNumber": "C035",
+    "name": "Provider Specialty Information",
+    "definition": "Code indicating the primary specialty of the provider, as defined by the receiver",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "01",
+        "elementId": "1222",
+        "name": "Provider Specialty Code",
+        "requirement": "M"
+      },
+      {
+        "position": "02",
+        "elementId": "559",
+        "name": "Agency Qualifier Code",
+        "requirement": "O"
+      },
+      {
+        "position": "03",
+        "elementId": "1073",
+        "name": "Yes/No Condition or Response Code",
+        "requirement": "O"
+      }
+    ]
+  },
+  "C036": {
+    "elementNumber": "C036",
+    "name": "Index Identification",
+    "definition": "Code defining how information is being grouped or arrayed",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "01",
+        "elementId": "1395",
+        "name": "Configuration Type Code",
+        "requirement": "O"
+      },
+      {
+        "position": "02",
+        "elementId": "127",
+        "name": "Reference Identification",
+        "requirement": "C"
+      },
+      {
+        "position": "03",
+        "elementId": "127",
+        "name": "Reference Identification",
+        "requirement": "C"
+      },
+      {
+        "position": "04",
+        "elementId": "863",
+        "name": "X-Peg",
+        "requirement": "C"
+      },
+      {
+        "position": "05",
+        "elementId": "864",
+        "name": "Y-Peg",
+        "requirement": "C"
+      }
+    ]
+  },
+  "C037": {
+    "elementNumber": "C037",
+    "name": "Tax Field Identification",
+    "definition": "Identifying number for Tax Information Field",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "01",
+        "elementId": "817",
+        "name": "Tax Information Identification Number",
+        "requirement": "M"
+      },
+      {
+        "position": "02",
+        "elementId": "647",
+        "name": "Application Error Condition Code",
+        "requirement": "O"
+      }
+    ]
+  },
+  "C040": {
+    "elementNumber": "C040",
+    "name": "Reference Identifier",
+    "definition": "Code qualifying the Reference Identification",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "01",
+        "elementId": "128",
+        "name": "Reference Identification Qualifier",
+        "requirement": "M"
+      },
+      {
+        "position": "02",
+        "elementId": "127",
+        "name": "Reference Identification",
+        "requirement": "M"
+      },
+      {
+        "position": "03",
+        "elementId": "128",
+        "name": "Reference Identification Qualifier",
+        "requirement": "C"
+      },
+      {
+        "position": "04",
+        "elementId": "127",
+        "name": "Reference Identification",
+        "requirement": "C"
+      },
+      {
+        "position": "05",
+        "elementId": "128",
+        "name": "Reference Identification Qualifier",
+        "requirement": "C"
+      },
+      {
+        "position": "06",
+        "elementId": "127",
+        "name": "Reference Identification",
+        "requirement": "C"
+      }
+    ]
+  },
+  "C042": {
+    "elementNumber": "C042",
+    "name": "Adjustment Identifier",
+    "definition": "Code indicating reason for debit or credit memo or adjustment to invoice, debit or credit memo, or payment",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "01",
+        "elementId": "426",
+        "name": "Adjustment Reason Code",
+        "requirement": "M"
+      },
+      {
+        "position": "02",
+        "elementId": "127",
+        "name": "Reference Identification",
+        "requirement": "O"
+      }
+    ]
+  },
+  "C043": {
+    "elementNumber": "C043",
+    "name": "Health Care Claim Status",
+    "definition": "Code indicating a code from a specific industry code list",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "01",
+        "elementId": "1271",
+        "name": "Industry Code",
+        "requirement": "M"
+      },
+      {
+        "position": "02",
+        "elementId": "1271",
+        "name": "Industry Code",
+        "requirement": "M"
+      },
+      {
+        "position": "03",
+        "elementId": "98",
+        "name": "Entity Identifier Code",
+        "requirement": "O"
+      },
+      {
+        "position": "04",
+        "elementId": "1270",
+        "name": "Code List Qualifier Code",
+        "requirement": "O"
+      }
+    ]
+  },
+  "C045": {
+    "elementNumber": "C045",
+    "name": "Conditions Indicated",
+    "definition": "Code indicating a condition",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "01",
+        "elementId": "1321",
+        "name": "Condition Indicator",
+        "requirement": "M"
+      },
+      {
+        "position": "02",
+        "elementId": "1321",
+        "name": "Condition Indicator",
+        "requirement": "O"
+      },
+      {
+        "position": "03",
+        "elementId": "1321",
+        "name": "Condition Indicator",
+        "requirement": "O"
+      },
+      {
+        "position": "04",
+        "elementId": "1321",
+        "name": "Condition Indicator",
+        "requirement": "O"
+      },
+      {
+        "position": "05",
+        "elementId": "1321",
+        "name": "Condition Indicator",
+        "requirement": "O"
+      }
+    ]
+  },
+  "C046": {
+    "elementNumber": "C046",
+    "name": "Composite Qualifier Identifier",
+    "definition": "Code qualifying how to extend charges or interpret value",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "01",
+        "elementId": "122",
+        "name": "Rate/Value Qualifier",
+        "requirement": "M"
+      },
+      {
+        "position": "02",
+        "elementId": "122",
+        "name": "Rate/Value Qualifier",
+        "requirement": "O"
+      },
+      {
+        "position": "03",
+        "elementId": "122",
+        "name": "Rate/Value Qualifier",
+        "requirement": "O"
+      },
+      {
+        "position": "04",
+        "elementId": "122",
+        "name": "Rate/Value Qualifier",
+        "requirement": "O"
+      },
+      {
+        "position": "05",
+        "elementId": "122",
+        "name": "Rate/Value Qualifier",
+        "requirement": "O"
+      }
+    ]
+  },
+  "C047": {
+    "elementNumber": "C047",
+    "name": "Composite Type of Real Estate Asset Code",
+    "definition": "Code identifying the nature of a real estate",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "01",
+        "elementId": "1074",
+        "name": "Type of Real Estate Asset Code",
+        "requirement": "M"
+      },
+      {
+        "position": "02",
+        "elementId": "1074",
+        "name": "Type of Real Estate Asset Code",
+        "requirement": "O"
+      },
+      {
+        "position": "03",
+        "elementId": "1074",
+        "name": "Type of Real Estate Asset Code",
+        "requirement": "O"
+      },
+      {
+        "position": "04",
+        "elementId": "1074",
+        "name": "Type of Real Estate Asset Code",
+        "requirement": "C"
+      },
+      {
+        "position": "05",
+        "elementId": "1074",
+        "name": "Type of Real Estate Asset Code",
+        "requirement": "O"
+      }
+    ]
+  },
+  "C048": {
+    "elementNumber": "C048",
+    "name": "Composite Use of Proceeds",
+    "definition": "Code specifying how proceeds will be used or why they are being requested",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "01",
+        "elementId": "1082",
+        "name": "Use of Proceeds Code",
+        "requirement": "M"
+      },
+      {
+        "position": "02",
+        "elementId": "1680",
+        "name": "Refinance Type Code",
+        "requirement": "O"
+      },
+      {
+        "position": "03",
+        "elementId": "1082",
+        "name": "Use of Proceeds Code",
+        "requirement": "O"
+      },
+      {
+        "position": "04",
+        "elementId": "1073",
+        "name": "Yes/No Condition or Response Code",
+        "requirement": "O"
+      }
+    ]
+  },
+  "C050": {
+    "elementNumber": "C050",
+    "name": "Certificate Look-up Information",
+    "definition": "Code specifying the protocol used to identify a certificate",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "01",
+        "elementId": "1675",
+        "name": "Look-up Value Protocol Code",
+        "requirement": "M"
+      },
+      {
+        "position": "02",
+        "elementId": "1570",
+        "name": "Filter ID Code",
+        "requirement": "M"
+      },
+      {
+        "position": "03",
+        "elementId": "799",
+        "name": "Version Identifier",
+        "requirement": "M"
+      },
+      {
+        "position": "04",
+        "elementId": "1565",
+        "name": "Look-up Value",
+        "requirement": "M"
+      },
+      {
+        "position": "05",
+        "elementId": "1675",
+        "name": "Look-up Value Protocol Code",
+        "requirement": "C"
+      },
+      {
+        "position": "06",
+        "elementId": "1570",
+        "name": "Filter ID Code",
+        "requirement": "C"
+      },
+      {
+        "position": "07",
+        "elementId": "799",
+        "name": "Version Identifier",
+        "requirement": "C"
+      },
+      {
+        "position": "08",
+        "elementId": "1565",
+        "name": "Look-up Value",
+        "requirement": "C"
+      },
+      {
+        "position": "09",
+        "elementId": "1675",
+        "name": "Look-up Value Protocol Code",
+        "requirement": "C"
+      },
+      {
+        "position": "10",
+        "elementId": "1570",
+        "name": "Filter ID Code",
+        "requirement": "C"
+      },
+      {
+        "position": "11",
+        "elementId": "799",
+        "name": "Version Identifier",
+        "requirement": "C"
+      },
+      {
+        "position": "12",
+        "elementId": "1565",
+        "name": "Look-up Value",
+        "requirement": "C"
+      }
+    ]
+  },
+  "C052": {
+    "elementNumber": "C052",
+    "name": "Medicare Status Code",
+    "definition": "Code identifying the Medicare Plan",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "01",
+        "elementId": "1218",
+        "name": "Medicare Plan Code",
+        "requirement": "M"
+      },
+      {
+        "position": "02",
+        "elementId": "1701",
+        "name": "Eligibility Reason Code",
+        "requirement": "O"
+      },
+      {
+        "position": "03",
+        "elementId": "1701",
+        "name": "Eligibility Reason Code",
+        "requirement": "O"
+      },
+      {
+        "position": "04",
+        "elementId": "1701",
+        "name": "Eligibility Reason Code",
+        "requirement": "O"
+      }
+    ]
+  },
+  "C053": {
+    "elementNumber": "C053",
+    "name": "Standards Information",
+    "definition": "Code identifying the standard type being transferred using the electronic form",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "01",
+        "elementId": "922",
+        "name": "Electronic Form Standards Type Code",
+        "requirement": "M"
+      },
+      {
+        "position": "02",
+        "elementId": "1707",
+        "name": "Electronic Form Standards Identifier",
+        "requirement": "M"
+      },
+      {
+        "position": "03",
+        "elementId": "1705",
+        "name": "Implementation Convention Reference",
+        "requirement": "M"
+      },
+      {
+        "position": "04",
+        "elementId": "799",
+        "name": "Version Identifier",
+        "requirement": "O"
+      },
+      {
+        "position": "05",
+        "elementId": "796",
+        "name": "Revision Value",
+        "requirement": "O"
+      }
+    ]
+  },
+  "C055": {
+    "elementNumber": "C055",
+    "name": "Tax Service Non-payment Exception Code",
+    "definition": "Code identifying the reason for non-payment of the tax amount owed",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "01",
+        "elementId": "1720",
+        "name": "Tax Service Non-payment Code",
+        "requirement": "M"
+      },
+      {
+        "position": "02",
+        "elementId": "1720",
+        "name": "Tax Service Non-payment Code",
+        "requirement": "O"
+      },
+      {
+        "position": "03",
+        "elementId": "1720",
+        "name": "Tax Service Non-payment Code",
+        "requirement": "O"
+      },
+      {
+        "position": "04",
+        "elementId": "1720",
+        "name": "Tax Service Non-payment Code",
+        "requirement": "O"
+      },
+      {
+        "position": "05",
+        "elementId": "1720",
+        "name": "Tax Service Non-payment Code",
+        "requirement": "O"
+      },
+      {
+        "position": "06",
+        "elementId": "1720",
+        "name": "Tax Service Non-payment Code",
+        "requirement": "O"
+      },
+      {
+        "position": "07",
+        "elementId": "1720",
+        "name": "Tax Service Non-payment Code",
+        "requirement": "O"
+      },
+      {
+        "position": "08",
+        "elementId": "1720",
+        "name": "Tax Service Non-payment Code",
+        "requirement": "O"
+      }
+    ]
+  },
+  "C056": {
+    "elementNumber": "C056",
+    "name": "Composite Race or Ethnicity Information",
+    "definition": "Code indicating the racial or ethnic background of a person; it is normally self-reported; Under certain circumstances this information is collected for United States Government statistical purposes",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "01",
+        "elementId": "1109",
+        "name": "Race or Ethnicity Code",
+        "requirement": "O"
+      },
+      {
+        "position": "02",
+        "elementId": "1270",
+        "name": "Code List Qualifier Code",
+        "requirement": "C"
+      },
+      {
+        "position": "03",
+        "elementId": "1271",
+        "name": "Industry Code",
+        "requirement": "C"
+      }
+    ]
+  },
+  "C057": {
+    "elementNumber": "C057",
+    "name": "Communication Number Component",
+    "definition": "Code identifying the type of communication number",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "01",
+        "elementId": "365",
+        "name": "Communication Number Qualifier",
+        "requirement": "C"
+      },
+      {
+        "position": "02",
+        "elementId": "364",
+        "name": "Communication Number",
+        "requirement": "C"
+      }
+    ]
+  },
+  "C998": {
+    "elementNumber": "C998",
+    "name": "Context Identification",
+    "definition": "Holds the name or 'tag' of a context",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "01",
+        "elementId": "9999",
+        "name": "Context Name",
+        "requirement": "M"
+      },
+      {
+        "position": "02",
+        "elementId": "9998",
+        "name": "Context Reference",
+        "requirement": "O"
+      }
+    ]
+  },
+  "C999": {
+    "elementNumber": "C999",
+    "name": "Reference in Segment",
+    "definition": "Reference number used to locate the data element in the Data Element Dictionary",
+    "dataType": "AN",
+    "minLength": 0,
+    "maxLength": 0,
+    "components": [
+      {
+        "position": "01",
+        "elementId": "725",
+        "name": "Data Element Reference Number",
+        "requirement": "M"
+      },
+      {
+        "position": "02",
+        "elementId": "725",
+        "name": "Data Element Reference Number",
+        "requirement": "O"
+      }
+    ]
+  }
+}

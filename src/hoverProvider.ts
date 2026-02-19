@@ -243,6 +243,16 @@ export class EdiHoverProvider implements vscode.HoverProvider {
             }
             console.log(`[EDI Hover] Loaded ${Object.keys(elementsData).length} X12 ${version} elements`);
         }
+
+        // Load composite elements
+        const compositesPath = path.join(schemaDir, 'composites.json');
+        if (fs.existsSync(compositesPath)) {
+            const compositesData = JSON.parse(fs.readFileSync(compositesPath, 'utf-8'));
+            for (const [compositeNum, data] of Object.entries(compositesData)) {
+                compositeCache.set(`x12:${version}:${compositeNum}`, data as CompositeElementInfo);
+            }
+            console.log(`[EDI Hover] Loaded ${Object.keys(compositesData).length} X12 ${version} composites`);
+        }
     }
 
     private async loadEdifactSchemas(version: string): Promise<void> {
@@ -324,11 +334,31 @@ export class EdiHoverProvider implements vscode.HoverProvider {
             const elementPosition = this.getElementPosition(lineText, position.character, segmentCode, elementDelimiter);
             console.log(`[EDI Hover] Element position: ${elementPosition}`);
             if (elementPosition) {
-                return this.showElementHover(segmentCode, elementPosition, lineText, elementDelimiter, languagePrefix, position.character, version);
+                const componentSeparator = isEdifact ? ':' : this.extractComponentSeparator(document);
+                return this.showElementHover(segmentCode, elementPosition, lineText, elementDelimiter, languagePrefix, position.character, version, componentSeparator);
             }
         }
 
         return undefined;
+    }
+
+    /**
+     * Extract the component (sub-element) separator from an X12 ISA segment.
+     * ISA-16 (the 16th element) defines this character — typically '>' or ':'.
+     */
+    private extractComponentSeparator(document: vscode.TextDocument): string {
+        const text = document.getText().substring(0, 200);
+        const elemDelim = text.charAt(3);
+        let count = 0;
+        for (let i = 3; i < text.length; i++) {
+            if (text.charAt(i) === elemDelim) {
+                count++;
+                if (count === 16) {
+                    return text.charAt(i + 1); // ISA-16 value
+                }
+            }
+        }
+        return '>'; // X12 default fallback
     }
 
     private async showSegmentHover(segmentCode: string, languagePrefix: string, version: string): Promise<vscode.Hover | undefined> {
@@ -357,7 +387,8 @@ export class EdiHoverProvider implements vscode.HoverProvider {
         elementDelimiter: string,
         languagePrefix: string,
         cursorPosition: number | undefined,
-        version: string
+        version: string,
+        componentSeparator: string = ':'
     ): Promise<vscode.Hover | undefined> {
         try {
             // First get segment info to find element number
@@ -374,17 +405,15 @@ export class EdiHoverProvider implements vscode.HoverProvider {
             // Get the actual value of this element from the line
             const elementValue = this.getElementValue(lineText, elementPosition, elementDelimiter);
 
-            // For EDIFACT, check if this is a composite element (starts with 'C' or 'S')
-            // 'C' = Composite data elements, 'S' = Service composite elements
-            // Also check if element value contains ':' separator
-            if (languagePrefix === 'edifact' && elementValue.includes(':') && cursorPosition !== undefined) {
+            // Check if this is a composite element (value contains the component separator)
+            if (elementValue.includes(componentSeparator) && cursorPosition !== undefined) {
                 const compositeInfo = this.getCompositeDetail(elementInfo.type, languagePrefix, version);
 
                 // Get component position within the composite
-                const componentPos = this.getComponentPosition(elementValue, cursorPosition, lineText, elementPosition, elementDelimiter, segmentCode);
+                const componentPos = this.getComponentPosition(elementValue, cursorPosition, lineText, elementPosition, elementDelimiter, segmentCode, componentSeparator);
 
                 if (componentPos !== null) {
-                    const componentValue = this.getComponentValue(elementValue, componentPos);
+                    const componentValue = this.getComponentValue(elementValue, componentPos, componentSeparator);
 
                     // If we have composite metadata, use it
                     if (compositeInfo && compositeInfo.components && compositeInfo.components.length > 0 && componentPos <= compositeInfo.components.length) {
@@ -486,7 +515,8 @@ export class EdiHoverProvider implements vscode.HoverProvider {
         lineText: string,
         elementPosition: number,
         elementDelimiter: string,
-        segmentCode: string
+        segmentCode: string,
+        componentSeparator: string = ':'
     ): number | null {
         // Calculate where this element starts in the line
         const parts = lineText.split(elementDelimiter);
@@ -499,8 +529,8 @@ export class EdiHoverProvider implements vscode.HoverProvider {
         // Calculate cursor position relative to element start
         const relativePos = cursorPosition - elementStartPos;
 
-        // Split element value by component separator (:)
-        const components = elementValue.split(':');
+        // Split element value by component separator
+        const components = elementValue.split(componentSeparator);
         let currentPos = 0;
 
         for (let i = 0; i < components.length; i++) {
@@ -510,7 +540,7 @@ export class EdiHoverProvider implements vscode.HoverProvider {
                 return i + 1; // Return 1-based component position
             }
 
-            currentPos = componentEnd + 1; // +1 for the : separator
+            currentPos = componentEnd + 1; // +1 for the separator character
         }
 
         return null;
@@ -519,8 +549,8 @@ export class EdiHoverProvider implements vscode.HoverProvider {
     /**
      * Get value of a specific component within a composite element
      */
-    private getComponentValue(elementValue: string, componentPosition: number): string {
-        const components = elementValue.split(':');
+    private getComponentValue(elementValue: string, componentPosition: number, componentSeparator: string = ':'): string {
+        const components = elementValue.split(componentSeparator);
         if (componentPosition <= components.length) {
             // Don't trim - preserve the actual value including whitespace
             return components[componentPosition - 1];
@@ -754,7 +784,7 @@ export class EdiHoverProvider implements vscode.HoverProvider {
         componentInfo: ComponentInfo,
         componentValue: string,
         componentDetail: ElementDetailInfo | null,
-        _languagePrefix: string,
+        languagePrefix: string,
         _version: string,
         compositeType?: string,
         fullElementValue?: string
@@ -855,7 +885,11 @@ export class EdiHoverProvider implements vscode.HoverProvider {
 
         // Link to full reference
         md.appendMarkdown(`\n\n---\n`);
-        md.appendMarkdown(`[View element reference →](https://www.stedi.com/edi/edifact/elements/${componentInfo.elementId})`);
+        if (languagePrefix === 'edifact') {
+            md.appendMarkdown(`[View element reference →](https://www.stedi.com/edi/edifact/elements/${componentInfo.elementId})`);
+        } else {
+            md.appendMarkdown(`[View element reference →](https://www.stedi.com/edi/x12/element/${componentInfo.elementId})`);
+        }
 
         return md;
     }
@@ -899,5 +933,47 @@ export class EdiHoverProvider implements vscode.HoverProvider {
         }
 
         return md;
+    }
+
+    /**
+     * Resolve the Stedi reference URL and label for the element (or composite) under the cursor.
+     * Returns null if the cursor is not on an element, or the segment/element is unknown.
+     */
+    public async resolveElementReference(
+        document: vscode.TextDocument,
+        position: vscode.Position
+    ): Promise<{ url: string; label: string } | null> {
+        const lineText = document.lineAt(position.line).text;
+        const isEdifact = document.languageId === 'edifact' || !!lineText.match(/^(UNA|UNB|UNH|UNT|UNZ)/);
+        const languagePrefix = isEdifact ? 'edifact' : 'x12';
+
+        const segmentMatch = lineText.match(/^([A-Z0-9]{2,3})(?=\*|\+|:)/);
+        if (!segmentMatch) { return null; }
+        const segmentCode = segmentMatch[1];
+
+        const elementDelimiter = lineText.includes('*') ? '*' : (lineText.includes('+') ? '+' : ':');
+        const elementIndex = this.getElementPosition(lineText, position.character, segmentCode, elementDelimiter);
+        if (!elementIndex) { return null; }
+
+        const version = await this.getDocumentVersion(document, isEdifact);
+        const segmentInfo = this.getSegmentInfo(segmentCode, languagePrefix, version);
+        if (!segmentInfo || !segmentInfo.elements || elementIndex > segmentInfo.elements.length) { return null; }
+
+        const elementDef = segmentInfo.elements[elementIndex - 1];
+        const elementType = elementDef.type;
+        const posLabel = `${segmentCode}-${elementIndex.toString().padStart(2, '0')}`;
+
+        // Composite element — open the parent segment page (no dedicated composite URL)
+        if (/^C\d{3}$/i.test(elementType)) {
+            const url = isEdifact
+                ? `https://www.stedi.com/edi/edifact/segments/${segmentCode}`
+                : `https://www.stedi.com/edi/x12/segment/${segmentCode}`;
+            return { url, label: `${posLabel} (composite ${elementType}: ${elementDef.name})` };
+        }
+
+        const url = isEdifact
+            ? `https://www.stedi.com/edi/edifact/elements/${elementType}`
+            : `https://www.stedi.com/edi/x12/element/${elementType}`;
+        return { url, label: `${posLabel} (${elementType}: ${elementDef.name})` };
     }
 }

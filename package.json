@@ -89,6 +89,10 @@
         "title": "EDI: Lookup Segment at Cursor"
       },
       {
+        "command": "ediX12Tools.lookupElement",
+        "title": "EDI: Lookup Element at Cursor"
+      },
+      {
         "command": "ediX12Tools.lookupTransactionSet",
         "title": "EDI: Lookup Transaction Set"
       },
@@ -119,6 +123,16 @@
       {
         "command": "ediX12Tools.clearValidation",
         "title": "EDI: Clear Validation"
+      },
+      {
+        "command": "ediX12Tools.fixTrailers",
+        "title": "EDI: Fix Trailer Counts"
+      }
+    ],
+    "submenus": [
+      {
+        "id": "ediX12Tools.submenu",
+        "label": "EDI Tools"
       }
     ],
     "keybindings": [
@@ -151,9 +165,64 @@
         "key": "ctrl+e ctrl+t",
         "mac": "cmd+e cmd+t",
         "when": "editorLangId == x12 || editorLangId == edifact"
+      },
+      {
+        "command": "ediX12Tools.lookupElement",
+        "key": "ctrl+e ctrl+f",
+        "mac": "cmd+e cmd+f",
+        "when": "editorLangId == x12 || editorLangId == edifact"
       }
     ],
     "menus": {
+      "editor/context": [
+        {
+          "submenu": "ediX12Tools.submenu",
+          "group": "navigation",
+          "when": "editorLangId == x12 || editorLangId == edifact"
+        }
+      ],
+      "ediX12Tools.submenu": [
+        {
+          "command": "ediX12Tools.quickFormat",
+          "group": "1_format@1",
+          "when": "editorLangId == x12 || editorLangId == edifact"
+        },
+        {
+          "command": "ediX12Tools.lookupTransactionSet",
+          "group": "2_lookup@1",
+          "when": "editorLangId == x12 || editorLangId == edifact"
+        },
+        {
+          "command": "ediX12Tools.lookupSegment",
+          "group": "2_lookup@2",
+          "when": "editorLangId == x12 || editorLangId == edifact"
+        },
+        {
+          "command": "ediX12Tools.lookupElement",
+          "group": "2_lookup@3",
+          "when": "editorLangId == x12 || editorLangId == edifact"
+        },
+        {
+          "command": "ediX12Tools.updateIds",
+          "group": "2_lookup@3",
+          "when": "editorLangId == x12 || editorLangId == edifact"
+        },
+        {
+          "command": "ediX12Tools.validateDocument",
+          "group": "3_validate@1",
+          "when": "editorLangId == x12 || editorLangId == edifact"
+        },
+        {
+          "command": "ediX12Tools.fixTrailers",
+          "group": "3_validate@2",
+          "when": "editorLangId == x12"
+        },
+        {
+          "command": "ediX12Tools.clearValidation",
+          "group": "3_validate@3",
+          "when": "editorLangId == x12 || editorLangId == edifact"
+        }
+      ],
       "commandPalette": [
         {
           "command": "ediX12Tools.quickFormat",
@@ -180,12 +249,28 @@
           "when": "editorLangId == x12 || editorLangId == edifact"
         },
         {
+          "command": "ediX12Tools.lookupElement",
+          "when": "editorLangId == x12 || editorLangId == edifact"
+        },
+        {
           "command": "ediX12Tools.searchSegment",
           "when": "editorLangId == x12 || editorLangId == edifact"
         },
         {
           "command": "ediX12Tools.searchTransactionSet",
           "when": "editorLangId == x12 || editorLangId == edifact"
+        },
+        {
+          "command": "ediX12Tools.validateDocument",
+          "when": "editorLangId == x12 || editorLangId == edifact"
+        },
+        {
+          "command": "ediX12Tools.clearValidation",
+          "when": "editorLangId == x12 || editorLangId == edifact"
+        },
+        {
+          "command": "ediX12Tools.fixTrailers",
+          "when": "editorLangId == x12"
         }
       ]
     },
