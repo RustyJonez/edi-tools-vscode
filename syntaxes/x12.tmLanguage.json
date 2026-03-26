@@ -18,65 +18,65 @@
       "match": "(ISA)(\\*)(\\w+)(\\*)(\\s{10}|\\w{10})(\\*)(\\w+)(\\*)(\\s{10}|\\w{10})(\\*)(\\w+)(\\*)(.{15})(\\*)(\\w+)(\\*)(.{15})(\\*)(\\w+)(\\*)(\\w+)(\\*)(.{1})(\\*)(\\w+)(\\*)(\\w+)(\\*)(\\w+)(\\*)(\\w+)(\\*)(.{1})(~|\\||!|\\+)",
       "captures": {
         "1": {"name": "keyword.control.edi"},
-        "2": {"name": "string.edi"},
-        "4": {"name": "string.edi"},
-        "6": {"name": "string.edi"},
-        "8": {"name": "string.edi"},
-        "10": {"name": "string.edi"},
+        "2": {"name": "comment.edi"},
+        "4": {"name": "comment.edi"},
+        "6": {"name": "comment.edi"},
+        "8": {"name": "comment.edi"},
+        "10": {"name": "comment.edi"},
         "11": {"name": "support.class.edi"},
-        "12": {"name": "string.edi"},
+        "12": {"name": "comment.edi"},
         "13": {"name": "support.class.edi"},
-        "14": {"name": "string.edi"},
+        "14": {"name": "comment.edi"},
         "15": {"name": "variable.parameter.edi"},
-        "16": {"name": "string.edi"},
+        "16": {"name": "comment.edi"},
         "17": {"name": "variable.parameter.edi"},
-        "18": {"name": "string.edi"},
-        "20": {"name": "string.edi"},
-        "22": {"name": "string.edi"},
-        "24": {"name": "string.edi"},
-        "26": {"name": "string.edi"},
+        "18": {"name": "comment.edi"},
+        "20": {"name": "comment.edi"},
+        "22": {"name": "comment.edi"},
+        "24": {"name": "comment.edi"},
+        "26": {"name": "comment.edi"},
         "27": {"name": "keyword.control.edi"},
-        "28": {"name": "string.edi"},
-        "30": {"name": "string.edi"},
+        "28": {"name": "comment.edi"},
+        "30": {"name": "comment.edi"},
         "31": {"name": "keyword.control.edi"},
-        "32": {"name": "string.edi"},
-        "34": {"name": "comment.edi"}
+        "32": {"name": "comment.edi"},
+        "34": {"name": "constant.numeric.edi"}
       }
     },
     "gsenvelope": {
       "match": "(GS)(\\*)(\\w+)(\\*)([^\\*~:>\\^|!+\\r\\n\\t]{2,15})(\\*)([^\\*~:>\\^|!+\\r\\n\\t]{2,15})(\\*)(\\w+)(\\*)(\\w+)(\\*)(\\w+)(\\*)(\\w+)(\\*)(\\w+)(~|\\||!|\\+)",
       "captures": {
         "1": {"name": "keyword.control.edi"},
-        "2": {"name": "string.edi"},
+        "2": {"name": "comment.edi"},
         "3": {"name": "variable.parameter.edi"},
-        "4": {"name": "string.edi"},
+        "4": {"name": "comment.edi"},
         "5": {"name": "support.class.edi"},
-        "6": {"name": "string.edi"},
+        "6": {"name": "comment.edi"},
         "7": {"name": "variable.parameter.edi"},
-        "8": {"name": "string.edi"},
-        "10": {"name": "string.edi"},
-        "12": {"name": "string.edi"},
-        "14": {"name": "string.edi"},
-        "16": {"name": "string.edi"},
-        "18": {"name": "comment.edi"}
+        "8": {"name": "comment.edi"},
+        "10": {"name": "comment.edi"},
+        "12": {"name": "comment.edi"},
+        "14": {"name": "comment.edi"},
+        "16": {"name": "comment.edi"},
+        "18": {"name": "constant.numeric.edi"}
       }
     },
     "transactionset": {
       "match": "\\b(?<!\\*|\\s)(ST)(\\*)(\\w+)(\\*)(\\w+)\\b",
       "captures": {
         "1": {"name": "keyword.control.edi"},
-        "2": {"name": "string.edi"},
+        "2": {"name": "comment.edi"},
         "3": {"name": "variable.parameter.edi"},
-        "4": {"name": "string.edi"}
+        "4": {"name": "comment.edi"}
       }
     },
     "delimiter1": {
       "match": "(\\*|:|>|\\^)",
-      "name": "string.edi"
+      "name": "comment.edi"
     },
     "delimiter2": {
       "match": "(~|\\||!|\\+)",
-      "name": "comment.edi"
+      "name": "constant.numeric.edi"
     },
     "heading": {
       "patterns": [
@@ -88,11 +88,11 @@
           "match": "\\b(?<!\\*|\\s)((HL)(\\*)(.*)(\\*)(.*)(\\*)(S))\\b",
           "captures": {
             "2": {"name": "support.class.edi"},
-            "3": {"name": "string.edi"},
+            "3": {"name": "comment.edi"},
             "4": {"name": "variable.parameter.edi"},
-            "5": {"name": "string.edi"},
+            "5": {"name": "comment.edi"},
             "6": {"name": "storage.type.edi"},
-            "7": {"name": "string.edi"},
+            "7": {"name": "comment.edi"},
             "8": {"name": "support.function.edi"}
           }
         }
@@ -115,11 +115,11 @@
       "begin": "\\b(?<!\\*|\\s)(HL)(\\*)(.*)(\\*)(.*)(\\*)(O|I|P|T|F)\\b",
       "beginCaptures": {
         "1": {"name": "support.class.edi"},
-        "2": {"name": "string.edi"},
+        "2": {"name": "comment.edi"},
         "3": {"name": "variable.parameter.edi"},
-        "4": {"name": "string.edi"},
+        "4": {"name": "comment.edi"},
         "5": {"name": "storage.type.edi"},
-        "6": {"name": "string.edi"},
+        "6": {"name": "comment.edi"},
         "7": {"name": "support.function.edi"}
       },
       "end": "\\b(?<!\\*)(CTT|SE|GE|IEA|AMT|TDS|TXI|TXP|CAD|ISS|SAC|PID|W03|W14|((G)+(31|33|49))|((G|W)76))\\b",
@@ -144,17 +144,17 @@
           "match": "\\b(?<!\\*|\\s)(HL)(\\*)(.*)(\\*)(.*)(\\*)(O|I|P|T|F)\\b",
           "captures": {
             "1": {"name": "support.class.edi"},
-            "2": {"name": "string.edi"},
+            "2": {"name": "comment.edi"},
             "3": {"name": "variable.parameter.edi"},
-            "4": {"name": "string.edi"},
+            "4": {"name": "comment.edi"},
             "5": {"name": "storage.type.edi"},
-            "6": {"name": "string.edi"},
+            "6": {"name": "comment.edi"},
             "7": {"name": "support.function.edi"}
           }
         },
         {
           "match": "\\b(?<!\\*|\\s)(AAA|ACD|ACK|ACS|ACT|AD1|ADI|ADJ|ADT|ADV|ADX|AIN|ALG|AM1|AMT|ANI|AOC|AOI|AOL|AOR|AP1|API|ARC|ARS|ASI|ASL|ASM|ASO|AST|AT2|AT3|AT4|AT5|AT6|AT7|AT8|AT9|ATH|ATN|ATR|ATV|AVA|AWD|AXL|BAL|BAT|BBC|BCI|BDS|BEN|BEP|BER|BFS|BIN|BL|BLI|BLN|BLR|BOR|BPR|BSD|BUY|BVI|C3|C8|C8C|CA1|CAD|CAI|CAL|CAS|CAT|CCI|CD|CD2|CD3|CDA|CDI|CDS|CED|CER|CFI|CGS|CHB|CID|CIV|CL1|CLD|CLI|CLM|CLP|CMC|CN1|COB|COD|COI|COM|CON|CPI|CQ|CR1|CR2|CR3|CR4|CR5|CR6|CR7|CR8|CRC|CRD|CRI|CRS|CRT|CS|CSF|CSH|CSS|CST|CSU|CTB|CTP|CTX|CUR|DAM|DD|DED|DEG|DET|DEX|DFI|DIS|DL|DLP|DMA|DMG|DN1|DN2|DOS|DP|DPN|DRA|DSB|DTM|DTP|DVI|EB|EC|ECS|ED|EDF|EFI|ELV|EM|EMP|EMS|EMT|ENM|ENT|EQ|ERI|ESI|ETD|F13|FA1|FA2|FAA|FC|FCL|FDA|FGS|FH|FIR|FIS|FK|FOB|FOS|FPT|FQR|FRM|FSA|FST|FTH|FU1|FU2|FU3|FU4|FU5|FX2|FX3|FX4|FX5|FX6|FX7|G05|G07|G13|G18|G19|G2|G20|G22|G23|G24|G25|G26|G28|G29|G30|G31|G32|G33|G35|G36|G37|G39|G40|G43|G45|G46|G47|G51|G53|G54|G55|G61|G62|G63|G66|G69|G70|G72|G73|G83|G86|G89|G93|G94|G95|GDP|GF|GRP|GY|H1|H2|H3|H6|HAD|HC|HCP|HCR|HD|HI|HLH|HPL|HS|HSD|IC|ICH|ICM|ID|ID2|ID3|ID4|IDC|IGI|III|IMM|IMP|IN1|IN2|INC|IND|ING|INI|INQ|INR|INS|INT|INV|INX|IRA|ISI|ISR|IT1|IT3|IT8|ITA|ITC|ITD|ITS|IV1|IVT|JID|JIT|K1|K2|K3|L0|L1|L10|L11|L12|L3|L4|L5|L7|L8|L9|LAD|LC|LC1|LCD|LCT|LDT|LE|LEP|LFG|LFH|LH|LH1|LH2|LH3|LH4|LH6|LHE|LHR|LHT|LIC|LID|LIE|LIN|LM|LN|LN1|LN2|LOC|LOD|LP|LQ|LRQ|LS|LSC|LT|LTE|LTR|LUC|LUI|LX|M1|M12|M7|M7A|MAN|MCD|MCT|MEA|MIA|MIC|MIR|MKS|MLA|MLS|MOA|MPI|MPP|MRC|MS1|MS2|MS4|MS5|MS6|MSG|MSI|MSS|MTX|N1|N10|N11|N12|N2|N3|N4|N5|N7|N7A|N7B|N9|NA|NCA|NCD|NF1|NF2|NF3|NF4|NF5|NF6|NF7|NF8|NFB|NFC|NFD|NFE|NM1|NTE|NX1|NX2|OBI|OI|OID|OOI|OPS|OPX|P1|P2|PAD|PAI|PAL|PAM|PAS|PAT|PBI|PCL|PCS|PCT|PD|PDD|PDE|PDH|PDI|PDL|PDP|PDR|PDS|PEN|PER|PEX|PI|PID|PIN|PKD|PKG|PKL|PL|PLA|PLD|PM|PMP|PO1|PO3|PO4|PO5|PO6|PO7|PO8|POD|PPA|PPD|PPL|PPR|PPY|PR|PRC|PRD|PRF|PRJ|PRR|PRS|PRT|PRV|PS1|PSA|PSC|PSD|PSG|PTF|PTS|PWK|PYD|PYM|PYT|Q7|Q8|QTY|R1|R13|R4|RAP|RAS|RC|RCD|RCR|RDI|RDR|RDT|REA|REC|RED|REF|REG|REL|REP|REQ|RES|RET|RLD|RLT|RMR|RMT|RO|RP|RPA|RQS|RRA|RRE|RSC|RSD|RST|RTE|RTT|RYL|S5|SAC|SBI|SBR|SBT|SCA|SCH|SCM|SCS|SCT|SD1|SDP|SDQ|SEF|SER|SES|SHI|SHP|SI|SII|SIN|SL1|SLA|SLN|SLS|SLV|SMD|SN1|SOI|SOM|SP|SPA|SPI|SPK|SPR|SPS|SPT|SPY|SR|SRE|SSE|SSS|SST|STA|STC|SUM|SUP|SV|SV1|SV2|SV3|SV4|SV5|SV6|SV7|SVC|SVD|TA|TAR|TAX|TBI|TBP|TC2|TCD|TD1|TD3|TD4|TD5|TDT|TED|TER|TF|TFR|TIA|TID|TII|TIS|TLN|TMD|TOA|TOO|TOV|TPB|TPP|TRD|TRF|TRN|TRS|TRT|TS|TS2|TS3|TSD|TSP|TST|TSU|TXI|TXP|UC|UCS|UD|UDA|UIT|UM|UQS|UR|USD|USI|UWI|V1|V4|V9|VAR|VAT|VC|VC1|VDI|VEH|VRC|W01|W07|W09|W12|W13|W20|W27|W6|WIN|WLD|WS|X1|X2|Y2|Y7|YNQ|ZA)\\b",
-          "name": "storage.type.edi"
+          "name": "string.edi"
         }
       ]
     },
