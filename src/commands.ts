@@ -104,6 +104,17 @@ export function registerCommands(context: vscode.ExtensionContext, hoverProvider
         vscode.commands.registerCommand('ediX12Tools.fixTrailers', fixTrailers)
     );
 
+    // Toggle Hover Tooltips
+    context.subscriptions.push(
+        vscode.commands.registerCommand('ediX12Tools.toggleHover', async () => {
+            const config = vscode.workspace.getConfiguration('ediX12Tools');
+            const current = config.get<boolean>('hover.enabled', true);
+            await config.update('hover.enabled', !current, vscode.ConfigurationTarget.Global);
+            const state = !current ? 'enabled' : 'disabled';
+            vscode.window.showInformationMessage(`EDI hover tooltips ${state}`);
+        })
+    );
+
     // Clear diagnostics on document close
     context.subscriptions.push(
         vscode.workspace.onDidCloseTextDocument(doc => {

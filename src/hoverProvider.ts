@@ -294,6 +294,11 @@ export class EdiHoverProvider implements vscode.HoverProvider {
         position: vscode.Position,
         _token: vscode.CancellationToken
     ): Promise<vscode.Hover | undefined> {
+        const config = vscode.workspace.getConfiguration('ediX12Tools');
+        if (!config.get<boolean>('hover.enabled', true)) {
+            return undefined;
+        }
+
         const line = document.lineAt(position.line);
         const lineText = line.text;
 

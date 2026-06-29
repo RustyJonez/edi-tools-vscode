@@ -127,6 +127,10 @@
       {
         "command": "ediX12Tools.fixTrailers",
         "title": "EDI: Fix Trailer Counts"
+      },
+      {
+        "command": "ediX12Tools.toggleHover",
+        "title": "EDI: Toggle Hover Tooltips"
       }
     ],
     "submenus": [
@@ -221,6 +225,11 @@
           "command": "ediX12Tools.clearValidation",
           "group": "3_validate@3",
           "when": "editorLangId == x12 || editorLangId == edifact"
+        },
+        {
+          "command": "ediX12Tools.toggleHover",
+          "group": "4_settings@1",
+          "when": "editorLangId == x12 || editorLangId == edifact"
         }
       ],
       "commandPalette": [
@@ -271,6 +280,9 @@
         {
           "command": "ediX12Tools.fixTrailers",
           "when": "editorLangId == x12"
+        },
+        {
+          "command": "ediX12Tools.toggleHover"
         }
       ]
     },
