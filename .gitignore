@@ -35,3 +35,6 @@ Thumbs.db
 
 # Lock files (regenerated on install)
 package-lock.json
+
+# Local validator tests (reference client sample data)
+test/

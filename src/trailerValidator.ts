@@ -1,24 +1,28 @@
-import * as vscode from 'vscode';
+/**
+ * X12 trailer validation (SE / GE / IEA counts and control numbers).
+ *
+ * Works on a ParsedDocument, so it doesn't depend on one segment per line.
+ * No vscode dependency - keeps this module unit-testable.
+ */
+
+import { ParsedDocument, ParsedSegment, isSegmentTag } from './ediParser';
 
 /**
  * Describes a single trailer mismatch — what the current value is and what it should be.
  */
 export interface TrailerError {
-    lineNum: number;
+    segment: ParsedSegment;
     elemIndex: number;   // 1-based element position in the segment (e.g. SE-01 = 1, SE-02 = 2)
     label: string;       // e.g. "SE-01"
     message: string;
     currentValue: string;
     correctValue: string;
-}
-
-/** Strip segment terminator characters and trim whitespace from a raw element string. */
-function stripTerminator(raw: string): string {
-    return raw.replace(/[~'\r\n]+$/, '').trim();
+    start: number;       // offset of the element (segment end when the element is missing)
+    end: number;
 }
 
 /**
- * Parse an X12 document and compute the correct trailer values.
+ * Compute the correct trailer values for an X12 document.
  * Returns one TrailerError per element that doesn't match expectations.
  *
  * Rules validated:
@@ -29,10 +33,7 @@ function stripTerminator(raw: string): string {
  *   IEA-01 = count of GS/GE pairs in this interchange
  *   IEA-02 = must match ISA-13
  */
-export function analyzeTrailers(
-    document: vscode.TextDocument,
-    elemDelim: string
-): TrailerError[] {
+export function analyzeTrailers(doc: ParsedDocument): TrailerError[] {
     const errors: TrailerError[] = [];
 
     // Interchange state
@@ -49,27 +50,25 @@ export function analyzeTrailers(
     let segmentCount = 0;
     let inTransaction = false;
 
-    for (let lineNum = 0; lineNum < document.lineCount; lineNum++) {
-        const lineText = document.lineAt(lineNum).text;
-        if (!lineText.trim()) continue;
+    const check = (segment: ParsedSegment, elemIndex: number, expected: string, message: (actual: string) => string) => {
+        const element = segment.elements[elemIndex - 1];
+        const actual = element ? element.value.trim() : '';
+        if (actual === expected) return;
+        errors.push({
+            segment, elemIndex,
+            label: `${segment.tag}-${String(elemIndex).padStart(2, '0')}`,
+            message: message(actual),
+            currentValue: actual,
+            correctValue: expected,
+            start: element ? element.start : segment.end,
+            end: element ? element.end : segment.end
+        });
+    };
 
-        // Must start with a valid segment code followed by the element delimiter
-        const delimEscaped = elemDelim.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-        const codeMatch = lineText.match(new RegExp(`^([A-Z][A-Z0-9]{1,2})(?=${delimEscaped})`));
-        if (!codeMatch) continue;
+    for (const segment of doc.segments) {
+        const getElem = (idx: number) => segment.elements[idx - 1]?.value.trim() ?? '';
 
-        const code = codeMatch[1];
-        const parts = lineText.split(elemDelim);
-
-        // Return the value of element at idx, stripping the segment terminator if it's the last.
-        const getElem = (idx: number): string => {
-            if (idx >= parts.length) return '';
-            return idx === parts.length - 1
-                ? stripTerminator(parts[idx])
-                : parts[idx].trim();
-        };
-
-        switch (code) {
+        switch (segment.tag) {
             case 'ISA':
                 isaControlNumber = getElem(13);
                 functionalGroupCount = 0;  // reset for this interchange
@@ -90,27 +89,10 @@ export function analyzeTrailers(
             case 'SE': {
                 if (!inTransaction) break;
                 segmentCount++;     // SE is the last segment — count it before comparing
-
-                const seExpectedCount = String(segmentCount);
-                const seExpectedControl = stControlNumber;
-                const seActualCount = getElem(1);
-                const seActualControl = getElem(2);
-
-                if (seActualCount !== seExpectedCount) {
-                    errors.push({
-                        lineNum, elemIndex: 1, label: 'SE-01',
-                        message: `SE-01: Segment count ${seActualCount} should be ${seExpectedCount}`,
-                        currentValue: seActualCount, correctValue: seExpectedCount
-                    });
-                }
-                if (seActualControl !== seExpectedControl) {
-                    errors.push({
-                        lineNum, elemIndex: 2, label: 'SE-02',
-                        message: `SE-02: Control number "${seActualControl}" must match ST-02 "${seExpectedControl}"`,
-                        currentValue: seActualControl, correctValue: seExpectedControl
-                    });
-                }
-
+                const expectedCount = String(segmentCount);
+                const expectedControl = stControlNumber;
+                check(segment, 1, expectedCount, a => `SE-01: Segment count ${a} should be ${expectedCount}`);
+                check(segment, 2, expectedControl, a => `SE-02: Control number "${a}" must match ST-02 "${expectedControl}"`);
                 groupTransactionSetCount++;
                 inTransaction = false;
                 break;
@@ -118,60 +100,26 @@ export function analyzeTrailers(
 
             case 'GE': {
                 if (!inGroup) break;
-
-                const geExpectedCount = String(groupTransactionSetCount);
-                const geExpectedControl = gsControlNumber;
-                const geActualCount = getElem(1);
-                const geActualControl = getElem(2);
-
-                if (geActualCount !== geExpectedCount) {
-                    errors.push({
-                        lineNum, elemIndex: 1, label: 'GE-01',
-                        message: `GE-01: Transaction set count ${geActualCount} should be ${geExpectedCount}`,
-                        currentValue: geActualCount, correctValue: geExpectedCount
-                    });
-                }
-                if (geActualControl !== geExpectedControl) {
-                    errors.push({
-                        lineNum, elemIndex: 2, label: 'GE-02',
-                        message: `GE-02: Control number "${geActualControl}" must match GS-06 "${geExpectedControl}"`,
-                        currentValue: geActualControl, correctValue: geExpectedControl
-                    });
-                }
-
+                const expectedCount = String(groupTransactionSetCount);
+                const expectedControl = gsControlNumber;
+                check(segment, 1, expectedCount, a => `GE-01: Transaction set count ${a} should be ${expectedCount}`);
+                check(segment, 2, expectedControl, a => `GE-02: Control number "${a}" must match GS-06 "${expectedControl}"`);
                 functionalGroupCount++;
                 inGroup = false;
                 break;
             }
 
             case 'IEA': {
-                const ieaExpectedCount = String(functionalGroupCount);
-                const ieaExpectedControl = isaControlNumber;
-                const ieaActualCount = getElem(1);
-                const ieaActualControl = getElem(2);
-
-                if (ieaActualCount !== ieaExpectedCount) {
-                    errors.push({
-                        lineNum, elemIndex: 1, label: 'IEA-01',
-                        message: `IEA-01: Functional group count ${ieaActualCount} should be ${ieaExpectedCount}`,
-                        currentValue: ieaActualCount, correctValue: ieaExpectedCount
-                    });
-                }
-                if (ieaActualControl !== ieaExpectedControl) {
-                    errors.push({
-                        lineNum, elemIndex: 2, label: 'IEA-02',
-                        message: `IEA-02: Control number "${ieaActualControl}" must match ISA-13 "${ieaExpectedControl}"`,
-                        currentValue: ieaActualControl, correctValue: ieaExpectedControl
-                    });
-                }
+                const expectedCount = String(functionalGroupCount);
+                const expectedControl = isaControlNumber;
+                check(segment, 1, expectedCount, a => `IEA-01: Functional group count ${a} should be ${expectedCount}`);
+                check(segment, 2, expectedControl, a => `IEA-02: Control number "${a}" must match ISA-13 "${expectedControl}"`);
                 break;
             }
 
             default:
-                // Count any segment that falls inside a transaction set
-                if (inTransaction) {
-                    segmentCount++;
-                }
+                // Count any segment that falls inside a transaction set (stray text isn't a segment)
+                if (inTransaction && isSegmentTag(segment.tag)) segmentCount++;
                 break;
         }
     }
@@ -179,42 +127,35 @@ export function analyzeTrailers(
     return errors;
 }
 
-/**
- * Compute the character range of a specific element within a segment line.
- * elemIndex is 1-based (SE-01 = 1, SE-02 = 2).
- */
-export function getTrailerElementRange(
-    lineText: string,
-    elemIndex: number,
-    elemDelim: string,
-    lineNum: number
-): vscode.Range {
-    const parts = lineText.split(elemDelim);
-    let charPos = 0;
-    for (let i = 0; i < elemIndex; i++) {
-        charPos += parts[i].length + 1; // +1 for the delimiter
-    }
-    const raw = elemIndex < parts.length ? parts[elemIndex] : '';
-    const cleanLen = raw.replace(/[~'\r\n]+$/, '').length;
-    return new vscode.Range(lineNum, charPos, lineNum, charPos + Math.max(cleanLen, 1));
+export interface TextReplacement {
+    start: number;
+    end: number;
+    text: string;
 }
 
 /**
- * Add VSCode diagnostics for X12 trailer mismatches.
- * Call from validateDocument() for X12 documents only.
+ * Build one replacement per trailer segment that has errors. The segment's element
+ * list (everything after the tag, before the terminator) is rewritten with the
+ * corrected values, so missing elements are added with the right delimiters.
  */
-export function validateTrailers(
-    document: vscode.TextDocument,
-    elemDelim: string,
-    diagnostics: vscode.Diagnostic[]
-): void {
-    const errors = analyzeTrailers(document, elemDelim);
+export function buildTrailerFixes(text: string, errors: TrailerError[]): TextReplacement[] {
+    const bySegment = new Map<ParsedSegment, TrailerError[]>();
     for (const err of errors) {
-        const lineText = document.lineAt(err.lineNum).text;
-        const range = getTrailerElementRange(lineText, err.elemIndex, elemDelim, err.lineNum);
-        const diagnostic = new vscode.Diagnostic(range, err.message, vscode.DiagnosticSeverity.Error);
-        diagnostic.source = 'EDI Validator';
-        diagnostic.code = 'trailer';
-        diagnostics.push(diagnostic);
+        const list = bySegment.get(err.segment) ?? [];
+        list.push(err);
+        bySegment.set(err.segment, list);
     }
+
+    const fixes: TextReplacement[] = [];
+    for (const [segment, segErrors] of bySegment) {
+        const values = segment.elements.map(e => text.substring(e.start, e.end));
+        for (const err of segErrors) {
+            while (values.length < err.elemIndex) values.push('');
+            values[err.elemIndex - 1] = err.correctValue;
+        }
+        const start = segment.start + segment.tag.length;
+        const delim = segment.delimiters.element;  // each interchange may declare its own
+        fixes.push({ start, end: segment.end, text: delim + values.join(delim) });
+    }
+    return fixes;
 }

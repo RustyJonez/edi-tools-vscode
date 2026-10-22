@@ -35,7 +35,9 @@ export function validateElement(value: string, schema: ElementSchema): Validatio
     // This applies to both X12 'ID' types and EDIFACT 'AN' types with code lists
     if (schema.codes && schema.codes.length > 0) {
         // Check if this is a composite code element (like X12 element 103 - Packaging Code)
-        if (schema.elementNumber && isCompositeCodeElement(schema.elementNumber)) {
+        if (schema.elementNumber && hasValidCodePrefix(value, schema.elementNumber, schema.codes)) {
+            // e.g. GS-08 "004010VICS" - version code plus an industry suffix
+        } else if (schema.elementNumber && isCompositeCodeElement(schema.elementNumber)) {
             const codeResult = validateCompositeCode(value, schema.elementNumber, schema.codes);
             if (!codeResult.isValid) return codeResult;
         } else {
@@ -56,10 +58,25 @@ export function validateElement(value: string, schema: ElementSchema): Validatio
 }
 
 /**
+ * Code elements whose value is a listed code followed by a free-form suffix.
+ * X12 480 (GS-08): 6-digit version/release plus an industry identifier, e.g. 004010VICS, 005010X222A1.
+ */
+const PREFIX_CODE_ELEMENTS: Record<string, number> = {
+    '480': 6,
+};
+
+function hasValidCodePrefix(value: string, elementNumber: string, codes: Array<{ code: string }>): boolean {
+    const prefixLength = PREFIX_CODE_ELEMENTS[elementNumber];
+    return prefixLength !== undefined
+        && value.length > prefixLength
+        && codes.some(c => c.code === value.substring(0, prefixLength));
+}
+
+/**
  * Validate element length against min/max constraints
  */
 export function validateLength(value: string, schema: ElementSchema): ValidationResult {
-    const len = value.length;
+    const len = isNumericType(schema.dataType) ? numericLength(value) : value.length;
 
     if (schema.minLength > 0 && len < schema.minLength) {
         return {
@@ -80,6 +97,15 @@ export function validateLength(value: string, schema: ElementSchema): Validation
     }
 
     return { isValid: true, message: '', severity: 'warning' };
+}
+
+/** X12 N0-N9, N and R, and EDIFACT n: a leading minus sign and the decimal mark don't count toward length */
+function isNumericType(dataType: string): boolean {
+    return /^(N\d?|R)$/i.test(dataType || '');
+}
+
+function numericLength(value: string): number {
+    return value.replace(/^-/, '').replace(/[.,]/, '').length;
 }
 
 /**
@@ -453,192 +479,156 @@ export function getCompositeCodeTranslation(
 }
 
 /**
- * Validate date/time with EDIFACT format qualifier
- * Used for context-aware validation of date composites (C507, S004, etc.)
+ * EDIFACT date/time/period format qualifiers (code list 2379) mapped to their
+ * picture strings. Used when the schema's code list isn't available; when it is,
+ * the description from the schema takes precedence.
  */
-export function validateDateWithFormat(value: string, formatCode: string): ValidationResult {
-    // Map EDIFACT format codes to validation rules
-    // Reference: EDIFACT code list 2379 - Date/time/period format qualifier
-    const formatMap: Record<string, { length: number, pattern: 'date' | 'datetime' | 'time', description: string }> = {
-        '102': { length: 8, pattern: 'date', description: 'CCYYMMDD' },
-        '203': { length: 12, pattern: 'datetime', description: 'CCYYMMDDHHMM' },
-        '204': { length: 14, pattern: 'datetime', description: 'CCYYMMDDHHMMSS' },
-        '602': { length: 6, pattern: 'date', description: 'YYMMDD' },
-        '616': { length: 8, pattern: 'datetime', description: 'YYMMDDHHMM' },
-        '718': { length: 10, pattern: 'datetime', description: 'YYMMDDHHMMSS' },
-        '201': { length: 10, pattern: 'datetime', description: 'YYMMDDHHMM' },
-        '303': { length: 4, pattern: 'time', description: 'HHMM' },
-        '304': { length: 6, pattern: 'time', description: 'HHMMSS' },
+const DATE_FORMAT_PATTERNS: Record<string, string> = {
+    '2': 'DDMMYY', '3': 'MMDDYY', '4': 'DDMMCCYY', '5': 'DDMMCCYYHHMM', '10': 'CCYYMMDDTHHMM',
+    '101': 'YYMMDD', '102': 'CCYYMMDD', '103': 'YYWWD', '105': 'YYDDD', '106': 'MMDD',
+    '107': 'DDD', '108': 'WW', '109': 'MM', '110': 'DD',
+    '201': 'YYMMDDHHMM', '202': 'YYMMDDHHMMSS', '203': 'CCYYMMDDHHMM', '204': 'CCYYMMDDHHMMSS',
+    '301': 'YYMMDDHHMMZZZ', '302': 'YYMMDDHHMMSSZZZ', '303': 'CCYYMMDDHHMMZZZ', '304': 'CCYYMMDDHHMMSSZZZ',
+    '305': 'MMDDHHMM', '306': 'DDHHMM', '307': 'CCYYMMDDHHMMSSFFF', '308': 'CCYYMMDDHHMMZZZ-CCYYMMDDHHMMZZZ',
+    '401': 'HHMM', '402': 'HHMMSS', '404': 'HHMMSSZZZ',
+    '501': 'HHMMHHMM', '502': 'HHMMSS-HHMMSS', '503': 'HHMMSSZZZ-HHMMSSZZZ',
+    '600': 'CC', '601': 'YY', '602': 'CCYY', '609': 'YYMM', '610': 'CCYYMM', '615': 'YYWW', '616': 'CCYYWW',
+    '701': 'YY-YY', '702': 'CCYY-CCYY', '709': 'YYMM-YYMM', '710': 'CCYYMM-CCYYMM',
+    '711': 'CCYYMMDD-CCYYMMDD', '713': 'YYMMDDHHMM-YYMMDDHHMM', '715': 'YYWW-YYWW', '716': 'CCYYWW-CCYYWW',
+    '717': 'YYMMDD-YYMMDD', '718': 'CCYYMMDD-CCYYMMDD', '719': 'CCYYMMDDHHMM-CCYYMMDDHHMM', '720': 'DHHMM-DHHMM',
+};
+
+type DateToken = 'CCYY' | 'YY' | 'CC' | 'MONTH' | 'DD' | 'DDD' | 'D' | 'HH' | 'MIN' | 'SS' | 'WW' | 'ZZZ' | 'FFF' | '-' | 'T';
+
+const TOKEN_WIDTH: Record<DateToken, number> = {
+    CCYY: 4, YY: 2, CC: 2, MONTH: 2, DD: 2, DDD: 3, D: 1, HH: 2, MIN: 2, SS: 2, WW: 2, ZZZ: 3, FFF: 3, '-': 1, T: 1
+};
+
+/**
+ * Break a picture string such as "CCYYMMDDHHMM-CCYYMMDDHHMM" into tokens.
+ * Returns undefined for pictures containing parts we can't check (e.g. Z, S, Q, P),
+ * in which case the value is not validated rather than risk a false error.
+ */
+function tokenizeDatePattern(pattern: string): DateToken[] | undefined {
+    const tokens: DateToken[] = [];
+    let i = 0;
+    while (i < pattern.length) {
+        const rest = pattern.substring(i);
+        const prev = tokens[tokens.length - 1];
+        let tok: DateToken | undefined;
+        if (rest.startsWith('CCYY')) tok = 'CCYY';
+        else if (rest.startsWith('CC')) tok = 'CC';
+        else if (rest.startsWith('YY')) tok = 'YY';
+        else if (rest.startsWith('MM')) tok = prev === 'HH' ? 'MIN' : 'MONTH';
+        else if (rest.startsWith('DDD')) tok = 'DDD';
+        else if (rest.startsWith('DD')) tok = 'DD';
+        else if (rest.startsWith('HH')) tok = 'HH';
+        else if (rest.startsWith('SS')) tok = 'SS';
+        else if (rest.startsWith('WW')) tok = 'WW';
+        else if (rest.startsWith('ZZZ')) tok = 'ZZZ';
+        else if (rest.startsWith('FFF')) tok = 'FFF';
+        else if (rest.startsWith('D')) tok = 'D';
+        else if (rest.startsWith('-')) tok = '-';
+        else if (rest.startsWith('T')) tok = 'T';
+        if (!tok) return undefined;
+        tokens.push(tok);
+        i += TOKEN_WIDTH[tok];
+    }
+    return tokens;
+}
+
+function dateError(message: string): ValidationResult {
+    return { isValid: false, errorType: 'dataType', message, severity: 'error' };
+}
+
+/** Check a value against a 2379-style picture string. Undefined = picture not checkable. */
+export function validateDatePattern(value: string, pattern: string): ValidationResult | undefined {
+    const tokens = tokenizeDatePattern(pattern);
+    if (!tokens) return undefined;
+
+    const expectedLength = tokens.reduce((n, t) => n + TOKEN_WIDTH[t], 0);
+    if (value.length !== expectedLength) {
+        return dateError(`Invalid ${pattern} length: ${value.length} (expected ${expectedLength})`);
+    }
+
+    // Year/month/day are tracked per range part so each date is checked on its own
+    let year: number | undefined, month: number | undefined, day: number | undefined;
+    const checkDayInMonth = (): ValidationResult | undefined => {
+        if (month === undefined || day === undefined) return undefined;
+        const daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+        const y = year ?? 2000; // no year in picture: allow Feb 29
+        if ((y % 4 === 0 && y % 100 !== 0) || y % 400 === 0) daysInMonth[1] = 29;
+        if (day > daysInMonth[month - 1]) return dateError(`Invalid day ${day} for month ${month}`);
+        return undefined;
     };
 
-    const format = formatMap[formatCode];
-    if (!format) {
-        // Unknown format code - skip specific validation but check if it looks date-like
-        if (!/^\d+$/.test(value)) {
-            return {
-                isValid: false,
-                errorType: 'dataType',
-                message: `Date/time value contains non-numeric characters`,
-                severity: 'error'
-            };
-        }
-        return { isValid: true, message: '', severity: 'warning' };
-    }
+    let pos = 0;
+    for (const tok of tokens) {
+        const part = value.substring(pos, pos + TOKEN_WIDTH[tok]);
+        pos += TOKEN_WIDTH[tok];
 
-    // Check length
-    if (value.length !== format.length) {
-        return {
-            isValid: false,
-            errorType: 'dataType',
-            message: `Invalid ${format.description} length: ${value.length} (expected ${format.length})`,
-            severity: 'error'
-        };
-    }
-
-    // Check all numeric
-    if (!/^\d+$/.test(value)) {
-        return {
-            isValid: false,
-            errorType: 'dataType',
-            message: `Date/time contains non-numeric characters`,
-            severity: 'error'
-        };
-    }
-
-    // Validate date portion
-    if (format.pattern === 'date' || format.pattern === 'datetime') {
-        let year: number, month: number, day: number;
-        let dateLength: number;
-
-        if (format.description.startsWith('CCYY')) {
-            // 4-digit year
-            year = parseInt(value.substring(0, 4), 10);
-            month = parseInt(value.substring(4, 6), 10);
-            day = parseInt(value.substring(6, 8), 10);
-            dateLength = 8;
-        } else if (format.description.startsWith('YY')) {
-            // 2-digit year
-            const yy = parseInt(value.substring(0, 2), 10);
-            year = yy < 50 ? 2000 + yy : 1900 + yy;
-            month = parseInt(value.substring(2, 4), 10);
-            day = parseInt(value.substring(4, 6), 10);
-            dateLength = 6;
-        } else {
-            // Can't determine date format
-            return { isValid: true, message: '', severity: 'warning' };
-        }
-
-        // Validate month
-        if (month < 1 || month > 12) {
-            return {
-                isValid: false,
-                errorType: 'dataType',
-                message: `Invalid month: ${month}`,
-                severity: 'error'
-            };
-        }
-
-        // Validate day
-        if (day < 1 || day > 31) {
-            return {
-                isValid: false,
-                errorType: 'dataType',
-                message: `Invalid day: ${day}`,
-                severity: 'error'
-            };
-        }
-
-        // Check days in month
-        const daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-        if (month === 2 && ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0)) {
-            daysInMonth[1] = 29; // Leap year
-        }
-
-        if (day > daysInMonth[month - 1]) {
-            return {
-                isValid: false,
-                errorType: 'dataType',
-                message: `Invalid day ${day} for month ${month}`,
-                severity: 'error'
-            };
-        }
-
-        // Validate time portion if present
-        if (format.pattern === 'datetime' && value.length > dateLength) {
-            const timeOffset = dateLength;
-
-            if (value.length >= timeOffset + 2) {
-                const hours = parseInt(value.substring(timeOffset, timeOffset + 2), 10);
-                if (hours < 0 || hours > 23) {
-                    return {
-                        isValid: false,
-                        errorType: 'dataType',
-                        message: `Invalid hour: ${hours}`,
-                        severity: 'error'
-                    };
-                }
+        if (tok === '-' || tok === 'T') {
+            if (part !== tok) return dateError(`Expected "${tok}" at position ${pos} (format ${pattern})`);
+            if (tok === '-') {
+                const r = checkDayInMonth();
+                if (r) return r;
+                year = month = day = undefined;
             }
-
-            if (value.length >= timeOffset + 4) {
-                const minutes = parseInt(value.substring(timeOffset + 2, timeOffset + 4), 10);
-                if (minutes < 0 || minutes > 59) {
-                    return {
-                        isValid: false,
-                        errorType: 'dataType',
-                        message: `Invalid minutes: ${minutes}`,
-                        severity: 'error'
-                    };
-                }
-            }
-
-            if (value.length >= timeOffset + 6) {
-                const seconds = parseInt(value.substring(timeOffset + 4, timeOffset + 6), 10);
-                if (seconds < 0 || seconds > 59) {
-                    return {
-                        isValid: false,
-                        errorType: 'dataType',
-                        message: `Invalid seconds: ${seconds}`,
-                        severity: 'error'
-                    };
-                }
-            }
+            continue;
         }
-    } else if (format.pattern === 'time') {
-        // Validate time-only format
-        const hours = parseInt(value.substring(0, 2), 10);
-        if (hours < 0 || hours > 23) {
-            return {
-                isValid: false,
-                errorType: 'dataType',
-                message: `Invalid hour: ${hours}`,
-                severity: 'error'
-            };
-        }
+        if (tok === 'ZZZ') continue; // time zone code - free text
 
-        if (value.length >= 4) {
-            const minutes = parseInt(value.substring(2, 4), 10);
-            if (minutes < 0 || minutes > 59) {
-                return {
-                    isValid: false,
-                    errorType: 'dataType',
-                    message: `Invalid minutes: ${minutes}`,
-                    severity: 'error'
-                };
-            }
+        if (!/^\d+$/.test(part)) {
+            return dateError(`Date/time contains non-numeric characters (format ${pattern})`);
         }
-
-        if (value.length >= 6) {
-            const seconds = parseInt(value.substring(4, 6), 10);
-            if (seconds < 0 || seconds > 59) {
-                return {
-                    isValid: false,
-                    errorType: 'dataType',
-                    message: `Invalid seconds: ${seconds}`,
-                    severity: 'error'
-                };
-            }
+        const n = parseInt(part, 10);
+        switch (tok) {
+            case 'CCYY': year = n; break;
+            case 'YY': year = n < 50 ? 2000 + n : 1900 + n; break;
+            case 'MONTH':
+                if (n < 1 || n > 12) return dateError(`Invalid month: ${n}`);
+                month = n; break;
+            case 'DD':
+                if (n < 1 || n > 31) return dateError(`Invalid day: ${n}`);
+                day = n; break;
+            case 'DDD':
+                if (n < 1 || n > 366) return dateError(`Invalid day of year: ${n}`);
+                break;
+            case 'D':
+                if (n < 1 || n > 7) return dateError(`Invalid day of week: ${n}`);
+                break;
+            case 'WW':
+                if (n < 1 || n > 53) return dateError(`Invalid week: ${n}`);
+                break;
+            case 'HH':
+                if (n > 23) return dateError(`Invalid hour: ${n}`);
+                break;
+            case 'MIN':
+                if (n > 59) return dateError(`Invalid minutes: ${n}`);
+                break;
+            case 'SS':
+                if (n > 59) return dateError(`Invalid seconds: ${n}`);
+                break;
         }
     }
 
-    return { isValid: true, message: '', severity: 'warning' };
+    return checkDayInMonth() ?? { isValid: true, message: '', severity: 'warning' };
+}
+
+/**
+ * Validate date/time with EDIFACT format qualifier (code list 2379).
+ * Used for context-aware validation of the C507 composite (DTM).
+ * `codes` is the 2379 code list from the loaded schema, when available.
+ */
+export function validateDateWithFormat(
+    value: string,
+    formatCode: string,
+    codes?: Array<{ code: string; description: string }>
+): ValidationResult {
+    const fromSchema = codes?.find(c => c.code === formatCode)?.description;
+    const pattern = fromSchema && /^[A-Z-]+$/.test(fromSchema) ? fromSchema : DATE_FORMAT_PATTERNS[formatCode];
+
+    // Unknown qualifier or a picture we can't check (e.g. "Month", "CCYYQ") - don't guess
+    const result = pattern ? validateDatePattern(value, pattern) : undefined;
+    return result ?? { isValid: true, message: '', severity: 'warning' };
 }

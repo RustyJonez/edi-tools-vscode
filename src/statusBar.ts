@@ -2,6 +2,7 @@ import * as vscode from 'vscode';
 
 export class StatusBarController {
     private statusBarItem: vscode.StatusBarItem;
+    private hoverToggleItem: vscode.StatusBarItem;
     private disposables: vscode.Disposable[] = [];
 
     constructor() {
@@ -11,6 +12,23 @@ export class StatusBarController {
             100
         );
         this.disposables.push(this.statusBarItem);
+
+        // Create hover toggle button (high priority = leftmost item in the right-side cluster)
+        this.hoverToggleItem = vscode.window.createStatusBarItem(
+            vscode.StatusBarAlignment.Right,
+            10000
+        );
+        this.hoverToggleItem.command = 'ediX12Tools.toggleHover';
+        this.disposables.push(this.hoverToggleItem);
+
+        // Refresh the toggle button when the setting changes (from the button, command palette, or settings UI)
+        this.disposables.push(
+            vscode.workspace.onDidChangeConfiguration(e => {
+                if (e.affectsConfiguration('ediX12Tools.hover.enabled')) {
+                    this.updateStatusBar();
+                }
+            })
+        );
 
         // Register event handlers
         this.disposables.push(
@@ -35,6 +53,7 @@ export class StatusBarController {
 
         if (!editor) {
             this.statusBarItem.hide();
+            this.hoverToggleItem.hide();
             return;
         }
 
@@ -44,8 +63,11 @@ export class StatusBarController {
         // Only show for X12 or EDIFACT files
         if (languageId !== 'x12' && languageId !== 'edifact') {
             this.statusBarItem.hide();
+            this.hoverToggleItem.hide();
             return;
         }
+
+        this.updateHoverToggle();
 
         const position = editor.selection.active;
         const positionInfo = this.getSegmentElementPosition(editor, position);
@@ -57,6 +79,18 @@ export class StatusBarController {
             this.statusBarItem.text = languageId.toUpperCase();
             this.statusBarItem.show();
         }
+    }
+
+    private updateHoverToggle(): void {
+        const enabled = vscode.workspace
+            .getConfiguration('ediX12Tools')
+            .get<boolean>('hover.enabled', true);
+
+        this.hoverToggleItem.text = enabled ? '$(eye) Hover' : '$(eye-closed) Hover';
+        this.hoverToggleItem.tooltip = enabled
+            ? 'EDI hover tooltips: On (click to turn off)'
+            : 'EDI hover tooltips: Off (click to turn on)';
+        this.hoverToggleItem.show();
     }
 
     private getSegmentElementPosition(
